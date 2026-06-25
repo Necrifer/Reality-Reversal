@@ -1,0 +1,30 @@
+{
+  "block_states": {
+    "dimdoors:clod_ore": "minecraft:coal_ore",
+    "dimdoors:amalgam_ore": "minecraft:copper_ore",
+    "dimdoors:amalgam_door": "minecraft:iron_door",
+    "dimdoors:amalgam_trapdoor": "minecraft:iron_trapdoor",
+    "dimdoors:amalgam_slab": "oritech:iron_plating_slab",
+    "dimdoors:amalgam_stairs": "oritech:iron_plating_stairs",
+    "dimdoors:clod_block": "minecraft:stone",
+    "dimdoors:amalgam_block": "minecraft:stone",
+    "dimdoors:driftwood_sapling": "minecraft:oak_sapling",
+    "dimdoors:driftwood_log": "minecraft:oak_log",
+    "dimdoors:driftwood_leaves": "minecraft:oak_leaves",
+    "dimdoors:driftwood_planks": "minecraft:oak_planks",
+    "dimdoors:driftwood_wood": "minecraft:oak_wood",
+    "dimdoors:driftwood_door": "minecraft:oak_door",
+    "dimdoors:driftwood_trapdoor": "minecraft:oak_trapdoor",
+    "dimdoors:driftwood_fence": "minecraft:oak_fence",
+    "dimdoors:driftwood_stairs": "minecraft:oak_stairs",
+    "dimdoors:driftwood_slab": "minecraft:oak_slab",
+    "dimdoors:dark_sand": "minecraft:sand",
+    "dimdoors:pale_sand": "minecraft:sand"
+  },
+  "items": {
+    "dimdoors:leak_bucket": "minecraft:bucket",
+    "dimdoors:clod": "minecraft:coal",
+    "dimdoors:amalgam_lump": "minecraft:copper_ingot"
+  },
+  "advancement": "modpack:main_story"
+}
