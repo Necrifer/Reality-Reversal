@@ -6,4 +6,7 @@ ItemEvents.modifyTooltips(event => {
     event.modify('extendedcrafting:basic_table', tooltip => {
         tooltip.insert(1, Text.of('Duplicable recipe is on purpose.').green())
     })
+    event.modify('projecte:transmutation_table', tooltip => {
+        tooltip.insert(1, Text.of('Draconium ores are revealed when you made the Philosopher stone').blue())
+    })
 })
