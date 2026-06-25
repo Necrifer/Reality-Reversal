@@ -1,0 +1,10 @@
+{
+"block_states": {
+    "stellaris:steel_ore": "minecraft:stone",
+    "stellaris:deepslate_steel_ore": "minecraft:deepslate"
+  },
+  "items": {
+    "stellaris:raw_steel_ingot": "minecraft:raw_iron"
+  },
+  "advancement": "minecraft:oritech/foundry"
+}

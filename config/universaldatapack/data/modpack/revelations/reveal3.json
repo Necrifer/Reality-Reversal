@@ -1,0 +1,15 @@
+{
+  "block_states": {
+    "draconicevolution:overworld_draconium_ore": "minecraft:stone",
+    "draconicevolution:deepslate_draconium_ore": "minecraft:deepslate",
+    "draconicevolution:nether_draconium_ore": "minecraft:netherrack",
+    "draconicevolution:end_draconium_ore": "minecraft:end_stone"
+  },
+  "items": {
+    "draconicevolution:draconium_dust": "minecraft:redstone",
+    "draconicevolution:draconium_ingot": "minecraft:iron_ingot",
+    "draconicevolution:draconium_nugget": "minecraft:iron_nugget",
+    "draconicevolution:draconium_block": "minecraft:iron_block"
+  },
+  "advancement": "projecte:philosophers_stone"
+}
