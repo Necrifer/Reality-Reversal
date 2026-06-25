@@ -7,3 +7,10 @@
 	[<tag:item:c:obsidians>, <item:draconicevolution:draconium_ingot>, <item:minecraft:air>, <item:mekanism:ingot_refined_glowstone>, <item:minecraft:air>, <item:draconicevolution:draconium_ingot>, <tag:item:c:obsidians>], 
 	[<item:mekanism:ingot_refined_obsidian>, <tag:item:c:obsidians>, <tag:item:c:obsidians>, <tag:item:c:obsidians>, <tag:item:c:obsidians>, <tag:item:c:obsidians>, <item:mekanism:ingot_refined_obsidian>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("philosophers_stone", 2, <item:projecte:philosophers_stone>, [
+	[<item:minecraft:glowstone_dust>, <item:minecraft:air>, <item:mekanism:alloy_infused>, <item:minecraft:air>, <item:minecraft:glowstone_dust>], 
+	[<item:minecraft:air>, <item:mekanism:alloy_infused>, <item:minecraft:quartz>, <item:mekanism:alloy_infused>, <item:minecraft:air>], 
+	[<item:mekanism:alloy_infused>, <item:minecraft:quartz>, <item:mekanism:enriched_diamond>, <item:minecraft:quartz>, <item:mekanism:alloy_infused>], 
+	[<item:minecraft:air>, <item:mekanism:alloy_infused>, <item:minecraft:quartz>, <item:mekanism:alloy_infused>, <item:minecraft:air>], 
+	[<item:minecraft:glowstone_dust>, <item:minecraft:air>, <item:mekanism:alloy_infused>, <item:minecraft:air>, <item:minecraft:glowstone_dust>]
+]);

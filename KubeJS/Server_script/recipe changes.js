@@ -71,6 +71,7 @@ ServerEvents.recipes(event => {
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'oritech:crafting/alloy/steel',
     'ultimatefoods:acero',
+    'projecte:transmutation_table'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
