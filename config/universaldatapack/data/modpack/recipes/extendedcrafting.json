@@ -1,3 +1,4 @@
+//Code for Extended Crafting (all types) has another variant for Crafttweaker. This is the Datapack version.
 {
   "type": "extendedcrafting:shaped_table",
   "pattern": [
