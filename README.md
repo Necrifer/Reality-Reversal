@@ -5,3 +5,459 @@ An attempt of a Tech + Magic + RPG modpack on Minecraft 1.21.1, replicating (and
 This is a massive project undertaken by someone with nearly 0 background in CS, so expect lots of fixes/bugs/changes frequently. 
 A lot of features are still heavily underdeveloped/exist as concept and not yet fixed, so there is not much to look around yet.
 Due to very frequent changes on 1.21 mods development environment, files may be removed/changed in massive chunks at times.
+
+Do NOT override files in this repository unless you know what you are doing. 
+
+List of Mods used (For checking of Configs + scripts):
+- Sky Aesthetics(sky_aesthetics)@2.0.13-beta
+- Almanac(almanac)@1.5.2
+- FTB Essentials(ftbessentials)@2101.1.9
+- Forgified Fabric Rendering Fluids (v1)(fabric_rendering_fluids_v1)@3.1.6+857185bc19
+- HammerLib(hammerlib)@21.0.14
+- ProjectE(projecte)@1.1.0
+- Ender Core(endercore)@8.2.11-beta
+- IconExporter(iconexporter)@1.4.1
+- ProjectExtendedAdvancedAE(projectextendedadvancedae)@1.0.1
+- NeoForge(neoforge)@21.1.233
+- ModernFix(modernfix)@5.27.14+mc1.21.1
+- Forgified Fabric BlockView API (v2)(fabric_block_view_api_v2)@1.0.11+e9036fd419
+- Forgified Fabric Command API (v2)(fabric_command_api_v2)@2.2.28+36d727be19
+- YUNG's API(yungsapi)@1.21.1-NeoForge-5.1.6
+- Gateways To Eternity(gateways)@5.1.0
+- clientcrafting mod(clientcrafting)@2.1
+- Biolith(biolith)@3.0.10
+- GeodeJei(geodejei)@1.1
+- Cloth Config v15 API(cloth_config)@15.0.140
+- Supplementaries(supplementaries)@1.21.1-3.6.7
+- Castle in the Sky(castle_in_the_sky)@1.21.1.1
+- ImmersiveUI(immersiveui)@0.3.3
+- GroovyModLoader(gml)@6.0.2
+- Jupiter(jupiter)@2.3.7
+- spark(spark)@1.10.124
+- CommonGroovyLibrary(commongroovylibrary)@0.5.1
+- ExtraLib(extralib)@3.0.8
+- Corail Tombstone(tombstone)@9.5.0
+- Modern GUI(modern_gui)@1.0.6
+- OneEnoughEnchantment(oneenoughenchantment)@1.0.1
+- Accessories(accessories)@1.1.0-beta.48+1.21.1
+- Cumulus(cumulus_menus)@2.0.7
+- Wormhole (Portals)(wormhole)@1.1.16
+- KubeJSDataComponent(kubejs_datacomponent)@1.0.1
+- TRansition(transition)@1.0.21
+- Dynamic FPS(dynamic_fps)@3.11.4
+- Forgified Fabric Rendering Data Attachment (v1)(fabric_rendering_data_attachment_v1)@0.3.49+73761d2e19
+- Nitrogen(nitrogen_internals)@1.1.25
+- JourneyMap API(journeymap_api)@2.0.0-1.21.1
+- DivineRPG(divinerpg)@1.10.9.2
+- Super Factory Manager (SFM)(sfm)@4.32.0
+- Forgified Fabric Client Tags(fabric_client_tags_api_v1)@1.1.15+e053909619
+- SmartBrainLib(smartbrainlib)@1.16.10
+- Quark Oddities(quarkoddities)@1.21.1
+- Kiwi Library(kiwi)@15.8.4+neoforge
+- Client Tweaks(clienttweaks)@21.1.11
+- FastBoot(fastboot)@1.3.0
+- AoA3(aoa3)@3.7.16.1
+- MossyLib(mossylib)@1.5.0+1.21.1+neoforge
+- Iron's Lib(irons_lib)@1.21.1-1.1.0
+- Visual Workbench(visualworkbench)@21.1.1
+- Lithium(lithium)@0.15.3+mc1.21.1
+- AttributeFix(attributefix)@21.1.3
+- Forgified Fabric Screen Handler API (v1)(fabric_screen_handler_api_v1)@1.3.88+8dbc56dd19
+- fastasyncworldsave mod(fastasyncworldsave)@2.6
+- EpheroLib(epherolib)@1.2.0
+- BotanyPots(botanypots)@21.1.44
+- UltimateFoods (ultimatefoods)@2.0.8
+- Inventory Particles(inventory_particles)@2.4.0+1.21.1+neoforge
+- ProjectE-Integration(projecteintegration)@8.3.1
+- Fusion(fusion)@1.3.3
+- Sodium(sodium)@0.6.13+mc1.21.1
+- CraftTweaker(crafttweaker)@21.0.38
+- Forgified Fabric Particles (v1)(fabric_particles_v1)@4.0.2+824f924c19
+- BBL Core(bblcore)@1.3.20
+- Smoothchunk mod(smoothchunk)@4.1
+- Minecraft(minecraft)@1.21.1
+- Crystalcraft Unlimited Java Edition(crystalcraft_unlimited_java)@1.0.0
+- TerraBlender(terrablender)@4.1.0.8
+- SKP(smartkeyprompts)@1.1.3
+- Pam's HarvestCraft - Crops(pamhc2crops)@1.0.9
+- Just Enough Breeding(justenoughbreeding)@3.1.0
+- Forgified Fabric Block API (v1)(fabric_block_api_v1)@1.0.22+a6e994cd19
+- Forgified Fabric Resource Conditions API (v1)(fabric_resource_conditions_api_v1)@4.3.0+5bdd099819
+- KubeJS ProjectE(kubejsprojecte)@1.3.3
+- ChickenChunks(chickenchunks)@2.12.0.103
+- ModifyJS(modifyjs)@1.1.0.3-neoforge
+- Skyfall: Tesla(skyfalltesla)@1.0.3
+- betterfpsdist mod(betterfpsdist)@6.0
+- Sable Companion(sablecompanion)@1.6.0
+- ExperienceLib(experiencelib)@1.2.1
+- AlmostUnified(almostunified)@1.21.1-1.4.2
+- DimensionalDoors(dimdoors)@6.2.1
+- Forgified Fabric Registry Sync (v0)(fabric_registry_sync_v0)@5.2.0+867470b919
+- ImmediatelyFast(immediatelyfast)@1.6.10+1.21.1
+- underwater_village(underwater_village)@1.0.2
+- LambDynamicLights (API)(lambdynlights_api)@4.5.1+1.21.1
+- AppleSkin(appleskin)@3.0.9+mc1.21
+- Forgified Fabric Object Builder API (v1)(fabric_object_builder_api_v1)@15.2.1+cc242efd19
+- Forgified Fabric Message API (v1)(fabric_message_api_v1)@6.0.13+e053909619
+- Extreme Sound Muffler(extremesoundmuffler)@3.56
+- AE Wireless Transceiver(aewireless)@1.3.1fix
+- Bedrock Miner(bedrockminer)@3.0.3
+- KumaAPI(kuma_api)@21.0.8
+- Forgified Fabric Renderer API (v1)(fabric_renderer_api_v1)@3.4.0+9c40919e19
+- AlchemyLib(alchemylib)@1.21.1
+- Forgified Fabric Item API (v1)(fabric_item_api_v1)@11.1.1+57cdfa8219
+- Revelationary(revelationary)@1.5.0+1.21.1
+- Extended Crafting(extendedcrafting)@7.0.8
+- Project Expansion(projectexpansion)@1.21.1-1.0.6
+- Sophisticated Core(sophisticatedcore)@1.4.60
+- Gpu memory leak fix(gpumemleakfix)@1.8
+- Structure Essentials mod(structureessentials)@5.0
+- Prism(prism)@1.0.11
+- Placebo(placebo)@9.9.1
+- FastFurnace(fastfurnace)@9.0.1
+- Lootintegrations mod(lootintegrations)@4.7
+- Bookshelf(bookshelf)@21.1.81
+- Sophisticated Backpacks(sophisticatedbackpacks)@3.25.64
+- BBL Portals(portals)@1.2.0
+- Melody(melody)@1.0.10
+- LycheeJS NeoForge(lycheejs)@1.21.1-2.1
+- KubeJEI(kubejei)@1.0.0
+- Fzzy Config(fzzy_config)@0.7.6+1.21+neoforge
+- Forgified Fabric API(fabric_api)@0.115.6+2.1.0+1.21.1
+- Integration(integration)@0.2
+- Konkrete(konkrete)@1.9.9
+- RangedJS(rangedjs)@1.3.1-neoforge-1.21.1
+- AvaritiaIntegration(avaritia_integration)@1.0
+- Hostile Neural Networks(hostilenetworks)@6.4.1
+- AmbientSounds(ambientsounds)@6.3.8
+- Forgified Fabric API Lookup API (v1)(fabric_api_lookup_api_v1)@1.6.70+c21168c319
+- Chunky(chunky)@1.4.23
+- lionfishapi(lionfishapi)@3.0
+- Solar Flux Reborn(solarflux)@21.1.8
+- memorysettings mod(memorysettings)@6.0
+- L_Ender's Cataclysm 1.21.1(cataclysm)@3.31
+- Time In A Bottle(tiab)@6.5.4
+- Mystical Customization(mysticalcustomization)@6.0.2
+- LostCities(lostcities)@1.21-8.3.10
+- ElevatorMod(elevatorid)@1.21.1-1.11.4
+- KubeJS Draconic Evolution(kubejsde)@1.1.0
+- Lost Cities Modern Tweaks(lcmt)@2.0.7
+- AI-Improvements(aiimprovements)@0.5.3
+- Cupboard mod(cupboard)@3.8
+- Voidscape(voidscape)@1.21.1-1.9.588
+- ProbeJS(probejs)@8.0.3
+- Matmos(matmos_tct)@7.6
+- Forgified Fabric Key Binding API (v1)(fabric_key_binding_api_v1)@1.0.47+62cc7ce119
+- Forgified Fabric Transfer API (v1)(fabric_transfer_api_v1)@5.4.2+a25cb45619
+- Pam's HarvestCraft - Trees(pamhc2trees)@1.0.9
+- Particle Rain(particlerain)@4.0.0-beta.10
+- Common Networking(commonnetworking)@1.0.21-1.21.1
+- Forgified Fabric Resource Loader (v0)(fabric_resource_loader_v0)@1.3.1+4ea8954419
+- Woot Revived(woot_revived)@21.1.1.10-kjs
+- Clumps(clumps)@19.0.0.1
+- Project Time Master: Reforged(projecttimemasterreforged)@1.0.0
+- Mystical Automation(mysticalautomation)@1.0.6
+- BadMobs(badmobs)@21.1.1
+- Explorer's Compass(explorerscompass)@1.21.1-3.4.0-neoforge
+- Block Booster(blockbooster)@1.1.13
+- Time in a bottle Curio Support(tiabcurio)@3.0.1
+- ImmersiveCaveAmbience(spooky)@1.0.1
+- TxniLib(txnilib)@1.0.24
+- Akashic Tome(akashictome)@1.8-30
+- Traveler's Titles(travelerstitles)@1.21.1-NeoForge-5.1.3
+- Oritech Things(oritechthings)@0.0.44
+- Stellaris Extra(stellaris_extra)@1.2.21
+- Just Enough Immersive Multiblocks(jeimultiblocks)@1.0.6
+- Mystical Agriculture(mysticalagriculture)@8.0.26
+- Mystical Extended Tier(mysticalextendedtier)@0.9.6
+- Crafting Tweaks(craftingtweaks)@21.1.10
+- Ambience Mini(ambience_mini)@2.6.2
+- Apothic Spawners(apothic_spawners)@1.3.4
+- AppliedE(appliede)@1.0.8-beta
+- Re-Avaritia(avaritia)@1.3.9.9
+- Forgified Fabric BlockRenderLayer Registration (v1)(fabric_blockrenderlayer_v1)@1.1.52+b089b4bd19
+- CreativeCore(creativecore)@2.13.41
+- FTB Jei Extras(ftbjeiextras)@21.1.7
+- Ender IO(enderio)@8.2.11-beta
+- MoogsEndStructures(mes)@2.0.3
+- JAOPCA(jaopca)@5.0.13.22
+- Polymorphic Energistics(polyeng)@0.4.1
+- Fast Workbench(fastbench)@9.1.3
+- Forgified Fabric Game Test API (v1)(fabric_gametest_api_v1)@2.0.5+29f188ce19
+- Flux Networks(fluxnetworks)@8.0.0
+- Forgified Fabric Biome API (v1)(fabric_biome_api_v1)@13.0.31+1e62d33c19
+- Building Gadgets 2(buildinggadgets2)@1.3.9
+- AppliedJS(appliedjs)@1.21.1-1.0.0
+- Ferrite Core(ferritecore)@7.0.3
+- Lychee Tweaker(lychee)@6.4.4+neoforge
+- Lodestone(lodestone)@1.8.2
+- BadOptimizations(badoptimizations)@2.4.1
+- Astral Dimension(astral_dimension)@2.2
+- PartiCull(particull)@2.0
+- AStages - FTB Quests Addon(astages_ftbquests)@2.0.0-1.21.1
+- OpenLoader(openloader)@21.1.5
+- SuperMartijn642's Config Library(supermartijn642configlib)@1.1.8
+- BeautifulCampfires(beautifulcampfires)@1.0.2
+- Sound Physics Remastered(sound_physics_remastered)@1.21.1-1.5.1
+- Energy To EMC(energytoemc)@1.0.1
+- Forgified Fabric Convention Tags(fabric_convention_tags_v1)@2.1.4+7f945d5b19
+- CRLib(crlib)@1.0.1
+- Tesseract API(tesseract_api)@1.12.3-1.21.1
+- Forgified Fabric Convention Tags (v2)(fabric_convention_tags_v2)@2.11.0+87e5848019
+- Voltaic(voltaic)@1.0.8
+- ClientSort(clientsort)@2.2.2+1.21.1
+- Balm(balm)@21.0.59
+- Forgified Fabric Screen API (v1)(fabric_screen_api_v1)@2.0.25+4228281319
+- PrickleMC(prickle)@21.1.11
+- Dynamic view distance(dynview)@4.0
+- Myotus(myotus)@19.0.9
+- Just Enough Resources(jeresources)@1.6.0.17
+- Tslat's Modding Extensions(tslatmoddingextensions)@1.0.0
+- Crash Assistant(crash_assistant)@1.11.10
+- Mystical Agradditions(mysticalagradditions)@8.0.13
+- LowDragLib2(ldlib2)@2.2.24
+- Athena(athena)@4.0.6
+- AllTheOres(alltheores)@3.2.0
+- Glodium(glodium)@1.21-2.2-neoforge
+- Forgified Fabric Game Rule API (v1)(fabric_game_rule_api_v1)@1.0.53+36d727be19
+- BotanyTrees(botanytrees)@21.1.7
+- Databank(databank)@1.3.1
+- SuperMartijn642's Core Lib(supermartijn642corelib)@1.1.21
+- Apothic Attributes(apothic_attributes)@2.9.1
+- kjsbotanypots(kjsbotanypots)@1.3.2
+- Curios API(curios)@9.5.1+1.21.1
+- Project EMapper(projectemapper)@1.0.1-bata
+- Forgified Fabric Entity Events (v1)(fabric_entity_events_v1)@1.7.0+1af6e62419
+- Exclusions Lib(exclusions_lib)@1.1.0-NEO
+- More Culling(moreculling)@1.0.7
+- PackagedDraconic(packageddraconic)@4.0.0.1
+- conditional mixin(conditional_mixin)@0.6.4
+- Apothic Enchanting(apothic_enchanting)@1.5.3
+- UniLib(unilib)@1.2.1
+- Infiniverse(infiniverse)@2.0.1.0
+- SparseStructures(sparsestructures)@3.0
+- CodeChicken Lib(codechickenlib)@4.6.1.526
+- CBMultipart(cb_multipart)@3.5.0.155
+- CBMicroblock(cb_microblock)@3.5.0.155
+- CBMultipart Minecraft(cb_multipart_minecraft)@3.5.0.155
+- Brandon's Core(brandonscore)@3.2.1.309
+- Draconic Evolution(draconicevolution)@3.1.4.632
+- Universal Data Pack(universaldatapack)@1.21.1-1.0.0
+- Accelerated Rendering(acceleratedrendering)@1.0.10.1-1.21.1-alpha
+- Drip Sounds(waterdripsound)@0.5.2
+- AE2 JEI Integration(ae2jeiintegration)@1.2.1
+- KubeJS Tweaks(kubejstweaks)@1.0.6
+- Forgified Fabric Model Loading API (v1)(fabric_model_loading_api_v1)@2.0.0+986ae77219
+- Just Enough Items(jei)@19.27.0.336
+- JEI Structures(jei_structures)@1.2
+- Universal Bone Meal(universalbonemeal)@21.1.0
+- Mekanism(mekanism)@10.7.19
+- Mekanism: Generators(mekanismgenerators)@10.7.19
+- Inventory Tweaks Refoxed(invtweaks)@1.21.1-1.3.2
+- Forgified Fabric Rendering (v1)(fabric_rendering_v1)@5.0.5+077ba95f19
+- Forgified Fabric Renderer - Indigo(fabric_renderer_indigo)@1.7.0+4198af7119
+- Fallingleaves(fallingleaves)@2.5.1
+- JEI Gateways(jei_gateways)@1.1.2+mc1.21.1
+- kubejsarsnouveau(kubejsarsnouveau)@1.3.2
+- Nature's Compass(naturescompass)@1.21.1-3.4.0-neoforge
+- OELib(oelib)@0.2.3
+- GlitchCore(glitchcore)@2.1.0.2
+- Biomes O' Plenty(biomesoplenty)@21.1.0.14
+- Serene Seasons(sereneseasons)@10.1.0.3
+- Neruina(neruina)@3.3.2
+- Ice And Fire Community Edition(iceandfire)@2.0-beta.15
+- Cataclysm Dimension(cataclysm_dimension)@1.5.5
+- Urkaz Moon Tools(urkazmoontools)@2.3.1-49
+- Formations(formations)@1.0.4
+- Log Begone(logbegone)@1.0.3
+- Zero CORE 2(zerocore)@1.21.1-2.4.21
+- Avaritia Expand(avaritia_expand)@0.3.6
+- Simple Backups(simplebackups)@1.21-4.0.21
+- Physics Mod(physicsmod)@3.0.29
+- ItemPhysicLite(itemphysiclite)@1.6.11
+- Forgified Fabric API Base(fabric_api_base)@0.4.42+d1308dedd1
+- Mouse Tweaks(mousetweaks)@2.26.1
+- Immersive Engineering(immersiveengineering)@12.4.2-194
+- AeroBlender(aeroblender)@1.0.0
+- Kotlin For Forge(kotlinforforge)@5.11.0
+- JEI Integration Reborn(jei_integration_reborn)@1.0.2
+- tctcore(tctcore)@2.2
+- Pam's HarvestCraft - Food Core(pamhc2foodcore)@1.0.4
+- Forgified Fabric Item Group API (v1)(fabric_item_group_api_v1)@4.1.7+e324903319
+- AStages(astages)@2.2.0-1.21.1
+- Stellar View(stellarview)@0.5.2
+- Polymorph(polymorph)@1.1.0+1.21.1
+- Zeta(zeta)@1.1-40
+- EntityCulling(entityculling)@1.10.5
+- Smart Particles(smart_particles)@21.8.10
+- More Sounds(more_sounds)@1.21.x-0.3.0-beta
+- Forgified Fabric Recipe API (v1)(fabric_recipe_api_v1)@5.0.14+59440bcc19
+- Modern UI(modernui)@3.13.0.1
+- Puzzles Lib(puzzleslib)@21.1.52
+- Aquaculture 2(aquaculture)@2.7.21
+- Forgified Fabric Sound API (v1)(fabric_sound_api_v1)@1.0.23+10b84f8419
+- chunksending mod(chunksending)@2.9
+- Configurable(configurable)@3.5.1
+- Cristel Lib(cristellib)@3.1.7
+- Carbon Config Library(carbonconfig)@0.0NONE
+- Chunk Pregenerator(chunkpregen)@1.21-4.5.3
+- Cyclops Core(cyclopscore)@1.29.1
+- MoreEventsJS(more_events_js)@1.0.1
+- GeckoLib 4(geckolib)@4.9.1
+- Ars Nouveau(ars_nouveau)@5.12.0
+- Sauce Library(sauce)@0.0.42.89
+- Ars Elemental(ars_elemental)@0.7.10.0
+- recipeessentials mod(recipeessentials)@4.0
+- The Aether(aether)@1.5.10
+- Deep Aether(deep_aether)@1.21.1-1.1.5.1
+- Connectivity Mod(connectivity)@7.6
+- Forgified Fabric Data Attachment API (v1)(fabric_data_attachment_api_v1)@1.4.3+58235da019
+- Catalytic Tweaks(catalytictweaks)@1.0.11
+- Nuggets(nuggets)@1.1.0.48
+- Mystical Agriculture Tiered Crystals(matc)@1.7.1
+- Music Trigger(music_trigger)@1.0.0
+- Grand Power(grandpower)@3.0.2
+- Forgified Fabric Content Registries (v0)(fabric_content_registries_v0)@8.0.18+0a0c14ff19
+- The Twilight Forest(twilightforest)@4.8.3345
+- Mob Grinding Utils(mob_grinding_utils)@1.1.10+mc1.21.1
+- Farmer's Delight(farmersdelight)@1.3.2
+- Avaritia's Delight(avaritia_delight)@1.6.3
+- ExtraQuests [FTB Quests](extraquests)@1.7.0
+- Crash Utilities(crashutilities)@9.0.4
+- Get It Together, Drops!(getittogetherdrops)@1.4
+- Angel Utilities(angel_utilities)@1.0.9
+- Colorful Hearts(colorfulhearts)@10.5.9
+- Ender IO - Modded Conduits(enderio_modded_conduits)@8.2.11-beta
+- Pam's HarvestCraft - Food Extended(pamhc2foodextended)@1.0.0
+- Dyson Cube Project(dysoncubeproject)@1.0.5
+- leaky mod(leaky)@2.4
+- Actually Additions(actuallyadditions)@1.3.26
+- Porting Dead Libs(portingdeadlibs)@1.1.8
+- Patchouli(patchouli)@1.21.1-93-NEOFORGE
+- Croptopia(croptopia)@4.2.4
+- FTB Ultimine(ftbultimine)@2101.1.15
+- Eating Animation(eatinganimation)@6.0.1
+- MiiWillisCombatSound(miiwilliscombatsound1_21_1neo)@1.0
+- LootJS(lootjs)@1.21.1-3.7.0
+- AdvancedLootInfo(ali)@1.12.0
+- KJSutils(kjsutils)@1.0.12-1.21.1
+- Architectury(architectury)@13.0.8
+- FTB Materials(ftbmaterials)@21.1.3
+- Simple Discord Rich Presence(sdrp)@88.0.1-build.54+mc1.21.1
+- Potentials(potentials)@0.7.1
+- Better Client(better_client)@1.10.1
+- Uranus(uranus)@2.4.1
+- Not Enough Recipe Book(nerb)@0.4.3
+- FTB Library(ftblibrary)@2101.1.32
+- FTB Teams(ftbteams)@2101.1.10
+- JamLib(jamlib)@1.3.6+1.21.1
+- Right Click Harvest(rightclickharvest)@4.6.1+1.21.1
+- Oracle Index(oracle_index)@1.3.0
+- Oritech(oritech)@1.2.8
+- FTB Quests(ftbquests)@2101.1.27
+- UIQuest(uiquest)@1.0.4
+- Lychee Oritech(lychee_oritech)@1.0.0
+- Forgified Fabric Loot API (v2)(fabric_loot_api_v2)@3.0.15+a3ee712d19
+- Forgified Fabric Loot API (v3)(fabric_loot_api_v3)@1.0.3+333dfad919
+- Mighty Ender Chicken Rehatched(mecrh)@21.1.5
+- Extreme Reactors(bigreactors)@1.21.1-2.4.28
+- Productive Bees(productivebees)@1.21.1-13.13.5
+- KubeJSIGRM(kjsigrm)@1.4.1
+- Trash Cans(trashcans)@1.0.18+c
+- M.R.U(mru)@1.0.19+LTS+1.21.1+neoforge
+- Moog's Structure Lib(moogs_structures)@3.0.0
+- Forgified Fabric Networking API (v1)(fabric_networking_api_v1)@4.3.0+4f690eb619
+- PackagedAvaritia:Re(packagedavaritia)@3.0.1.5
+- Doardos Core(doardo_core)@0.1.0
+- Let Me Despawn(letmedespawn)@1.5.0
+- Forgified Fabric Lifecycle Events (v1)(fabric_lifecycle_events_v1)@2.5.0+a2ee258a19
+- CraftPresence(craftpresence)@2.7.1
+- Rhino(rhino)@2101.2.7-build.85
+- KubeJS(kubejs)@2101.7.2-build.368
+- KubeJS EnderIO(kubejs_enderio)@1.21.1-0.12.0
+- FTB XMod Compat(ftbxmodcompat)@21.1.8
+- KubeJS Actually Additions(kubejs_actuallyadditions)@1.21.1-0.3.0
+- KubeJS CustomEvents(kubejscustomevents)@1.0.3
+- Better Advanced Tooltips(betteradvancedtooltips)@2101.1.0-build.1
+- FluidJS(fluidjs)@1.2.3
+- KubeJS Mekanism(kubejs_mekanism)@2101.1.7-build.18
+- Modular Machinery Reborn(modular_machinery_reborn)@3.0.19
+- Modular Machinery Reborn Mekanism(modular_machinery_reborn_mekanism)@3.0.3
+- oωo(owo)@0.12.15.5-beta.1+1.21
+- Cucumber Library(cucumber)@8.0.16
+- Crafting Station(craftingstation)@2.1.1
+- Snad(snad)@21.1.1
+- limitedchunks mod(limitedchunks)@4.1
+- OctoLib(octolib)@0.6.2
+- Productive Lib(productivelib)@1.21.1-0.2.0
+- Summoning Rituals(summoningrituals)@1.21.1-3.14.1
+- MetalBarrels(metalbarrels)@7
+- KubeJS Oritech(kubejs_oritech)@1.21.1-0.4.4
+- FTB Pack Companion(ftbpc)@21.1.20
+- TRender(trender)@1.0.15
+- Waystones(waystones)@21.1.34
+- Fast Suite(fastsuite)@6.0.7
+- Journeymap(journeymap)@1.21.1-6.0.0-beta.88
+- Cobblegen Galore(cobblegengalore)@1.21.1-0.2.8
+- Roost Ultimate(chicken_roost)@4.2.2
+- Particular Reforged(particular)@1.5.5
+- McJtyLib(mcjtylib)@1.21-9.0.21
+- RFToolsBase(rftoolsbase)@1.21-6.0.11
+- RFToolsBuilder(rftoolsbuilder)@1.21-7.0.5
+- XNet(xnet)@1.21-7.0.7
+- RFToolsDimensions(rftoolsdim)@1.21-12.0.4
+- XNet Gases(xnetgases)@6.0.2
+- RFToolsStorage(rftoolsstorage)@1.21-6.0.5
+- GuideME(guideme)@21.1.16
+- Immersive Sounds(mr_immersive_sound)@0.2
+- Mahou Tsukai(mahoutsukai)@1.21.1-v1.36.27
+- EnderStorage(enderstorage)@2.13.0.191
+- Stellaris(stellaris)@1.4.23
+- Forgified Fabric Transitive Access Wideners (v1)(fabric_transitive_access_wideners_v1)@6.2.0+6c854b6f19
+- RFToolsUtility(rftoolsutility)@1.21-7.0.12
+- EnchantmentDescriptions(enchdesc)@21.1.10
+- Moonlight Lib(moonlight)@1.21.1-3.0.19
+- Configuration(configuration)@3.1.1
+- Titanium(titanium)@4.0.43
+- Distraction Free Recipes (EMI)(distraction_free_recipes)@1.2.2
+- Jade(jade)@15.10.5+neoforge
+- Applied Energistics 2(ae2)@19.2.17
+- Applied KubeJS(applied_kjs)@1.0.0
+- AEInfinityBooster(aeinfinitybooster)@1.21.1-1.0.0.54
+- Applied Extended Crafting(applied_extended_crafting)@1.1.2
+- AE2:Crafting Tree(ae2ct)@1.21.1-1.1.1
+- KubeJS Additions(kubejsadditions)@1.21.1-6.0.0
+- Modular Machinery Reborn Energistics(modular_machinery_reborn_energistics)@1.1.2
+- Extended Terminal(extendedterminal)@19.0.4
+- AE2WTLib(ae2wtlib)@19.5.0
+- ExtendedAE(extendedae)@1.21-2.2.33-neoforge
+- MEGA Cells(megacells)@4.11.0
+- AE2AddonLib(ae2addonlib)@1.0.3-1.21.1
+- Advanced AE(advanced_ae)@1.6.11-1.21.1
+- AE2WTLib API(ae2wtlib_api)@19.5.0
+- AE2 Lightning Tech(ae2lt)@1.0.19
+- AE2FluidCraftingTerminal(ae2fct)@19.0.3
+- Display Delight(displaydelight)@1.7.0
+- Platform(platform)@1.3.3
+- PackagedAuto(packagedauto)@4.0.8.21
+- Sounds(sounds)@2.4.22+lts
+- Iceberg(iceberg)@1.3.2
+- Legendary Tooltips(legendarytooltips)@1.5.5
+- KubeJS Custom Rarity(kubejs_rarity)@1.0.0
+- Quark(quark)@4.1-480
+- ChemLib(chemlib)@2.1.5
+- Expanded Delight(expandeddelight)@0.1.4
+- More Delight(moredelight)@26.05.20a-1.21-neoforge
+- Malum(malum)@1.8.2
+- Delight Lib(delightlib)@26.05.18-1.21-neoforge
+- betterchunkloading mod(betterchunkloading)@5.4
+- Modonomicon(modonomicon)@1.120.1
+- YetAnotherConfigLib(yet_another_config_lib_v3)@3.8.2+1.21.1-neoforge
+- Quantified API(quantified)@1.4.4
+- Polymorphic Extended Crafting(polymorphic_extended_crafting)@1.0.3
+- Applied Mekanistics(appmek)@1.6.3
+- AE2Extras(ae2extras)@0
+- Forgified Fabric Data Generation API (v1)(fabric_data_generation_api_v1)@20.2.28+2d91a6db19
+- Forgified Fabric Events Interaction (v0)(fabric_events_interaction_v0)@0.7.13+7b71cc1619
+- ExoConfig(exoconfig)@0.3.0
+- UFO FUTURE(ufo)@2.1-fix5
