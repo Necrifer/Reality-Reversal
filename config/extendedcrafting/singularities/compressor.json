@@ -1,0 +1,10 @@
+{
+  "name": "singularity.extendedcrafting.compressor",
+  "colors": [
+    "97ffff",
+    "212121"
+  ],
+  "ingredient": {
+    "item": "extendedcrafting:compressor"
+  }
+}
