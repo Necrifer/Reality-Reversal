@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "dimdoors:reality_sponge"
+    },
+    "title": "Fragment of Limbo",
+    "description": "Construct a Tesselating Loom through the pieces of Limbo.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent" : "dimdoors:dimdoors/world_unfurled",
+  "criteria": {
+    "main_story":{
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "kubejs:kjs/dimdoors_tesselating_loom"
+      }
+    }
+  }
+}
