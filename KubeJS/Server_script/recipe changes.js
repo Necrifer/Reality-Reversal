@@ -62,7 +62,8 @@ ServerEvents.recipes(event => {
     'projecte:philosophers_stone',
     'minecraft:hopper', 
     'oritech:foundry_block', 
-    'minecraft:flint_and_steel']
+    'minecraft:flint_and_steel',
+    'minecraft:anvil']
   removal.forEach(removal => {
     event.remove({output: removal})
   })
@@ -81,6 +82,18 @@ ServerEvents.recipes(event => {
   replace('extendedcrafting:black_iron_ingot', '#c:dyes/black', 'minecraft:basalt')
   replace('enderio:void_chassis', '#c:ingots/iron', '#c:ingots/dark_steel')
   replace('immersiveengineering:blastbrick', 'minecraft:magma_block', 'minecraft:lava_bucket')
+  event.shaped(
+    Item.of('minecraft:anvil'),
+    [
+      'AAA',
+      ' B ',
+      'BBB'
+    ],
+    {
+      A: '#c:storage_blocks/steel',
+      B: '#c:ingots/dark_steel'
+    }
+  )
   event.shaped(
     Item.of('mekanism:enrichment_chamber'),
     [
