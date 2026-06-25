@@ -1,0 +1,22 @@
+[ 
+  {
+    "type": "block",
+    "key": "avaritia:infinity",
+    "rarity": "rare",
+    "create": 1000,
+    "maintain": 1000,
+    "ticks": 100,
+    "worldgen": true,
+    "dimlet": true
+  },
+  {
+    "type": "fluid",
+    "key": "ufo:source_primordial_matter_fluid",
+    "rarity": "rare",
+    "create": 1000,
+    "maintain": 1000,
+    "ticks": 100,
+    "worldgen": true,
+    "dimlet": true
+  }
+]
