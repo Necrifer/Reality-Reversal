@@ -11,5 +11,5 @@
     "draconicevolution:draconium_nugget": "minecraft:iron_nugget",
     "draconicevolution:draconium_block": "minecraft:iron_block"
   },
-  "advancement": "projecte:philosophers_stone"
+  "advancement": "modpack:philosophers_stone"
 }

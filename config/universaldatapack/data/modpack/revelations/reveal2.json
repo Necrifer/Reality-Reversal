@@ -6,5 +6,5 @@
   "items": {
     "stellaris:raw_steel_ingot": "minecraft:raw_iron"
   },
-  "advancement": "minecraft:oritech/foundry"
+  "advancement": "modpack:foundry"
 }
