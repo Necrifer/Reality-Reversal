@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "projecte:philosophers_stone"
+    },
+    "title": "Fragmented Memories #1",
+    "description": "Recover the results of the experiments of the fallen",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent" : "modpack:root",
+  "criteria": {
+    "main_story":{
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "crafttweaker:philosophers_stone"
+      }
+    }
+  }
+}

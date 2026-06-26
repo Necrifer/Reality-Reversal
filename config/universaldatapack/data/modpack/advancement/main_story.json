@@ -9,7 +9,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent" : "dimdoors:dimdoors/world_unfurled",
+  "parent" : "modpack:root",
   "criteria": {
     "main_story":{
       "trigger": "minecraft:recipe_crafted",
