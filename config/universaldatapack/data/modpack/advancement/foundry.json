@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "oritech:foundry_block"
+    },
+    "title": "The First Construction",
+    "description": "Construct your first machine for metal alloying.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent" : "modpack:main_story",
+  "criteria": {
+    "main_story":{
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "kubejs:kjs/oritech_foundry_block"
+      }
+    }
+  }
+}
