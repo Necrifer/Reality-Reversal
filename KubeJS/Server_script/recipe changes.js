@@ -63,7 +63,8 @@ ServerEvents.recipes(event => {
     'minecraft:hopper', 
     'oritech:foundry_block', 
     'minecraft:flint_and_steel',
-    'minecraft:anvil']
+    'minecraft:anvil',
+    'mekanismgenerators:heat_generator']
   removal.forEach(removal => {
     event.remove({output: removal})
   })
@@ -84,6 +85,21 @@ ServerEvents.recipes(event => {
   replace('extendedcrafting:black_iron_ingot', '#c:dyes/black', 'minecraft:basalt')
   replace('enderio:void_chassis', '#c:ingots/iron', '#c:ingots/dark_steel')
   replace('immersiveengineering:blastbrick', 'minecraft:magma_block', 'minecraft:lava_bucket')
+  event.shaped(
+    Item.of('mekanismgenerators:heat_generator'),
+    [
+      'AAA',
+      'BCB',
+      'DED'
+    ],
+    {
+      A: '#c:ingots/osmium',
+      B: '#immersiveengineering:treated_wood',
+      C: steelcasing,
+      D: '#c:ingots/dark_steel',
+      E: 'oritech:basic_generator_block'
+    }
+  )
   event.shaped(
     Item.of('mekanismgenerators:bio_generator'),
     [
