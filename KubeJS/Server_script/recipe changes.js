@@ -71,7 +71,8 @@ ServerEvents.recipes(event => {
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'oritech:crafting/alloy/steel',
     'ultimatefoods:acero',
-    'projecte:transmutation_table'
+    'projecte:transmutation_table',
+    'mekanismgenerators:generator/bio'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
@@ -83,6 +84,20 @@ ServerEvents.recipes(event => {
   replace('extendedcrafting:black_iron_ingot', '#c:dyes/black', 'minecraft:basalt')
   replace('enderio:void_chassis', '#c:ingots/iron', '#c:ingots/dark_steel')
   replace('immersiveengineering:blastbrick', 'minecraft:magma_block', 'minecraft:lava_bucket')
+  event.shaped(
+    Item.of('mekanismgenerators:bio_generator'),
+    [
+      'ABA',
+      'CDC',
+      'ABA'
+    ],
+    {
+      A: 'mekanism:alloy_infused',
+      B: 'mekanism:basic_control_circuit',
+      C: '#c:fuels/bio',
+      D: 'mekanism:steel_casing'
+    }
+  )
   event.shaped(
     Item.of('minecraft:anvil'),
     [
