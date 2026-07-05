@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Inferium",
+    "colors":  [
+                   "9bbb00",
+                   "445400"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/inferium"
+                   }
+}

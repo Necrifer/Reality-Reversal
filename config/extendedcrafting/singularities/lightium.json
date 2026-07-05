@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lightium",
+    "colors":  [
+                   "87bee3",
+                   "4c6b81"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/lightium"
+                   }
+}

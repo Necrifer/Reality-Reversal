@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Neptunium",
+    "colors":  [
+                   "82f9d8",
+                   "034230"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/neptunium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ironwood",
+    "colors":  [
+                   "877e66",
+                   "382e25"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ironwood"
+                   }
+}

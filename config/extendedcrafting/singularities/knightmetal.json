@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Knightmetal",
+    "colors":  [
+                   "c0d2ab",
+                   "434341"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/knightmetal"
+                   }
+}

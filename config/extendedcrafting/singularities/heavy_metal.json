@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Heavy Metal",
+    "colors":  [
+                   "7d7a7d",
+                   "29252a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/heavy_metal"
+                   }
+}

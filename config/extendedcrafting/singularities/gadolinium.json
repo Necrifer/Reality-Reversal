@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Gadolinium",
+    "colors":  [
+                   "c8506e",
+                   "732e40"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/gadolinium"
+                   }
+}

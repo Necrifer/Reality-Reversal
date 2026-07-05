@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Nadienite",
+    "colors":  [
+                   "d77f81",
+                   "793c20"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/nadienite"
+                   }
+}

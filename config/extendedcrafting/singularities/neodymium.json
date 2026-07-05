@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Neodymium",
+    "colors":  [
+                   "bf6668",
+                   "6e3b3c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/neodymium"
+                   }
+}

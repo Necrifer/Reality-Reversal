@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Magnesium",
+    "colors":  [
+                   "dededd",
+                   "80807f"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/magnesium"
+                   }
+}

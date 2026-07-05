@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lyon",
+    "colors":  [
+                   "d9be6e",
+                   "433837"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/lyon"
+                   }
+}

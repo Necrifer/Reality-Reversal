@@ -1,0 +1,10 @@
+﻿{
+    "name":  "HOP Graphite",
+    "colors":  [
+                   "a986d5",
+                   "5f257e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/hop_graphite"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ender Ingot",
+    "colors":  [
+                   "1d8271",
+                   "033028"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ender_ingot"
+                   }
+}

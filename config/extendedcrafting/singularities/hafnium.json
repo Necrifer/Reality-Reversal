@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Hafnium",
+    "colors":  [
+                   "5e6e60",
+                   "364037"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/hafnium"
+                   }
+}

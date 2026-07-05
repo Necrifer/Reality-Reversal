@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Netherite Scrap",
+    "colors":  [
+                   "d286d5",
+                   "7e2570"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/netherite_scrap"
+                   }
+}

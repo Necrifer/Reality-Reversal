@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Entro",
+    "colors":  [
+                   "9f86d5",
+                   "53257e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/entro"
+                   }
+}

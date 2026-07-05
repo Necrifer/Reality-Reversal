@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Insanite",
+    "colors":  [
+                   "39e18f",
+                   "385454"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/insanite"
+                   }
+}

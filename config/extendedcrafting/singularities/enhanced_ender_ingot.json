@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Enhanced Ender Ingot",
+    "colors":  [
+                   "127a8a",
+                   "032e33"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/enhanced_ender_ingot"
+                   }
+}

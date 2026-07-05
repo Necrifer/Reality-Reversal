@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Mystite",
+    "colors":  [
+                   "b7f2c8",
+                   "2c5651"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/mystite"
+                   }
+}

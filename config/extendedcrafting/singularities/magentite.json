@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Magentite",
+    "colors":  [
+                   "e48de4",
+                   "881388"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/magentite"
+                   }
+}

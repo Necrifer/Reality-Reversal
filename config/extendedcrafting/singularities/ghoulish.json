@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ghoulish",
+    "colors":  [
+                   "a9cbff",
+                   "402772"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ghoulish"
+                   }
+}

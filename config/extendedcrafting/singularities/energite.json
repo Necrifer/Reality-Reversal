@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Energite",
+    "colors":  [
+                   "feb6ff",
+                   "4a00a2"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/energite"
+                   }
+}

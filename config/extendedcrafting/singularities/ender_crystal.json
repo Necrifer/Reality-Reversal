@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ender Crystal",
+    "colors":  [
+                   "8dfdcd",
+                   "266553"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/ender_crystal"
+                   }
+}

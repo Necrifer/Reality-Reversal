@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Fiery",
+    "colors":  [
+                   "e5b25a",
+                   "261918"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/fiery"
+                   }
+}

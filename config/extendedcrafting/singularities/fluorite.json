@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Fluorite",
+    "colors":  [
+                   "e1e3e7",
+                   "abbac3"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/fluorite"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lanthanum",
+    "colors":  [
+                   "eec85e",
+                   "897336"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/lanthanum"
+                   }
+}

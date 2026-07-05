@@ -1,10 +1,10 @@
-{
-  "name": "singularity.extendedcrafting.emerald",
-  "colors": [
-    "7df8ac",
-    "8e1a"
-  ],
-  "ingredient": {
-    "item": "minecraft:emerald"
-  }
+﻿{
+    "name":  "Emerald",
+    "colors":  [
+                   "9ef7b8",
+                   "106e2d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/emerald"
+                   }
 }

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Europium",
+    "colors":  [
+                   "c1b8e7",
+                   "6f6a85"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/europium"
+                   }
+}

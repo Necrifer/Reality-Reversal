@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lithium",
+    "colors":  [
+                   "c25e76",
+                   "6f3644"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/lithium"
+                   }
+}

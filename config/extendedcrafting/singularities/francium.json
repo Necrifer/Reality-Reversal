@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Francium",
+    "colors":  [
+                   "d04147",
+                   "772529"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/francium"
+                   }
+}
