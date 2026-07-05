@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Prudentium",
+    "colors":  [
+                   "00b81b",
+                   "004310"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/prudentium"
+                   }
+}

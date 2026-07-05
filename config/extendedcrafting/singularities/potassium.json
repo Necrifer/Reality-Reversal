@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Potassium",
+    "colors":  [
+                   "b9ce59",
+                   "6a7633"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/potassium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Tantalum",
+    "colors":  [
+                   "dd585e",
+                   "7f3336"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/tantalum"
+                   }
+}

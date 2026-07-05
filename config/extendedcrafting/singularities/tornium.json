@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Tornium",
+    "colors":  [
+                   "4c4c4c",
+                   "2b2a2b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/tornium"
+                   }
+}

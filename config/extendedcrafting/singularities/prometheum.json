@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Prometheum",
+    "colors":  [
+                   "8bcbd1",
+                   "3a2e3a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/prometheum"
+                   }
+}

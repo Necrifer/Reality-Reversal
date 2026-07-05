@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Steeleaf",
+    "colors":  [
+                   "5c9148",
+                   "1e3214"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/steeleaf"
+                   }
+}

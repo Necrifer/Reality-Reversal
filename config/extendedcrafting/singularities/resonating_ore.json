@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Resonating Ore",
+    "colors":  [
+                   "df8f8f",
+                   "531818"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/resonating_ore"
+                   }
+}

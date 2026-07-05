@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Vanadium",
+    "colors":  [
+                   "5e6ec0",
+                   "36406e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/vanadium"
+                   }
+}

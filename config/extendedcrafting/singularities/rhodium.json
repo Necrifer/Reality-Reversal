@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Rhodium",
+    "colors":  [
+                   "b96e66",
+                   "6a3f3b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/rhodium"
+                   }
+}

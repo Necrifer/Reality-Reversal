@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Weather Crystal",
+    "colors":  [
+                   "ec8aff",
+                   "6b3e98"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/weather_crystal"
+                   }
+}

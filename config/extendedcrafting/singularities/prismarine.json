@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Prismarine",
+    "colors":  [
+                   "63c5aa",
+                   "2d6c70"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/prismarine"
+                   }
+}

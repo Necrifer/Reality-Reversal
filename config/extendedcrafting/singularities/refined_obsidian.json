@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Refined Obsidian",
+    "colors":  [
+                   "2f2251",
+                   "241a3e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/refined_obsidian"
+                   }
+}

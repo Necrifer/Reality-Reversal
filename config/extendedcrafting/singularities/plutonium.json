@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Plutonium",
+    "colors":  [
+                   "a3c3a7",
+                   "5d8d64"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/plutonium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Pulsating Alloy",
+    "colors":  [
+                   "86f5b2",
+                   "38605b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/pulsating_alloy"
+                   }
+}

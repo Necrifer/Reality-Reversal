@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Sky Steel",
+    "colors":  [
+                   "313431",
+                   "161717"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/sky_steel"
+                   }
+}

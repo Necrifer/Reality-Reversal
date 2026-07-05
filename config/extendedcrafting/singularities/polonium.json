@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Polonium",
+    "colors":  [
+                   "664077",
+                   "3b2444"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/polonium"
+                   }
+}

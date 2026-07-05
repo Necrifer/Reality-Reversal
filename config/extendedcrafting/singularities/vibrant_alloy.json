@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Vibrant Alloy",
+    "colors":  [
+                   "f4fcb9",
+                   "6d894f"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/vibrant_alloy"
+                   }
+}

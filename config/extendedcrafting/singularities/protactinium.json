@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Protactinium",
+    "colors":  [
+                   "76bf60",
+                   "446e37"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/protactinium"
+                   }
+}

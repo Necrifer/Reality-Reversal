@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Vibrant Crystal",
+    "colors":  [
+                   "eefeb6",
+                   "5d7d4a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/vibrant_crystal"
+                   }
+}

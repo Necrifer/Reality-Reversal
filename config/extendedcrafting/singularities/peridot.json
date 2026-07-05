@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Peridot",
+    "colors":  [
+                   "f0f761",
+                   "527002"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/peridot"
+                   }
+}

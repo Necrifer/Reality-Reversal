@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Tungstensteel",
+    "colors":  [
+                   "77838c",
+                   "232b31"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/tungstensteel"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Redstone Alloy",
+    "colors":  [
+                   "f77558",
+                   "742c27"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/redstone_alloy"
+                   }
+}

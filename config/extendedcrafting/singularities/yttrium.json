@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Yttrium",
+    "colors":  [
+                   "e75fb8",
+                   "853769"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/yttrium"
+                   }
+}

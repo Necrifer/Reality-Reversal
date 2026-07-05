@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Sky Osmium",
+    "colors":  [
+                   "aa88ae",
+                   "302c42"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/sky_osmium"
+                   }
+}

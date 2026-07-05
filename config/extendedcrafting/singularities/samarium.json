@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Samarium",
+    "colors":  [
+                   "e7e556",
+                   "858331"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/samarium"
+                   }
+}

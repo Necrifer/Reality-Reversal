@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ouranium",
+    "colors":  [
+                   "4c757c",
+                   "1c454c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ouranium"
+                   }
+}

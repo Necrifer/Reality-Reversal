@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Salt",
+    "colors":  [
+                   "e1e6e9",
+                   "b3b7b9"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/salt"
+                   }
+}

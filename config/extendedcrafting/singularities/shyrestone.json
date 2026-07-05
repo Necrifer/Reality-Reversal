@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Shyrestone",
+    "colors":  [
+                   "b5edff",
+                   "2d3677"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/shyrestone"
+                   }
+}

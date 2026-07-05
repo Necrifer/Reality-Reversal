@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ornamyte",
+    "colors":  [
+                   "9f9f9f",
+                   "333333"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/ornamyte"
+                   }
+}

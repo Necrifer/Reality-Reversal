@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Zirconium",
+    "colors":  [
+                   "caefc2",
+                   "74896f"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/zirconium"
+                   }
+}

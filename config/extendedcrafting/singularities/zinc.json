@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Zinc",
+    "colors":  [
+                   "c8e0de",
+                   "7f92a2"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/zinc"
+                   }
+}

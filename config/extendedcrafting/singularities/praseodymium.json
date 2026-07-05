@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Praseodymium",
+    "colors":  [
+                   "6fed75",
+                   "408843"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/praseodymium"
+                   }
+}

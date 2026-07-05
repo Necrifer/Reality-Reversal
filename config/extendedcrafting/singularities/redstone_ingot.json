@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Redstone Ingot",
+    "colors":  [
+                   "ba0b01",
+                   "3d0400"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/redstone_ingot"
+                   }
+}
