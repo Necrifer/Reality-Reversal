@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Actinium",
+    "colors":  [
+                   "6fb8ed",
+                   "406a88"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/actinium"
+                   }
+}

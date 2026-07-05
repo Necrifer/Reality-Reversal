@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Cadmium",
+    "colors":  [
+                   "d0686d",
+                   "773c3e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/cadmium"
+                   }
+}

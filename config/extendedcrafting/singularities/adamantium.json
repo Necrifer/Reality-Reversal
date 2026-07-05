@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Adamantium",
+    "colors":  [
+                   "65e885",
+                   "1f5c2d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/adamantium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Chromium",
+    "colors":  [
+                   "475857",
+                   "293332"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/chromium"
+                   }
+}

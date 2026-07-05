@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Cinnabar",
+    "colors":  [
+                   "bb6166",
+                   "6b2e32"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/cinnabar"
+                   }
+}

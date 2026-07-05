@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Cyanite",
+    "colors":  [
+                   "b5e6ff",
+                   "205885"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/cyanite"
+                   }
+}

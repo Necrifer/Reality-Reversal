@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Cesium",
+    "colors":  [
+                   "c2dd67",
+                   "6f7f3b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/cesium"
+                   }
+}

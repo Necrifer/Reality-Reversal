@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Baronyte",
+    "colors":  [
+                   "f79658",
+                   "5f0f20"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/baronyte"
+                   }
+}

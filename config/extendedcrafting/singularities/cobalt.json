@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Cobalt",
+    "colors":  [
+                   "5f5fef",
+                   "373789"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/cobalt"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Draconium",
+    "colors":  [
+                   "bc8ee3",
+                   "21044d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/draconium"
+                   }
+}

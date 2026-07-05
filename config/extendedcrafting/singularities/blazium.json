@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Blazium",
+    "colors":  [
+                   "f6d678",
+                   "641b20"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/blazium"
+                   }
+}

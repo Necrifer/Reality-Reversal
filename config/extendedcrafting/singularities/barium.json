@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Barium",
+    "colors":  [
+                   "baecdd",
+                   "6b887f"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/barium"
+                   }
+}

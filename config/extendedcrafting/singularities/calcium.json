@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Calcium",
+    "colors":  [
+                   "d1c9ba",
+                   "78736b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/calcium"
+                   }
+}

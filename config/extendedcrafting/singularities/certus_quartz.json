@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Certus Quartz",
+    "colors":  [
+                   "b6e6ff",
+                   "4a8fb3"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/certus_quartz"
+                   }
+}

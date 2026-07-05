@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Crystallite",
+    "colors":  [
+                   "fbd27d",
+                   "ac3a2d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/crystallite"
+                   }
+}

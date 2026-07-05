@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Biosteel",
+    "colors":  [
+                   "b6c8b0",
+                   "243f27"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/biosteel"
+                   }
+}

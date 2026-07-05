@@ -1,10 +1,10 @@
-{
-  "name": "singularity.extendedcrafting.aluminum",
-  "colors": [
-    "caccda",
-    "9a9ca6"
-  ],
-  "ingredient": {
-    "tag": "c:ingots/aluminum"
-  }
+﻿{
+    "name":  "Aluminum",
+    "colors":  [
+                   "e5eced",
+                   "5f717b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/aluminum"
+                   }
 }

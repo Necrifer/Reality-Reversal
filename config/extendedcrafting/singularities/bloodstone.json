@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Bloodstone",
+    "colors":  [
+                   "ef7c46",
+                   "501d2f"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/bloodstone"
+                   }
+}

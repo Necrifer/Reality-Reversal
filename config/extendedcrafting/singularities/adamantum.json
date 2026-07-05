@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Adamantum",
+    "colors":  [
+                   "d5a086",
+                   "7e5525"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/adamantum"
+                   }
+}

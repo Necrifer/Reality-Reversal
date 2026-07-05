@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Desh",
+    "colors":  [
+                   "e7b75b",
+                   "923e3d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/desh"
+                   }
+}

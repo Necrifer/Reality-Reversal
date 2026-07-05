@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Coal Coke",
+    "colors":  [
+                   "5a626f",
+                   "3b4049"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/coal_coke"
+                   }
+}

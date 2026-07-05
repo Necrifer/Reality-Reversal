@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Conductive Alloy",
+    "colors":  [
+                   "efc6ac",
+                   "926051"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/conductive_alloy"
+                   }
+}
