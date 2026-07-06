@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Awakened Draconium",
+    "colors":  [
+                   "9bd586",
+                   "2b7e25"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/draconium_awakened"
+                   }
+}

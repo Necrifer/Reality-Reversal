@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Erbium",
+    "colors":  [
+                   "d65265",
+                   "7b2f3a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/erbium"
+                   }
+}

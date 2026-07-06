@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Adamant",
+    "colors":  [
+                   "afdcf0",
+                   "0d2048"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/adamant"
+                   }
+}

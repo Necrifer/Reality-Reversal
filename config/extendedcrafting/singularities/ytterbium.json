@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ytterbium",
+    "colors":  [
+                   "d8d8d1",
+                   "7c7c78"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ytterbium"
+                   }
+}

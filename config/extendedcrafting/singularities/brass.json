@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Brass",
+    "colors":  [
+                   "f8ca5e",
+                   "8e571c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/brass"
+                   }
+}

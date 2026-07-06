@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Radium",
+    "colors":  [
+                   "74ce68",
+                   "43763c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/radium"
+                   }
+}

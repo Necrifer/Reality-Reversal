@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ruby",
+    "colors":  [
+                   "e68380",
+                   "581614"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/ruby"
+                   }
+}

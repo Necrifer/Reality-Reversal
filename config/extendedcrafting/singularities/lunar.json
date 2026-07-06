@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lunar",
+    "colors":  [
+                   "f07fd8",
+                   "4c2564"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/lunar"
+                   }
+}

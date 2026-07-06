@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Sky Bronze",
+    "colors":  [
+                   "af915a",
+                   "3c130c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/sky_bronze"
+                   }
+}

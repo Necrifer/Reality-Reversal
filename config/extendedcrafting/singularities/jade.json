@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Jade",
+    "colors":  [
+                   "7fbf5a",
+                   "1d3232"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/jade"
+                   }
+}

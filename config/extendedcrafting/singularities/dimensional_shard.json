@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Dimensional Shard",
+    "colors":  [
+                   "d6e6ea",
+                   "517f8a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/dimensional_shard"
+                   }
+}

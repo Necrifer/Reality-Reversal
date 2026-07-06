@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Titanium",
+    "colors":  [
+                   "606eef",
+                   "373f89"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/titanium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Jewelyte",
+    "colors":  [
+                   "34d851",
+                   "00270b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/jewelyte"
+                   }
+}

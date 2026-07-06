@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Soularium",
+    "colors":  [
+                   "8a7253",
+                   "342e24"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/soularium"
+                   }
+}

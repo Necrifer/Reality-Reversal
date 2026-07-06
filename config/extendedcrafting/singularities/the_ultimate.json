@@ -1,0 +1,10 @@
+﻿{
+    "name":  "The Ultimate",
+    "colors":  [
+                   "f8f8f8",
+                   "838383"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/the_ultimate"
+                   }
+}

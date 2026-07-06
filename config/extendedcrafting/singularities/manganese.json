@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Manganese",
+    "colors":  [
+                   "bad8b8",
+                   "6b7c6a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/manganese"
+                   }
+}

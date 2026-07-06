@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Source",
+    "colors":  [
+                   "d791ea",
+                   "65157c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/source"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Dysprosium",
+    "colors":  [
+                   "5e7749",
+                   "36442a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/dysprosium"
+                   }
+}

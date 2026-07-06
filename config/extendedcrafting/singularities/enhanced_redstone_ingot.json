@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Enhanced Redstone Ingot",
+    "colors":  [
+                   "ba4801",
+                   "3d1800"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/enhanced_redstone_ingot"
+                   }
+}

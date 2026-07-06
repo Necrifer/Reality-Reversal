@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Supremium",
+    "colors":  [
+                   "df0000",
+                   "7e0000"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/supremium"
+                   }
+}

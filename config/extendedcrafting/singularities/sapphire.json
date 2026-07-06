@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Sapphire",
+    "colors":  [
+                   "7491d5",
+                   "152241"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/sapphire"
+                   }
+}

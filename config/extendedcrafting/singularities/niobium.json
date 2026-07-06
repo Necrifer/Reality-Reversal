@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Niobium",
+    "colors":  [
+                   "6f484f",
+                   "40292d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/niobium"
+                   }
+}

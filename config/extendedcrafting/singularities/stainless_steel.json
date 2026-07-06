@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Stainless Steel",
+    "colors":  [
+                   "adb9cf",
+                   "96a6c2"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/stainless_steel"
+                   }
+}

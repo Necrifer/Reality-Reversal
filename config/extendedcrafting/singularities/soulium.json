@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Soulium",
+    "colors":  [
+                   "975c40",
+                   "21150e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/soulium"
+                   }
+}

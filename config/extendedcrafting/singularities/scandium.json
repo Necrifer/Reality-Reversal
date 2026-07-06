@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Scandium",
+    "colors":  [
+                   "ecef60",
+                   "888937"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/scandium"
+                   }
+}

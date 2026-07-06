@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Gemenyte",
+    "colors":  [
+                   "4bf38d",
+                   "006722"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/gemenyte"
+                   }
+}

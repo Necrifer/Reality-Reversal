@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Tertium",
+    "colors":  [
+                   "e24a00",
+                   "6d2900"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/tertium"
+                   }
+}

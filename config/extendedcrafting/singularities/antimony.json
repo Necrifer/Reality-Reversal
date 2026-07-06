@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Antimony",
+    "colors":  [
+                   "ffffff",
+                   "141414"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/antimony"
+                   }
+}

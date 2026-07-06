@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Black Iron",
+    "colors":  [
+                   "949494",
+                   "171717"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/black_iron"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Emberstone",
+    "colors":  [
+                   "bf8451",
+                   "422d32"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/emberstone"
+                   }
+}

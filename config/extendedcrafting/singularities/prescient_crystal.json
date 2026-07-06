@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Prescient Crystal",
+    "colors":  [
+                   "bef9c7",
+                   "206744"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/prescient_crystal"
+                   }
+}

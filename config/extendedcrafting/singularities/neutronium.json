@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Neutronium",
+    "colors":  [
+                   "9ea2b7",
+                   "171717"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/neutronium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Palladium",
+    "colors":  [
+                   "6d4156",
+                   "3e2531"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/palladium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ornium",
+    "colors":  [
+                   "5c3d6d",
+                   "3b1c4c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ornium"
+                   }
+}

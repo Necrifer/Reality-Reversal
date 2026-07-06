@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Limonite",
+    "colors":  [
+                   "f5b165",
+                   "6e2333"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/limonite"
+                   }
+}

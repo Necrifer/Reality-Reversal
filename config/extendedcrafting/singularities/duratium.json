@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Duratium",
+    "colors":  [
+                   "8a78a0",
+                   "120d17"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/duratium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Beryllium",
+    "colors":  [
+                   "5ed676",
+                   "367b44"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/beryllium"
+                   }
+}

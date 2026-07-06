@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Constantan",
+    "colors":  [
+                   "edd36b",
+                   "8e7741"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/constantan"
+                   }
+}

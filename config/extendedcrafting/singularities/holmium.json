@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Holmium",
+    "colors":  [
+                   "486051",
+                   "29372e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/holmium"
+                   }
+}

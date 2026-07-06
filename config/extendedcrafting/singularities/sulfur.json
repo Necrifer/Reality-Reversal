@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Sulfur",
+    "colors":  [
+                   "e6db87",
+                   "bfae2c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/sulfur"
+                   }
+}

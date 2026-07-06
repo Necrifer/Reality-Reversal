@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Bismuth",
+    "colors":  [
+                   "75c8b8",
+                   "43736a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/bismuth"
+                   }
+}

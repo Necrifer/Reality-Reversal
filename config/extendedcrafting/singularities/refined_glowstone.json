@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Refined Glowstone",
+    "colors":  [
+                   "fde3ba",
+                   "f8b340"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/refined_glowstone"
+                   }
+}

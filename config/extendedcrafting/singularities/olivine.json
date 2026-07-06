@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Olivine",
+    "colors":  [
+                   "b5d678",
+                   "3f5207"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/olivine"
+                   }
+}

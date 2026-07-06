@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Thorium",
+    "colors":  [
+                   "59416f",
+                   "332540"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/thorium"
+                   }
+}

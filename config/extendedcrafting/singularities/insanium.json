@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Insanium",
+    "colors":  [
+                   "7b03c4",
+                   "3c0059"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/insanium"
+                   }
+}

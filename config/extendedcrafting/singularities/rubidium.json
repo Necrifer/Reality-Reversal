@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Rubidium",
+    "colors":  [
+                   "dfbfed",
+                   "806e88"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/rubidium"
+                   }
+}

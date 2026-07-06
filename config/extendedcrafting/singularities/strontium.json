@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Strontium",
+    "colors":  [
+                   "5266ce",
+                   "2f3b76"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/strontium"
+                   }
+}

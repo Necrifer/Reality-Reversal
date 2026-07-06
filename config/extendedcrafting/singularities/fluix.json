@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Fluix",
+    "colors":  [
+                   "b77dff",
+                   "4470dd"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/fluix"
+                   }
+}

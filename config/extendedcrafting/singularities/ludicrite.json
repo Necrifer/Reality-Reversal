@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ludicrite",
+    "colors":  [
+                   "ba65e6",
+                   "450f60"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ludicrite"
+                   }
+}

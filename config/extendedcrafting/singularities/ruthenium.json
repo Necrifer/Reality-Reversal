@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ruthenium",
+    "colors":  [
+                   "6e5960",
+                   "3f3337"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ruthenium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Shyregem",
+    "colors":  [
+                   "63f8f3",
+                   "01a6a2"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/shyregem"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Carminite",
+    "colors":  [
+                   "c22929",
+                   "340000"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/carminite"
+                   }
+}

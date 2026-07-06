@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Crystaltine",
+    "colors":  [
+                   "a8e2fb",
+                   "3f96b8"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/crystaltine"
+                   }
+}

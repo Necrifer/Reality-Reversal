@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Indium",
+    "colors":  [
+                   "b9b877",
+                   "6a6944"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/indium"
+                   }
+}

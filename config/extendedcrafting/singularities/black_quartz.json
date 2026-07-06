@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Black Quartz",
+    "colors":  [
+                   "495d68",
+                   "101118"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/black_quartz"
+                   }
+}

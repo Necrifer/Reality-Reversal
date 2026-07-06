@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Infused Entro",
+    "colors":  [
+                   "b486d5",
+                   "6b257e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/infused_entro"
+                   }
+}

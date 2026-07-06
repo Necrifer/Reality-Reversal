@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Dark Steel",
+    "colors":  [
+                   "6f6b71",
+                   "272627"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/dark_steel"
+                   }
+}

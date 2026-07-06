@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Tungsten",
+    "colors":  [
+                   "686e76",
+                   "3c3f44"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/tungsten"
+                   }
+}

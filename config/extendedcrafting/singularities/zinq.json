@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Zinq",
+    "colors":  [
+                   "d586cf",
+                   "7e2567"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/zinq"
+                   }
+}

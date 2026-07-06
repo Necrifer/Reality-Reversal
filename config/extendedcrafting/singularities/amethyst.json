@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Amethyst",
+    "colors":  [
+                   "c98cff",
+                   "68439a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/amethyst"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Elecanium",
+    "colors":  [
+                   "60b2c9",
+                   "2f4f52"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/elecanium"
+                   }
+}

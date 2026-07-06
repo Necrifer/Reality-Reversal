@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Wrought Iron",
+    "colors":  [
+                   "d586b0",
+                   "7e2543"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/wrought_iron"
+                   }
+}

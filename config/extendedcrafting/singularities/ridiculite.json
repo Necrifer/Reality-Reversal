@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ridiculite",
+    "colors":  [
+                   "eec9f2",
+                   "694a6f"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ridiculite"
+                   }
+}

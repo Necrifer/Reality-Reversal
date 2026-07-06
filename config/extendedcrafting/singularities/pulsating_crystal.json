@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Pulsating Crystal",
+    "colors":  [
+                   "93fce3",
+                   "168379"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/pulsating_crystal"
+                   }
+}

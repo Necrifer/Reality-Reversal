@@ -1,0 +1,10 @@
+﻿{
+    "name":  "End Steel",
+    "colors":  [
+                   "dadda3",
+                   "71714d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/end_steel"
+                   }
+}

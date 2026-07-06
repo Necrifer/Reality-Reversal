@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Thallium",
+    "colors":  [
+                   "744f41",
+                   "432d25"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/thallium"
+                   }
+}

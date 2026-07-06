@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Aluminium",
+    "colors":  [
+                   "bab9b9",
+                   "908f8e"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/aluminium"
+                   }
+}

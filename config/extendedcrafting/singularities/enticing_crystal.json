@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Enticing Crystal",
+    "colors":  [
+                   "a4fcd4",
+                   "2aa993"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/enticing_crystal"
+                   }
+}

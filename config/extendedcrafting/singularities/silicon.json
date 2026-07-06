@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Silicon",
+    "colors":  [
+                   "fafafa",
+                   "141414"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/silicon"
+                   }
+}

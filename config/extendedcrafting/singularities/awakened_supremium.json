@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Awakened Supremium",
+    "colors":  [
+                   "df8200",
+                   "7e4a00"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/awakened_supremium"
+                   }
+}

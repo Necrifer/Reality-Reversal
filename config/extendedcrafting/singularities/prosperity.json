@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Prosperity",
+    "colors":  [
+                   "e6fcfc",
+                   "6d8b8b"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/prosperity"
+                   }
+}

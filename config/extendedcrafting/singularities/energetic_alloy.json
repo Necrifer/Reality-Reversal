@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Energetic Alloy",
+    "colors":  [
+                   "fdc373",
+                   "a05027"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/energetic_alloy"
+                   }
+}

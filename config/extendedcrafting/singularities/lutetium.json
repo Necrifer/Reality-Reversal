@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lutetium",
+    "colors":  [
+                   "c84841",
+                   "732925"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/lutetium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Imperium",
+    "colors":  [
+                   "0089e3",
+                   "004a81"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/imperium"
+                   }
+}

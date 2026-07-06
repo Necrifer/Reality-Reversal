@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Chrome",
+    "colors":  [
+                   "f5f3f3",
+                   "ab8d93"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/chrome"
+                   }
+}

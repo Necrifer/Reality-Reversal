@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Uranum",
+    "colors":  [
+                   "d5c986",
+                   "7a7e25"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/uranum"
+                   }
+}

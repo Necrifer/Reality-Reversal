@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Gallium",
+    "colors":  [
+                   "d6ddb8",
+                   "7b7f6a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/gallium"
+                   }
+}

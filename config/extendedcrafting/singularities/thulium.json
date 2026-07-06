@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Thulium",
+    "colors":  [
+                   "52d042",
+                   "2f7726"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/thulium"
+                   }
+}

@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Platinium",
+    "colors":  [
+                   "86d5af",
+                   "257e65"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/platinium"
+                   }
+}

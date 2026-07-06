@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Niter",
+    "colors":  [
+                   "c5bbc7",
+                   "9f90a3"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/niter"
+                   }
+}

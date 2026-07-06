@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Varsium",
+    "colors":  [
+                   "e3b573",
+                   "481f2d"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/varsium"
+                   }
+}

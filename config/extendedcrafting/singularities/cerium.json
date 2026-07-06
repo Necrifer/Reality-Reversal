@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Cerium",
+    "colors":  [
+                   "5f6558",
+                   "373a33"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/cerium"
+                   }
+}

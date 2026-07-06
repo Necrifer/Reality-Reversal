@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Skeletal",
+    "colors":  [
+                   "d5cdbf",
+                   "55423c"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/skeletal"
+                   }
+}

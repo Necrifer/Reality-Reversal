@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Iridium",
+    "colors":  [
+                   "d4d0cd",
+                   "5e5958"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/iridium"
+                   }
+}

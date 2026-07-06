@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Yellorium",
+    "colors":  [
+                   "ede27c",
+                   "5a5501"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/yellorium"
+                   }
+}

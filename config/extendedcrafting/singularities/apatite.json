@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Apatite",
+    "colors":  [
+                   "51a3cc",
+                   "143242"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/apatite"
+                   }
+}

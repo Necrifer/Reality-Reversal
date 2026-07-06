@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Graphite",
+    "colors":  [
+                   "a9a9ab",
+                   "38383a"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/graphite"
+                   }
+}

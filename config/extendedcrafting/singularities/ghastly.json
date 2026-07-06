@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Ghastly",
+    "colors":  [
+                   "d4e690",
+                   "1f4b29"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/ghastly"
+                   }
+}

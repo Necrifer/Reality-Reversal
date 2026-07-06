@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Molybdenum",
+    "colors":  [
+                   "6676d0",
+                   "3b4477"
+               ],
+    "ingredient":  {
+                       "tag":  "c:ingots/molybdenum"
+                   }
+}

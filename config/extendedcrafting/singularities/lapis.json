@@ -1,0 +1,10 @@
+﻿{
+    "name":  "Lapis Lazuli",
+    "colors":  [
+                   "315bc4",
+                   "172657"
+               ],
+    "ingredient":  {
+                       "tag":  "c:gems/lapis"
+                   }
+}
