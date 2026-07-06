@@ -25,3 +25,8 @@
 	[<item:minecraft:air>, <item:mekanism:alloy_atomic>, <item:mekanism:ingot_refined_obsidian>, <item:minecraft:air>, <item:dimdoors:amalgam_lump>, <item:minecraft:air>, <item:dimdoors:solid_static>, <item:projecte:red_matter>, <item:minecraft:air>], 
 	[<item:mekanism:alloy_atomic>, <item:mekanism:ingot_refined_obsidian>, <item:minecraft:air>, <item:minecraft:air>, <item:dimdoors:amalgam_lump>, <item:minecraft:air>, <item:minecraft:air>, <item:dimdoors:solid_static>, <item:projecte:red_matter>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("wrought_iron_bar", 2, <item:twilightforest:wrought_iron_bar> * 2, [
+	[<item:twilightforest:naga_scale>, <item:twilightforest:naga_scale>, <item:twilightforest:carminite>, <item:twilightforest:exanimate_essence>, <item:twilightforest:exanimate_essence>], 
+	[<item:twilightforest:fiery_ingot>, <item:twilightforest:fiery_blood>, <item:enderio:dark_steel_ingot>, <item:twilightforest:fiery_blood>, <item:twilightforest:fiery_ingot>], 
+	[<item:twilightforest:steeleaf_ingot>, <item:twilightforest:steeleaf_ingot>, <item:twilightforest:carminite>, <item:twilightforest:knightmetal_ingot>, <item:twilightforest:knightmetal_ingot>]
+]);
