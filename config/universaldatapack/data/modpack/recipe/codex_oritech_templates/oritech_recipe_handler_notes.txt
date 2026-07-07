@@ -1,0 +1,100 @@
+Oritech recipe handler notes
+Source checked: oritech-neoforge-1.21.1-1.2.8.jar, data/oritech/recipe/*.json
+
+Shared JSON fields
+- type: Oritech recipe type id.
+- ingredients: array of item ingredients. Use {"item":"mod:item"} for exact items or {"tag":"c:tag/path"} for tags.
+- results: array of item stacks. Use {"id":"mod:item","count":1}. Empty array is used by generator/fuel handlers.
+- time: integer processing time used by the handler.
+- fluidInput: optional object. Use {"fluid":"mod:fluid"} or {"fluid":"#c:fluid_tag"}; some handlers also include "amount".
+- fluidOutputs: optional array of fluid stacks. Use {"fluid":"mod:fluid","amount":100}.
+
+Handler templates
+- oritech:assembler
+  Inputs: multiple item ingredients; examples use four ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:atomic_forge
+  Inputs: multiple item ingredients; examples use three ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:bio_generator
+  Inputs: item ingredients, commonly fuel tags such as c:fuels/bio.
+  Outputs: no item results in bundled examples.
+  Extra fields: time as burn/generation duration.
+
+- oritech:centrifuge
+  Inputs: item ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:centrifuge_fluid
+  Inputs: fluidInput plus optional item ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:cooler
+  Inputs: fluidInput; bundled examples may have no item ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:deep_drill
+  Inputs: resource node item ingredients such as oritech:resource_node_coal.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:foundry
+  Inputs: item ingredients, commonly two or more alloy components.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:fuel_generator
+  Inputs: fluidInput with amount and fluid id/tag.
+  Outputs: no item results in bundled examples.
+  Extra fields: time as fuel/generation duration.
+
+- oritech:grinder
+  Inputs: item ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:laser
+  Inputs: item ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:lava_generator
+  Inputs: fluidInput with amount and fluid id.
+  Outputs: no item results in bundled examples.
+  Extra fields: time as fuel/generation duration.
+
+- oritech:particle_collision
+  Inputs: item ingredients, often repeated ingredients for collision recipes.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:pulverizer
+  Inputs: item ingredients.
+  Outputs: item results.
+  Extra fields: time.
+
+- oritech:reactor
+  Inputs: item fuel ingredients such as uranium pellets.
+  Outputs: no item results in bundled examples.
+  Extra fields: time as fuel/generation duration.
+
+- oritech:refinery
+  Inputs: fluidInput plus optional catalyst item ingredients.
+  Outputs: fluidOutputs; bundled examples have no item results.
+  Extra fields: time.
+
+- oritech:steam_engine
+  Inputs: fluidInput with amount and fluid id/tag, commonly steam.
+  Outputs: no item results in bundled examples.
+  Extra fields: time as fuel/generation duration.
+
+KubeJS usage
+- The companion JavaScript file uses event.custom(...) so it does not require a dedicated Oritech KubeJS builder.
+- The enable flag is false by default, so adding the file does not create active recipes until deliberately enabled.

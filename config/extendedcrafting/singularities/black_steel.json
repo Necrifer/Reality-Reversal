@@ -1,0 +1,10 @@
+{
+    "name": "Black Steel Ingot",
+    "colors": [
+        "2d313d",
+        "969cad"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/black_steel"
+    }
+}

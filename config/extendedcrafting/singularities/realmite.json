@@ -1,0 +1,10 @@
+{
+    "name": "Realmite Ingot",
+    "colors": [
+        "c1671b",
+        "ffe07c"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/realmite"
+    }
+}

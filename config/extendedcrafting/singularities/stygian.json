@@ -1,0 +1,10 @@
+{
+    "name": "Stygian Ingot",
+    "colors": [
+        "d0b0d0",
+        "341f34"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/stygian"
+    }
+}

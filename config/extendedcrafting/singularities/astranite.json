@@ -1,0 +1,10 @@
+{
+    "name": "Astranite Ingot",
+    "colors": [
+        "ffdf9d",
+        "715e43"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/astranite"
+    }
+}

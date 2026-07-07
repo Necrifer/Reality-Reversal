@@ -1,0 +1,10 @@
+{
+    "name": "Hellstone Ingot",
+    "colors": [
+        "673521",
+        "a68468"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/hellstone"
+    }
+}

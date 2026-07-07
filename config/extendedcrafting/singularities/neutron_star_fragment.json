@@ -1,0 +1,10 @@
+{
+    "name": "Neutron Star Fragment Ingot",
+    "colors": [
+        "025067",
+        "72a0dd"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/neutron_star_fragment"
+    }
+}

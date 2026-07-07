@@ -1,0 +1,10 @@
+{
+    "name": "Stratus Ingot",
+    "colors": [
+        "edc3dc",
+        "673c79"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/stratus"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Crystal Matrix Ingot",
+    "colors": [
+        "f8f9d4",
+        "1a5b57"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/crystal_matrix"
+    }
+}

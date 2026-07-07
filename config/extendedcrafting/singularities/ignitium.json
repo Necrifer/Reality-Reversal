@@ -1,0 +1,10 @@
+{
+    "name": "Ignitium Ingot",
+    "colors": [
+        "893605",
+        "fffd6e"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/ignitium"
+    }
+}

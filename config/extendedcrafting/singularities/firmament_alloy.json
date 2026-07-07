@@ -1,0 +1,10 @@
+{
+    "name": "Firmament Alloy Ingot",
+    "colors": [
+        "677a7c",
+        "f9fdfc"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/firmament_alloy"
+    }
+}

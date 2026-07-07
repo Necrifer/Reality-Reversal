@@ -1,0 +1,10 @@
+{
+    "name": "White Dwarf Fragment Ingot",
+    "colors": [
+        "d3c5b1",
+        "705e58"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/white_dwarf_fragment"
+    }
+}

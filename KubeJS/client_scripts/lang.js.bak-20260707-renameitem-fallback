@@ -1,0 +1,3 @@
+ClientEvents.lang('en_us', (event) => {
+    event.add('item.twilightforest.wrought_iron_bar', 'Twilight dipped Ingot');
+})

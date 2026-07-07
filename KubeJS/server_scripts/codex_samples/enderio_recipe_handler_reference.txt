@@ -1,0 +1,109 @@
+EnderIO recipe handler reference for Minecraft 1.21.1 NeoForge
+
+Source checked:
+- enderio-8.2.11-beta.jar bundled recipe JSON.
+- kubejs_enderio-neoforge-1.21.1-0.12.0.jar recipe schema class names and field constants.
+- Instance dump listed the recipe types below.
+
+General KubeJS removal patterns:
+- Remove one recipe by id: event.remove({ id: 'enderio:alloy_smelting/pulsating_alloy_ingot' })
+- Remove every recipe of a type: event.remove({ type: 'enderio:alloy_smelting' })
+- Remove by output where supported by the recipe manager: event.remove({ output: 'enderio:pulsating_alloy_ingot' })
+
+General addition pattern:
+- Use event.custom({ type: 'enderio:<handler>', ... }).id('kubejs:enderio/<handler>/<name>')
+- Item outputs use { count: <number>, id: '<item id>' }.
+- Item inputs usually accept { item: '<item id>' } or { tag: '<item tag>' }.
+- Sized item inputs use { count: <number>, item: '<item id>' } or { count: <number>, tag: '<item tag>' }.
+- Fluid inputs/outputs use { amount: <millibuckets>, id: '<fluid id>' } for stacks, or { amount: <millibuckets>, fluid: '<fluid id>' } / { amount: <millibuckets>, tag: '<fluid tag>' } where the recipe expects a fluid ingredient.
+
+enderio:alloy_smelting
+- Machine: Alloy Smelter.
+- Fields: energy, experience, inputs, output.
+- inputs: list of sized ingredients.
+- output: item stack.
+- Example source: data/enderio/recipe/alloy_smelting/pulsating_alloy_ingot.json.
+
+enderio:enchanting
+- Machine: Enchanter.
+- Fields: cost_multiplier, enchantment, input.
+- enchantment: enchantment id string, such as minecraft:unbreaking.
+- input: sized ingredient.
+- Example source: data/enderio/recipe/enchanting/sweeping_edge.json.
+
+enderio:fire_crafting
+- World recipe for Infinity-style fire crafting.
+- Fields: base_blocks, base_tags, block_after_burning, dimensions, results.
+- base_blocks: list of block ids.
+- base_tags: list of block tag ids.
+- block_after_burning: block id left after the fire craft.
+- dimensions: list of dimension ids.
+- results: list of weighted item outputs with chance, min_count, max_count, result.
+- Example source: data/enderio/recipe/fire_crafting/deepslate_infinity.json.
+
+enderio:painting
+- Machine: Painting Machine.
+- Fields: input, output.
+- input: ingredient.
+- output: item stack.
+- Example source: data/enderio/recipe/painting/painted_crafting_table.json.
+
+enderio:shaped_entity_storage
+- Machine: Powered Spawner crafting recipe with entity-storage awareness.
+- Fields: category, pattern, key, result.
+- pattern: shaped crafting pattern strings.
+- key: shaped ingredient map. Values accept normal item ingredients such as { item: '<item id>' } or { tag: '<item tag>' }.
+- result: item stack. The built-in recipe outputs enderio:powered_spawner.
+- Example source: data/enderio/recipe/powered_spawner.json.
+
+enderio:sag_milling
+- Machine: SAG Mill.
+- Fields: energy, input, outputs, bonus.
+- input: ingredient.
+- outputs: list of entries shaped like { item: <item stack>, chance?: <0.0-1.0> }.
+- bonus: optional bonus behavior. The KubeJS integration exposes multiply_output as a bonus mode.
+- Example source: data/enderio/recipe/sag_milling/uranium_ore.json.
+
+enderio:slicing
+- Machine: Slice and Splice.
+- Fields: energy, inputs, output.
+- inputs: list of six ingredients, read in the Slice and Splice slot order.
+- output: item stack.
+- Example source: data/enderio/recipe/slicing/ender_resonator.json.
+
+enderio:soul_binding
+- Machine: Soul Binder.
+- Fields: energy, experience, input, output, entity_type.
+- input: ingredient. EnderIO also supports custom ingredient types such as { type: 'enderio:any_soul_storage', item: 'enderio:broken_spawner' } in built-in data.
+- output: item stack.
+- entity_type: entity id string when the recipe binds a specific entity.
+- Example source: data/enderio/recipe/soulbinding/broken_spawner.json.
+
+enderio:tank
+- Machine/storage behavior: Fluid Tank fill and empty recipes.
+- Fields: mode, fluid, input, output.
+- mode: fill or empty.
+- fluid: sized fluid ingredient, usually { amount: <mb>, id: '<fluid id>' } or { amount: <mb>, tag: '<fluid tag>' }.
+- input: ingredient.
+- output: item stack.
+- Example sources: data/enderio/recipe/tank_fill/experience_bottle.json and data/enderio/recipe/tank_empty/glass_bottle.json.
+
+enderio:vat_fermenting
+- Machine: Vat.
+- Fields: ticks, input, left_reagent, right_reagent, output.
+- input: sized fluid ingredient.
+- left_reagent/right_reagent: item tag ids used as Vat reagents by EnderIO.
+- output: fluid stack.
+- Example source: data/enderio/recipe/fermenting/fluid_hootch_still.json.
+
+enderio:weather_change
+- Machine: Weather Obelisk.
+- Fields: mode, fluid.
+- mode: clear or rain in built-in data.
+- fluid: fluid stack consumed for the weather change.
+- Example sources: data/enderio/recipe/clear.json and data/enderio/recipe/rain.json.
+
+Notes and cautions:
+- EnderIO itself does not expose separate modern config JSON files for machine recipe customization in this instance.
+- The KubeJS EnderIO addon exposes schema classes for alloy smelting, enchanting, fire crafting, painting, SAG milling, slicing, soul binding, tank, and vat fermenting. The shaped_entity_storage and weather_change recipe types exist in EnderIO data; use event.custom for them.
+- Keep sample recipes disabled until intentionally tested. Duplicate ids or duplicate outputs can make JEI/recipe lookup confusing.

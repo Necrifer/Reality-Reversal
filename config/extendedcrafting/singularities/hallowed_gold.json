@@ -1,0 +1,10 @@
+{
+    "name": "Hallowed Gold Ingot",
+    "colors": [
+        "fff394",
+        "69231e"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/hallowed_gold"
+    }
+}

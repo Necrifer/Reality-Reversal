@@ -1,0 +1,10 @@
+{
+    "name": "Pulsar Fragment Ingot",
+    "colors": [
+        "1d3712",
+        "304a38"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/pulsar_fragment"
+    }
+}

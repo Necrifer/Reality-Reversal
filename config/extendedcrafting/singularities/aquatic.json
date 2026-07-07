@@ -1,0 +1,10 @@
+{
+    "name": "Aquatic Ingot",
+    "colors": [
+        "a0daf9",
+        "0d4b82"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/aquatic"
+    }
+}

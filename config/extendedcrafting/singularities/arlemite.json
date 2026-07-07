@@ -1,0 +1,10 @@
+{
+    "name": "Arlemite Ingot",
+    "colors": [
+        "70bd4f",
+        "063215"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/arlemite"
+    }
+}

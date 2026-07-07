@@ -1,0 +1,10 @@
+{
+    "name": "Corronium Ingot",
+    "colors": [
+        "00e100",
+        "c4a179"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/corronium"
+    }
+}

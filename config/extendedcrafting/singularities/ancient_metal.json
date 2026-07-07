@@ -1,0 +1,10 @@
+{
+    "name": "Ancient Metal Ingot",
+    "colors": [
+        "b98a3c",
+        "4c1e15"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/ancient_metal"
+    }
+}

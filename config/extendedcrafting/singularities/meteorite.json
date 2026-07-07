@@ -1,0 +1,10 @@
+{
+    "name": "Meteorite Ingot",
+    "colors": [
+        "592d17",
+        "d5840d"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/meteorite"
+    }
+}

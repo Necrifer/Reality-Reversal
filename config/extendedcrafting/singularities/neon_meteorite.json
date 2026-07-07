@@ -1,0 +1,10 @@
+{
+    "name": "Neon Meteorite Ingot",
+    "colors": [
+        "383838",
+        "f400ce"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/neon_meteorite"
+    }
+}

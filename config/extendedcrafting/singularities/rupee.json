@@ -1,0 +1,10 @@
+{
+    "name": "Rupee Ingot",
+    "colors": [
+        "34a1c8",
+        "b5f3f2"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/rupee"
+    }
+}

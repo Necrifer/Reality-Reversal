@@ -1,0 +1,7 @@
+{
+  "type": "neoforge:components",
+  "items": "extendedcrafting:singularity",
+  "components": {
+    "extendedcrafting:singularity_id": "extendedcrafting:diamond"
+  }
+}

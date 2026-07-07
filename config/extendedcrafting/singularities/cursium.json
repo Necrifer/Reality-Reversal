@@ -1,0 +1,10 @@
+{
+    "name": "Cursium Ingot",
+    "colors": [
+        "13584a",
+        "75ffe2"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/cursium"
+    }
+}

@@ -1,0 +1,52 @@
+[05Jul2026 17:39:42.061] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Luricerite: Currently registered dimensions by type:]
+[05Jul2026 17:39:42.062] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Currently registered dimensions by type:
+[05Jul2026 17:39:42.070] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:abyss: Abyss
+[05Jul2026 17:39:42.071] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:apalachia: divinerpg:apalachia
+[05Jul2026 17:39:42.071] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:arcana: divinerpg:arcana
+[05Jul2026 17:39:42.072] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] astral_dimension:astral_dimension: astral_dimension:astral_dimension
+[05Jul2026 17:39:42.072] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:barathos: Barathos
+[05Jul2026 17:39:42.072] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_abyssal_depths_type: cataclysm_dimension:cataclysm_abyssal_depths
+[05Jul2026 17:39:42.074] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_bastion_lost_type: cataclysm_dimension:cataclysm_bastion_lost
+[05Jul2026 17:39:42.075] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_eternal_frosthold_type: cataclysm_dimension:cataclysm_eternal_frosthold
+[05Jul2026 17:39:42.075] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_forge_of_aeons_type: cataclysm_dimension:cataclysm_forge_of_aeons
+[05Jul2026 17:39:42.076] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_infernos_maw_type: cataclysm_dimension:cataclysm_infernos_maw
+[05Jul2026 17:39:42.076] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_pharaohs_bane_type: cataclysm_dimension:cataclysm_pharaohs_bane
+[05Jul2026 17:39:42.077] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_sanctum_fallen_type: cataclysm_dimension:cataclysm_sanctum_fallen
+[05Jul2026 17:39:42.079] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] cataclysm_dimension:cataclysm_souls_anvil_type: cataclysm_dimension:cataclysm_souls_anvil
+[05Jul2026 17:39:42.080] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] rftoolsdim:cavern: rftoolsdim:qweyqe
+[05Jul2026 17:39:42.080] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:celeve: Celeve
+[05Jul2026 17:39:42.080] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:crystevia: Crystevia
+[05Jul2026 17:39:42.081] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] angel_utilities:deep_dark: angel_utilities:deep_dark
+[05Jul2026 17:39:42.081] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:deeplands: Deeplands
+[05Jul2026 17:39:42.081] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] iceandfire:dread_land: iceandfire:dread_land
+[05Jul2026 17:39:42.082] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] woot_revived:drop_simulator_type: woot_revived:drop_simulator
+[05Jul2026 17:39:42.082] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:dustopia: Dustopia
+[05Jul2026 17:39:42.082] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:eden: divinerpg:eden
+[05Jul2026 17:39:42.083] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:iceika: divinerpg:iceika
+[05Jul2026 17:39:42.083] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] stellaris:jupiter: stellaris:jupiter
+[05Jul2026 17:39:42.083] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:lborean: L'Borean
+[05Jul2026 17:39:42.083] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:lelyetia: Lelyetia
+[05Jul2026 17:39:42.083] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] dimdoors:limbo: dimdoors:limbo
+[05Jul2026 17:39:42.084] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] lostcities:lostcity: lostcities:lostcity
+[05Jul2026 17:39:42.085] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] stellaris:mars: stellaris:mars
+[05Jul2026 17:39:42.085] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] stellaris:mercury: stellaris:mercury
+[05Jul2026 17:39:42.085] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] stellaris:moon: stellaris:moon
+[05Jul2026 17:39:42.085] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:mortum: divinerpg:mortum
+[05Jul2026 17:39:42.086] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] rftoolsdim:normal_time: rftoolsdim:primordial, rftoolsdim:131, rftoolsdim:ca, rftoolsdim:infinity, rftoolsdim:primor, rftoolsdim:36
+[05Jul2026 17:39:42.087] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:nowhere: Nowhere
+[05Jul2026 17:39:42.087] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] stellaris:orbit: stellaris:mercury_orbit, stellaris:earth_orbit, stellaris:mars_orbit, stellaris:venus_orbit
+[05Jul2026 17:39:42.087] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] minecraft:overworld: Overworld
+[05Jul2026 17:39:42.088] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] dimdoors:pocket: dimdoors:public_pockets, dimdoors:dungeon_pockets, dimdoors:personal_pockets
+[05Jul2026 17:39:42.088] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aoa3:precasia: Precasia
+[05Jul2026 17:39:42.089] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] mahoutsukai:reality_marble: Reality Marble
+[05Jul2026 17:39:42.089] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] astral_dimension:setback: astral_dimension:setback
+[05Jul2026 17:39:42.089] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:skythern: divinerpg:skythern
+[05Jul2026 17:39:42.089] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] ae2:spatial_storage: AE2 Spatial Storage
+[05Jul2026 17:39:42.090] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] aether:the_aether: The Aether
+[05Jul2026 17:39:42.090] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] minecraft:the_end: The End
+[05Jul2026 17:39:42.090] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] minecraft:the_nether: The Nether
+[05Jul2026 17:39:42.090] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] twilightforest:twilight_forest_type: Twilight Forest
+[05Jul2026 17:39:42.090] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] stellaris:venus: stellaris:venus
+[05Jul2026 17:39:42.091] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:vethea: divinerpg:vethea
+[05Jul2026 17:39:42.091] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] voidscape:void: The Void
+[05Jul2026 17:39:42.091] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] divinerpg:wildwood: divinerpg:wildwood

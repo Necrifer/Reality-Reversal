@@ -1,0 +1,10 @@
+{
+    "name": "Tharsite Ingot",
+    "colors": [
+        "fd8c22",
+        "b60117"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/tharsite"
+    }
+}

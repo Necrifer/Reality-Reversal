@@ -1,0 +1,10 @@
+{
+    "name": "Oxdrite Ingot",
+    "colors": [
+        "554036",
+        "d5a38d"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/oxdrite"
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Phantasmal Ingot",
+    "colors": [
+        "67c7ad",
+        "0c173c"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/ghost"
+    }
+}

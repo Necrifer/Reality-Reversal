@@ -1,0 +1,22 @@
+{
+    "type":  "extendedcrafting:shapeless_table",
+    "tier":  0,
+    "ingredients":  [
+                        {
+                            "item":  "kubejs:compressed_singularity_alpha"
+                        },
+                        {
+                            "item":  "kubejs:compressed_singularity_beta"
+                        },
+                        {
+                            "item":  "kubejs:compressed_singularity_gamma"
+                        }
+                    ],
+    "result":  {
+                   "id":  "extendedcrafting:ultimate_singularity",
+                   "count":  1,
+                   "components":  {
+                                      "minecraft:enchantment_glint_override":  false
+                                  }
+               }
+}

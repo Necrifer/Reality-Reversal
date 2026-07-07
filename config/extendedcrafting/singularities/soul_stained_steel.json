@@ -1,0 +1,10 @@
+{
+    "name": "Soulstained Steel Ingot",
+    "colors": [
+        "31274c",
+        "ffc5e4"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/soul_stained_steel"
+    }
+}

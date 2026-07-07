@@ -1,0 +1,10 @@
+{
+    "name": "Fire Dragonsteel Ingot",
+    "colors": [
+        "a78f8c",
+        "443342"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/dragonsteel_fire"
+    }
+}

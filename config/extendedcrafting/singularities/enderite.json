@@ -1,0 +1,10 @@
+{
+    "name": "Enderite Ingot",
+    "colors": [
+        "343234",
+        "a34db2"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/enderite"
+    }
+}

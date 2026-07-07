@@ -1,0 +1,10 @@
+{
+    "name": "Ice Dragonsteel Ingot",
+    "colors": [
+        "dce7ed",
+        "110f30"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/dragonsteel_ice"
+    }
+}

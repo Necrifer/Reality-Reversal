@@ -1,0 +1,10 @@
+{
+    "name": "Malignant Pewter Ingot",
+    "colors": [
+        "5e4870",
+        "ffeaf7"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/malignant_pewter"
+    }
+}

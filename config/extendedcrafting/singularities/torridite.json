@@ -1,0 +1,10 @@
+{
+    "name": "Torridite Ingot",
+    "colors": [
+        "bb1d1d",
+        "ffae85"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/torridite"
+    }
+}

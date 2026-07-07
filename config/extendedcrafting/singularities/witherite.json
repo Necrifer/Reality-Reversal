@@ -1,0 +1,10 @@
+{
+    "name": "Witherite Ingot",
+    "colors": [
+        "2b2f34",
+        "ee4b31"
+    ],
+    "ingredient": {
+        "tag": "c:ingots/witherite"
+    }
+}
