@@ -24,4 +24,10 @@ ItemEvents.modifyTooltips(event => {
     event.modify('oritech:assembler_block', tooltip => {
         tooltip.insert(1, Text.of('Same as the Foundry. Right click to activate.').green())
     })
+    event.modify('oritech:centrifuge_block', tooltip => {
+        tooltip.insert(1, Text.of('Just require 1 Machine Core.').green())
+    })
+    event.modify('oritech:centrifuge_block', tooltip => {
+        tooltip.insert(2, Text.of('Have you treaded the Trials of The Magician?').red())
+    })
 })

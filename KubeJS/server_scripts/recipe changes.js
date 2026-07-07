@@ -11,7 +11,8 @@ ServerEvents.recipes(event => {
         'oritech:machine_core_1',
         'mekanismgenerators:heat_generator',
         'projecte:transmutation_tablet',
-        'oritech:assembler_block'
+        'oritech:assembler_block',
+        'oritech:centrifuge_block',
       ]
   removal.forEach(removal => {
     event.remove({output: removal})
@@ -70,6 +71,27 @@ const shapelessCrafting = [
   ];
 const shapedCrafting = [
   {
+    id: 'kuejs:refined_obsidian_gear',
+    output: 'kubejs:refined_obsidian_gear',
+    pattern: [' A ', 'ABA', ' A '],
+    keys: {
+      A: 'kubejs:refined_obsidian_ingot',
+      B: 'mekanism:alloy_atomic'
+    }
+  },
+  {
+    id: 'tiab:time_in_a_bottle',
+    output: 'tiab:time_in_a_bottle',
+    pattern: ['AAA', 'BCB', 'DED'],
+    keys: {
+      A: '#c:ingots/soularium',
+      B: '#c:ingots/wrought_iron',
+      C: '#c:clocks',
+      D: 'mekanism:enriched_diamond',
+      E: 'minecraft:glass_bottle'
+    }
+  },
+  {
     id: 'oritech:assembler_block',
     output: 'oritech:assembler_block',
     pattern: ['AAA', 'BCB', 'DED'],
@@ -79,6 +101,15 @@ const shapedCrafting = [
       C: 'oritech:adamant_ingot',
       D: 'twilightforest:castle_brick',
       E: '#oritech:plating',
+    }
+  },
+  {
+    id: 'kubejs:energetic_alloy_gear',
+    output: 'kubejs:energetic_alloy_gear',
+    pattern: [' A ', 'ABA', ' A '],
+    keys: {
+      A: 'enderio:energetic_alloy_ingot',
+      B: '#c:nuggets/dark_steel'
     }
   },
   {

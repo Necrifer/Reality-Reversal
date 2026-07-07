@@ -1,0 +1,30 @@
+{
+  "block_states": {
+    "alltheores:platinum_ore": "minecraft:stone",
+    "alltheores:deepslate_platinum_ore": "minecraft:deepslate",
+    "alltheores:nether_platinum_ore": "minecraft:netherrack",
+    "alltheores:end_platinum_ore": "minecraft:end_stone",
+    "alltheores:other_platinum_ore": "alltheores:other_aluminum_ore",
+    "crystalcraft_unlimited_java:platinum_ore": "minecraft:stone",
+    "crystalcraft_unlimited_java:deepslate_platinum_ore": "minecraft:deepslate",
+    "ftbmaterials:platinum_stone_ore": "minecraft:stone",
+    "ftbmaterials:platinum_end_ore": "minecraft:end_stone",
+    "ftbmaterials:platinum_nether_ore": "minecraft:netherrack",
+    "ftbmaterials:platinum_deepslate_ore": "minecraft:deepslate",
+    "oritech:deepslate_platinum_ore": "minecraft:deepslate",
+    "oritech:endstone_platinum_ore": "minecraft:end_stone"
+  },
+  "items": {
+    "chemlib:platinum_ingot": "oritech:silver_ingot",
+    "oritech:platinum_ingot": "oritech:silver_ingot",
+    "chicken_roost:ingot_platinum": "minecraft:iron_ingot",
+    "ftbmaterials:platinum_ingot": "minecraft:iron_ingot",
+    "alltheores:platinum_ingot": "mekanism:ingot_steel",
+    "crystalcraft_unlimited_java:platinum": "mekanism:ingot_steel",
+    "alltheores:raw_platinum": "minecraft:raw_gold",
+    "ftbmaterials:platinum_raw_ore": "mekanism:raw_osmium",
+    "crystalcraft_unlimited_java:raw_platinum": "minecraft:raw_iron",
+    "oritech:raw_platinum": "mekanism:raw_osmium"
+  },
+  "advancement": "modpack:remains"
+}

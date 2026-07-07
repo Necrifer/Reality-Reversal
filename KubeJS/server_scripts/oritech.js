@@ -15,4 +15,15 @@ ServerEvents.recipes(event => {
     results: [stack('minecraft:ender_eye', 2)],
     time: 300
     });
+  recipe('oritech:assembler_conductive_alloy_plate', {
+    type: 'oritech:assembler',
+    ingredients: [
+      item('#c:plates/conductive_alloy'),
+      item('#c:plates/conductive_alloy'),
+      item('#c:plates/conductive_alloy'),
+      item('#c:plates/conductive_alloy')
+    ],
+    results: [stack('minecraft:ender_eye', 2)],
+    time: 300
+    });
 });
