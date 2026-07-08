@@ -1,4 +1,0 @@
-ClientEvents.lang('en_us', (event) => {
-    event.add('twilightforest:wrought_iron_bar', 'Twilight dipped Ingot');
-    event.add('itemGroup.kubejs_tools', 'KubeJS Tools')
-})

@@ -75,7 +75,7 @@ const shapedCrafting = [
     output: 'kubejs:refined_obsidian_gear',
     pattern: [' A ', 'ABA', ' A '],
     keys: {
-      A: 'kubejs:refined_obsidian_ingot',
+      A: 'mekanism:ingot_refined_obsidian',
       B: 'mekanism:alloy_atomic'
     }
   },

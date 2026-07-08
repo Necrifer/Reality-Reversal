@@ -4,7 +4,7 @@ ServerEvents.recipes(event => {
   const tag = id => ({ tag: id });
   const block = id => ({ blocks: id });
   const entity = id => ({ type: id });
-  const stack = (id, count) => ({ id: id, count: count == null ? 1 : count });
+  const stack = (id, count) => ({ id: id, count: count });
   const setBlock = id => ({ type: 'set_block', block: block(id) });
   const placeBlock = id => ({ type: 'place', block: block(id) });
   const dropItem = (id, count) => ({ type: 'drop_item', item: stack(id, count) });
@@ -17,7 +17,12 @@ ServerEvents.recipes(event => {
     item_in: [item('dimdoors:driftwood_log')],
     block_in: block('dimdoors:eternal_fluid'),
     post: [
-      {type: 'set_item', id: 'minecraft:coal', count: 8}
+      {type: 'set_item', count: 8, item: stack('minecraft:coal')}
     ],
+    contextual: {
+      location: {
+        can_see_sky: true
+      }
+    }
   });
 });

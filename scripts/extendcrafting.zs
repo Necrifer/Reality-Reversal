@@ -30,7 +30,7 @@
 	[<item:twilightforest:fiery_ingot>, <item:twilightforest:fiery_blood>, <item:enderio:dark_steel_ingot>, <item:twilightforest:fiery_blood>, <item:twilightforest:fiery_ingot>], 
 	[<item:twilightforest:steeleaf_ingot>, <item:twilightforest:steeleaf_ingot>, <item:twilightforest:carminite>, <item:twilightforest:knightmetal_ingot>, <item:twilightforest:knightmetal_ingot>]
 ]);
-<recipetype:extendedcrafting:table>.addShaped("oritech:centrifuge", 3, <item:oritech:centrifuge_block>, [
+<recipetype:extendedcrafting:table>.addShaped("oritech_centrifuge", 3, <item:oritech:centrifuge_block>, [
 	[<item:minecraft:glass_bottle>, <item:minecraft:air>, <item:minecraft:glass_bottle>, <item:minecraft:air>, <item:minecraft:glass_bottle>, <item:minecraft:air>, <item:minecraft:glass_bottle>], 
 	[<item:kubejs:energetic_alloy_gear>, <item:enderio:energetic_alloy_ingot>, <item:kubejs:energetic_alloy_gear>, <item:enderio:energetic_alloy_ingot>, <item:kubejs:energetic_alloy_gear>, <item:enderio:energetic_alloy_ingot>, <item:kubejs:energetic_alloy_gear>], 
 	[<item:minecraft:glass_bottle>, <item:minecraft:air>, <item:minecraft:air>, <item:twilightforest:wrought_iron_bar>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:glass_bottle>], 
@@ -39,7 +39,7 @@
 	[<item:ftbmaterials:platinum_plate>, <item:oritech:platinum_ingot>, <item:enderio:conductive_alloy_ingot>, <item:twilightforest:wrought_iron_bar>, <item:enderio:conductive_alloy_ingot>, <item:oritech:platinum_ingot>, <item:ftbmaterials:platinum_plate>], 
 	[<item:oritech:platinum_ingot>, <item:enderio:conductive_alloy_ingot>, <item:minecraft:air>, <item:twilightforest:wrought_iron_bar>, <item:minecraft:air>, <item:enderio:conductive_alloy_ingot>, <item:oritech:platinum_ingot>]
 ]);
-<recipetype:extendedcrafting:table>.addShaped("oritech:basic_machine_core", 1, <item:oritech:machine_core_2>, [
+<recipetype:extendedcrafting:table>.addShaped("oritech_basic_machine_core", 1, <item:oritech:machine_core_2>, [
 	[<item:twilightforest:wrought_iron_bar>, <item:twilightforest:wrought_iron_bar>, <item:twilightforest:wrought_iron_bar>], 
 	[<item:twilightforest:wrought_iron_bar>, <item:oritech:machine_core_1>, <item:twilightforest:wrought_iron_bar>], 
 	[<item:twilightforest:wrought_iron_bar>, <item:twilightforest:wrought_iron_bar>, <item:twilightforest:wrought_iron_bar>]
