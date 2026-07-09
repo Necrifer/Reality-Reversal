@@ -1,7 +1,7 @@
 
 const steelcasing = 'mekanism:steel_casing'
 ServerEvents.recipes(event => {
-    const removal = [
+    const removalout = [
         'dimdoors:tesselating_loom',
         'projecte:philosophers_stone',
         'minecraft:hopper', 
@@ -13,9 +13,16 @@ ServerEvents.recipes(event => {
         'projecte:transmutation_tablet',
         'oritech:assembler_block',
         'oritech:centrifuge_block',
+        'ftbmaterials:coal_coke_gem'
       ]
-  removal.forEach(removal => {
-    event.remove({output: removal})
+    const removalin =[
+      'ftbmaterials:coal_coke_gem',
+    ]
+  removalin.forEach(removalin => {
+    event.remove({input: removalin})
+  })
+  removalout.forEach(removalout => {
+    event.remove({output: removalout})
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',

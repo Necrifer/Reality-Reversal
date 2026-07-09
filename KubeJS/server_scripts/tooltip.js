@@ -31,6 +31,11 @@ ItemEvents.modifyTooltips(event => {
         tooltip.insert(2, Text.of('Have you treaded the Trials of The Magician?').red())
     })
     event.modify('immersiveengineering:coal_coke', tooltip => {
-        tooltip.insert(2, Text.of('You will eventually want to look into Mekanism for this.').gold())
+        tooltip.insert(1, Text.of('You will eventually want to look into Mekanism for this.').gold())
+        tooltip.insert(2, Text.of('Texture is bugged, you need it for the Blast Furnace.').darkBlue())
+    })
+    event.modify('immersiveengineering:ingot_hop_graphite', tooltip => {
+        tooltip.insert(1, Text.of('Work with Immersive Engineering for a while.').blue())
+        tooltip.insert(2, Text.of('Eventually Mystical Agriculture will do this for you.').gold())
     })
 })
