@@ -6,6 +6,8 @@ This is a massive project undertaken by someone with nearly 0 background in CS, 
 A lot of features are still heavily underdeveloped/exist as concept and not yet fixed, so there is not much to look around yet.
 Due to very frequent changes on 1.21 mods development environment, files may be removed/changed in massive chunks at times.
 
+**Special note: You will notice some files have traces of AI usage. I needed to find causes of bugs or recipes that is not documented anywhere and required some assitance otherwise.
+
 Do NOT override files in this repository unless you know what you are doing. 
 
 List of Mods used (For checking of Configs + scripts):
