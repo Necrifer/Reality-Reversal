@@ -18,12 +18,12 @@ ServerEvents.recipes(event => {
   recipe('oritech:assembler_conductive_alloy_plate', {
     type: 'oritech:assembler',
     ingredients: [
-      item('#c:plates/conductive_alloy'),
-      item('#c:plates/conductive_alloy'),
-      item('#c:plates/conductive_alloy'),
-      item('#c:plates/conductive_alloy')
+      item('#c:ingots/conductive_alloy'),
+      item('#c:ingots/conductive_alloy'),
+      item('#c:ingots/conductive_alloy'),
+      item('#c:ingots/conductive_alloy')
     ],
-    results: [stack('minecraft:ender_eye', 2)],
+    results: [stack('kubejs:conductive_alloy_plate', 1)],
     time: 300
     });
 });

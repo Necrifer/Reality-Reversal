@@ -44,3 +44,10 @@
 	[<item:twilightforest:wrought_iron_bar>, <item:oritech:machine_core_1>, <item:twilightforest:wrought_iron_bar>], 
 	[<item:twilightforest:wrought_iron_bar>, <item:twilightforest:wrought_iron_bar>, <item:twilightforest:wrought_iron_bar>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("oritech_bio_generator", 2, <item:oritech:bio_generator_block>, [
+	[<item:kubejs:refined_obsidian_gear>, <item:kubejs:refined_obsidian_gear>, <item:kubejs:refined_obsidian_gear>, <item:kubejs:refined_obsidian_gear>, <item:kubejs:refined_obsidian_gear>], 
+	[<item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:oritech:machine_core_2>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>], 
+	[<item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>]
+]);

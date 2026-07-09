@@ -13,7 +13,7 @@ ItemEvents.modifyTooltips(event => {
         tooltip.insert(1, Text.of('Place these in a 3x3x3 structure.').green())
     })
     event.modify('immersiveengineering:hammer', tooltip => {
-        tooltip.insert(1, Text.of('Right click on Immersive multiblocks.').gray())
+        tooltip.insert(1, Text.of('Right click on Immersive Engineering multiblocks.').gray())
     })
     event.modify('dimdoors:reality_sponge', tooltip => {
         tooltip.insert(1, Text.of('Blocks and fluids placed beside decays similarly like in Limbo.').green())
@@ -29,5 +29,8 @@ ItemEvents.modifyTooltips(event => {
     })
     event.modify('oritech:centrifuge_block', tooltip => {
         tooltip.insert(2, Text.of('Have you treaded the Trials of The Magician?').red())
+    })
+    event.modify('immersiveengineering:coal_coke', tooltip => {
+        tooltip.insert(2, Text.of('You will eventually want to look into Mekanism for this.').gold())
     })
 })

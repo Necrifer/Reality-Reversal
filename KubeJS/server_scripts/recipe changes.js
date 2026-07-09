@@ -28,7 +28,10 @@ ServerEvents.recipes(event => {
     'oritech:compat/immersiveengineering/alloying/adamant',
     'oritech:compat/immersiveengineering/arcalloying/adamant',
     'oritech:crafting/alloy/adamant',
-    'minecraft:ender_eye'
+    'minecraft:ender_eye',
+    'oritech:crafting/core2',
+    'oritech:crafting/core2alt',
+    'oritech:crafting/biogen'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
@@ -42,6 +45,7 @@ ServerEvents.recipes(event => {
     replace('extendedcrafting:black_iron_ingot', '#c:dyes/black', 'minecraft:basalt')
     replace('enderio:void_chassis', '#c:ingots/iron', '#c:ingots/dark_steel')
     replace('immersiveengineering:blastbrick', 'minecraft:magma_block', 'minecraft:lava_bucket')
+    replace('mekanism:electrolytic_seperator', '#c:ingots/iron', '#c:ingots/steel')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [
