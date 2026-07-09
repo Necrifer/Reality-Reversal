@@ -13,11 +13,14 @@ ServerEvents.recipes(event =>{
     event.recipes.mekanism.metallurgic_infusing("mekanism:basic_control_circuit", '#c:ingots/osmium', "mekanism:redstone", false);
 
     //recipe code below is bugged! will fix later!
+
+    //No documentation for Chemical Injector customisation exists for Mekanism
+    //Double check if it's even possible!
     recipe('kubejs_modified_coal_coke', {
     type: 'mekanism:injecting',
     item_input: tag('c:coal'),
     chemical_input: chemicalTag('mekanism:oxygen', 1),
-    output: stack('c:coal_coke', 1),
+    output: stack('#c:coal_coke', 1),
     per_tick_usage: true
   });
 })
