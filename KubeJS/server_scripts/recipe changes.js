@@ -26,6 +26,10 @@ ServerEvents.recipes(event => {
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
+    'divinerpg:compat/projecte/conversions/anthracite_from_coal',
+    'divinerpg:compat/projecte/conversions/anthracite_from_alchemical_coal',
+    'divinerpg:compat/projecte/conversions/anthracite_from_charcoal',
+    'divinerpg:shaped/blue_stone',
     'oritech:crafting/alloy/steel',
     'ultimatefoods:acero',
     'projecte:transmutation_table',
@@ -38,7 +42,8 @@ ServerEvents.recipes(event => {
     'minecraft:ender_eye',
     'oritech:crafting/core2',
     'oritech:crafting/core2alt',
-    'oritech:crafting/biogen'
+    'oritech:crafting/biogen',
+    'divinerpg:compat/projecte/conversions/oxdrite_ingot'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
