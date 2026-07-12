@@ -38,4 +38,7 @@ ItemEvents.modifyTooltips(event => {
         tooltip.insert(1, Text.of('Work with Immersive Engineering for a while.').blue())
         tooltip.insert(2, Text.of('Eventually Mystical Agriculture will do this for you.').gold())
     })
+    event.modify('divinerpg:ice_stone', tooltip => {
+        tooltip.insert(1, Text.of('Dropped by monsters in any icy biomes.').green())
+    })
 })

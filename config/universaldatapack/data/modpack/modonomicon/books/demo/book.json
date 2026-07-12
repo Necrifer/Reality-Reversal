@@ -1,0 +1,14 @@
+{
+  "allow_open_book_with_invalid_links": true,
+  "creative_tab": "modonomicon:modonomicon",
+  "description": "",
+  "display_mode": "node",
+  "font": "modonomicon:default",
+  "generate_book_item": true,
+  "model": "modonomicon:modonomicon_green",
+  "name": "Logbook",
+  "page_display_mode": "double_page",
+  "show_recently_unlocked": true,
+  "tooltip": "Records of my journey through this world.",
+  "turn_page_sound": "modonomicon:turn_page"
+}
