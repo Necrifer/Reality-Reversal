@@ -1,26 +1,27 @@
-{
-  "type": "modonomicon:content",
-  "background": {
-    "height": 26,
-    "sprite": "modonomicon:modonomicon/themes/default/node/entry_backgrounds/square_gold",
-    "width": 26
-  },
-  "category": "modpack:spatial_discovery",
-  "description": "Intially I landed here, but where am I?",
-  "icon": {
-    "id": "minecraft:grass_block"
-  },
-  "id": "modpack:spatial_discovery/empty",
-  "name": "Historical Era",
-  "pages": [
-    {
-      "type": "modonomicon:text",
-      "show_title_separator": true,
-      "text": "modonomicon.test.sections.test_category.test_entry.page0.text",
-      "title": "modonomicon.test.sections.test_category.test_entry.page0.title"
-    }
-  ],
-  "sort_number": 9,
-  "x": -2,
-  "y": 1
+﻿{
+    "type":  "modonomicon:content",
+    "background":  {
+                       "height":  26,
+                       "sprite":  "modonomicon:modonomicon/themes/default/node/entry_backgrounds/square_gold",
+                       "width":  26
+                   },
+    "category":  "modpack:spatial_discovery",
+    "description":  "Intially I landed here, but where am I?",
+    "icon":  {
+                 "id":  "minecraft:grass_block"
+             },
+    "id":  "modpack:spatial_discovery/empty",
+    "name":  "Historical Era",
+    "pages":  [
+                  {
+                      "type":  "modonomicon:text",
+                      "show_title_separator":  true,
+                      "text":  "modonomicon.test.sections.test_category.test_entry.page0.text",
+                      "title":  "modonomicon.test.sections.test_category.test_entry.page0.title",
+                      "use_markdown_title":  true
+                  }
+              ],
+    "sort_number":  9,
+    "x":  -2,
+    "y":  1
 }
