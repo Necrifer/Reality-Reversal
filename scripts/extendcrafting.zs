@@ -51,3 +51,13 @@
 	[<item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>, <item:kubejs:conductive_alloy_plate>, <item:minecraft:air>], 
 	[<item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>, <item:immersiveengineering:ingot_hop_graphite>]
 ]);
+<recipetype:extendedcrafting:combination>.addRecipe("snow_globe", <item:divinerpg:snow_globe>, <item:divinerpg:ice_stone>, [<item:divinerpg:shadow_stone>, <item:enderio:clear_glass>, <item:enderio:clear_glass>, <item:enderio:clear_glass>, <item:ae2:quartz_glass>, <item:ae2:quartz_glass>, <item:enderio:end_steel_ingot>, <item:enderio:end_steel_ingot>], 100000);
+<recipetype:extendedcrafting:table>.addShaped("aether_portal_frame", 3, <item:aether:aether_portal_frame>, [
+	[<item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>], 
+	[<item:mekanism:ingot_refined_glowstone>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:mekanism:ingot_refined_glowstone>], 
+	[<item:mekanism:ingot_refined_glowstone>, <item:quark:myalite>, <item:minecraft:chorus_fruit>, <item:minecraft:chorus_fruit>, <item:minecraft:chorus_fruit>, <item:quark:myalite>, <item:mekanism:ingot_refined_glowstone>], 
+	[<item:mekanism:ingot_refined_glowstone>, <item:quark:myalite>, <item:minecraft:chorus_fruit>, <item:minecraft:water_bucket>, <item:minecraft:chorus_fruit>, <item:quark:myalite>, <item:mekanism:ingot_refined_glowstone>], 
+	[<item:mekanism:ingot_refined_glowstone>, <item:quark:myalite>, <item:minecraft:chorus_fruit>, <item:minecraft:chorus_fruit>, <item:minecraft:chorus_fruit>, <item:quark:myalite>, <item:mekanism:ingot_refined_glowstone>], 
+	[<item:mekanism:ingot_refined_glowstone>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:mekanism:ingot_refined_glowstone>], 
+	[<item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>]
+]);

@@ -41,4 +41,10 @@ ItemEvents.modifyTooltips(event => {
     event.modify('divinerpg:ice_stone', tooltip => {
         tooltip.insert(1, Text.of('Dropped by monsters in any icy biomes.').green())
     })
+    event.modify('divinerpg:snow_globe', tooltip => {
+        tooltip.insert(1, Text.of('Portal frame should be similar to Nether portal, but of snow blocks.').white())
+    })
+    event.modify('aether:aether_portal_frame', tooltip => {
+        tooltip.insert(1, Text.of('Right click on any block to form the full Aether portal').green())
+    })
 })

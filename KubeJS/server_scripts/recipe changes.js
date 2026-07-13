@@ -43,7 +43,8 @@ ServerEvents.recipes(event => {
     'oritech:crafting/core2',
     'oritech:crafting/core2alt',
     'oritech:crafting/biogen',
-    'divinerpg:compat/projecte/conversions/oxdrite_ingot'
+    'divinerpg:compat/projecte/conversions/oxdrite_ingot',
+    'divinerpg:compat/projecte/conversions/shadow_bar_from_ingots'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
@@ -58,6 +59,7 @@ ServerEvents.recipes(event => {
     replace('enderio:void_chassis', '#c:ingots/iron', '#c:ingots/dark_steel')
     replace('immersiveengineering:blastbrick', 'minecraft:magma_block', 'minecraft:lava_bucket')
     replace('mekanism:electrolytic_seperator', '#c:ingots/iron', '#c:ingots/steel')
+    replace('ae2:quartz_glass', 'ae2:certus_quartz_dust', 'ae2:fluix_dust')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [
