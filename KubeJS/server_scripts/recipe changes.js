@@ -44,7 +44,8 @@ ServerEvents.recipes(event => {
     'oritech:crafting/core2alt',
     'oritech:crafting/biogen',
     'divinerpg:compat/projecte/conversions/oxdrite_ingot',
-    'divinerpg:compat/projecte/conversions/shadow_bar_from_ingots'
+    'divinerpg:compat/projecte/conversions/shadow_bar_from_ingots',
+    'divinerpg:shaped/snow_globe'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
@@ -89,7 +90,19 @@ const shapelessCrafting = [
   ];
 const shapedCrafting = [
   {
-    id: 'kuejs:refined_obsidian_gear',
+    id:'cits:laputa_orb',
+    output: 'castle_in_the_sky:laputa_core_orb',
+    pattern: [' A ', 'BCD', ' E '],
+    keys: {
+      A: 'aether:ambrosium_shard',
+      B: 'aether:zanite_gemstone',
+      C: 'castle_in_the_sky:laputa_miniature',
+      D: 'divinerpg:frozen_stone',
+      E: 'divinerpg:oxdrite_ingot'
+    }
+  },
+  {
+    id: 'kubejs:refined_obsidian_gear',
     output: 'kubejs:refined_obsidian_gear',
     pattern: [' A ', 'ABA', ' A '],
     keys: {

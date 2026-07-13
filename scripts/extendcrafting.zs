@@ -61,3 +61,14 @@
 	[<item:mekanism:ingot_refined_glowstone>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:quark:myalite>, <item:mekanism:ingot_refined_glowstone>], 
 	[<item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("laputan_orb", 4, <item:castle_in_the_sky:laputa_miniature>, [
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:extendedcrafting:enhanced_ender_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:extendedcrafting:enhanced_ender_ingot>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:enderio:energetic_alloy_ingot>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:twilightforest:wrought_iron_bar>, <item:minecraft:air>, <item:twilightforest:wrought_iron_bar>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>], 
+	[<item:extendedcrafting:enhanced_ender_ingot>, <item:extendedcrafting:enhanced_ender_ingot>, <item:enderio:energetic_alloy_ingot>, <item:minecraft:air>, <item:extendedcrafting:ender_star>, <item:minecraft:air>, <item:enderio:energetic_alloy_ingot>, <item:extendedcrafting:enhanced_ender_ingot>, <item:extendedcrafting:enhanced_ender_ingot>], 
+	[<item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:twilightforest:wrought_iron_bar>, <item:minecraft:air>, <item:twilightforest:wrought_iron_bar>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:enderio:energetic_alloy_ingot>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:extendedcrafting:enhanced_ender_ingot>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:extendedcrafting:enhanced_ender_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
