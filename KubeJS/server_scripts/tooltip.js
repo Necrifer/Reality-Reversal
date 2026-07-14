@@ -54,4 +54,7 @@ ItemEvents.modifyTooltips(event => {
     event.modify('castle_in_the_sky:levitation_stone', tooltip => {
     tooltip.insert(1, Text.of('Be prepared for a long journey... Follow the trail when ON').green())
     })
+    event.modify('divinerpg:arcana_portal_frame', tooltip => {
+    tooltip.insert(1, Text.of('Place the frames in 3x3 on the ground such that all blue dots faces you.').green())
+    })
 })
