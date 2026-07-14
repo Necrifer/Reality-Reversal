@@ -62,4 +62,6 @@
 priority: 5
 ServerEvents.tags('item', event => {
     event.remove('twilightforest:portal/activator', '#c:gems/diamond')
+    event.add('neoforge:arcana', 'kubejs:eyes1')
+    event.add('neoforge:arcana', 'kubejs:eyes2')
 })
