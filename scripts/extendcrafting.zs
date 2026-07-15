@@ -72,3 +72,8 @@
 	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:mekanism:basic_control_circuit>, <item:extendedcrafting:enhanced_ender_ingot>, <item:mekanism:basic_control_circuit>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
 	[<item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:extendedcrafting:enhanced_ender_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("nuclearcraft_basic_plating_easy", 1, <item:nuclearcraft:plate_basic>, [
+	[<item:twilightforest:wrought_iron_bar>, <item:divinerpg:arcanium>, <item:twilightforest:wrought_iron_bar>], 
+	[<item:divinerpg:arcanium>, <item:spectrum:citrine_shard>, <item:divinerpg:arcanium>], 
+	[<item:twilightforest:wrought_iron_bar>, <item:divinerpg:arcanium>, <item:twilightforest:wrought_iron_bar>]
+]);

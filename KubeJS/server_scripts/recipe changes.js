@@ -26,6 +26,9 @@ ServerEvents.recipes(event => {
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
+    'nuclearcraft:plate_basic',
+    'nuclearcraft:plate_basic2',
+    'oritech:compact/enderio/crafting/pump',
     'divinerpg:compat/projecte/conversions/anthracite_from_coal',
     'divinerpg:compat/projecte/conversions/anthracite_from_alchemical_coal',
     'divinerpg:compat/projecte/conversions/anthracite_from_charcoal',
