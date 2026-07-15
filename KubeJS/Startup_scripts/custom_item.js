@@ -16,7 +16,7 @@
 
 StartupEvents.registry('item', event => {
     event.create('eyes1')
-    .tooltip("§4The First Eyes Stares.").color(0, 0xFA2800)
+    .tooltip("§4To know one knows nothing, is your lesson.").color(0, 0xFA2800)
     .displayName("§4Eyes of The Fool").color(0, 0xFA2800)
     .glow(true)
     .fireResistant(true)

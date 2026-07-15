@@ -11,11 +11,11 @@ const NR_PERCENT_FUNCTION = 'modpack:reduce_nuclear_radiation_loaded_area'
 
 // Radius 1 means the controller chunk plus its eight neighbours (a 3x3 area).
 // Unloaded chunks are skipped so that running the machine does not load terrain.
-const NR_CLEANUP_RADIUS_CHUNKS = 1
+const NR_CLEANUP_RADIUS_CHUNKS = 9
 
 // Production machine removal per completed recipe. Use a value above 0 and at
 // or below 1: 0.25 = 25%, 0.5 = 50%, and 1 = a complete cleanup.
-const NR_PERCENT_REMOVAL = 0.25
+const NR_PERCENT_REMOVAL = 0.9
 
 // Broad section range for cached radiation vectors. This covers Y -256 through
 // Y 511 without relying on mapped Level height methods that Rhino may hide.
@@ -264,6 +264,7 @@ function nrProcessLoadedArea(event, removalFraction) {
   const remainingFraction = 1 - removalFraction
   let cachedVectors = 0
   let cachedVectorActivityRemovedBq = 0
+  let playerMetersReset = 0
 
   for (let chunkIndex = 0;
     chunkIndex < processedChunkPositions.length;
@@ -302,6 +303,36 @@ function nrProcessLoadedArea(event, removalFraction) {
   registry.saveToLevel()
   simulator.tickWorld(level)
 
+  // Nuclear Radiation 1.0.2's /nr clear command omits svPerHourAmbient even
+  // though the Geiger Counter reads that field. For the 100% test recipe only,
+  // reset the two rolling rate meters of players standing in the cleaned area.
+  // Career dose, internal contamination, and lung state are left untouched.
+  if (removalFraction >= 1) {
+    // ServerLevel exposes players as a Java List property in KubeJS/Rhino.
+    // Calling players() resolves the property and then attempts to call the
+    // resulting List, which Rhino rejects as "not a function".
+    const players = level.players.toArray()
+
+    for (let playerIndex = 0; playerIndex < players.length; playerIndex++) {
+      const player = players[playerIndex]
+      const playerChunkPos = player.chunkPosition()
+
+      if (Math.abs(playerChunkPos.x - centerChunkPos.x) >
+        NR_CLEANUP_RADIUS_CHUNKS ||
+        Math.abs(playerChunkPos.z - centerChunkPos.z) >
+        NR_CLEANUP_RADIUS_CHUNKS) {
+        continue
+      }
+
+      const playerRadiationData = player.getData(
+        NRAttachments.ENTITY_RADIATION.get()
+      )
+      playerRadiationData.setSvPerHour(0)
+      playerRadiationData.setSvPerHourAmbient(0)
+      playerMetersReset++
+    }
+  }
+
   return {
     scannedChunks: scannedChunks,
     loadedChunks: loadedChunks,
@@ -310,6 +341,7 @@ function nrProcessLoadedArea(event, removalFraction) {
     orphanedSimulatorSources: orphanedSimulatorSources,
     cachedVectors: cachedVectors,
     cachedVectorActivityRemovedBq: cachedVectorActivityRemovedBq,
+    playerMetersReset: playerMetersReset,
     chunkActivityRemovedBq: activityBeforeBq - activityAfterBq,
     leftoverActivityRemovedBq: leftoverActivityRemovedBq,
     removedBq:
@@ -327,7 +359,8 @@ MMREvents.recipeFunction(NR_TEST_FUNCTION, event => {
     `${result.leftoverSources} registry source(s), ` +
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
-    `${result.cachedVectorActivityRemovedBq} Bq.`
+    `${result.cachedVectorActivityRemovedBq} Bq; reset ` +
+    `${result.playerMetersReset} player rate meter(s).`
   )
 })
 
