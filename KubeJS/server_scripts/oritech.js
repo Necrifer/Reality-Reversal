@@ -4,6 +4,18 @@ ServerEvents.recipes(event => {
   const stack = (id, count) => ({ id: id, count: count });
   const recipe = (id, body) => event.custom(body).id(id);
 
+  const massremoval = [
+    {
+    machine: 'Centrifuge (item recipe)',
+    type: 'oritech:centrifuge',
+    ids: ['oritech:centrifuge/carbon']
+    },
+  ]
+  massremoval.forEach(group => {
+    group.ids.forEach(recipeID => {
+      event.remove({id:recipeID})
+    })
+  })
   recipe('oritech:assembler_ender_eye', {
     type: 'oritech:assembler',
     ingredients: [
@@ -26,4 +38,15 @@ ServerEvents.recipes(event => {
     results: [stack('kubejs:conductive_alloy_plate', 1)],
     time: 300
     });
+    recipe('oritech:assembler_industrial_support_beam',{
+      type: 'oritech:assembler',
+      ingredients: [
+        item('#c:ingots/steel'),
+        item('oritech:carbon_fibre_strands'),
+        item('#c:ingots/steel'),
+        item('oritech:carbon_fibre_strands')
+      ],
+      results: [stack('oritech:metal_beam_block', 6)],
+      time: 100
+    })
 });

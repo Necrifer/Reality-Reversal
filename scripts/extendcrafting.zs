@@ -77,3 +77,15 @@
 	[<item:divinerpg:arcanium>, <item:spectrum:citrine_shard>, <item:divinerpg:arcanium>], 
 	[<item:twilightforest:wrought_iron_bar>, <item:divinerpg:arcanium>, <item:twilightforest:wrought_iron_bar>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("ae2_charger", 1, <item:ae2:charger>, [
+	[<item:mekanism:alloy_atomic>, <item:alltheores:iridium_ingot>, <item:alltheores:iridium_ingot>], 
+	[<item:divinerpg:legendary_ender_eye>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:mekanism:alloy_atomic>, <item:alltheores:iridium_ingot>, <item:alltheores:iridium_ingot>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("oritech_pump", 2, <item:oritech:pump_block>, [
+	[<item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:projectexpansion:magenta_matter>], 
+	[<item:ae2:quartz_glass>, <item:ae2:quartz_glass>, <item:ae2:quartz_glass>, <item:alltheores:invar_ingot>, <item:projectexpansion:magenta_matter>], 
+	[<item:ae2:quartz_glass>, <item:ae2:quartz_glass>, <item:ae2:quartz_glass>, <item:alltheores:invar_ingot>, <item:alltheores:signalum_ingot>], 
+	[<item:alltheores:invar_ingot>, <item:alltheores:invar_ingot>, <item:alltheores:invar_ingot>, <item:alltheores:invar_ingot>, <item:alltheores:signalum_ingot>], 
+	[<item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>]
+]);

@@ -26,9 +26,13 @@ ServerEvents.recipes(event => {
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
+    'oritech:crafting/refinerymodulealt',
+    'oritech:crafting/fluidpipe',
+    'oritech:crafting/metalbeams',
     'nuclearcraft:plate_basic',
     'nuclearcraft:plate_basic2',
-    'oritech:compact/enderio/crafting/pump',
+    'oritech:compat/enderio/crafting/pump',
+    'oritech:crafting/pump',
     'divinerpg:compat/projecte/conversions/anthracite_from_coal',
     'divinerpg:compat/projecte/conversions/anthracite_from_alchemical_coal',
     'divinerpg:compat/projecte/conversions/anthracite_from_charcoal',
@@ -57,13 +61,24 @@ ServerEvents.recipes(event => {
     event.replaceInput ({output: result}, oldInput, Ingredient.of(newInput))
   }
     replace('extendedcrafting:basic_table', '#c:storage_blocks/iron', '#c:storage_blocks/dark_steel')
+    replace('projecte:condenser_mk1', '#c:gems/diamond', '#c:dusts/diamond')
+    replace('projecte:condenser_mk1', 'minecraft:obsidian', 'enderio:reinforced_obsidian_block')
+    replace('projectexpansion:basic_emc_link', 'projecte:condenser_mk1', 'projecte:condenser_mk2')
     replace('minecraft:blast_furnace', '#c:ingots/iron', '#c:ingots/steel')
     replace('minecraft:crafter', '#c:ingots/iron', '#c:ingots/dark_steel')
     replace('extendedcrafting:black_iron_ingot', '#c:dyes/black', 'minecraft:basalt')
     replace('enderio:void_chassis', '#c:ingots/iron', '#c:ingots/dark_steel')
     replace('immersiveengineering:blastbrick', 'minecraft:magma_block', 'minecraft:lava_bucket')
-    replace('mekanism:electrolytic_seperator', '#c:ingots/iron', '#c:ingots/steel')
+    replace('mekanism:electrolytic_separator', '#c:ingots/iron', '#c:ingots/steel')
     replace('ae2:quartz_glass', 'ae2:certus_quartz_dust', 'ae2:fluix_dust')
+    replace('oritech:small_tank_block', '#c:glass_blocks', 'ae2:quartz_glass')
+    replace('oritech:refinery_module_block', 'minecraft:slime_ball', 'minecraft:ender_eye')
+    replace('oritech:refinery_block', 'minecraft:cauldron', 'mekanism:advanced_fluid_tank')
+    replace('mekanism:basic_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/steel')
+    replace('mekanism:advanced_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/dark_steel')
+    replace('mekanism:elite_fluid tank', 'minecraft:iron_ingot', '#c:ingots/end_steel')
+    replace('mekanism:ultimate_fluid_tank', 'minecraft:iron_ingot', 'kubejs:stellarium_ingot')
+    replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [
@@ -92,6 +107,21 @@ const shapelessCrafting = [
     }
   ];
 const shapedCrafting = [
+  {
+    id:'projecte:alchemical_chest',
+    output: 'projecte:alchemical_chest',
+    pattern: ['ABC', 'DED', 'FGH'],
+    keys: {
+      A: 'projecte:low_covalence_dust',
+      B: 'projecte:medium_covalence_dust',
+      C: 'projecte:high_covalence_dust',
+      D: 'bigreactors:benitoite_crystal',
+      E: 'mekanism:enriched_diamond',
+      F: 'divinerpg:terran_shards',
+      G: 'divinerpg:ender_shards',
+      H: 'divinerpg:molten_shards'
+    }
+  },
   {
     id:'cits:laputa_orb',
     output: 'castle_in_the_sky:laputa_core_orb',

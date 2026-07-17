@@ -12,12 +12,22 @@ ServerEvents.recipes(event => {
   const preventDefault = () => ({ type: 'prevent_default' });
   const damageItem = amount => ({ type: 'damage_item', damage: amount });
 
-  recipe('lychee:item_inside_template', {
+  recipe('lychee:emc_coal_conversion', {
     type: 'lychee:item_inside',
     item_in: [item('dimdoors:driftwood_log')],
     block_in: block('dimdoors:eternal_fluid'),
     post: [
       {type: 'set_item', id: 'minecraft:coal', count: 8}
     ],
+  });
+  recipe('lychee:stellarium_ingot_explode', {
+    type: 'lychee:item_exploding',
+    item_in: [item('minecraft:nether_star')],
+    post: [
+      dropItem('kubejs:stellarium_ingot', 1)
+    ],
+    contextual: {
+      chance: 1.0
+    }
   });
 });
