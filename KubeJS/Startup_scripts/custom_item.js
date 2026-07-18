@@ -34,6 +34,6 @@ StartupEvents.registry('item', event => {
     .tag('c:ingots')
     event.create('stellarium_ingot')
     .displayName("Stellarium Ingot")
-    .tooltip("it is recommended to do this in large batches.")
+    .tooltip("it is recommended to make this in large batches.")
     .tag('c:ingots')
 })

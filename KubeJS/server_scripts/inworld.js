@@ -22,12 +22,11 @@ ServerEvents.recipes(event => {
   });
   recipe('lychee:stellarium_ingot_explode', {
     type: 'lychee:item_exploding',
-    item_in: [item('minecraft:nether_star')],
-    post: [
-      dropItem('kubejs:stellarium_ingot', 1)
-    ],
-    contextual: {
-      chance: 1.0
+    item_in: [item('minecraft:nether_star'), item('enderio:end_steel_ingot')],
+    post:{
+      type: 'drop_item',
+      id: 'kubejs:stellarium_ingot',
+      count: 32
     }
   });
 });

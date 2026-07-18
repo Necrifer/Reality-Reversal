@@ -70,9 +70,10 @@ ServerEvents.recipes(event => {
   recipe('codex_inworldcrafting:item_exploding_template', {
     type: 'lychee:item_exploding',
     item_in: [item('minecraft:coal')],
-    post: [
-      dropItem('minecraft:diamond', 1)
-    ],
+    post: {type: 'drop_item',
+      id: 'minecraft:gold_ingot',
+      count: 1
+    },
     contextual: {
       chance: 0.25
     }

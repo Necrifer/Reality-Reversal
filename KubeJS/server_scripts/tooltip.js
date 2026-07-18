@@ -57,4 +57,11 @@ ItemEvents.modifyTooltips(event => {
     event.modify('divinerpg:arcana_portal_frame', tooltip => {
     tooltip.insert(1, Text.of('Place the frames in 3x3 on the ground such that all blue dots faces you.').green())
     })
+    event.modify('kubejs:stellarium_ingot', tooltip => {
+    tooltip.insert(2, Text.of('Make sure you have some ways of passive Withers...').gold())
+    })
+    event.modify('oritech:refinery_block', tooltip => {
+    tooltip.insert(1, Text.of('Have 2 extra Refinery Chamber Module for this!').green())
+    tooltip.insert(2, Text.of('Yes these things need their own Machine Cores!').red())
+    })
 })
