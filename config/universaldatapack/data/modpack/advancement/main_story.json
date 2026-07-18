@@ -14,7 +14,7 @@
     "main_story":{
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe_id": "kubejs:kjs/dimdoors_tesselating_loom"
+        "recipe_id": "dimdoors:tesselating_loom"
       }
     }
   }

@@ -1,0 +1,193 @@
+// Modular Machinery Reborn biome terraformer experiment.
+//
+// Each completed recipe consumes one biome-associated selector block and FE,
+// then changes one full-height 4x4x4-aligned biome column. Successive cycles
+// expand outwards from the controller in square rings. Vanilla /fillbiome is
+// used so changed chunks are saved and biome updates are sent to clients.
+
+const BT_MACHINE = 'modpack:biome_terraformer_test_rig'
+const BT_SCAN_RADIUS_CELLS = 4
+const BT_RECIPE_TICKS = 100
+const BT_ENERGY_PER_TICK = 256
+const BT_PROGRESS_INDEX_KEY = 'modpackBiomeTerraformerIndex'
+const BT_PROGRESS_TARGET_KEY = 'modpackBiomeTerraformerTarget'
+
+const BT_TARGETS = [
+  {
+    key: 'plains',
+    selector: 'minecraft:grass_block',
+    biome: 'minecraft:plains',
+    functionId: 'modpack:terraform_to_plains'
+  },
+  {
+    key: 'desert',
+    selector: 'minecraft:sand',
+    biome: 'minecraft:desert',
+    functionId: 'modpack:terraform_to_desert'
+  },
+  {
+    key: 'snowy_plains',
+    selector: 'minecraft:snow_block',
+    biome: 'minecraft:snowy_plains',
+    functionId: 'modpack:terraform_to_snowy_plains'
+  },
+  {
+    key: 'badlands',
+    selector: 'minecraft:red_sand',
+    biome: 'minecraft:badlands',
+    functionId: 'modpack:terraform_to_badlands'
+  }
+]
+
+MMREvents.machines(event => {
+  event.create(BT_MACHINE)
+    .name('Biome Terraformer Test Rig')
+    .color(0x66cc66)
+    .structure(
+      MMRStructureBuilder.create()
+        .pattern([
+          [
+            'CCC',
+            'CIC',
+            'CCC'
+          ],
+          [
+            'CCC',
+            'CmE',
+            'CCC'
+          ]
+        ])
+        .keys({
+          m: 'modular_machinery_reborn:controller',
+          C: 'modular_machinery_reborn:casing_circuitry',
+          I: 'modular_machinery_reborn:inputbus_normal',
+          E: 'modular_machinery_reborn:energyinputhatch_normal'
+        })
+    )
+})
+
+ServerEvents.recipes(event => {
+  for (let index = 0; index < BT_TARGETS.length; index++) {
+    const target = BT_TARGETS[index]
+
+    event.recipes.modular_machinery_reborn
+      .machine_recipe(BT_MACHINE, BT_RECIPE_TICKS)
+      .requireItem(target.selector)
+      .requireEnergyPerTick(BT_ENERGY_PER_TICK)
+      .requireFunctionOnEnd(target.functionId)
+      .id(`modpack:biome_terraforming_${target.key}`)
+  }
+})
+
+function btBuildScanCells(radius) {
+  const cells = [[0, 0]]
+
+  for (let ring = 1; ring <= radius; ring++) {
+    for (let x = -ring; x <= ring; x++) {
+      cells.push([x, -ring])
+    }
+
+    for (let z = -ring + 1; z <= ring; z++) {
+      cells.push([ring, z])
+    }
+
+    for (let x = ring - 1; x >= -ring; x--) {
+      cells.push([x, ring])
+    }
+
+    for (let z = ring - 1; z >= -ring + 1; z--) {
+      cells.push([-ring, z])
+    }
+  }
+
+  return cells
+}
+
+const BT_SCAN_CELLS = btBuildScanCells(BT_SCAN_RADIUS_CELLS)
+
+function btTerraformNextCell(event, targetBiome) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  const controller = event.getTile()
+  const level = controller.getLevel()
+  const controllerPos = controller.getBlockPos()
+  const progress = controller.getPersistentData()
+
+  let scanIndex = progress.getInt(BT_PROGRESS_INDEX_KEY)
+  const previousTarget = progress.getString(BT_PROGRESS_TARGET_KEY)
+
+  if (previousTarget !== targetBiome || scanIndex >= BT_SCAN_CELLS.length) {
+    scanIndex = 0
+  }
+
+  const cell = BT_SCAN_CELLS[scanIndex]
+  const centerCellX = Math.floor(controllerPos.getX() / 4)
+  const centerCellZ = Math.floor(controllerPos.getZ() / 4)
+  const minX = (centerCellX + cell[0]) * 4
+  const minZ = (centerCellZ + cell[1]) * 4
+  const maxX = minX + 3
+  const maxZ = minZ + 3
+  const minY = level.getMinBuildHeight()
+  const maxY = level.getMaxBuildHeight() - 1
+  const checkPos = new BlockPos(minX, controllerPos.getY(), minZ)
+
+  // Never force-load terrain. The scan advances past unloaded cells and will
+  // revisit them after the configured square has completed.
+  let result = 0
+  let loaded = level.isLoaded(checkPos)
+
+  if (loaded) {
+    const server = level.getServer()
+    const source = server.createCommandSourceStack()
+      .withLevel(level)
+      .withPermission(4)
+      .withSuppressedOutput()
+    const command = `fillbiome ${minX} ${minY} ${minZ} ` +
+      `${maxX} ${maxY} ${maxZ} ${targetBiome}`
+
+    result = server.getCommands().performPrefixedCommand(source, command)
+  }
+
+  const nextIndex = (scanIndex + 1) % BT_SCAN_CELLS.length
+  progress.putString(BT_PROGRESS_TARGET_KEY, targetBiome)
+  progress.putInt(BT_PROGRESS_INDEX_KEY, nextIndex)
+  controller.setChanged()
+
+  return {
+    loaded: loaded,
+    commandResult: result,
+    scanIndex: scanIndex + 1,
+    scanTotal: BT_SCAN_CELLS.length,
+    minX: minX,
+    minZ: minZ,
+    maxX: maxX,
+    maxZ: maxZ
+  }
+}
+
+for (let index = 0; index < BT_TARGETS.length; index++) {
+  const target = BT_TARGETS[index]
+
+  MMREvents.recipeFunction(target.functionId, event => {
+    const result = btTerraformNextCell(event, target.biome)
+
+    if (result.loaded) {
+      console.info(
+        `[Biome Terraformer] Target ${target.biome}; processed cell ` +
+        `${result.scanIndex}/${result.scanTotal} at ` +
+        `X ${result.minX}..${result.maxX}, ` +
+        `Z ${result.minZ}..${result.maxZ}; ` +
+        `command result ${result.commandResult}.`
+      )
+    } else {
+      console.warn(
+        `[Biome Terraformer] Skipped unloaded cell ` +
+        `${result.scanIndex}/${result.scanTotal} at ` +
+        `X ${result.minX}..${result.maxX}, ` +
+        `Z ${result.minZ}..${result.maxZ}.`
+      )
+    }
+  })
+}
+
+// This experiment changes biome data only. It does not replace terrain blocks,
+// grow biome vegetation, regenerate features, or load neighbouring chunks.

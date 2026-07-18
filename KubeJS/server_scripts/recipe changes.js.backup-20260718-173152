@@ -26,7 +26,6 @@ ServerEvents.recipes(event => {
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
-    'divinerpg:shaped/arcana_portal_frame',
     'oritech:crafting/refinerymodulealt',
     'oritech:crafting/fluidpipe',
     'oritech:crafting/metalbeams',
@@ -110,8 +109,7 @@ const shapelessCrafting = [
 const shapedCrafting = [
   {
     id:'divinerpg:aracana_portal_frame',
-    output: 'divinerpg:arcana_portal_frame',
-    count: 12,
+    output:['divinerpg:arcana_portal_frame' * 12], 
     pattern: ["CRC","SAS","WEW"],
     keys: {
         C: 'dimdoors:clod',
@@ -318,11 +316,7 @@ const shapedCrafting = [
     }
   ];
     shapedCrafting.forEach(recipe => {
-        event.shaped(
-          Item.of(recipe.output, recipe.count || 1),
-          recipe.pattern,
-          recipe.keys
-        ).id(recipe.id);
+        event.shaped(Item.of(recipe.output), recipe.pattern, recipe.keys).id(recipe.id);
   });
     shapelessCrafting.forEach(recipe => {
     event.shapeless(Item.of(recipe.output), recipe.inputs).id(recipe.id);
