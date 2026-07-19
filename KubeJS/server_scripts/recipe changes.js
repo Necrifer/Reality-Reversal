@@ -26,6 +26,7 @@ ServerEvents.recipes(event => {
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
+    'voidminers:rubetine',
     'divinerpg:shaped/arcana_portal_frame',
     'oritech:crafting/refinerymodulealt',
     'oritech:crafting/fluidpipe',
@@ -77,6 +78,7 @@ ServerEvents.recipes(event => {
     replace('oritech:refinery_block', 'minecraft:cauldron', 'mekanism:advanced_fluid_tank')
     replace('mekanism:basic_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/steel')
     replace('mekanism:advanced_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/dark_steel')
+    replace('rftoolsbuilder:builder', 'minecraft:bricks', 'ae2:fluix_block')
     replace('mekanism:elite_fluid tank', 'minecraft:iron_ingot', '#c:ingots/end_steel')
     replace('mekanism:ultimate_fluid_tank', 'minecraft:iron_ingot', 'kubejs:stellarium_ingot')
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
@@ -108,6 +110,51 @@ const shapelessCrafting = [
     }
   ];
 const shapedCrafting = [
+  {
+    id:'rftoolsbase:machine_frame', 
+    output: 'rftoolsbase:machine_frame',
+    pattern:[
+        "CWC",
+        "DED",
+        "CWC"
+    ],
+    keys: {
+        C: 'ae2:certus_quartz_dust',
+        W: 'twilightforest:wrought_iron_bar',
+        D: 'enderio:dark_steel_bars',
+        E: 'enderio:end_steel_block'
+    }
+  },
+  {
+    id:'enderio:alloy_smelter',
+    output: 'enderio:alloy_smelter',
+    pattern: [
+        "III",
+        "RVR",
+        "ERE"
+    ],
+    keys: {
+        I: 'immersiveengineering:ingot_hop_graphite',
+        R: 'projecte:red_matter',
+        V: 'enderio:void_chassis',
+        E: 'mekanism:energized_smelter'
+    }
+  },
+  {
+    id:'projectexpansion:basic_power_flower', 
+    output:'projectexpansion:basic_power_flower',
+    pattern: [
+        "BAB",
+        "CDC",
+        "CCC"
+    ],
+    keys: {
+        B: 'projectexpansion:basic_compressed_collector',
+        A: 'projectexpansion:basic_emc_link',
+        C: 'projectexpansion:basic_relay',
+        D: 'divinerpg:arcanium_block'
+    }
+  },
   {
     id:'divinerpg:aracana_portal_frame',
     output: 'divinerpg:arcana_portal_frame',

@@ -64,4 +64,7 @@ ItemEvents.modifyTooltips(event => {
     tooltip.insert(1, Text.of('Have 2 extra Refinery Chamber Module for this!').green())
     tooltip.insert(2, Text.of('Yes these things need their own Machine Cores!').red())
     })
+    event.modify('voidminers:rubetine', tooltip => {
+    tooltip.insert(1, Text.of('Expensive, best to ensure all your machines are working hard').darkPurple())
+    })
 })

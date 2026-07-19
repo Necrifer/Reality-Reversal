@@ -1,0 +1,21 @@
+{
+  "display": {
+    "icon": {
+      "id": "voidminers:rebetine_miner"
+    },
+    "title": "Quarrying from Void",
+    "description": "Converge all the metals known into special matter, allowing the start of Quarrying.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent" : "modpack:remains",
+  "criteria": {
+    "main_story":{
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "voidminers:rubetine_block"
+      }
+    }
+  }
+}
