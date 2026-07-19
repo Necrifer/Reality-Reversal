@@ -111,6 +111,21 @@ const shapelessCrafting = [
   ];
 const shapedCrafting = [
   {
+    id:'kubejs:easy_rubetine', 
+    output: 'voidminers:rubetine',
+    pattern: [
+        "RDM",
+        "EEE",
+        "MDR"
+    ],
+    keys:{
+        R: 'projecte:red_matter',
+        D: 'projecte:dark_matter',
+        M: 'projectexpansion:magenta_matter',
+        E: 'enderio:end_steel_ingot'
+    }
+  },
+  {
     id:'rftoolsbase:machine_frame', 
     output: 'rftoolsbase:machine_frame',
     pattern:[
