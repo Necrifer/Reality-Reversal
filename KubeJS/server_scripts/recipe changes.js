@@ -26,8 +26,11 @@ ServerEvents.recipes(event => {
   })
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
+    'ae2:network/blocks/crystal_processing_charger',
     'voidminers:rubetine',
     'divinerpg:shaped/arcana_portal_frame',
+    'bigreactors:reactor/reinforced/casing',
+    'bigreactors:reactor/reinforced/casing_upgrade',
     'oritech:crafting/refinerymodulealt',
     'oritech:crafting/fluidpipe',
     'oritech:crafting/metalbeams',
