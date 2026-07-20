@@ -67,4 +67,8 @@ ItemEvents.modifyTooltips(event => {
     event.modify('voidminers:rubetine', tooltip => {
     tooltip.insert(1, Text.of('Expensive, best to ensure all your machines are working hard').darkPurple())
     })
+    event.modify('voidminers:rubetine_miner', tooltip => {
+    tooltip.insert(1, Text.of('Things do not come for free.').darkRed())
+    tooltip.insert(2, Text.of('You will get a cheaper recipe upon obtaining this first').darkGreen())
+    })
 })

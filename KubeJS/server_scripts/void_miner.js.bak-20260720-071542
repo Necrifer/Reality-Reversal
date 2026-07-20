@@ -1,0 +1,44 @@
+ServerEvents.recipes(event => {
+  // Adds Netherite Scrap to the Overworld mining pool
+  //
+  // Arguments:
+  // 1. Output item
+  // 2. Dimension
+  // 3. Minimum miner tier
+  // 4. Selection weight
+  // 5. Output per cycle
+  // 6. Allow higher-tier miners
+  // id is the recipeID, can be used by other KubeJS scripts
+
+  event.recipes.voidminers.miner(
+    'minecraft:netherite_scrap',
+    'javd:void',
+    1,
+    0.25,
+    2,
+    true
+  ).id('modpack:voidminers/netherite_scrap')
+  // Take note that the weight here does not mean %chance, but relative % compared to others.
+
+  // Remove the built-in T1 Overworld Diamond Ore entry.
+  event.remove({
+    id: 'voidminers:overworld/tier1_miner/diamond_ore'
+  })
+  // Re-add it at a lower weight and with two ore per operation.
+  const ores = [
+    'minecraft:diamond_ore',
+    'minecraft:coal_ore'
+  ]
+  const weight = [
+    2.0,
+    15.0
+  ]
+  const recipeID =[
+    'modpack:voidminers/diamond_ore',
+    'modpack:voidminers/coal_ore'
+  ]
+
+  ores.forEach(recipe => {
+    event.recipes.voidminers.miner(recipe.ores, 'javd:void', 1, recipe.weight, 1, true).id(recipe.id);
+  });
+})

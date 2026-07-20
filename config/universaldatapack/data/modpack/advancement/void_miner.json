@@ -14,7 +14,7 @@
     "main_story":{
       "trigger": "minecraft:recipe_crafted",
       "conditions": {
-        "recipe_id": "voidminers:rubetine_block"
+        "recipe_id": "voidminers:rubetine_miner"
       }
     }
   }
