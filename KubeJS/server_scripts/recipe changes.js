@@ -114,6 +114,45 @@ const shapelessCrafting = [
   ];
 const shapedCrafting = [
   {
+    id:'castle_in_the_sky:red_key',
+    output: 'castle_in_the_sky:red_key',
+    pattern: [
+        "SRR",
+        "SRR",
+        "SRR"
+    ],
+    keys: {
+        S: 'minecraft:stick',
+        R: 'projecte:red_matter'
+    }
+  },
+  {
+    id:'castle_in_the_sky:blue_key',
+    output: 'castle_in_the_sky:blue_key',
+    pattern: [
+        "SRR",
+        "SRR",
+        "SRR"
+    ],
+    keys: {
+        S: 'minecraft:stick',
+        R: 'minecraft:lapis_lazuli'
+    }
+  },
+  {
+    id:'castle_in_the_sky:yellow_key',
+    output: 'castle_in_the_sky:yellow_key',
+    pattern: [
+        "SRR",
+        "SRR",
+        "SRR"
+    ],
+    keys: {
+        S: 'minecraft:stick',
+        R: 'minecraft:gold_ingot'
+    }
+  },
+  {
     id:'kubejs:easy_rubetine', 
     output: 'voidminers:rubetine',
     pattern: [
