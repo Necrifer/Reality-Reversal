@@ -100,3 +100,12 @@
 	[<item:extendedcrafting:black_iron_ingot>, <item:enderio:soularium_ingot>, <item:mekanism:ingot_osmium>, <item:twilightforest:ironwood_ingot>, <item:extendedcrafting:enhanced_ender_ingot>, <item:twilightforest:ironwood_ingot>, <item:mekanism:ingot_osmium>, <item:enderio:soularium_ingot>, <item:extendedcrafting:black_iron_ingot>], 
 	[<item:ultimatefoods:nadienite_ingot>, <item:minecraft:netherite_ingot>, <item:enderio:vibrant_alloy_ingot>, <item:enderio:conductive_alloy_ingot>, <item:minecraft:copper_ingot>, <item:enderio:conductive_alloy_ingot>, <item:enderio:vibrant_alloy_ingot>, <item:minecraft:netherite_ingot>, <item:ultimatefoods:nadienite_ingot>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("law_ingot", 3, <item:kubejs:law_ingot> * 12, [
+	[<item:minecraft:spider_eye>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:rotten_flesh>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:spider_eye>], 
+	[<item:minecraft:air>, <item:minecraft:ender_pearl>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:ender_pearl>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:bone_block>, <item:minecraft:string>, <item:minecraft:rotten_flesh>, <item:minecraft:string>, <item:minecraft:bone_block>, <item:minecraft:air>], 
+	[<item:minecraft:blaze_rod>, <item:minecraft:air>, <item:minecraft:dragon_egg>, <item:minecraft:magma_cream>, <item:minecraft:dragon_egg>, <item:minecraft:air>, <item:minecraft:blaze_rod>], 
+	[<item:minecraft:air>, <item:minecraft:bone_block>, <item:minecraft:string>, <item:minecraft:rotten_flesh>, <item:minecraft:string>, <item:minecraft:bone_block>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:minecraft:ender_pearl>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:ender_pearl>, <item:minecraft:air>], 
+	[<item:minecraft:spider_eye>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:rotten_flesh>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:spider_eye>]
+]);

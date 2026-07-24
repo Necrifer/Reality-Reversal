@@ -53,6 +53,7 @@ ServerEvents.recipes(event => {
     'oritech:crafting/alloy/adamant',
     'minecraft:ender_eye',
     'oritech:crafting/core2',
+    'projectexpansion:power_flower/basic',
     'oritech:crafting/core2alt',
     'oritech:crafting/biogen',
     'divinerpg:compat/projecte/conversions/oxdrite_ingot',
