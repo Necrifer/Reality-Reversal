@@ -38,6 +38,7 @@ ServerEvents.recipes(event => {
 
   // Fusion Reactor reaction
   // energy is the recipe's energy value and optimal_temperature is measured K.
+  // Currently does not show up in JEI
   event.custom({
     type: 'nuclearcraft:fusion_reactor',
     input_a: {
@@ -64,6 +65,7 @@ ServerEvents.recipes(event => {
   }).id('modpack:nuclearcraft_samples/fusion_water_lava')
 
   // Fusion Reactor coolant conversion
+  // No JEI support yet
   event.custom({
     type: 'nuclearcraft:fusion_coolant',
     input_fluid: {
@@ -93,6 +95,7 @@ ServerEvents.recipes(event => {
   }).id('modpack:nuclearcraft_samples/turbine_exhaust_steam')
 
   // Kugelblitz Chamber item conversion
+  // No JEI.
   event.custom({
     type: 'nuclearcraft:kugelblitz_chamber',
     input: {

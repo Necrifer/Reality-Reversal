@@ -44,3 +44,8 @@ craftingTable.addShaped("arctic_fur", <item:twilightforest:arctic_fur> * 8, [
         [<tag:item:c:leathers>, <item:twilightforest:lamp_of_cinders>.reuse(), <tag:item:c:leathers>],
         [<tag:item:c:leathers>, <tag:item:c:leathers>, <tag:item:c:leathers>]
     ]);
+craftingTable.addShaped("reinforced_reactor_casing", <item:bigreactors:reinforced_reactorcasing> * 1, [
+        [<item:divinerpg:oxdrite_ingot>, <item:nuclearcraft:plate_basic>, <item:divinerpg:oxdrite_ingot>],
+        [<item:nuclearcraft:plate_basic>, <item:castle_in_the_sky:laputa_core_orb>.reuse(), <item:nuclearcraft:plate_basic>],
+        [<item:divinerpg:oxdrite_ingot>, <item:nuclearcraft:plate_basic>, <item:divinerpg:oxdrite_ingot>]
+    ]); 

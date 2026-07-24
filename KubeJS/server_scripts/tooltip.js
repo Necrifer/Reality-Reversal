@@ -50,6 +50,7 @@ ItemEvents.modifyTooltips(event => {
     event.modify('castle_in_the_sky:laputa_core_orb', tooltip => {
         tooltip.insert(1, Text.of('The magic words, when repeated, will annihilate the castle.').green())
         tooltip.insert(2, Text.of('Very laggy. Has a recipe if you wish to avoid it.').darkRed())
+        tooltip.insert(2, Text.of('Reusable.').gold())
     })
     event.modify('castle_in_the_sky:levitation_stone', tooltip => {
     tooltip.insert(1, Text.of('Be prepared for a long journey... Follow the trail when ON').green())
@@ -71,4 +72,5 @@ ItemEvents.modifyTooltips(event => {
     tooltip.insert(1, Text.of('Things do not come for free.').darkRed())
     tooltip.insert(2, Text.of('You will get a cheaper recipe upon obtaining this first').darkGreen())
     })
+
 })
