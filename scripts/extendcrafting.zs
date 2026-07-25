@@ -109,3 +109,8 @@
 	[<item:minecraft:air>, <item:minecraft:ender_pearl>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:ender_pearl>, <item:minecraft:air>], 
 	[<item:minecraft:spider_eye>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:rotten_flesh>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:spider_eye>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("loot_fabricator", 1, <item:hostilenetworks:loot_fabricator>, [
+	[<item:divinerpg:oxdrite_ingot>, <item:bigreactors:anglesite_crystal>, <item:divinerpg:oxdrite_ingot>], 
+	[<item:bigreactors:anglesite_crystal>, <item:hostilenetworks:prediction_matrix>, <item:bigreactors:anglesite_crystal>], 
+	[<item:divinerpg:oxdrite_ingot>, <item:bigreactors:anglesite_crystal>, <item:divinerpg:oxdrite_ingot>]
+]);

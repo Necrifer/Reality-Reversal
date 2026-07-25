@@ -115,6 +115,21 @@ const shapelessCrafting = [
   ];
 const shapedCrafting = [
   {
+    id: 'hostilenetworks:sim_chamber',
+    output: 'hostilenetworks:sim_chamber',
+    pattern: 
+      [
+        "PIP",
+        "LIL",
+        "PIP"
+    ],
+    keys: {
+        P: 'nuclearcraft:plate_basic',
+        I: 'mekanism:ingot_uranium',
+        L: 'kubejs:law_ingot'
+    }
+  },
+  {
     id:'castle_in_the_sky:red_key',
     output: 'castle_in_the_sky:red_key',
     pattern: [

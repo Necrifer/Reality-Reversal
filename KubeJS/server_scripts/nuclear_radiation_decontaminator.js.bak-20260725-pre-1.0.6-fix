@@ -1,6 +1,6 @@
 // Modular Machinery Reborn environmental decontaminators.
 //
-// Nuclear Radiation 1.0.6 does not expose a supported KubeJS cleanup API.
+// Nuclear Radiation 1.0.2 does not expose a supported KubeJS cleanup API.
 // This integration uses its public Java methods directly; see the matching
 // warning JSON in config/codex_warnings before updating Nuclear Radiation.
 
@@ -93,16 +93,16 @@ function nrProcessLoadedArea(event, removalFraction) {
   const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   const RadiationProfile = Java.loadClass('igentuman.nr.api.RadiationProfile')
   const LeftOverRadSource = Java.loadClass(
-    'igentuman.nr.radiation.source.LeftOverRadSource'
+    'igentuman.nr.util.tracking.LeftOverRadSource'
   )
   const WorldSourceRegistry = Java.loadClass(
-    'igentuman.nr.radiation.source.WorldSourceRegistry'
+    'igentuman.nr.util.tracking.WorldSourceRegistry'
   )
   const RadiationSimulator = Java.loadClass(
-    'igentuman.nr.radiation.simulation.RadiationSimulator'
+    'igentuman.nr.simulation.RadiationSimulator'
   )
   const NRAttachments = Java.loadClass(
-    'igentuman.nr.radiation.storage.NRAttachments'
+    'igentuman.nr.util.persistence.NRAttachments'
   )
 
   const controller = event.getTile()
@@ -303,7 +303,7 @@ function nrProcessLoadedArea(event, removalFraction) {
   registry.saveToLevel()
   simulator.tickWorld(level)
 
-  // Nuclear Radiation 1.0.6's /nr clear command omits svPerHourAmbient even
+  // Nuclear Radiation 1.0.2's /nr clear command omits svPerHourAmbient even
   // though the Geiger Counter reads that field. For the 100% test recipe only,
   // reset the two rolling rate meters of players standing in the cleaned area.
   // Career dose, internal contamination, and lung state are left untouched.
