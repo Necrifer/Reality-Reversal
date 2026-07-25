@@ -72,5 +72,7 @@ ItemEvents.modifyTooltips(event => {
     tooltip.insert(1, Text.of('Things do not come for free.').darkRed())
     tooltip.insert(2, Text.of('You will get a cheaper recipe upon obtaining this first').darkGreen())
     })
-
+    event.modify('mbtool:mbtool', tooltip => {
+    tooltip.insert(1, Text.of('Keep one around! Autobuilds multiblocks for you.').blue())
+    })
 })

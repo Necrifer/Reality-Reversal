@@ -6,7 +6,7 @@
 	"notes": [
 		"Frequency is derived at runtime; it is not a recipe JSON field.",
 		"actual_output reproduces the chamber world-seed shuffle for self-output recipes.",
-		"Input selected is NuclearCraft’s resolved runtime input item.",
+		"Input selected is NuclearCraft resolved runtime input item.",
 		"Tag outputs include their resolved candidate item IDs."
 	],
 	"recipes": [

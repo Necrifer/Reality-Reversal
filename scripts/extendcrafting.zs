@@ -114,3 +114,10 @@
 	[<item:bigreactors:anglesite_crystal>, <item:hostilenetworks:prediction_matrix>, <item:bigreactors:anglesite_crystal>], 
 	[<item:divinerpg:oxdrite_ingot>, <item:bigreactors:anglesite_crystal>, <item:divinerpg:oxdrite_ingot>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("stygian_dust", 2, <item:woot_revived:stygian_dust> * 64, [
+	[<item:aether:enchanted_gravitite>, <item:malum:aqueous_spirit>, <item:actuallyadditions:black_quartz>, <item:malum:earthen_spirit>, <item:aether:enchanted_gravitite>], 
+	[<item:malum:sacred_spirit>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:inferium_essence>, <item:malum:wicked_spirit>], 
+	[<item:actuallyadditions:black_quartz>, <item:mysticalagriculture:inferium_essence>, <item:modular_machinery_reborn:modularium>, <item:mysticalagriculture:inferium_essence>, <item:actuallyadditions:black_quartz>], 
+	[<item:malum:eldritch_spirit>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:inferium_essence>, <item:malum:infernal_spirit>], 
+	[<item:aether:enchanted_gravitite>, <item:malum:arcane_spirit>, <item:actuallyadditions:black_quartz>, <item:malum:aerial_spirit>, <item:aether:enchanted_gravitite>]
+]);

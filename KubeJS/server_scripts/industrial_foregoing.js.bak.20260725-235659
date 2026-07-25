@@ -1,0 +1,37 @@
+ServerEvents.recipes(event => {
+
+  // Dissolution Chamber
+  // ItemStack output uses "id"; its fluid input is a SizedFluidIngredient and
+  // therefore uses "fluid".
+
+    const dischamber = [
+        {input: [
+      'ae2:charged_certus_quartz_crystal'
+    ],
+    inputFluid: {
+      amount: 1000,
+      fluid: 'minecraft:water'
+    },
+    processingTime: 400,
+    output: {
+      count: 1,
+      id: 'ae2:fluix_crystal',
+    },
+    outputFluid: {
+    amount: 1000,
+    id: 'kubejs:fluid_charged_fluix'
+    },
+    id:'modpack:industrialforegoing_custom_fluix'}
+]
+  dischamber.forEach(dischamber => {
+    event.custom(
+        'industrialforegoing:dissolution_chamber',
+        dischamber.input,
+        dischamber.inputFluid,
+        dischamber.processingTime,
+        dischamber.output,
+        dischamber.outputFluid
+        .id(dischamber.id)
+    )
+  });
+})
