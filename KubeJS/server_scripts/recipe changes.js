@@ -86,6 +86,8 @@ ServerEvents.recipes(event => {
     replace('mekanism:elite_fluid tank', 'minecraft:iron_ingot', '#c:ingots/end_steel')
     replace('mekanism:ultimate_fluid_tank', 'minecraft:iron_ingot', 'kubejs:stellarium_ingot')
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
+    replace('enderio:end_steel_ingot', '#c:obsidians', 'mekanism:ingot_refined_obsidian')
+    replace('industrialforegoing:machine_frame_pity', 'minecraft:iron_ingot', 'enderio:end_steel_ingot')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [

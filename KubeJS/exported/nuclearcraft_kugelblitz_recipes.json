@@ -1,0 +1,674 @@
+{
+	"nuclearcraft_version": "1.21.1-1.3.0-alpha3",
+	"world_seed": "2796162279116754000",
+	"frequency_range": "0-14",
+	"recipe_count": 29,
+	"notes": [
+		"Frequency is derived at runtime; it is not a recipe JSON field.",
+		"actual_output reproduces the chamber world-seed shuffle for self-output recipes.",
+		"Input selected is NuclearCraft’s resolved runtime input item.",
+		"Tag outputs include their resolved candidate item IDs."
+	],
+	"recipes": [
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_lead",
+			"frequency": 5,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:lead_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "mekanism:ingot_lead",
+				"candidates": [
+					"mekanism:ingot_lead"
+				]
+			},
+			"actual_output": {
+				"item": "mekanism:ingot_lead",
+				"count": 1,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_copper",
+			"frequency": 8,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:copper_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:copper_ingot",
+				"candidates": [
+					"minecraft:copper_ingot"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:emerald",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/gems_diamond",
+			"frequency": 8,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:diamond"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:diamond",
+				"candidates": [
+					"minecraft:diamond"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:diamond",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_aluminum",
+			"frequency": 14,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:aluminum_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:air",
+				"candidates": [
+					"ftbmaterials:aluminum_ingot",
+					"alltheores:aluminum_ingot",
+					"immersiveengineering:ingot_aluminum",
+					"nuclearcraftneohaul:aluminum_ingot",
+					"nuclearcraft:aluminum_ingot",
+					"chemlib:aluminum_ingot"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:air",
+				"count": 0,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_tin",
+			"frequency": 9,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:tin_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "mekanism:ingot_tin",
+				"candidates": [
+					"mekanism:ingot_tin"
+				]
+			},
+			"actual_output": {
+				"item": "mekanism:ingot_tin",
+				"count": 1,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/tough_alloy_bscco",
+			"frequency": 0,
+			"input": {
+				"count": 1,
+				"selected": "nuclearcraft:tough_alloy_ingot"
+			},
+			"declared_output": {
+				"count": 2,
+				"selected": "nuclearcraft:bscco_dust",
+				"candidates": [
+					"nuclearcraft:bscco_dust"
+				]
+			},
+			"actual_output": {
+				"item": "nuclearcraft:bscco_dust",
+				"count": 2,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/gems_lapis",
+			"frequency": 5,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:lapis_lazuli"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:lapis_lazuli",
+				"candidates": [
+					"minecraft:lapis_lazuli"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:yellow_dye",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "modpack:nuclearcraft_samples/kugelblitz_cobblestone",
+			"frequency": 13,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:cobblestone"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:obsidian",
+				"candidates": [
+					"minecraft:obsidian"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:obsidian",
+				"count": 1,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dyes_green",
+			"frequency": 3,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:green_dye"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:green_dye",
+				"candidates": [
+					"minecraft:green_dye",
+					"woot_revived:green_dye_plate"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:iron_ingot",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_netherite",
+			"frequency": 6,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:netherite_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:netherite_ingot",
+				"candidates": [
+					"minecraft:netherite_ingot"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:gold_ingot",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/gems_ruby",
+			"frequency": 14,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:ruby_gem"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:air",
+				"candidates": [
+					"ftbmaterials:ruby_gem",
+					"alltheores:ruby"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:air",
+				"count": 0,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/gems_emerald",
+			"frequency": 10,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:emerald"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:emerald",
+				"candidates": [
+					"minecraft:emerald"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:netherite_ingot",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_silver",
+			"frequency": 14,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:silver_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:air",
+				"candidates": [
+					"ftbmaterials:silver_ingot",
+					"alltheores:silver_ingot",
+					"iceandfire:silver_ingot",
+					"immersiveengineering:ingot_silver",
+					"nuclearcraftneohaul:silver_ingot",
+					"nuclearcraft:silver_ingot",
+					"chemlib:silver_ingot"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:air",
+				"count": 0,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dusts_coal",
+			"frequency": 14,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:coal_dust"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:air",
+				"candidates": [
+					"ftbmaterials:coal_dust",
+					"enderio:powdered_coal",
+					"mekanism:dust_coal",
+					"nuclearcraftneohaul:coal_gem_dust",
+					"oritech:coal_dust",
+					"nuclearcraft:coal_dust"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:air",
+				"count": 0,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_iron",
+			"frequency": 10,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:iron_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:iron_ingot",
+				"candidates": [
+					"minecraft:iron_ingot"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:copper_ingot",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ender_eye",
+			"frequency": 5,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:ender_eye"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:ender_eye",
+				"candidates": [
+					"minecraft:ender_eye"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:glowstone_dust",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dragon_breath",
+			"frequency": 10,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:dragon_breath"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:dragon_breath",
+				"candidates": [
+					"minecraft:dragon_breath"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:lapis_lazuli",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dusts_glowstone",
+			"frequency": 13,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:glowstone_dust"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:glowstone_dust",
+				"candidates": [
+					"minecraft:glowstone_dust"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:red_dye",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_bronze",
+			"frequency": 12,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:bronze_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "mekanism:ingot_bronze",
+				"candidates": [
+					"mekanism:ingot_bronze"
+				]
+			},
+			"actual_output": {
+				"item": "mekanism:ingot_bronze",
+				"count": 1,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dyes_red",
+			"frequency": 2,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:red_dye"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:red_dye",
+				"candidates": [
+					"minecraft:red_dye",
+					"woot_revived:red_dye_plate"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:nether_star",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_uranium",
+			"frequency": 2,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:uranium_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "mekanism:ingot_uranium",
+				"candidates": [
+					"mekanism:ingot_uranium"
+				]
+			},
+			"actual_output": {
+				"item": "mekanism:ingot_uranium",
+				"count": 1,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dusts_redstone",
+			"frequency": 7,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:redstone"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:redstone",
+				"candidates": [
+					"minecraft:redstone"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:blue_dye",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ender_pearl",
+			"frequency": 3,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:ender_pearl"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:ender_pearl",
+				"candidates": [
+					"minecraft:ender_pearl"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:green_dye",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dyes_blue",
+			"frequency": 1,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:blue_dye"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:blue_dye",
+				"candidates": [
+					"minecraft:blue_dye",
+					"woot_revived:blue_dye_plate"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:white_dye",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dyes_white",
+			"frequency": 0,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:white_dye"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:white_dye",
+				"candidates": [
+					"minecraft:white_dye",
+					"woot_revived:white_dye_plate"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:redstone",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/nether_star",
+			"frequency": 13,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:nether_star"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:nether_star",
+				"candidates": [
+					"minecraft:nether_star"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:ender_eye",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_gold",
+			"frequency": 11,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:gold_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:gold_ingot",
+				"candidates": [
+					"minecraft:gold_ingot"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:dragon_breath",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/dyes_yellow",
+			"frequency": 4,
+			"input": {
+				"count": 1,
+				"selected": "minecraft:yellow_dye"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "minecraft:yellow_dye",
+				"candidates": [
+					"minecraft:yellow_dye",
+					"woot_revived:yellow_dye_plate"
+				]
+			},
+			"actual_output": {
+				"item": "minecraft:ender_pearl",
+				"count": 1,
+				"randomized": true
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		},
+		{
+			"id": "nuclearcraft:kugelblitz_chamber/ingots_steel",
+			"frequency": 11,
+			"input": {
+				"count": 1,
+				"selected": "ftbmaterials:steel_ingot"
+			},
+			"declared_output": {
+				"count": 1,
+				"selected": "mekanism:ingot_steel",
+				"candidates": [
+					"mekanism:ingot_steel"
+				]
+			},
+			"actual_output": {
+				"item": "mekanism:ingot_steel",
+				"count": 1,
+				"randomized": false
+			},
+			"base_time_ticks": 50,
+			"processing_fe_per_step": 1000
+		}
+	]
+}
