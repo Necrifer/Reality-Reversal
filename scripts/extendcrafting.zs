@@ -111,7 +111,7 @@
 ]);
 <recipetype:extendedcrafting:table>.addShaped("loot_fabricator", 1, <item:hostilenetworks:loot_fabricator>, [
 	[<item:divinerpg:oxdrite_ingot>, <item:bigreactors:anglesite_crystal>, <item:divinerpg:oxdrite_ingot>], 
-	[<item:bigreactors:anglesite_crystal>, <item:hostilenetworks:prediction_matrix>, <item:bigreactors:anglesite_crystal>], 
+	[<item:bigreactors:anglesite_crystal>, <item:woot_revived:stygian_ingot>, <item:bigreactors:anglesite_crystal>], 
 	[<item:divinerpg:oxdrite_ingot>, <item:bigreactors:anglesite_crystal>, <item:divinerpg:oxdrite_ingot>]
 ]);
 <recipetype:extendedcrafting:table>.addShaped("stygian_dust", 2, <item:woot_revived:stygian_dust> * 64, [

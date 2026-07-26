@@ -89,6 +89,8 @@ ServerEvents.recipes(event => {
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
     replace('enderio:end_steel_ingot', '#c:obsidians', 'mekanism:ingot_refined_obsidian')
     replace('industrialforegoing:machine_frame_pity', 'minecraft:iron_ingot', 'enderio:end_steel_ingot')
+    replace('actuallyadditions:iron_casing', 'minecraft:iron_ingot', 'twilightforest:wrought_iron_bar')
+    replace('actuallyadditions:iron_casing', '#c:rods/wooden', 'ae2:logic_processor')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [

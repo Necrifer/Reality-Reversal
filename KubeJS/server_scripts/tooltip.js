@@ -75,4 +75,8 @@ ItemEvents.modifyTooltips(event => {
     event.modify('mbtool:mbtool', tooltip => {
     tooltip.insert(1, Text.of('Keep one around! Autobuilds multiblocks for you.').blue())
     })
+    event.modify('malum:wicked_spirit', tooltip => {
+    tooltip.insert(1, Text.of('Killing any mobs with Crude Scythe drops different spirits.').green())
+    tooltip.insert(2, Text.of('JEI is your friend to check which mobs drops which spirits.').blue())    
+    })
 })
