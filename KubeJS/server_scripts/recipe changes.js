@@ -28,6 +28,7 @@ ServerEvents.recipes(event => {
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'ae2:network/blocks/crystal_processing_charger',
     'voidminers:rubetine',
+    'hostilenetworks:loot_fabricator',
     'divinerpg:shaped/arcana_portal_frame',
     'woot_revived:stygian_dust',
     'bigreactors:reactor/reinforced/casing',
