@@ -13,7 +13,8 @@ ServerEvents.recipes(event => {
         'projecte:transmutation_tablet',
         'oritech:assembler_block',
         'oritech:centrifuge_block',
-        'ftbmaterials:coal_coke_gem'
+        'ftbmaterials:coal_coke_gem',
+        'oritech:pulverizer_block'
       ]
     const removalin =[
       'ftbmaterials:coal_coke_gem',
@@ -91,6 +92,7 @@ ServerEvents.recipes(event => {
     replace('enderio:end_steel_ingot', '#c:obsidians', 'mekanism:ingot_refined_obsidian')
     replace('industrialforegoing:machine_frame_pity', 'minecraft:iron_ingot', 'enderio:end_steel_ingot')
     replace('actuallyadditions:iron_casing', 'minecraft:iron_ingot', 'twilightforest:wrought_iron_bar')
+    replace('industrialforegoing:fluid_extractor', '#minecraft:iron_ingot', '#c:ingots/dark_steel')
     replace('actuallyadditions:iron_casing', '#c:rods/wooden', 'ae2:logic_processor')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
@@ -120,6 +122,21 @@ const shapelessCrafting = [
     }
   ];
 const shapedCrafting = [
+  {
+    id: "catalyst:inscriber",
+    output: 'ae2:inscriber',
+    pattern: [
+        "DDD",
+        "BFB",
+        "BFB"
+    ],
+    keys: {
+        D: 'enderio:dark_steel_ingot',
+        B: 'extendedcrafting:black_iron_ingot',
+        F: 'ae2:fluix_crystal'
+    }
+
+  },
   {
     id: 'hostilenetworks:sim_chamber',
     output: 'hostilenetworks:sim_chamber',

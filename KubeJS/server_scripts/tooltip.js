@@ -79,4 +79,7 @@ ItemEvents.modifyTooltips(event => {
     tooltip.insert(1, Text.of('Killing any mobs with Crude Scythe drops different spirits.').green())
     tooltip.insert(2, Text.of('JEI is your friend to check which mobs drops which spirits.').blue())    
     })
+    event.modify('aether:sentry_stone', tooltip => {
+    tooltip.insert(1, Text.of('The boss fights are unpleasant. In exchange, this is the price.').gold())
+    })
 })

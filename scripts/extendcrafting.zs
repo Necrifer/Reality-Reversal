@@ -121,3 +121,10 @@
 	[<item:malum:eldritch_spirit>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:inferium_essence>, <item:mysticalagriculture:inferium_essence>, <item:malum:infernal_spirit>], 
 	[<item:aether:enchanted_gravitite>, <item:malum:arcane_spirit>, <item:actuallyadditions:black_quartz>, <item:malum:aerial_spirit>, <item:aether:enchanted_gravitite>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("oritech_pulverizer", 2, <item:oritech:pulverizer_block>, [
+	[<item:minecraft:air>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:minecraft:air>], 
+	[<item:alltheores:lumium_ingot>, <item:twilightforest:fiery_ingot>, <item:oritech:motor>, <item:twilightforest:fiery_ingot>, <item:alltheores:lumium_ingot>], 
+	[<item:alltheores:lumium_ingot>, <item:twilightforest:fiery_ingot>, <item:oritech:motor>, <item:twilightforest:fiery_ingot>, <item:alltheores:lumium_ingot>], 
+	[<item:alltheores:lumium_ingot>, <item:twilightforest:fiery_ingot>, <item:oritech:motor>, <item:twilightforest:fiery_ingot>, <item:alltheores:lumium_ingot>], 
+	[<item:minecraft:air>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:minecraft:air>]
+]);
