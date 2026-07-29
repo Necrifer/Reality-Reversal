@@ -28,7 +28,6 @@ ServerEvents.recipes(event => {
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'ae2:network/blocks/inscribers',
-    'primalmagick:mundane_wand',
     'ae2:network/blocks/crystal_processing_charger',
     'voidminers:rubetine',
     'hostilenetworks:loot_fabricator',
@@ -96,6 +95,7 @@ ServerEvents.recipes(event => {
     replace('actuallyadditions:iron_casing', 'minecraft:iron_ingot', 'twilightforest:wrought_iron_bar')
     replace('industrialforegoing:fluid_extractor', '#minecraft:iron_ingot', '#c:ingots/dark_steel')
     replace('actuallyadditions:iron_casing', '#c:rods/wooden', 'ae2:logic_processor')
+    replace('primalmagick:mundane_wand', '#c:rods/wooden', 'malum:hallowed_gold_ingot')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [
@@ -122,11 +122,6 @@ const shapelessCrafting = [
         output: 'twilightforest:fiery_tears',
         inputs: ['minecraft:ghast_tear', 'twilightforest:carminite']
     },
-  {
-    id: 'modpack:mundane_wand', 
-    output: 'primalmagick:mundane_wand',
-    inputs: ['#c:rods/wooden','#malum:spirits','#primalmagick:essences/dusts']
-  }
   ];
 const shapedCrafting = [
 

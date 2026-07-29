@@ -4,7 +4,7 @@
 // version. KubeJS can still register all of its datapack recipe serializers
 // through event.custom().
 //
-// These are active test recipes. Change or remove them after testing.
+// These are test recipes. Change or remove them after testing.
 const enable_recipe = false;
 ServerEvents.recipes(event => {
   if (!enable_recipe) {
