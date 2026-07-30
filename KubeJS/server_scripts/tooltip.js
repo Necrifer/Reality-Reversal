@@ -82,7 +82,7 @@ ItemEvents.modifyTooltips(event => {
     event.modify('aether:sentry_stone', tooltip => {
     tooltip.insert(1, Text.of('The boss fights are unpleasant. In exchange, this is the prize.').gold())
     })
-    event.modify('angel_utilies:deep_dark', tooltip => {
+    event.modify('angel_utilities:deep_dark', tooltip => {
     tooltip.insert(1, Text.of('Light up the cobblestone portal to enter Deep Dark.').green())
     })
     event.modify('angel_utilities:compressed_cobblestone', tooltip => {
