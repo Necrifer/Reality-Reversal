@@ -31,7 +31,7 @@ ServerEvents.recipes(event => {
     'ars_nouveau:novice_spellbook_alt',
     'ars_nouveau:novice_spell_book',
     'ae2:network/blocks/crystal_processing_charger',
-    'voidminers:rubetine',
+    'voidminersremastered:rubetine',
     'hostilenetworks:loot_fabricator',
     'divinerpg:shaped/arcana_portal_frame',
     'woot_revived:stygian_dust',
@@ -198,7 +198,7 @@ const shapedCrafting = [
   },
   {
     id:'kubejs:easy_rubetine', 
-    output: 'voidminers:rubetine',
+    output: 'voidminersremastered:rubetine',
     pattern: [
         "RDM",
         "EEE",

@@ -89,7 +89,7 @@
 	[<item:alltheores:invar_ingot>, <item:alltheores:invar_ingot>, <item:alltheores:invar_ingot>, <item:alltheores:invar_ingot>, <item:alltheores:signalum_ingot>], 
 	[<item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>, <item:alltheores:signalum_ingot>]
 ]);
-<recipetype:extendedcrafting:table>.addShaped("harsh_voidminers_rubetine", 0, <item:voidminers:rubetine>, [
+<recipetype:extendedcrafting:table>.addShaped("harsh_voidminers_rubetine", 0, <item:voidminersremastered:rubetine>, [
 	[<item:twilightforest:fiery_ingot>, <item:minecraft:gold_ingot>, <item:enderio:energetic_alloy_ingot>, <item:draconicevolution:draconium_ingot>, <item:minecraft:copper_ingot>, <item:draconicevolution:draconium_ingot>, <item:enderio:energetic_alloy_ingot>, <item:minecraft:gold_ingot>, <item:twilightforest:fiery_ingot>], 
 	[<item:extendedcrafting:ender_ingot>, <item:enderio:end_steel_ingot>, <item:twilightforest:knightmetal_ingot>, <item:mekanism:ingot_tin>, <item:extendedcrafting:enhanced_ender_ingot>, <item:mekanism:ingot_tin>, <item:twilightforest:knightmetal_ingot>, <item:enderio:end_steel_ingot>, <item:extendedcrafting:ender_ingot>], 
 	[<item:extendedcrafting:enhanced_redstone_ingot>, <item:oritech:duratium_ingot>, <item:enderio:pulsating_alloy_ingot>, <item:ftbmaterials:constantan_ingot>, <item:oritech:nickel_ingot>, <item:ftbmaterials:constantan_ingot>, <item:enderio:redstone_alloy_ingot>, <item:oritech:adamant_ingot>, <item:extendedcrafting:enhanced_redstone_ingot>], 
@@ -127,4 +127,9 @@
 	[<item:alltheores:lumium_ingot>, <item:twilightforest:fiery_ingot>, <item:oritech:motor>, <item:twilightforest:fiery_ingot>, <item:alltheores:lumium_ingot>], 
 	[<item:alltheores:lumium_ingot>, <item:twilightforest:fiery_ingot>, <item:oritech:motor>, <item:twilightforest:fiery_ingot>, <item:alltheores:lumium_ingot>], 
 	[<item:minecraft:air>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:minecraft:air>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("internum_crystal", 2, <item:matc:inferium_crystal>, [
+	[<item:malum:soul_stained_steel_ingot>, <item:mysticalagriculture:prosperity_shard>, <item:malum:soul_stained_steel_ingot>], 
+	[<item:mysticalagriculture:prosperity_shard>, <item:mysticalagriculture:inferium_gemstone>, <item:mysticalagriculture:prosperity_shard>], 
+	[<item:malum:soul_stained_steel_ingot>, <item:mysticalagriculture:prosperity_shard>, <item:malum:soul_stained_steel_ingot>]
 ]);
