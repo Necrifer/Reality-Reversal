@@ -28,6 +28,7 @@ ServerEvents.recipes(event => {
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'ae2:network/blocks/inscribers',
+    'matc:inferium_crystal',
     'ars_nouveau:novice_spellbook_alt',
     'ars_nouveau:novice_spell_book',
     'ae2:network/blocks/crystal_processing_charger',

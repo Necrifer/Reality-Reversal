@@ -128,7 +128,7 @@
 	[<item:alltheores:lumium_ingot>, <item:twilightforest:fiery_ingot>, <item:oritech:motor>, <item:twilightforest:fiery_ingot>, <item:alltheores:lumium_ingot>], 
 	[<item:minecraft:air>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:alltheores:enderium_ingot>, <item:minecraft:air>]
 ]);
-<recipetype:extendedcrafting:table>.addShaped("internum_crystal", 2, <item:matc:inferium_crystal>, [
+<recipetype:extendedcrafting:table>.addShaped("infernium_crystal", 1, <item:matc:inferium_crystal>, [
 	[<item:malum:soul_stained_steel_ingot>, <item:mysticalagriculture:prosperity_shard>, <item:malum:soul_stained_steel_ingot>], 
 	[<item:mysticalagriculture:prosperity_shard>, <item:mysticalagriculture:inferium_gemstone>, <item:mysticalagriculture:prosperity_shard>], 
 	[<item:malum:soul_stained_steel_ingot>, <item:mysticalagriculture:prosperity_shard>, <item:malum:soul_stained_steel_ingot>]
