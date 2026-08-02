@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
   // 6. Allow higher-tier miners
   // id is the recipeID, can be used by other KubeJS scripts
 
-  event.recipes.voidminersremastered.miner(
+  event.recipes.voidminers.miner(
     'minecraft:netherite_scrap',
     'javd:void',
     1,
@@ -22,9 +22,9 @@ ServerEvents.recipes(event => {
 
   // Remove the built-in T1 Overworld Diamond Ore entry.
   event.remove({
-    id: 'voidminersremastered:overworld/tier1_miner/diamond_ore'
+    id: 'voidminers:overworld/tier1_miner/diamond_ore'
   })
-  // Re-add it at a lower weight and with other ore per operation.
+  // Re-add it at a lower weight and with two ore per operation.
   const ores = [
     {
       item: 'minecraft:diamond_ore',
@@ -62,6 +62,11 @@ ServerEvents.recipes(event => {
       id: 'modpack:voidminers/gold_ore'
     },
     {
+      item: 'minecraft:iron_ore',
+      weight: 13.0,
+      id: 'modpack:voidminers/iron_ore'
+    },
+    {
       item: 'minecraft:emerald_ore',
       weight: 9.0,
       id: 'modpack:voidminers/emerald_ore'
@@ -95,6 +100,11 @@ ServerEvents.recipes(event => {
       item: 'draconicevolution:overworld_draconium_ore',
       weight: 13.0,
       id: 'modpack:voidminers/draconium_ore'
+    },
+    {
+      item: 'minecraft:iron_ore',
+      weight: 13.0,
+      id: 'modpack:voidminers/iron_ore'
     },
     {
       item: 'bigreactors:anglesite_ore',
@@ -214,7 +224,7 @@ ServerEvents.recipes(event => {
   ]
 
   ores.forEach(recipe => {
-    event.recipes.voidminersremastered.miner(
+    event.recipes.voidminers.miner(
       recipe.item,
       'javd:void',
       1,
