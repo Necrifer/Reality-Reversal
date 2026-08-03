@@ -28,7 +28,9 @@ ServerEvents.recipes(event => {
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'ae2:network/blocks/inscribers',
+    'matc:prudentium_crystal',
     'matc:inferium_crystal',
+    'matc:tertium_crystal',
     'ars_nouveau:novice_spellbook_alt',
     'ars_nouveau:novice_spell_book',
     'ae2:network/blocks/crystal_processing_charger',
@@ -53,6 +55,9 @@ ServerEvents.recipes(event => {
     'ultimatefoods:acero',
     'projecte:transmutation_table',
     'mekanismgenerators:generator/bio',
+    'matc:master_infusion_crystal',
+    'matc:supremium_crystal',
+    'matc:imperium_crystal',
     'mekanism:energy_tablet',
     'crystalcraft_unlimited_java:crafting_fusion_11',
     'oritech:compat/immersiveengineering/alloying/adamant',
@@ -90,7 +95,7 @@ ServerEvents.recipes(event => {
     replace('mekanism:basic_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/steel')
     replace('mekanism:advanced_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/dark_steel')
     replace('rftoolsbuilder:builder', 'minecraft:bricks', 'ae2:fluix_block')
-    replace('mekanism:elite_fluid tank', 'minecraft:iron_ingot', '#c:ingots/end_steel')
+    replace('mekanism:elite_fluid_tank', 'minecraft:iron_ingot', '#c:ingots/end_steel')
     replace('mekanism:ultimate_fluid_tank', 'minecraft:iron_ingot', 'kubejs:stellarium_ingot')
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
     replace('enderio:end_steel_ingot', '#c:obsidians', 'mekanism:ingot_refined_obsidian')
@@ -98,8 +103,12 @@ ServerEvents.recipes(event => {
     replace('actuallyadditions:iron_casing', 'minecraft:iron_ingot', 'twilightforest:wrought_iron_bar')
     replace('industrialforegoing:fluid_extractor', '#minecraft:iron_ingot', '#c:ingots/dark_steel')
     replace('actuallyadditions:iron_casing', '#c:rods/wooden', 'ae2:logic_processor')
-    replace('oritech:laser_arm_block', '#c:ingots/electrum', 'modular_machinery_reborn:modularium_ingot')
+    replace('oritech:laser_arm_block', '#c:ingots/electrum', 'modular_machinery_reborn:modularium')
     replace('primalmagick:mundane_wand', '#c:rods/wooden', 'malum:hallowed_gold_ingot')
+    replace('spectrum:pedestal_basic_citrine', 'minecraft:redstone', 'minecraft:chorus_fruit')
+    replace('spectrum:pedestal_basic_amethyst', 'minecraft:redstone', 'minecraft:chorus_fruit')
+    replace('spectrum:pedestal_basic_topaz', 'minecraft:redstone', 'minecraft:chorus_fruit')
+
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [
@@ -128,7 +137,22 @@ const shapelessCrafting = [
     },
   ];
 const shapedCrafting = [
-
+  {
+    id: 'mysticalagriculture:master_infusion_crystal',
+    output: 'mysticalagriculture:master_infusion_crystal',
+    pattern: [
+        " D ",
+        "OSC",
+        " A "
+    ],
+    keys: {
+        D: 'minecraft:dirt',
+        O: 'minecraft:oak_log',
+        S: 'matc:supremium_crystal',
+        C: 'minecraft:cobblestone',
+        A: 'minecraft:deepslate'
+    }
+  },
   {
     id: "modpack:inscriber",
     output: 'ae2:inscriber',

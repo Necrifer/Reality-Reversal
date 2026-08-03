@@ -88,4 +88,7 @@ ItemEvents.modifyTooltips(event => {
     event.modify('angel_utilities:compressed_cobblestone', tooltip => {
     tooltip.insert(1, Text.of('Place it like Nether Portal.').gold())
     })
+    event.modify('mysticalagriculture:master_infusion_crystal', tooltip => {
+    tooltip.insert(1, Text.of('Things always comes with a price.').gold())
+    })
 })
