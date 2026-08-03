@@ -98,6 +98,7 @@ ServerEvents.recipes(event => {
     replace('actuallyadditions:iron_casing', 'minecraft:iron_ingot', 'twilightforest:wrought_iron_bar')
     replace('industrialforegoing:fluid_extractor', '#minecraft:iron_ingot', '#c:ingots/dark_steel')
     replace('actuallyadditions:iron_casing', '#c:rods/wooden', 'ae2:logic_processor')
+    replace('oritech:laser_arm_block', '#c:ingots/electrum', 'modular_machinery_reborn:modularium_ingot')
     replace('primalmagick:mundane_wand', '#c:rods/wooden', 'malum:hallowed_gold_ingot')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),

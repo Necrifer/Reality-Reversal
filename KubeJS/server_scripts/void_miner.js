@@ -210,7 +210,12 @@ ServerEvents.recipes(event => {
       item: 'nuclearcraftneohaul:thorium_ore',
       weight: 10.0,
       id: 'modpack:voidminers/thorium_ore'
-    }
+    },
+    {
+      item: 'voidminersremastered:rubetine',
+      weight: 1.0,
+      id: 'modpack:voidminers/rubetine'
+    },
   ]
 
   ores.forEach(recipe => {

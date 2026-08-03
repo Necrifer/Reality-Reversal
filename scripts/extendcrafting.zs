@@ -133,3 +133,15 @@
 	[<item:mysticalagriculture:prosperity_shard>, <item:mysticalagriculture:inferium_gemstone>, <item:mysticalagriculture:prosperity_shard>], 
 	[<item:malum:soul_stained_steel_ingot>, <item:mysticalagriculture:prosperity_shard>, <item:malum:soul_stained_steel_ingot>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("prudentium_crystal", 2, <item:matc:prudentium_crystal>, [
+	[<item:spectrum:lime_sapling>, <item:spectrum:yellow_sapling>, <item:voidminersremastered:rubetine>, <item:spectrum:orange_sapling>, <item:spectrum:light_blue_sapling>], 
+	[<item:divinerpg:arcanite_stone>, <item:spectrum:vegetal>, <item:voidminersremastered:rubetine>, <item:spectrum:vegetal>, <item:divinerpg:arcanite_sand>], 
+	[<item:divinerpg:arcanite_stone>, <item:spectrum:vegetal>, <item:matc:inferium_crystal>, <item:spectrum:vegetal>, <item:divinerpg:arcanite_sand>], 
+	[<item:divinerpg:arcanite_stone>, <item:spectrum:vegetal>, <item:voidminersremastered:rubetine>, <item:spectrum:vegetal>, <item:divinerpg:arcanite_sand>], 
+	[<item:spectrum:pink_sapling>, <item:spectrum:purple_sapling>, <item:voidminersremastered:rubetine>, <item:spectrum:cyan_sapling>, <item:spectrum:blue_sapling>]
+]);
+<recipetype:extendedcrafting:ender_crafting>.addShaped("onyx_ore", <item:spectrum:onyx_ore> * 2, [
+	[<item:spectrum:amethyst_powder>, <item:minecraft:air>, <item:spectrum:topaz_powder>], 
+	[<item:minecraft:air>, <item:primalmagick:primalite_ingot>, <item:minecraft:air>], 
+	[<item:dimdoors:amalgam_ore>, <item:spectrum:citrine_powder>, <item:dimdoors:clod_block>]
+]);
