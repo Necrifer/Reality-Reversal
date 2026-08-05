@@ -1,7 +1,0 @@
-ServerEvents.recipes(event => {
-
-  const replace = (result, oldInput, newInput) => {
-    event.replaceInput ({output: result}, oldInput, Ingredient.of(newInput))
-  }
-  replace('primalmagick:primalite_ingot', 'minecraft:iron_ingot', 'aether:ambrosium_shard')
-})

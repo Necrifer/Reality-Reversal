@@ -27,6 +27,16 @@ ServerEvents.recipes(event => {
     results: [stack('minecraft:ender_eye', 2)],
     time: 300
     });
+  recipe('oritech:atomic_forge_mythical_seed', {
+    type: 'oritech:atomic_forge',
+    ingredients: [
+      item('minecraft:wheat_seeds'),
+      item('spectrum:stratine_fragments'),
+      item('mysticalagriculture:prosperity_ingot'),
+    ],
+    results: [stack('mysticalagriculture:prosperity_seed_base', 1)],
+    time: 10
+  });
   recipe('oritech:assembler_conductive_alloy_plate', {
     type: 'oritech:assembler',
     ingredients: [

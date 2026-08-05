@@ -59,6 +59,7 @@ ServerEvents.recipes(event => {
     'matc:supremium_crystal',
     'matc:imperium_crystal',
     'mekanism:energy_tablet',
+    'mysticalagriculture:prosperity_seed_base',
     'crystalcraft_unlimited_java:crafting_fusion_11',
     'oritech:compat/immersiveengineering/alloying/adamant',
     'oritech:compat/immersiveengineering/arcalloying/adamant',

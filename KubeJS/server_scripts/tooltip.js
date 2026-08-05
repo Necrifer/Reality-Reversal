@@ -91,4 +91,10 @@ ItemEvents.modifyTooltips(event => {
     event.modify('mysticalagriculture:master_infusion_crystal', tooltip => {
     tooltip.insert(1, Text.of('Things always comes with a price.').gold())
     })
+    event.modify('oritech:atomic_forge_block', tooltip => {
+    tooltip.insert(1, Text.of('Have a few running at all times.').red())
+    })
+    event.modify('extendedcrafting:singularity[extendedcrafting:singularity_id="extendedcrafting:iron"]', tooltip => {
+    tooltip.insert(1, Text.of('Did you think because of EMC we will let you off?').red())
+    })
 })
