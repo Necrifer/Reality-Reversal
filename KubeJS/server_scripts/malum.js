@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
     event.remove({id: removeRecipe})
   })
 
-  addRecipe('kubejs:malum/template/spirit_infusion', {
+  addRecipe('kubejs:malum/soul_stained_steel_ingot', {
     type: 'malum:spirit_infusion',
     input: sizedItem('industrialforegoing:pink_slime_ingot', 4),
     result: resultItem('malum:soul_stained_steel_ingot', 4),

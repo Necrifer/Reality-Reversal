@@ -28,6 +28,8 @@ ServerEvents.recipes(event => {
   const idRemoval = [
     'oritech:foundry/alloy/compat/mekanism/infused_alloy',
     'ae2:network/blocks/inscribers',
+    'mysticalagriculture:inferium_farmland_till',
+    'mysticalagriculture:inferium_farmland',
     'matc:prudentium_crystal',
     'matc:inferium_crystal',
     'matc:tertium_crystal',
@@ -55,6 +57,8 @@ ServerEvents.recipes(event => {
     'ultimatefoods:acero',
     'projecte:transmutation_table',
     'mekanismgenerators:generator/bio',
+    'mysticalagriculture:infusion_altar',
+    'mysticalagriculture:infusion_pedestal',
     'matc:master_infusion_crystal',
     'matc:supremium_crystal',
     'matc:imperium_crystal',
@@ -109,7 +113,7 @@ ServerEvents.recipes(event => {
     replace('spectrum:pedestal_basic_citrine', 'minecraft:redstone', 'minecraft:chorus_fruit')
     replace('spectrum:pedestal_basic_amethyst', 'minecraft:redstone', 'minecraft:chorus_fruit')
     replace('spectrum:pedestal_basic_topaz', 'minecraft:redstone', 'minecraft:chorus_fruit')
-
+    replace('mysticalautomation:infusion_altarnator', '#c:ingots/iron', 'malum:soul_stained_steel_ingot')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [

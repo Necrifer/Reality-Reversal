@@ -16,6 +16,17 @@ ServerEvents.recipes(event => {
       event.remove({id:recipeID})
     })
   })
+  recipe('oritech:assembler_mythicalfarmland1', {
+    type: 'oritech:assembler',
+    ingredients: [
+      item('minecraft:dirt'),
+      item('mysticalagriculture:inferium_essence'),
+      item('bigreactors:blutonium_ingot'),
+      item('#c:ingots/uranium')
+    ],
+    results: [stack('mysticalagriculture:inferium_farmland', 1)],
+    time: 300
+    });
   recipe('oritech:assembler_ender_eye', {
     type: 'oritech:assembler',
     ingredients: [
