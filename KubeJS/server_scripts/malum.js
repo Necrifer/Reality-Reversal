@@ -27,4 +27,20 @@ ServerEvents.recipes(event => {
     ],
     carryOverComponentData: false
   });
+  addRecipe('kubejs:malum/tertium_farmland', {
+    type: 'malum:spirit_infusion',
+    input: sizedItem('minecraft:dirt', 1),
+    result: resultItem('mysticalagriculture:tertium_farmland', 1),
+    spirits: [
+      spirit('malum:sacred', 2),
+      spirit('malum:aerial', 5),
+      spirit('malum:earthen', 3),
+      spirit('malum:aqueous', 3)
+    ],
+    extraInputs: [
+      sizedItem('mysticalagriculture:tertium_essence', 4),
+      sizedItem('minecraft:wither_skeleton_skull', 1)
+    ],
+    carryOverComponentData: false
+  });
 })

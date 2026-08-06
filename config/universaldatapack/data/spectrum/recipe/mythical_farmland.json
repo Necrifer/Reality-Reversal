@@ -20,7 +20,7 @@
     }
   ],
   "result": {
-    "item": "mysticalagriculture:prudentium_farmland",
+    "id": "mysticalagriculture:prudentium_farmland",
     "count": 1
   },
   "required_advancement": "spectrum:unlocks/blocks/cmy_pedestal",
