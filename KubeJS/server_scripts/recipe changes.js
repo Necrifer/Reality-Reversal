@@ -49,6 +49,8 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:tertium_farmland',
     'mysticalagriculture:imperium_farmland',
     'mysticalagriculture:imperium_farmland_till',
+    'mysticalagriculture:supremium_farmland_till',
+    'mysticalagriculture:supremium_farmland',
     'oritech:crafting/fluidpipe',
     'oritech:crafting/metalbeams',
     'nuclearcraft:plate_basic',
