@@ -1,0 +1,248 @@
+// Independent Nature's Aura monitor.
+//
+// Crafting anchors are registered when placed or right-clicked. Once per
+// minute, each loaded chunk containing at least one registered anchor is
+// evaluated exactly once. Existing anchors can be registered by right-clicking
+// them after this script is installed.
+
+(() => {
+
+const ANCHOR_IDS = {
+  'naturesaura:nature_altar': true,
+  'naturesaura:offering_table': true,
+  'naturesaura:animal_spawner': true,
+  'naturesaura:wood_stand': true
+}
+
+const CHECK_INTERVAL_TICKS = 20 * 60
+const AURA_MEASUREMENT_RADIUS = 16
+
+// Sample thresholds. Tune these from the monitor's logged aura values.
+const LOW_AURA_TRIGGER = 500000
+const LOW_AURA_RESET = 650000
+const HIGH_AURA_TRIGGER = 2500000
+const HIGH_AURA_RESET = 2350000
+
+const ANCHOR_KEY_PREFIX = 'modpackAuraAnchor|'
+const STATE_KEY_PREFIX = 'modpackAuraChunkState|'
+const levelTickCounters = {}
+
+function anchorKey(position) {
+  return ANCHOR_KEY_PREFIX + position.getX() + '|' +
+    position.getY() + '|' + position.getZ()
+}
+
+function stateKey(chunkX, chunkZ) {
+  return STATE_KEY_PREFIX + chunkX + '|' + chunkZ
+}
+
+function isAnchor(block) {
+  return ANCHOR_IDS[String(block.id)] === true
+}
+
+function registerAnchor(event) {
+  if (!isAnchor(event.block)) {
+    return
+  }
+
+  const data = event.level.getPersistentData()
+  const key = anchorKey(event.block.pos)
+  if (!data.getBoolean(key)) {
+    data.putBoolean(key, true)
+    console.info(
+      `[Aura Anchor Monitor] Registered ${event.block.id} at ` +
+      `${event.block.pos.toShortString()}.`
+    )
+  }
+}
+
+BlockEvents.placed(event => registerAnchor(event))
+BlockEvents.rightClicked(event => registerAnchor(event))
+
+BlockEvents.broken(event => {
+  if (!isAnchor(event.block)) {
+    return
+  }
+  event.level.getPersistentData().remove(anchorKey(event.block.pos))
+})
+
+function runAuraCommand(level, command) {
+  const server = level.getServer()
+  const source = server.createCommandSourceStack()
+    .withLevel(level)
+    .withPermission(4)
+    .withSuppressedOutput()
+  return server.getCommands().performPrefixedCommand(source, command)
+}
+
+function findOpenPosition(level, center) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  const offsets = [
+    [0, 2, 0], [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
+    [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
+  ]
+
+  for (const offset of offsets) {
+    const candidate = new BlockPos(
+      center.getX() + offset[0],
+      center.getY() + offset[1],
+      center.getZ() + offset[2]
+    )
+    if (level.getBlockState(candidate).isAir() &&
+        level.getBlockState(candidate.above()).isAir()) {
+      return candidate
+    }
+  }
+  return null
+}
+
+function fireLowReaction(level, position, aura) {
+  const spawnPos = findOpenPosition(level, position)
+  if (spawnPos !== null) {
+    const x = spawnPos.getX() + 0.5
+    const y = spawnPos.getY()
+    const z = spawnPos.getZ() + 0.5
+    runAuraCommand(
+      level,
+      `summon minecraft:skeleton ${x} ${y} ${z} ` +
+      `{CustomName:'{"text":"Anchor Sentinel","color":"aqua"}',` +
+      `CustomNameVisible:1b,PersistenceRequired:1b,` +
+      `Tags:["modpack_anchor_aura_reaction"]}`
+    )
+  }
+
+  runAuraCommand(
+    level,
+    `effect give @a[x=${position.getX()},y=${position.getY()},` +
+    `z=${position.getZ()},distance=..12] minecraft:slowness 20 1 true`
+  )
+  console.info(`[Aura Anchor Monitor] LOW reaction fired; aura=${aura}.`)
+}
+
+function fireHighReaction(level, position, aura) {
+  const Blocks = Java.loadClass('net.minecraft.world.level.block.Blocks')
+  const blockPos = findOpenPosition(level, position)
+  if (blockPos !== null) {
+    level.setBlockAndUpdate(
+      blockPos,
+      Blocks.FLOWERING_AZALEA.defaultBlockState()
+    )
+  }
+  console.info(`[Aura Anchor Monitor] HIGH reaction fired; aura=${aura}.`)
+}
+
+function evaluateAnchorChunk(level, position, chunkX, chunkZ, data) {
+  const aura = AuraChunk.getAuraInArea(
+    level,
+    position,
+    AURA_MEASUREMENT_RADIUS
+  )
+  const key = stateKey(chunkX, chunkZ)
+  const oldState = data.getInt(key)
+  let newState = oldState
+
+  if (aura <= LOW_AURA_TRIGGER && oldState !== -1) {
+    fireLowReaction(level, position, aura)
+    newState = -1
+  } else if (aura >= HIGH_AURA_TRIGGER && oldState !== 1) {
+    fireHighReaction(level, position, aura)
+    newState = 1
+  } else if (oldState === -1 && aura >= LOW_AURA_RESET) {
+    newState = 0
+  } else if (oldState === 1 && aura <= HIGH_AURA_RESET) {
+    newState = 0
+  }
+
+  if (newState !== oldState) {
+    data.putInt(key, newState)
+  }
+
+  console.info(
+    `[Aura Anchor Monitor] Checked anchor chunk ${chunkX},${chunkZ}; ` +
+    `area aura=${aura}; reaction state=${newState}.`
+  )
+}
+
+function pollRegisteredAnchorChunks(level) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  const BuiltInRegistries = Java.loadClass(
+    'net.minecraft.core.registries.BuiltInRegistries'
+  )
+  const data = level.getPersistentData()
+  const iterator = data.getAllKeys().iterator()
+  const chunks = {}
+  const staleKeys = []
+
+  while (iterator.hasNext()) {
+    const key = String(iterator.next())
+    if (!key.startsWith(ANCHOR_KEY_PREFIX)) {
+      continue
+    }
+
+    const parts = key.substring(ANCHOR_KEY_PREFIX.length).split('|')
+    if (parts.length !== 3) {
+      staleKeys.push(key)
+      continue
+    }
+
+    const position = new BlockPos(
+      Number(parts[0]),
+      Number(parts[1]),
+      Number(parts[2])
+    )
+    if (!level.isLoaded(position)) {
+      continue
+    }
+
+    const currentId = String(
+      BuiltInRegistries.BLOCK.getKey(
+        level.getBlockState(position).getBlock()
+      )
+    )
+    if (ANCHOR_IDS[currentId] !== true) {
+      staleKeys.push(key)
+      continue
+    }
+
+    const chunkX = Math.floor(position.getX() / 16)
+    const chunkZ = Math.floor(position.getZ() / 16)
+    const chunkKey = chunkX + '|' + chunkZ
+    if (chunks[chunkKey] === undefined) {
+      chunks[chunkKey] = {
+        position: position,
+        chunkX: chunkX,
+        chunkZ: chunkZ
+      }
+    }
+  }
+
+  for (const staleKey of staleKeys) {
+    data.remove(staleKey)
+  }
+
+  for (const chunkKey of Object.keys(chunks)) {
+    const chunk = chunks[chunkKey]
+    evaluateAnchorChunk(
+      level,
+      chunk.position,
+      chunk.chunkX,
+      chunk.chunkZ,
+      data
+    )
+  }
+}
+
+LevelEvents.tick(event => {
+  const level = event.level
+  const levelKey = String(level.dimension())
+  const ticks = (levelTickCounters[levelKey] || 0) + 1
+
+  if (ticks >= CHECK_INTERVAL_TICKS) {
+    levelTickCounters[levelKey] = 0
+    pollRegisteredAnchorChunks(level)
+  } else {
+    levelTickCounters[levelKey] = ticks
+  }
+})
+
+})()

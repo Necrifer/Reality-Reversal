@@ -1,0 +1,140 @@
+// Modular Machinery Reborn test machines for Nature's Aura integration.
+//
+// Each completed recipe calls the same MMR recipe function with a different
+// action argument. Aura is measured and changed around the machine controller.
+
+(() => {
+
+const AURA_DRAIN_MACHINE = 'modpack:aura_drain_test_rig'
+const AURA_GENERATOR_MACHINE = 'modpack:aura_generator_test_rig'
+const AURA_FUNCTION = 'modpack:modify_natures_aura'
+
+const AURA_CHANGE_PER_RECIPE = 100000
+const AURA_MEASUREMENT_RADIUS = 16
+const RECIPE_TICKS = 100
+const ENERGY_PER_TICK = 128
+
+MMREvents.machines(event => {
+  event.create(AURA_DRAIN_MACHINE)
+    .name('Aura Drain Test Rig')
+    .color(0x6b4f8a)
+    .structure(
+      MMRStructureBuilder.create()
+        .pattern([
+          [
+            'CCC',
+            'CIC',
+            'CCC'
+          ],
+          [
+            'CCC',
+            'OmE',
+            'CCC'
+          ]
+        ])
+        .keys({
+          m: 'modular_machinery_reborn:controller',
+          C: 'modular_machinery_reborn:casing_plain',
+          I: 'modular_machinery_reborn:inputbus_normal',
+          O: 'modular_machinery_reborn:outputbus_normal',
+          E: 'modular_machinery_reborn:energyinputhatch_normal'
+        })
+    )
+
+  event.create(AURA_GENERATOR_MACHINE)
+    .name('Aura Generator Test Rig')
+    .color(0x5fd38d)
+    .structure(
+      MMRStructureBuilder.create()
+        .pattern([
+          [
+            'CCC',
+            'CIC',
+            'CCC'
+          ],
+          [
+            'CCC',
+            'OmE',
+            'CCC'
+          ]
+        ])
+        .keys({
+          m: 'modular_machinery_reborn:controller',
+          C: 'modular_machinery_reborn:casing_circuitry',
+          I: 'modular_machinery_reborn:inputbus_normal',
+          O: 'modular_machinery_reborn:outputbus_normal',
+          E: 'modular_machinery_reborn:energyinputhatch_normal'
+        })
+    )
+})
+
+ServerEvents.recipes(event => {
+  // Test conversion: one amethyst shard becomes one quartz and removes aura.
+  event.recipes.modular_machinery_reborn
+    .machine_recipe(AURA_DRAIN_MACHINE, RECIPE_TICKS)
+    .requireItem('minecraft:amethyst_shard')
+    .requireEnergyPerTick(ENERGY_PER_TICK)
+    .produceItem('minecraft:quartz')
+    .requireFunctionOnEnd(
+      AURA_FUNCTION,
+      'drain',
+      String(AURA_CHANGE_PER_RECIPE)
+    )
+    .id('modpack:aura_drain_test')
+
+  // Test conversion: one glowstone dust becomes one amethyst shard and adds aura.
+  event.recipes.modular_machinery_reborn
+    .machine_recipe(AURA_GENERATOR_MACHINE, RECIPE_TICKS)
+    .requireItem('minecraft:glowstone_dust')
+    .requireEnergyPerTick(ENERGY_PER_TICK)
+    .produceItem('minecraft:amethyst_shard')
+    .requireFunctionOnEnd(
+      AURA_FUNCTION,
+      'store',
+      String(AURA_CHANGE_PER_RECIPE)
+    )
+    .id('modpack:aura_generation_test')
+})
+
+MMREvents.recipeFunction(AURA_FUNCTION, event => {
+  const action = event.get(0)
+  const amount = Number(event.get(1))
+
+  if ((action !== 'drain' && action !== 'store') ||
+      !Number.isFinite(amount) || amount <= 0) {
+    console.error(
+      `[Aura Test Rig] Invalid function arguments: action=${action}, ` +
+      `amount=${event.get(1)}.`
+    )
+    return
+  }
+
+  const controller = event.getTile()
+  const level = controller.getLevel()
+  const position = controller.getBlockPos()
+  const auraBefore = AuraChunk.getAuraInArea(
+    level,
+    position,
+    AURA_MEASUREMENT_RADIUS
+  )
+
+  if (action === 'drain') {
+    AuraChunk.drainAura(level, position, amount)
+  } else {
+    AuraChunk.storeAura(level, position, amount)
+  }
+
+  const auraAfter = AuraChunk.getAuraInArea(
+    level,
+    position,
+    AURA_MEASUREMENT_RADIUS
+  )
+
+  console.info(
+    `[Aura Test Rig] Recipe ${event.getRecipeId()} completed at ` +
+    `${position.toShortString()}; action=${action}; requested=${amount}; ` +
+    `area aura before=${auraBefore}; after=${auraAfter}.`
+  )
+})
+
+})()
