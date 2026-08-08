@@ -1,11 +1,14 @@
-// Yes. This is written by Codex.
+// Yes this is written by AI. I'm not a programmer, remember...
 // Modular Machinery Reborn test machines for Nature's Aura integration.
 //
-// Each completed recipe changes aura at the controller, then immediately
-// evaluates the resulting value. The reactions are deliberately visible test
-// effects and can be replaced independently of the aura-changing recipes.
+// A completed recipe changes aura and immediately checks the LOW-aura tiers
+// below. There is deliberately no high-aura reaction in this template.
 
 (() => {
+
+// ---------------------------------------------------------------------------
+// MACHINE AND RECIPE SETTINGS
+// ---------------------------------------------------------------------------
 
 const AURA_DRAIN_MACHINE = 'modpack:aura_drain_test_rig'
 const AURA_GENERATOR_MACHINE = 'modpack:aura_generator_test_rig'
@@ -16,12 +19,90 @@ const AURA_MEASUREMENT_RADIUS = 16
 const RECIPE_TICKS = 100
 const ENERGY_PER_TICK = 128
 
-// Sample thresholds. Tune these after checking the logged area-aura values.
-const LOW_AURA_TRIGGER = 500000
-const LOW_AURA_RESET = 650000
-const HIGH_AURA_TRIGGER = 2500000
-const HIGH_AURA_RESET = 2350000
-const REACTION_STATE_KEY = 'modpackAuraImmediateReactionState'
+// ---------------------------------------------------------------------------
+// LOW-AURA BACKFIRE TIERS -- THIS IS THE MAIN CUSTOMIZATION SECTION
+// ---------------------------------------------------------------------------
+//
+// Tiers must remain ordered from least severe to most severe.
+//
+// threshold:        This tier is entered at or below this aura value.
+// resetAt:          Aura must recover to this value before the tier rearms.
+// entityId/count:   Mob and number summoned when the tier is entered.
+// entityNbt:        Everything after the entity coordinates in /summon.
+// effects:          Nearby player effects. amplifier 0 means level I.
+// placementId:      Any BLOCK id, including fluid blocks such as water/lava.
+// placementCount:   Number of positions forcibly replaced.
+// replaceCenter:    true permits replacing the MMR controller itself.
+//
+// Placement uses `setblock ... replace` and intentionally does NOT check for
+// air. Casings, buses, anchors, terrain, or the controller can be destroyed.
+const LOW_AURA_TIERS = [
+  {
+    name: 'unstable',
+    threshold: 1500000,
+    resetAt: 1650000,
+    entityId: 'minecraft:zombie',
+    entityCount: 3,
+    entityNbt: `{CustomName:'{"text":"Anomalous Aura","color":"dark_purple"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_unstable"]}`,
+    effects: [
+      { id: 'minecraft:weakness', durationSeconds: 15, amplifier: 0 }
+    ],
+    placementId: 'minecraft:cobweb',
+    placementCount: 4,
+    replaceCenter: false
+  },
+  {
+    name: 'critical',
+    threshold: 750000,
+    resetAt: 900000,
+    entityId: 'minecraft:cave_spider',
+    entityCount: 6,
+    entityNbt: `{CustomName:'{"text":"Aura Leak","color":"blue"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_critical"]}`,
+    effects: [
+      { id: 'minecraft:slowness', durationSeconds: 20, amplifier: 1 },
+      { id: 'minecraft:weakness', durationSeconds: 20, amplifier: 1 }
+    ],
+    // Water is a block-form fluid id and will begin flowing normally.
+    placementId: 'minecraft:water',
+    placementCount: 8,
+    replaceCenter: false
+  },
+  {
+    name: 'catastrophic',
+    threshold: 250000,
+    resetAt: 400000,
+    entityId: 'minecraft:vex',
+    entityCount: 10,
+    entityNbt: `{CustomName:'{"text":"Aura Backfire","color":"red"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_catastrophic"]}`,
+    effects: [
+      { id: 'minecraft:wither', durationSeconds: 12, amplifier: 1 },
+      { id: 'minecraft:blindness', durationSeconds: 12, amplifier: 0 }
+    ],
+    // Change this to another registered block-form fluid id if desired.
+    placementId: 'minecraft:lava',
+    placementCount: 13,
+    // The first replacement position is the machine controller.
+    replaceCenter: true
+  }
+]
+
+// Stored on the controller so a tier fires once per downward threshold entry.
+const REACTION_STATE_KEY = 'modpackAuraLowTierStateV2'
+
+// Relative replacement positions. No block-safety tests are performed.
+const REPLACEMENT_OFFSETS = [
+  [1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1],
+  [1, 1, 0], [-1, 1, 0], [0, 1, 1], [0, 1, -1],
+  [2, 0, 0], [-2, 0, 0], [0, 0, 2], [0, 0, -2],
+  [1, 0, 1], [1, 0, -1], [-1, 0, 1], [-1, 0, -1]
+]
+
+// Relative mob positions. Summoning also does not require an open position.
+const ENTITY_OFFSETS = [
+  [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
+  [2, 1, 2], [2, 1, -2], [-2, 1, 2], [-2, 1, -2],
+  [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
+]
 
 MMREvents.machines(event => {
   event.create(AURA_DRAIN_MACHINE)
@@ -30,16 +111,8 @@ MMREvents.machines(event => {
     .structure(
       MMRStructureBuilder.create()
         .pattern([
-          [
-            'CCC',
-            'CIC',
-            'CCC'
-          ],
-          [
-            'CCC',
-            'OmE',
-            'CCC'
-          ]
+          ['CCC', 'CIC', 'CCC'],
+          ['CCC', 'OmE', 'CCC']
         ])
         .keys({
           m: 'modular_machinery_reborn:controller',
@@ -56,16 +129,8 @@ MMREvents.machines(event => {
     .structure(
       MMRStructureBuilder.create()
         .pattern([
-          [
-            'CCC',
-            'CIC',
-            'CCC'
-          ],
-          [
-            'CCC',
-            'OmE',
-            'CCC'
-          ]
+          ['CCC', 'CIC', 'CCC'],
+          ['CCC', 'OmE', 'CCC']
         ])
         .keys({
           m: 'modular_machinery_reborn:controller',
@@ -78,33 +143,24 @@ MMREvents.machines(event => {
 })
 
 ServerEvents.recipes(event => {
-  //recipe of amethyst shard to quartz and removes aura.
   event.recipes.modular_machinery_reborn
     .machine_recipe(AURA_DRAIN_MACHINE, RECIPE_TICKS)
     .requireItem('minecraft:amethyst_shard')
     .requireEnergyPerTick(ENERGY_PER_TICK)
     .produceItem('minecraft:quartz')
-    .requireFunctionOnEnd(
-      AURA_FUNCTION,
-      'drain',
-      String(AURA_CHANGE_PER_RECIPE)
-    )
+    .requireFunctionOnEnd(AURA_FUNCTION, 'drain', String(AURA_CHANGE_PER_RECIPE))
     .id('modpack:aura_drain_test')
 
-  //recipe of glowstone dust to amethyst shard and adds aura.
   event.recipes.modular_machinery_reborn
     .machine_recipe(AURA_GENERATOR_MACHINE, RECIPE_TICKS)
     .requireItem('minecraft:glowstone_dust')
     .requireEnergyPerTick(ENERGY_PER_TICK)
     .produceItem('minecraft:amethyst_shard')
-    .requireFunctionOnEnd(
-      AURA_FUNCTION,
-      'store',
-      String(AURA_CHANGE_PER_RECIPE)
-    )
+    .requireFunctionOnEnd(AURA_FUNCTION, 'store', String(AURA_CHANGE_PER_RECIPE))
     .id('modpack:aura_generation_test')
 })
-// Fancy code here for permission acceleration.
+
+// Runs a Minecraft command in the correct dimension with silent admin access.
 function runAuraCommand(level, command) {
   const server = level.getServer()
   const source = server.createCommandSourceStack()
@@ -113,107 +169,161 @@ function runAuraCommand(level, command) {
     .withSuppressedOutput()
   return server.getCommands().performPrefixedCommand(source, command)
 }
-// This is to check for positions around the controller for aura.
-function findOpenPosition(level, center) {
-  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
-  const offsets = [
-    [0, 2, 0], [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
-    [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
-  ]
 
-  for (const offset of offsets) {
-    const candidate = new BlockPos(
+// Converts an aura reading to 0 (normal), 1, 2, or 3 (most severe).
+function tierNumberForAura(aura) {
+  for (let index = LOW_AURA_TIERS.length - 1; index >= 0; index--) {
+    if (aura <= LOW_AURA_TIERS[index].threshold) {
+      return index + 1
+    }
+  }
+  return 0
+}
+// This defines the area that allows the mob to spawn, and runs the command to summon.
+function summonTierEntities(level, center, tier) {
+  for (let index = 0; index < tier.entityCount; index++) {
+    const offset = ENTITY_OFFSETS[index % ENTITY_OFFSETS.length]
+    const ring = Math.floor(index / ENTITY_OFFSETS.length) * 2
+    const x = center.getX() + offset[0] + ring + 0.5
+    const y = center.getY() + offset[1]
+    const z = center.getZ() + offset[2] + ring + 0.5
+    runAuraCommand(
+      level,
+      `summon ${tier.entityId} ${x} ${y} ${z} ${tier.entityNbt}`
+    )
+  }
+}
+// This runs the command on the area to apply the effects.
+function applyTierEffects(level, center, tier) {
+  for (const effect of tier.effects) {
+    runAuraCommand(
+      level,
+      `effect give @a[x=${center.getX()},y=${center.getY()},` +
+      `z=${center.getZ()},distance=..12] ${effect.id} ` +
+      `${effect.durationSeconds} ${effect.amplifier} true`
+    )
+  }
+}
+// This runs the command to replace blocks in a defined area. Take note this code explicitly allows replacing of any blocks around it, not just air.
+function placeTierReplacements(level, center, tier) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  const offsets = tier.replaceCenter
+    ? [[0, 0, 0]].concat(REPLACEMENT_OFFSETS)
+    : REPLACEMENT_OFFSETS
+  const count = Math.min(tier.placementCount, offsets.length)
+
+  for (let index = 0; index < count; index++) {
+    const offset = offsets[index]
+    const target = new BlockPos(
       center.getX() + offset[0],
       center.getY() + offset[1],
       center.getZ() + offset[2]
     )
-    if (level.getBlockState(candidate).isAir() &&
-        level.getBlockState(candidate.above()).isAir()) {
-      return candidate
-    }
-  }
-  return null
-}
-// This function checks for aura every recipe cycle and runs if passes.
-function reactImmediatelyToAura(controller, aura) {
-  const Blocks = Java.loadClass('net.minecraft.world.level.block.Blocks')
-  const level = controller.getLevel()
-  const position = controller.getBlockPos()
-  const stateData = controller.getPersistentData()
-  const oldState = stateData.getInt(REACTION_STATE_KEY)
-  let newState = oldState
-// Summons a zombie with the name "Anomalous Aura" at low aura values.
-  if (aura <= LOW_AURA_TRIGGER && oldState !== -1) {
-    const spawnPos = findOpenPosition(level, position)
-    if (spawnPos !== null) {
-      const x = spawnPos.getX() + 0.5
-      const y = spawnPos.getY()
-      const z = spawnPos.getZ() + 0.5
-      runAuraCommand(
-        level,
-        `summon minecraft:zombie ${x} ${y} ${z} ` +
-        `{CustomName:'{"text":"Anomalous Aura","color":"dark_purple"}',` +
-        `CustomNameVisible:1b,PersistenceRequired:1b,` +
-        `Tags:["modpack_aura_reaction"]}`
-      )
-    }
-// Applies weakness around the controller at low aura values.
+    // `replace` intentionally overwrites any block at the target position.
     runAuraCommand(
       level,
-      `effect give @a[x=${position.getX()},y=${position.getY()},` +
-      `z=${position.getZ()},distance=..12] minecraft:weakness 15 1 true`
+      `setblock ${target.getX()} ${target.getY()} ${target.getZ()} ` +
+      `${tier.placementId} replace`
     )
-    newState = -1
-    console.info(`[Aura Test Rig] Immediate LOW reaction fired; aura=${aura}.`)
-  } 
-// Places a moss block at high aura values.
-    else if (aura >= HIGH_AURA_TRIGGER && oldState !== 1) {
-    const blockPos = findOpenPosition(level, position)
-    if (blockPos !== null) {
-      level.setBlockAndUpdate(blockPos, Blocks.MOSS_BLOCK.defaultBlockState())
-    }
-    newState = 1
-    console.info(`[Aura Test Rig] Immediate HIGH reaction fired; aura=${aura}.`)
   }
-// Reset the state if aura returns to normal.
-  else if (oldState === -1 && aura >= LOW_AURA_RESET) {
-    newState = 0
-  } else if (oldState === 1 && aura <= HIGH_AURA_RESET) {
-    newState = 0
+}
+
+function fireTierBackfire(level, center, tier, tierNumber, aura) {
+  summonTierEntities(level, center, tier)
+  applyTierEffects(level, center, tier)
+  placeTierReplacements(level, center, tier)
+  console.info(
+    `[Aura Test Rig] LOW tier ${tierNumber} (${tier.name}) fired at ` +
+    `${center.toShortString()}; aura=${aura}; entities=${tier.entityCount}; ` +
+    `replacements=${tier.placementCount} x ${tier.placementId}.`
+  )
+}
+
+function reactImmediatelyToAura(controller, aura) {
+  const level = controller.getLevel()
+  const center = controller.getBlockPos()
+  const stateData = controller.getPersistentData()
+  let oldTierNumber = stateData.getInt(REACTION_STATE_KEY)
+
+  if (oldTierNumber < 0 || oldTierNumber > LOW_AURA_TIERS.length) {
+    oldTierNumber = 0
   }
 
-  if (newState !== oldState) {
-    stateData.putInt(REACTION_STATE_KEY, newState)
+  const detectedTierNumber = tierNumberForAura(aura)
+  let newTierNumber = oldTierNumber
+
+  if (detectedTierNumber > oldTierNumber) {
+    newTierNumber = detectedTierNumber
+
+    // Save first: a destructive tier may replace the controller below.
+    stateData.putInt(REACTION_STATE_KEY, newTierNumber)
+    controller.setChanged()
+
+    fireTierBackfire(
+      level,
+      center,
+      LOW_AURA_TIERS[newTierNumber - 1],
+      newTierNumber,
+      aura
+    )
+    return
+  }
+
+  // Recovery never causes a backfire. It only rearms lower tiers so a later
+  // aura decline can trigger them again without rapid threshold oscillation.
+  if (detectedTierNumber < oldTierNumber) {
+    const oldTier = LOW_AURA_TIERS[oldTierNumber - 1]
+    if (aura >= oldTier.resetAt) {
+      newTierNumber = detectedTierNumber
+    }
+  }
+
+  if (newTierNumber !== oldTierNumber) {
+    stateData.putInt(REACTION_STATE_KEY, newTierNumber)
     controller.setChanged()
   }
 }
 
-// I do not understand what it is doing here.
 MMREvents.recipeFunction(AURA_FUNCTION, event => {
-  const action = event.get(0)
+  const action = String(event.get(0))
   const amount = Number(event.get(1))
+
+  if ((action !== 'drain' && action !== 'store') ||
+      !Number.isFinite(amount) || amount <= 0) {
+    console.error(
+      `[Aura Test Rig] Invalid aura function arguments: action=${action}, ` +
+      `amount=${event.get(1)}.`
+    )
+    return
+  }
+
   const controller = event.getTile()
   const level = controller.getLevel()
-  const position = controller.getBlockPos()
+  const center = controller.getBlockPos()
   const auraBefore = AuraChunk.getAuraInArea(
     level,
-    position,
+    center,
     AURA_MEASUREMENT_RADIUS
   )
 
   if (action === 'drain') {
-    AuraChunk.drainAura(level, position, amount)
+    AuraChunk.drainAura(level, center, amount)
   } else {
-    AuraChunk.storeAura(level, position, amount)
+    AuraChunk.storeAura(level, center, amount)
   }
 
   const auraAfter = AuraChunk.getAuraInArea(
     level,
-    position,
+    center,
     AURA_MEASUREMENT_RADIUS
   )
 
-  // Immediate behavior: no polling delay after an MMR recipe completes.
+  console.info(
+    `[Aura Test Rig] Recipe ${event.getRecipeId()} completed at ` +
+    `${center.toShortString()}; ${action}=${amount}; ` +
+    `aura before=${auraBefore}; after=${auraAfter}.`
+  )
+
   reactImmediatelyToAura(controller, auraAfter)
 })
 

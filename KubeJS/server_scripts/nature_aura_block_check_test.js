@@ -1,14 +1,14 @@
-// Yes. This is also written by Codex. Basically if you see anything that involves Java class, it's by Codex.
-// I'm not a programmer...
-
-// Independent Nature's Aura monitor.
+// Independent, low-aura-only Nature's Aura anchor monitor.
 //
-// Crafting anchors are registered when placed or right-clicked. Once per
-// minute, each loaded chunk containing at least one registered anchor is
-// evaluated exactly once. Existing anchors can be registered by right-clicking
-// them after this script is installed.
+// Anchors register when placed or right-clicked. Every minute, each loaded
+// chunk containing a registered anchor is checked once. Existing anchors only
+// need to be right-clicked once after installing/reloading this script.
 
 (() => {
+
+// ---------------------------------------------------------------------------
+// MONITOR SETTINGS
+// ---------------------------------------------------------------------------
 
 const ANCHOR_IDS = {
   'naturesaura:nature_altar': true,
@@ -17,18 +17,93 @@ const ANCHOR_IDS = {
   'naturesaura:wood_stand': true
 }
 
-const CHECK_INTERVAL_TICKS = 20 * 60
+const CHECK_INTERVAL_TICKS = 20 * 60 // 1,200 ticks = about one minute.
 const AURA_MEASUREMENT_RADIUS = 16
 
-// Sample thresholds. Tune these from the monitor's logged aura values.
-const LOW_AURA_TRIGGER = 500000
-const LOW_AURA_RESET = 650000
-const HIGH_AURA_TRIGGER = 2500000
-const HIGH_AURA_RESET = 2350000
+// ---------------------------------------------------------------------------
+// LOW-AURA BACKFIRE TIERS -- THIS IS THE MAIN CUSTOMIZATION SECTION
+// ---------------------------------------------------------------------------
+//
+// Tiers must remain ordered from least severe to most severe.
+//
+// threshold:        This tier is entered at or below this aura value.
+// resetAt:          Aura must recover to this value before the tier rearms.
+// entityId/count:   Mob and number summoned when the tier is entered.
+// entityNbt:        Everything after the entity coordinates in /summon.
+// effects:          Nearby player effects. amplifier 0 means level I.
+// placementId:      Any BLOCK id, including fluid blocks such as water/lava.
+// placementCount:   Number of positions forcibly replaced.
+// replaceCenter:    true permits replacing the crafting anchor itself.
+//
+// Placement uses `setblock ... replace` and intentionally does NOT check for
+// air. Anchors, pedestals, terrain, or other multiblock parts can be destroyed.
+const LOW_AURA_TIERS = [
+  {
+    name: 'unstable',
+    threshold: 1500000,
+    resetAt: 1650000,
+    entityId: 'minecraft:skeleton',
+    entityCount: 3,
+    entityNbt: `{CustomName:'{"text":"Anchor Sentinel","color":"aqua"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_anchor_unstable"]}`,
+    effects: [
+      { id: 'minecraft:slowness', durationSeconds: 20, amplifier: 0 }
+    ],
+    placementId: 'minecraft:cobweb',
+    placementCount: 4,
+    replaceCenter: false
+  },
+  {
+    name: 'critical',
+    threshold: 750000,
+    resetAt: 900000,
+    entityId: 'minecraft:drowned',
+    entityCount: 6,
+    entityNbt: `{CustomName:'{"text":"Drowned Aura","color":"dark_aqua"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_anchor_critical"]}`,
+    effects: [
+      { id: 'minecraft:mining_fatigue', durationSeconds: 25, amplifier: 1 },
+      { id: 'minecraft:weakness', durationSeconds: 25, amplifier: 1 }
+    ],
+    // Water is a block-form fluid id and will flow after placement.
+    placementId: 'minecraft:water',
+    placementCount: 8,
+    replaceCenter: false
+  },
+  {
+    name: 'catastrophic',
+    threshold: 250000,
+    resetAt: 400000,
+    entityId: 'minecraft:blaze',
+    entityCount: 10,
+    entityNbt: `{CustomName:'{"text":"Aura Backfire","color":"red"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_anchor_catastrophic"]}`,
+    effects: [
+      { id: 'minecraft:wither', durationSeconds: 12, amplifier: 1 },
+      { id: 'minecraft:blindness', durationSeconds: 12, amplifier: 0 }
+    ],
+    // Change this to another registered block-form fluid id if desired.
+    placementId: 'minecraft:lava',
+    placementCount: 13,
+    // The first replacement position is the anchor itself.
+    replaceCenter: true
+  }
+]
 
 const ANCHOR_KEY_PREFIX = 'modpackAuraAnchor|'
-const STATE_KEY_PREFIX = 'modpackAuraChunkState|'
+const STATE_KEY_PREFIX = 'modpackAuraLowTierStateV2|'
 const levelTickCounters = {}
+
+// Relative forced-replacement positions around an anchor.
+const REPLACEMENT_OFFSETS = [
+  [1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1],
+  [1, 1, 0], [-1, 1, 0], [0, 1, 1], [0, 1, -1],
+  [2, 0, 0], [-2, 0, 0], [0, 0, 2], [0, 0, -2],
+  [1, 0, 1], [1, 0, -1], [-1, 0, 1], [-1, 0, -1]
+]
+
+const ENTITY_OFFSETS = [
+  [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
+  [2, 1, 2], [2, 1, -2], [-2, 1, 2], [-2, 1, -2],
+  [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
+]
 
 function anchorKey(position) {
   return ANCHOR_KEY_PREFIX + position.getX() + '|' +
@@ -63,12 +138,12 @@ BlockEvents.placed(event => registerAnchor(event))
 BlockEvents.rightClicked(event => registerAnchor(event))
 
 BlockEvents.broken(event => {
-  if (!isAnchor(event.block)) {
-    return
+  if (isAnchor(event.block)) {
+    event.level.getPersistentData().remove(anchorKey(event.block.pos))
   }
-  event.level.getPersistentData().remove(anchorKey(event.block.pos))
 })
-/// Accelerating permission
+
+// Runs a Minecraft command in the anchor's dimension with silent admin access.
 function runAuraCommand(level, command) {
   const server = level.getServer()
   const source = server.createCommandSourceStack()
@@ -77,88 +152,119 @@ function runAuraCommand(level, command) {
     .withSuppressedOutput()
   return server.getCommands().performPrefixedCommand(source, command)
 }
-// Checks for positions around the anchor blocks for aura.
-function findOpenPosition(level, center) {
-  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
-  const offsets = [
-    [0, 2, 0], [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
-    [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
-  ]
 
-  for (const offset of offsets) {
-    const candidate = new BlockPos(
+function tierNumberForAura(aura) {
+  for (let index = LOW_AURA_TIERS.length - 1; index >= 0; index--) {
+    if (aura <= LOW_AURA_TIERS[index].threshold) {
+      return index + 1
+    }
+  }
+  return 0
+}
+
+function summonTierEntities(level, center, tier) {
+  for (let index = 0; index < tier.entityCount; index++) {
+    const offset = ENTITY_OFFSETS[index % ENTITY_OFFSETS.length]
+    const ring = Math.floor(index / ENTITY_OFFSETS.length) * 2
+    const x = center.getX() + offset[0] + ring + 0.5
+    const y = center.getY() + offset[1]
+    const z = center.getZ() + offset[2] + ring + 0.5
+    runAuraCommand(
+      level,
+      `summon ${tier.entityId} ${x} ${y} ${z} ${tier.entityNbt}`
+    )
+  }
+}
+
+function applyTierEffects(level, center, tier) {
+  for (const effect of tier.effects) {
+    runAuraCommand(
+      level,
+      `effect give @a[x=${center.getX()},y=${center.getY()},` +
+      `z=${center.getZ()},distance=..12] ${effect.id} ` +
+      `${effect.durationSeconds} ${effect.amplifier} true`
+    )
+  }
+}
+
+function placeTierReplacements(level, center, tier) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+  const offsets = tier.replaceCenter
+    ? [[0, 0, 0]].concat(REPLACEMENT_OFFSETS)
+    : REPLACEMENT_OFFSETS
+  const count = Math.min(tier.placementCount, offsets.length)
+
+  for (let index = 0; index < count; index++) {
+    const offset = offsets[index]
+    const target = new BlockPos(
       center.getX() + offset[0],
       center.getY() + offset[1],
       center.getZ() + offset[2]
     )
-    if (level.getBlockState(candidate).isAir() &&
-        level.getBlockState(candidate.above()).isAir()) {
-      return candidate
-    }
-  }
-  return null
-}
-// On low aura, summons a skeleton with name "Anchor Sentinel" at valid open space near the anchor block.
-function fireLowReaction(level, position, aura) {
-  const spawnPos = findOpenPosition(level, position)
-  if (spawnPos !== null) {
-    const x = spawnPos.getX() + 0.5
-    const y = spawnPos.getY()
-    const z = spawnPos.getZ() + 0.5
+    // `replace` is intentional: the target does not need to be air.
     runAuraCommand(
       level,
-      `summon minecraft:skeleton ${x} ${y} ${z} ` +
-      `{CustomName:'{"text":"Anchor Sentinel","color":"aqua"}',` +
-      `CustomNameVisible:1b,PersistenceRequired:1b,` +
-      `Tags:["modpack_anchor_aura_reaction"]}`
-    )
-  }
-// Applies Slowness as well.
-  runAuraCommand(
-    level,
-    `effect give @a[x=${position.getX()},y=${position.getY()},` +
-    `z=${position.getZ()},distance=..12] minecraft:slowness 20 1 true`
-  )
-}
-// Function activates on higher aura values. Places Azalea on high aura.
-function fireHighReaction(level, position, aura) {
-  const Blocks = Java.loadClass('net.minecraft.world.level.block.Blocks')
-  const blockPos = findOpenPosition(level, position)
-  if (blockPos !== null) {
-    level.setBlockAndUpdate(
-      blockPos,
-      Blocks.FLOWERING_AZALEA.defaultBlockState()
+      `setblock ${target.getX()} ${target.getY()} ${target.getZ()} ` +
+      `${tier.placementId} replace`
     )
   }
 }
 
-function evaluateAnchorChunk(level, position, chunkX, chunkZ, data) {
+function fireTierBackfire(level, center, tier, tierNumber, aura) {
+  summonTierEntities(level, center, tier)
+  applyTierEffects(level, center, tier)
+  placeTierReplacements(level, center, tier)
+  console.info(
+    `[Aura Anchor Monitor] LOW tier ${tierNumber} (${tier.name}) fired at ` +
+    `${center.toShortString()}; aura=${aura}; entities=${tier.entityCount}; ` +
+    `replacements=${tier.placementCount} x ${tier.placementId}.`
+  )
+}
+
+function evaluateAnchorChunk(level, center, chunkX, chunkZ, data) {
   const aura = AuraChunk.getAuraInArea(
     level,
-    position,
+    center,
     AURA_MEASUREMENT_RADIUS
   )
   const key = stateKey(chunkX, chunkZ)
-  const oldState = data.getInt(key)
-  let newState = oldState
-// Resets state for aura values below or above the threshold set earlier.
-  if (aura <= LOW_AURA_TRIGGER && oldState !== -1) {
-    fireLowReaction(level, position, aura)
-    newState = -1
-  } else if (aura >= HIGH_AURA_TRIGGER && oldState !== 1) {
-    fireHighReaction(level, position, aura)
-    newState = 1
-  } else if (oldState === -1 && aura >= LOW_AURA_RESET) {
-    newState = 0
-  } else if (oldState === 1 && aura <= HIGH_AURA_RESET) {
-    newState = 0
+  let oldTierNumber = data.getInt(key)
+
+  if (oldTierNumber < 0 || oldTierNumber > LOW_AURA_TIERS.length) {
+    oldTierNumber = 0
   }
 
-  if (newState !== oldState) {
-    data.putInt(key, newState)
+  const detectedTierNumber = tierNumberForAura(aura)
+  let newTierNumber = oldTierNumber
+
+  // Only downward aura movement into a more severe tier causes a backfire.
+  if (detectedTierNumber > oldTierNumber) {
+    newTierNumber = detectedTierNumber
+    data.putInt(key, newTierNumber)
+    fireTierBackfire(
+      level,
+      center,
+      LOW_AURA_TIERS[newTierNumber - 1],
+      newTierNumber,
+      aura
+    )
+  } else if (detectedTierNumber < oldTierNumber) {
+    // Recovery only rearms tiers; it never fires an event by itself.
+    const oldTier = LOW_AURA_TIERS[oldTierNumber - 1]
+    if (aura >= oldTier.resetAt) {
+      newTierNumber = detectedTierNumber
+      data.putInt(key, newTierNumber)
+    }
   }
+
+  console.info(
+    `[Aura Anchor Monitor] Checked chunk ${chunkX},${chunkZ}; ` +
+    `aura=${aura}; low-aura tier=${newTierNumber}.`
+  )
 }
-// I really do not know what is happening here.
+
+// Reads persistent anchor coordinates, removes stale entries, and reduces all
+// anchors in the same chunk to one aura check/reaction per monitoring pass.
 function pollRegisteredAnchorChunks(level) {
   const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   const BuiltInRegistries = Java.loadClass(
@@ -227,7 +333,7 @@ function pollRegisteredAnchorChunks(level) {
     )
   }
 }
-// This functions informs when to run the checks.
+
 LevelEvents.tick(event => {
   const level = event.level
   // KubeJS exposes dimension as a ResourceKey property, not a function.

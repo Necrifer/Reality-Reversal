@@ -8,8 +8,7 @@ ServerEvents.recipes(event => {
     event.remove({id: idRemoval})
   })
 
-  event.custom({
-    type: 'primalmagick:arcane_crafting_shapeless',
+  const arcanecraftingShapeless = [({
     group: 'primalite_ingot',
     ingredients: [
       { item: 'aether:ambrosium_shard' },
@@ -30,5 +29,62 @@ ServerEvents.recipes(event => {
       count: 1,
       id: 'primalmagick:primalite_ingot'
     }
-  }).id('primalmagick:primalite_ingot')
+  })]
+  arcanecraftingShapeless.forEach(recipe => {
+    event.custom({
+      type: 'primalmagick:arcane_crafting_shapeless',
+      ingredients: recipe.ingredients,
+      result: recipe.result,
+      outputFluid: recipe.outputFluid
+    }).id(recipe.recipeId)
+  })
+
+  const arcaneCraftingShaped = [
+  {
+    mana: {
+      sources: {
+        'primalmagick:hallow': 25000,
+        'primalmagick:earth': 25000,
+        'primalmagick:infernal': 25000,
+        'primalmagick:sea': 25000
+      }
+    },
+    pattern: [
+      'ABC',
+      'DEF',
+      'GHI'
+    ],
+    key: {
+      A: { item: 'primalmagick:essence_shard_infernal' },
+      B: { item: 'malum:eldritch_spirit' },
+      C: { item: 'primalmagick:essence_shard_earth'},
+      D: { item: 'malum:arcane_spirit'},
+      E: { item: 'primalmagick:spell_scroll_blank'},
+      F: { item: 'malum:wicked_spirit'},
+      G: { item: 'primalmagick:essence_shard_hallowed'},
+      H: { item: 'malum:sacred_spirit'},
+      I: { item: 'primalmagick:essence_shard_sea'}
+    },
+    requirement: {
+      requirement_type: 'primalmagick:research',  
+    rootKey: {
+        key_type: 'primalmagick:research_entry',
+        rootKey: 'primalmagick:basic_sorcery'
+      }
+    },
+    result: {
+      count: 1,
+      id: 'ars_nouveau:novice_spell_book'
+    }
+  }]
+  arcaneCraftingShaped.forEach(recipe => {
+    event.custom({
+      type: 'primalmagick:arcane_crafting_shaped',
+      pattern: recipe.pattern,
+      key: recipe.key,
+      result: recipe.result,
+      mana: recipe.mana,
+      requirement: recipe.requirement
+    }).id(recipe.recipeId)
+  })
 })
