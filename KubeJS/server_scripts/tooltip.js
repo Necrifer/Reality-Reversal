@@ -97,4 +97,11 @@ ItemEvents.modifyTooltips(event => {
     event.modify('extendedcrafting:singularity[extendedcrafting:singularity_id="extendedcrafting:iron"]', tooltip => {
     tooltip.insert(1, Text.of('Did you think because of EMC we will let you off?').red())
     })
+    event.modify('naturesaura:aura_bottle[naturesaura:aura_bottle_data={aura_type:"naturesaura:nether"}]', tooltip => {
+    tooltip.insert(1, Text.of('Obtained by right clicking bottle and cork in Nether').green())
+    })
+    event.modify('naturesaura:bottle_two_the_rebottling', tooltip => {
+    tooltip.insert(1, Text.of('Right clicking in different dimensions gives different air').green())
+    tooltip.insert(2, Text.of('You may want to grab as many as you can...').blue())
+    })
 })

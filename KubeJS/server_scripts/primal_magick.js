@@ -9,6 +9,7 @@ ServerEvents.recipes(event => {
   })
 
   const arcanecraftingShapeless = [({
+    recipeId: 'primalmagick:primalite_ingot',
     group: 'primalite_ingot',
     ingredients: [
       { item: 'aether:ambrosium_shard' },
@@ -34,16 +35,17 @@ ServerEvents.recipes(event => {
     event.custom({
       type: 'primalmagick:arcane_crafting_shapeless',
       ingredients: recipe.ingredients,
+      requirement: recipe.requirement,
       result: recipe.result,
-      outputFluid: recipe.outputFluid
     }).id(recipe.recipeId)
   })
 
   const arcaneCraftingShaped = [
   {
+    recipeId: 'ars_nouveau:novice_spell_book',
     mana: {
       sources: {
-        'primalmagick:hallow': 25000,
+        'primalmagick:hallowed': 25000,
         'primalmagick:earth': 25000,
         'primalmagick:infernal': 25000,
         'primalmagick:sea': 25000
