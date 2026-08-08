@@ -27,12 +27,12 @@ const ENERGY_PER_TICK = 128
 //
 // threshold:        This tier is entered at or below this aura value.
 // resetAt:          Aura must recover to this value before the tier rearms.
-// entityId/count:   Mob and number summoned at random positions in the chunk.
+// entityId/count:   Mob and number summoned when the tier is entered.
 // entityNbt:        Everything after the entity coordinates in /summon.
 // effects:          Nearby player effects. amplifier 0 means level I.
 // placementId:      A block id OR a fluid id. Fluid ids are converted to their
 //                   source-fluid block state automatically.
-// placementCount:   Number of random, distinct chunk positions replaced.
+// placementCount:   Number of positions forcibly replaced.
 // replaceStructure: false protects the controller and every registered
 //                   position in its formed MMR multiblock, regardless of
 //                   which mod owns the block at that position. Use true only
@@ -75,7 +75,7 @@ const LOW_AURA_TIERS = [
     threshold: 250000,
     resetAt: 400000,
     entityId: 'mecrh:ender_chicken',
-    entityCount: 1,
+    entityCount: 3,
     entityNbt: `{CustomName:'{"text":"Annihilation","color":"red"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_catastrophic"]}`,
     effects: [
       { id: 'minecraft:wither', durationSeconds: 12, amplifier: 1 },
@@ -83,7 +83,7 @@ const LOW_AURA_TIERS = [
     ],
     // Change this to another registered block-form fluid id if desired.
     placementId: 'spectrum:forfeiture',
-    placementCount: 5,
+    placementCount: 3,
     // Catastrophic backfires may replace the controller and MMR components.
     replaceStructure: true
   }
@@ -92,17 +92,33 @@ const LOW_AURA_TIERS = [
 // Stored on the controller so a tier fires once per downward threshold entry.
 const REACTION_STATE_KEY = 'modpackAuraLowTierStateV2'
 
-// RANDOM BACKFIRE AREA SETTINGS
-// X and Z are selected anywhere in the controller's current 16x16 chunk.
-// These Y values are relative to the controller and may be changed freely.
-const PLACEMENT_MIN_Y_OFFSET = -4
-const PLACEMENT_MAX_Y_OFFSET = 4
-const ENTITY_MIN_Y_OFFSET = 1
-const ENTITY_MAX_Y_OFFSET = 4
+// Relative replacement positions, ordered from nearest to farthest. Add more
+// entries if placementCount is raised beyond the available candidate count.
+const REPLACEMENT_OFFSETS = [
+  [1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1],
+  [1, 1, 0], [-1, 1, 0], [0, 1, 1], [0, 1, -1],
+  // Elevated candidates let non-catastrophic tiers clear a wide MMR platform.
+  [1, 2, 0], [-1, 2, 0], [0, 2, 1], [0, 2, -1],
+  [1, 2, 1], [1, 2, -1], [-1, 2, 1], [-1, 2, -1],
+  [2, 2, 0], [-2, 2, 0], [0, 2, 2], [0, 2, -2],
+  [2, 0, 0], [-2, 0, 0], [0, 0, 2], [0, 0, -2],
+  [1, 0, 1], [1, 0, -1], [-1, 0, 1], [-1, 0, -1],
+  [3, 0, 0], [-3, 0, 0], [0, 0, 3], [0, 0, -3],
+  [3, 0, 1], [3, 0, -1], [-3, 0, 1], [-3, 0, -1],
+  [1, 0, 3], [-1, 0, 3], [1, 0, -3], [-1, 0, -3],
+  [3, 0, 3], [3, 0, -3], [-3, 0, 3], [-3, 0, -3],
+  [4, 0, 0], [-4, 0, 0], [0, 0, 4], [0, 0, -4],
+  [4, 0, 2], [4, 0, -2], [-4, 0, 2], [-4, 0, -2],
+  [2, 0, 4], [-2, 0, 4], [2, 0, -4], [-2, 0, -4],
+  [5, 0, 0], [-5, 0, 0], [0, 0, 5], [0, 0, -5]
+]
 
-// Failed, duplicate, and protected random targets are retried. Raise this if
-// extremely large placement counts or very large structures exhaust attempts.
-const PLACEMENT_ATTEMPTS_PER_BLOCK = 20
+// Relative mob positions. Summoning also does not require an open position.
+const ENTITY_OFFSETS = [
+  [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
+  [2, 1, 2], [2, 1, -2], [-2, 1, 2], [-2, 1, -2],
+  [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
+]
 
 MMREvents.machines(event => {
   event.create(AURA_DRAIN_MACHINE)
@@ -172,46 +188,21 @@ function runAuraCommand(level, command) {
 
 // Converts an aura reading to 0 (normal), 1, 2, or 3 (most severe).
 function tierNumberForAura(aura) {
-  for (var index = LOW_AURA_TIERS.length - 1; index >= 0; index--) {
+  for (let index = LOW_AURA_TIERS.length - 1; index >= 0; index--) {
     if (aura <= LOW_AURA_TIERS[index].threshold) {
       return index + 1
     }
   }
   return 0
 }
-
-function randomIntInclusive(minimum, maximum) {
-  return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum
-}
-
-// Returns [x, y, z] offsets selecting a random position anywhere in the
-// controller's chunk and within the supplied relative vertical range.
-function randomChunkOffset(center, minimumYOffset, maximumYOffset) {
-  var centerX = javaCoordinate(center.getX())
-  var centerZ = javaCoordinate(center.getZ())
-  var chunkMinimumX = Math.floor(centerX / 16) * 16
-  var chunkMinimumZ = Math.floor(centerZ / 16) * 16
-  var targetX = randomIntInclusive(chunkMinimumX, chunkMinimumX + 15)
-  var targetZ = randomIntInclusive(chunkMinimumZ, chunkMinimumZ + 15)
-
-  return [
-    targetX - centerX,
-    randomIntInclusive(minimumYOffset, maximumYOffset),
-    targetZ - centerZ
-  ]
-}
-
-// Summons each configured mob at an independently randomized chunk position.
+// This defines the area that allows the mob to spawn, and runs the command to summon.
 function summonTierEntities(level, center, tier) {
-  for (var index = 0; index < tier.entityCount; index++) {
-    var offset = randomChunkOffset(
-      center,
-      ENTITY_MIN_Y_OFFSET,
-      ENTITY_MAX_Y_OFFSET
-    )
-    var x = javaCoordinate(center.getX()) + offset[0] + 0.5
-    var y = javaCoordinate(center.getY()) + offset[1]
-    var z = javaCoordinate(center.getZ()) + offset[2] + 0.5
+  for (let index = 0; index < tier.entityCount; index++) {
+    const offset = ENTITY_OFFSETS[index % ENTITY_OFFSETS.length]
+    const ring = Math.floor(index / ENTITY_OFFSETS.length) * 2
+    const x = center.getX() + offset[0] + ring + 0.5
+    const y = center.getY() + offset[1]
+    const z = center.getZ() + offset[2] + ring + 0.5
     runAuraCommand(
       level,
       `summon ${tier.entityId} ${x} ${y} ${z} ${tier.entityNbt}`
@@ -220,8 +211,7 @@ function summonTierEntities(level, center, tier) {
 }
 // This runs the command on the area to apply the effects.
 function applyTierEffects(level, center, tier) {
-  for (var effectIndex = 0; effectIndex < tier.effects.length; effectIndex++) {
-    var effect = tier.effects[effectIndex]
+  for (const effect of tier.effects) {
     runAuraCommand(
       level,
       `effect give @a[x=${center.getX()},y=${center.getY()},` +
@@ -262,56 +252,10 @@ function getPlacementState(placementId) {
   return null
 }
 
-// Converts a wrapped Java coordinate to a native JavaScript integer. Direct
-// Number(javaValue) conversion collapses these Minecraft integer wrappers in
-// this Rhino environment, so conversion is performed through text instead.
-function javaCoordinate(value) {
-  const parsed = parseInt(String(value), 10)
-  if (isNaN(parsed)) {
-    throw new Error(`[Aura Test Rig] Invalid Java coordinate: ${value}`)
-  }
-  return parsed
-}
-
-// Converts a block position to a plain JavaScript key without Java equality.
+// Converts a block position to a plain JavaScript key. Using numeric values
+// avoids Java object equality and boolean-wrapper issues in Rhino.
 function positionKey(pos) {
-  return `${String(pos.getX())},${String(pos.getY())},${String(pos.getZ())}`
-}
-
-// Builds an offset position using only unambiguous no-argument BlockPos
-// methods. This avoids depending on Rhino's Java overload selection.
-function positionFromOffset(center, offset) {
-  let target = center
-  let xSteps = Math.trunc(offset[0])
-  let ySteps = Math.trunc(offset[1])
-  let zSteps = Math.trunc(offset[2])
-
-  while (xSteps > 0) {
-    target = target.east()
-    xSteps--
-  }
-  while (xSteps < 0) {
-    target = target.west()
-    xSteps++
-  }
-  while (ySteps > 0) {
-    target = target.above()
-    ySteps--
-  }
-  while (ySteps < 0) {
-    target = target.below()
-    ySteps++
-  }
-  while (zSteps > 0) {
-    target = target.south()
-    zSteps--
-  }
-  while (zSteps < 0) {
-    target = target.north()
-    zSteps++
-  }
-
-  return target
+  return `${Number(pos.getX())},${Number(pos.getY())},${Number(pos.getZ())}`
 }
 
 // Builds the protected world-position set directly from this controller's
@@ -322,9 +266,9 @@ function getProtectedStructurePositionKeys(controller) {
     'net.minecraft.world.level.block.state.properties.BlockStateProperties'
   )
   const center = controller.getBlockPos()
-  const centerX = javaCoordinate(center.getX())
-  const centerY = javaCoordinate(center.getY())
-  const centerZ = javaCoordinate(center.getZ())
+  const centerX = Number(center.getX())
+  const centerY = Number(center.getY())
+  const centerZ = Number(center.getZ())
   const protectedKeys = {}
 
   // Always protect the controller, including if MMR omits its MACHINE entry.
@@ -340,14 +284,11 @@ function getProtectedStructurePositionKeys(controller) {
     .getBlocks(structureFacing)
   const relativePositions = rotatedBlocks.keySet().toArray()
 
-  for (var relativeIndex = 0;
-       relativeIndex < relativePositions.length;
-       relativeIndex++) {
-    var relativePos = relativePositions[relativeIndex]
-    var worldKey =
-      `${centerX + javaCoordinate(relativePos.getX())},` +
-      `${centerY + javaCoordinate(relativePos.getY())},` +
-      `${centerZ + javaCoordinate(relativePos.getZ())}`
+  for (const relativePos of relativePositions) {
+    const worldKey =
+      `${centerX + Number(relativePos.getX())},` +
+      `${centerY + Number(relativePos.getY())},` +
+      `${centerZ + Number(relativePos.getZ())}`
     protectedKeys[worldKey] = true
   }
 
@@ -381,17 +322,14 @@ function placeTierReplacements(controller, tier) {
     return 0
   }
 
+  const offsets = tier.replaceStructure
+    ? [[0, 0, 0]].concat(REPLACEMENT_OFFSETS)
+    : REPLACEMENT_OFFSETS
   const requested = Math.max(0, Math.floor(Number(tier.placementCount)))
-  const maximumAttempts = Math.max(
-    64,
-    requested * PLACEMENT_ATTEMPTS_PER_BLOCK
-  )
   let replaced = 0
-  let attemptsMade = 0
   let protectedSkips = 0
   let duplicateSkips = 0
   const attemptedKeys = {}
-  const duplicateExamples = []
   const failedTargets = []
   const BuiltInRegistries = Java.loadClass(
     'net.minecraft.core.registries.BuiltInRegistries'
@@ -403,27 +341,22 @@ function placeTierReplacements(controller, tier) {
     ? null
     : getProtectedStructurePositionKeys(controller)
 
-  for (var attempt = 0;
-       attempt < maximumAttempts && replaced < requested;
-       attempt++) {
-    attemptsMade++
-    var offset = randomChunkOffset(
-      center,
-      PLACEMENT_MIN_Y_OFFSET,
-      PLACEMENT_MAX_Y_OFFSET
+  for (let index = 0; index < offsets.length && replaced < requested; index++) {
+    const offset = offsets[index]
+    // Use BlockPos.offset instead of invoking the overloaded Java constructor.
+    // Rhino resolved new BlockPos(x, y, z) incorrectly and repeatedly returned
+    // the controller position, making every candidate appear protected.
+    const target = center.offset(
+      Math.trunc(Number(offset[0])),
+      Math.trunc(Number(offset[1])),
+      Math.trunc(Number(offset[2]))
     )
-    var target = positionFromOffset(center, offset)
-    var targetKey = positionKey(target)
+    const targetKey = positionKey(target)
 
     // Never count the same physical position more than once. This also leaves
     // an explicit diagnostic if Java interop ever collapses coordinates again.
     if (attemptedKeys[targetKey] === true) {
       duplicateSkips++
-      if (duplicateExamples.length < 3) {
-        duplicateExamples.push(
-          `[${offset.join(',')}]=>${target.toShortString()} key=${targetKey}`
-        )
-      }
       continue
     }
     attemptedKeys[targetKey] = true
@@ -438,7 +371,7 @@ function placeTierReplacements(controller, tier) {
     // Do not trust only setBlockAndUpdate's boolean: some modded blocks report
     // false even when their resulting block state is present. Verify the world.
     level.setBlockAndUpdate(target, replacementState)
-    var placedBlockId = String(
+    const placedBlockId = String(
       BuiltInRegistries.BLOCK.getKey(level.getBlockState(target).getBlock())
     )
     if (placedBlockId === replacementBlockId) {
@@ -451,11 +384,8 @@ function placeTierReplacements(controller, tier) {
   if (replaced < requested) {
     console.warn(
       `[Aura Test Rig] Requested ${requested} replacements but completed ` +
-      `${replaced} after ${attemptsMade}/${maximumAttempts} attempts; ` +
-      `protected skips=${protectedSkips}; duplicate skips=` +
-      `${duplicateSkips}; duplicate examples=` +
-      `${duplicateExamples.length > 0 ? duplicateExamples.join('; ') : 'none'}; ` +
-      `failed targets=` +
+      `${replaced}; protected skips=${protectedSkips}; duplicate skips=` +
+      `${duplicateSkips}; failed targets=` +
       `${failedTargets.length > 0 ? failedTargets.join('; ') : 'none'}.`
     )
   }

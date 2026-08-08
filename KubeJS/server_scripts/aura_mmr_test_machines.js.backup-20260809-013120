@@ -1,24 +1,23 @@
-// Independent, low-aura-only Nature's Aura anchor monitor.
+// Yes this is written by AI. I'm not a programmer, remember...
+// Modular Machinery Reborn test machines for Nature's Aura integration.
 //
-// Anchors register when placed or right-clicked. Every minute, each loaded
-// chunk containing a registered anchor is checked once. Existing anchors only
-// need to be right-clicked once after installing/reloading this script.
+// A completed recipe changes aura and immediately checks the LOW-aura tiers
+// below. There is deliberately no high-aura reaction in this template.
 
 (() => {
 
 // ---------------------------------------------------------------------------
-// MONITOR SETTINGS
+// MACHINE AND RECIPE SETTINGS
 // ---------------------------------------------------------------------------
 
-const ANCHOR_IDS = {
-  'naturesaura:nature_altar': true,
-  'naturesaura:offering_table': true,
-  'naturesaura:animal_spawner': true,
-  'naturesaura:wood_stand': true
-}
+const AURA_DRAIN_MACHINE = 'modpack:aura_drain_test_rig'
+const AURA_GENERATOR_MACHINE = 'modpack:aura_generator_test_rig'
+const AURA_FUNCTION = 'modpack:modify_natures_aura'
 
-const CHECK_INTERVAL_TICKS = 20 * 60 // 1,200 ticks = about one minute.
+const AURA_CHANGE_PER_RECIPE = 100000
 const AURA_MEASUREMENT_RADIUS = 16
+const RECIPE_TICKS = 100
+const ENERGY_PER_TICK = 128
 
 // ---------------------------------------------------------------------------
 // LOW-AURA BACKFIRE TIERS -- THIS IS THE MAIN CUSTOMIZATION SECTION
@@ -34,9 +33,10 @@ const AURA_MEASUREMENT_RADIUS = 16
 // placementId:      A block id OR a fluid id. Fluid ids are converted to their
 //                   source-fluid block state automatically.
 // placementCount:   Number of positions forcibly replaced.
-// replaceStructure: false protects all supported anchors and every MMR block.
-//                   Use true only when the Catastrophic tier may destroy those
-//                   structures.
+// replaceStructure: false protects the controller and every registered
+//                   position in its formed MMR multiblock, regardless of
+//                   which mod owns the block at that position. Use true only
+//                   when the Catastrophic tier may destroy the structure.
 //
 // Placement directly changes block states and does NOT require air. Protected
 // structures are skipped until a tier sets replaceStructure: true.
@@ -45,13 +45,13 @@ const LOW_AURA_TIERS = [
     name: 'unstable',
     threshold: 1500000,
     resetAt: 1650000,
-    entityId: 'minecraft:creeper',
-    entityCount: 6,
-    entityNbt: `{CustomName:'{"text":"Void","color":"aqua"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_anchor_unstable"]}`,
+    entityId: 'avaritia_expand:extreme_wither',
+    entityCount: 3,
+    entityNbt: `{CustomName:'{"text":"Judgement","color":"dark_purple"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_unstable"]}`,
     effects: [
-      { id: 'minecraft:slowness', durationSeconds: 20, amplifier: 0 }
+      { id: 'minecraft:weakness', durationSeconds: 15, amplifier: 0 }
     ],
-    placementId: 'minecraft:cobweb',
+    placementId: 'spectrum:dragonrot',
     placementCount: 4,
     replaceStructure: false
   },
@@ -59,14 +59,13 @@ const LOW_AURA_TIERS = [
     name: 'critical',
     threshold: 750000,
     resetAt: 900000,
-    entityId: 'minecraft:wither',
-    entityCount: 2,
-    entityNbt: `{CustomName:'{"text":"Wrath","color":"dark_aqua"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_anchor_critical"]}`,
+    entityId: 'aoa3:elite_nethengeic_wither',
+    entityCount: 5,
+    entityNbt: `{CustomName:'{"text":"Calamity","color":"blue"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_critical"]}`,
     effects: [
-      { id: 'minecraft:mining_fatigue', durationSeconds: 25, amplifier: 1 },
-      { id: 'minecraft:weakness', durationSeconds: 25, amplifier: 1 }
+      { id: 'minecraft:slowness', durationSeconds: 20, amplifier: 1 },
+      { id: 'minecraft:weakness', durationSeconds: 20, amplifier: 1 }
     ],
-    // Water is a block-form fluid id and will flow after placement.
     placementId: 'nuclear_radiation:molten_corium_block',
     placementCount: 8,
     replaceStructure: false
@@ -75,9 +74,9 @@ const LOW_AURA_TIERS = [
     name: 'catastrophic',
     threshold: 250000,
     resetAt: 400000,
-    entityId: 'aoa3:elite_nethengeic_wither',
-    entityCount: 1,
-    entityNbt: `{CustomName:'{"Destruction":"Vacuum","color":"red"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_anchor_catastrophic"]}`,
+    entityId: 'mecrh:ender_chicken',
+    entityCount: 3,
+    entityNbt: `{CustomName:'{"text":"Annihilation","color":"red"}',CustomNameVisible:1b,PersistenceRequired:1b,Tags:["modpack_aura_catastrophic"]}`,
     effects: [
       { id: 'minecraft:wither', durationSeconds: 12, amplifier: 1 },
       { id: 'minecraft:blindness', durationSeconds: 12, amplifier: 0 }
@@ -85,21 +84,20 @@ const LOW_AURA_TIERS = [
     // Change this to another registered block-form fluid id if desired.
     placementId: 'spectrum:forfeiture',
     placementCount: 3,
-    // Catastrophic backfires may replace the anchor or nearby MMR components.
+    // Catastrophic backfires may replace the controller and MMR components.
     replaceStructure: true
   }
 ]
 
-const ANCHOR_KEY_PREFIX = 'modpackAuraAnchor|'
-const STATE_KEY_PREFIX = 'modpackAuraLowTierStateV2|'
-const levelTickCounters = {}
+// Stored on the controller so a tier fires once per downward threshold entry.
+const REACTION_STATE_KEY = 'modpackAuraLowTierStateV2'
 
 // Relative replacement positions, ordered from nearest to farthest. Add more
 // entries if placementCount is raised beyond the available candidate count.
 const REPLACEMENT_OFFSETS = [
   [1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1],
   [1, 1, 0], [-1, 1, 0], [0, 1, 1], [0, 1, -1],
-  // Elevated candidates avoid an anchor ritual or MMR platform below them.
+  // Elevated candidates let non-catastrophic tiers clear a wide MMR platform.
   [1, 2, 0], [-1, 2, 0], [0, 2, 1], [0, 2, -1],
   [1, 2, 1], [1, 2, -1], [-1, 2, 1], [-1, 2, -1],
   [2, 2, 0], [-2, 2, 0], [0, 2, 2], [0, 2, -2],
@@ -115,51 +113,70 @@ const REPLACEMENT_OFFSETS = [
   [5, 0, 0], [-5, 0, 0], [0, 0, 5], [0, 0, -5]
 ]
 
+// Relative mob positions. Summoning also does not require an open position.
 const ENTITY_OFFSETS = [
   [2, 1, 0], [-2, 1, 0], [0, 1, 2], [0, 1, -2],
   [2, 1, 2], [2, 1, -2], [-2, 1, 2], [-2, 1, -2],
   [3, 1, 0], [-3, 1, 0], [0, 1, 3], [0, 1, -3]
 ]
 
-function anchorKey(position) {
-  return ANCHOR_KEY_PREFIX + position.getX() + '|' +
-    position.getY() + '|' + position.getZ()
-}
-
-function stateKey(chunkX, chunkZ) {
-  return STATE_KEY_PREFIX + chunkX + '|' + chunkZ
-}
-
-function isAnchor(block) {
-  return ANCHOR_IDS[String(block.id)] === true
-}
-
-function registerAnchor(event) {
-  if (!isAnchor(event.block)) {
-    return
-  }
-
-  const data = event.level.getPersistentData()
-  const key = anchorKey(event.block.pos)
-  if (!data.getBoolean(key)) {
-    data.putBoolean(key, true)
-    console.info(
-      `[Aura Anchor Monitor] Registered ${event.block.id} at ` +
-      `${event.block.pos.toShortString()}.`
+MMREvents.machines(event => {
+  event.create(AURA_DRAIN_MACHINE)
+    .name('Aura Drain Test Rig')
+    .color(0x6b4f8a)
+    .structure(
+      MMRStructureBuilder.create()
+        .pattern([
+          ['CCC', 'CIC', 'CCC'],
+          ['CCC', 'OmE', 'CCC']
+        ])
+        .keys({
+          m: 'modular_machinery_reborn:controller',
+          C: 'modular_machinery_reborn:casing_plain',
+          I: 'modular_machinery_reborn:inputbus_normal',
+          O: 'modular_machinery_reborn:outputbus_normal',
+          E: 'modular_machinery_reborn:energyinputhatch_normal'
+        })
     )
-  }
-}
 
-BlockEvents.placed(event => registerAnchor(event))
-BlockEvents.rightClicked(event => registerAnchor(event))
-
-BlockEvents.broken(event => {
-  if (isAnchor(event.block)) {
-    event.level.getPersistentData().remove(anchorKey(event.block.pos))
-  }
+  event.create(AURA_GENERATOR_MACHINE)
+    .name('Aura Generator Test Rig')
+    .color(0x5fd38d)
+    .structure(
+      MMRStructureBuilder.create()
+        .pattern([
+          ['CCC', 'CIC', 'CCC'],
+          ['CCC', 'OmE', 'CCC']
+        ])
+        .keys({
+          m: 'modular_machinery_reborn:controller',
+          C: 'modular_machinery_reborn:casing_circuitry',
+          I: 'modular_machinery_reborn:inputbus_normal',
+          O: 'modular_machinery_reborn:outputbus_normal',
+          E: 'modular_machinery_reborn:energyinputhatch_normal'
+        })
+    )
 })
 
-// Runs a Minecraft command in the anchor's dimension with silent admin access.
+ServerEvents.recipes(event => {
+  event.recipes.modular_machinery_reborn
+    .machine_recipe(AURA_DRAIN_MACHINE, RECIPE_TICKS)
+    .requireItem('minecraft:amethyst_shard')
+    .requireEnergyPerTick(ENERGY_PER_TICK)
+    .produceItem('minecraft:quartz')
+    .requireFunctionOnEnd(AURA_FUNCTION, 'drain', String(AURA_CHANGE_PER_RECIPE))
+    .id('modpack:aura_drain_test')
+
+  event.recipes.modular_machinery_reborn
+    .machine_recipe(AURA_GENERATOR_MACHINE, RECIPE_TICKS)
+    .requireItem('minecraft:glowstone_dust')
+    .requireEnergyPerTick(ENERGY_PER_TICK)
+    .produceItem('minecraft:amethyst_shard')
+    .requireFunctionOnEnd(AURA_FUNCTION, 'store', String(AURA_CHANGE_PER_RECIPE))
+    .id('modpack:aura_generation_test')
+})
+
+// Runs a Minecraft command in the correct dimension with silent admin access.
 function runAuraCommand(level, command) {
   const server = level.getServer()
   const source = server.createCommandSourceStack()
@@ -169,6 +186,7 @@ function runAuraCommand(level, command) {
   return server.getCommands().performPrefixedCommand(source, command)
 }
 
+// Converts an aura reading to 0 (normal), 1, 2, or 3 (most severe).
 function tierNumberForAura(aura) {
   for (let index = LOW_AURA_TIERS.length - 1; index >= 0; index--) {
     if (aura <= LOW_AURA_TIERS[index].threshold) {
@@ -177,7 +195,7 @@ function tierNumberForAura(aura) {
   }
   return 0
 }
-
+// This defines the area that allows the mob to spawn, and runs the command to summon.
 function summonTierEntities(level, center, tier) {
   for (let index = 0; index < tier.entityCount; index++) {
     const offset = ENTITY_OFFSETS[index % ENTITY_OFFSETS.length]
@@ -191,7 +209,7 @@ function summonTierEntities(level, center, tier) {
     )
   }
 }
-
+// This runs the command on the area to apply the effects.
 function applyTierEffects(level, center, tier) {
   for (const effect of tier.effects) {
     runAuraCommand(
@@ -202,7 +220,6 @@ function applyTierEffects(level, center, tier) {
     )
   }
 }
-
 // Resolves either a block registry id or a fluid registry id. This is more
 // reliable than /setblock for mods whose fluid id differs from its block id.
 function getPlacementState(placementId) {
@@ -215,7 +232,7 @@ function getPlacementState(placementId) {
   const parts = String(placementId).split(':')
 
   if (parts.length !== 2 || parts[0].length === 0 || parts[1].length === 0) {
-    console.error(`[Aura Anchor Monitor] Invalid placement id: ${placementId}.`)
+    console.error(`[Aura Test Rig] Invalid placement id: ${placementId}.`)
     return null
   }
 
@@ -230,12 +247,21 @@ function getPlacementState(placementId) {
   }
 
   console.error(
-    `[Aura Anchor Monitor] ${placementId} is neither a registered block nor fluid.`
+    `[Aura Test Rig] ${placementId} is neither a registered block nor fluid.`
   )
   return null
 }
 
-function isProtectedStructurePosition(level, target, center) {
+// Non-catastrophic tiers protect the controller and every position registered
+// in this controller's formed, rotated MMR multiblock. This is position-based,
+// so vanilla and third-party blocks are protected too. Registered air cells
+// are deliberately protected: a backfire cannot fill them before Catastrophic.
+//
+// MMR omits the special controller/MACHINE entry from isPosInCache(), so the
+// controller position is checked explicitly. Numeric coordinate comparison
+// avoids Rhino Java-wrapper ambiguity.
+function isProtectedStructurePosition(controller, target) {
+  const center = controller.getBlockPos()
   const isCenter = Number(target.getX()) === Number(center.getX()) &&
     Number(target.getY()) === Number(center.getY()) &&
     Number(target.getZ()) === Number(center.getZ())
@@ -243,22 +269,15 @@ function isProtectedStructurePosition(level, target, center) {
     return true
   }
 
-  const BuiltInRegistries = Java.loadClass(
-    'net.minecraft.core.registries.BuiltInRegistries'
-  )
-  const blockId = String(
-    BuiltInRegistries.BLOCK.getKey(level.getBlockState(target).getBlock())
-  )
-  return blockId.startsWith('modular_machinery_reborn:') ||
-    blockId === 'naturesaura:nature_altar' ||
-    blockId === 'naturesaura:offering_table' ||
-    blockId === 'naturesaura:animal_spawner' ||
-    blockId === 'naturesaura:wood_stand'
+  return controller.isPosInCache(target)
 }
 
 // Replaces multiple distinct positions directly through ServerLevel. It does
-// not require air, but non-catastrophic tiers skip protected structures.
-function placeTierReplacements(level, center, tier) {
+// not require air, but it skips protected structure positions unless the tier
+// explicitly sets replaceStructure: true.
+function placeTierReplacements(controller, tier) {
+  const level = controller.getLevel()
+  const center = controller.getBlockPos()
   const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   const replacementState = getPlacementState(tier.placementId)
   if (replacementState === null) {
@@ -286,11 +305,13 @@ function placeTierReplacements(level, center, tier) {
     )
 
     if (!tier.replaceStructure &&
-        isProtectedStructurePosition(level, target, center)) {
+        isProtectedStructurePosition(controller, target)) {
       protectedSkips++
       continue
     }
 
+    // Do not trust only setBlockAndUpdate's boolean: some modded blocks report
+    // false even when their resulting block state is present. Verify the world.
     level.setBlockAndUpdate(target, replacementState)
     const placedBlock = level.getBlockState(target).getBlock()
     if (placedBlock.equals(replacementBlock)) {
@@ -302,35 +323,31 @@ function placeTierReplacements(level, center, tier) {
 
   if (replaced < requested) {
     console.warn(
-      `[Aura Anchor Monitor] Requested ${requested} replacements but ` +
-      `completed ${replaced}; protected skips=${protectedSkips}; ` +
-      `failed targets=` +
+      `[Aura Test Rig] Requested ${requested} replacements but completed ` +
+      `${replaced}; protected skips=${protectedSkips}; failed targets=` +
       `${failedTargets.length > 0 ? failedTargets.join('; ') : 'none'}.`
     )
   }
   return replaced
 }
 
-function fireTierBackfire(level, center, tier, tierNumber, aura) {
+function fireTierBackfire(controller, tier, tierNumber, aura) {
+  const level = controller.getLevel()
+  const center = controller.getBlockPos()
   summonTierEntities(level, center, tier)
   applyTierEffects(level, center, tier)
-  const replacementsMade = placeTierReplacements(level, center, tier)
+  const replacementsMade = placeTierReplacements(controller, tier)
   console.info(
-    `[Aura Anchor Monitor] LOW tier ${tierNumber} (${tier.name}) fired at ` +
+    `[Aura Test Rig] LOW tier ${tierNumber} (${tier.name}) fired at ` +
     `${center.toShortString()}; aura=${aura}; entities=${tier.entityCount}; ` +
     `replacements=${replacementsMade}/${tier.placementCount} x ` +
     `${tier.placementId}.`
   )
 }
 
-function evaluateAnchorChunk(level, center, chunkX, chunkZ, data) {
-  const aura = AuraChunk.getAuraInArea(
-    level,
-    center,
-    AURA_MEASUREMENT_RADIUS
-  )
-  const key = stateKey(chunkX, chunkZ)
-  let oldTierNumber = data.getInt(key)
+function reactImmediatelyToAura(controller, aura) {
+  const stateData = controller.getPersistentData()
+  let oldTierNumber = stateData.getInt(REACTION_STATE_KEY)
 
   if (oldTierNumber < 0 || oldTierNumber > LOW_AURA_TIERS.length) {
     oldTierNumber = 0
@@ -339,115 +356,78 @@ function evaluateAnchorChunk(level, center, chunkX, chunkZ, data) {
   const detectedTierNumber = tierNumberForAura(aura)
   let newTierNumber = oldTierNumber
 
-  // Only downward aura movement into a more severe tier causes a backfire.
   if (detectedTierNumber > oldTierNumber) {
     newTierNumber = detectedTierNumber
-    data.putInt(key, newTierNumber)
+
+    // Save first: a destructive tier may replace the controller below.
+    stateData.putInt(REACTION_STATE_KEY, newTierNumber)
+    controller.setChanged()
+
     fireTierBackfire(
-      level,
-      center,
+      controller,
       LOW_AURA_TIERS[newTierNumber - 1],
       newTierNumber,
       aura
     )
-  } else if (detectedTierNumber < oldTierNumber) {
-    // Recovery only rearms tiers; it never fires an event by itself.
+    return
+  }
+
+  // Recovery never causes a backfire. It only rearms lower tiers so a later
+  // aura decline can trigger them again without rapid threshold oscillation.
+  if (detectedTierNumber < oldTierNumber) {
     const oldTier = LOW_AURA_TIERS[oldTierNumber - 1]
     if (aura >= oldTier.resetAt) {
       newTierNumber = detectedTierNumber
-      data.putInt(key, newTierNumber)
     }
   }
+
+  if (newTierNumber !== oldTierNumber) {
+    stateData.putInt(REACTION_STATE_KEY, newTierNumber)
+    controller.setChanged()
+  }
+}
+
+MMREvents.recipeFunction(AURA_FUNCTION, event => {
+  const action = String(event.get(0))
+  const amount = Number(event.get(1))
+
+  if ((action !== 'drain' && action !== 'store') ||
+      !Number.isFinite(amount) || amount <= 0) {
+    console.error(
+      `[Aura Test Rig] Invalid aura function arguments: action=${action}, ` +
+      `amount=${event.get(1)}.`
+    )
+    return
+  }
+
+  const controller = event.getTile()
+  const level = controller.getLevel()
+  const center = controller.getBlockPos()
+  const auraBefore = AuraChunk.getAuraInArea(
+    level,
+    center,
+    AURA_MEASUREMENT_RADIUS
+  )
+
+  if (action === 'drain') {
+    AuraChunk.drainAura(level, center, amount)
+  } else {
+    AuraChunk.storeAura(level, center, amount)
+  }
+
+  const auraAfter = AuraChunk.getAuraInArea(
+    level,
+    center,
+    AURA_MEASUREMENT_RADIUS
+  )
 
   console.info(
-    `[Aura Anchor Monitor] Checked chunk ${chunkX},${chunkZ}; ` +
-    `aura=${aura}; low-aura tier=${newTierNumber}.`
+    `[Aura Test Rig] Recipe ${event.getRecipeId()} completed at ` +
+    `${center.toShortString()}; ${action}=${amount}; ` +
+    `aura before=${auraBefore}; after=${auraAfter}.`
   )
-}
 
-// Reads persistent anchor coordinates, removes stale entries, and reduces all
-// anchors in the same chunk to one aura check/reaction per monitoring pass.
-function pollRegisteredAnchorChunks(level) {
-  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
-  const BuiltInRegistries = Java.loadClass(
-    'net.minecraft.core.registries.BuiltInRegistries'
-  )
-  const data = level.getPersistentData()
-  const iterator = data.getAllKeys().iterator()
-  const chunks = {}
-  const staleKeys = []
-
-  while (iterator.hasNext()) {
-    const key = String(iterator.next())
-    if (!key.startsWith(ANCHOR_KEY_PREFIX)) {
-      continue
-    }
-
-    const parts = key.substring(ANCHOR_KEY_PREFIX.length).split('|')
-    if (parts.length !== 3) {
-      staleKeys.push(key)
-      continue
-    }
-
-    const position = new BlockPos(
-      Number(parts[0]),
-      Number(parts[1]),
-      Number(parts[2])
-    )
-    if (!level.isLoaded(position)) {
-      continue
-    }
-
-    const currentId = String(
-      BuiltInRegistries.BLOCK.getKey(
-        level.getBlockState(position).getBlock()
-      )
-    )
-    if (ANCHOR_IDS[currentId] !== true) {
-      staleKeys.push(key)
-      continue
-    }
-
-    const chunkX = Math.floor(position.getX() / 16)
-    const chunkZ = Math.floor(position.getZ() / 16)
-    const chunkKey = chunkX + '|' + chunkZ
-    if (chunks[chunkKey] === undefined) {
-      chunks[chunkKey] = {
-        position: position,
-        chunkX: chunkX,
-        chunkZ: chunkZ
-      }
-    }
-  }
-
-  for (const staleKey of staleKeys) {
-    data.remove(staleKey)
-  }
-
-  for (const chunkKey of Object.keys(chunks)) {
-    const chunk = chunks[chunkKey]
-    evaluateAnchorChunk(
-      level,
-      chunk.position,
-      chunk.chunkX,
-      chunk.chunkZ,
-      data
-    )
-  }
-}
-
-LevelEvents.tick(event => {
-  const level = event.level
-  // KubeJS exposes dimension as a ResourceKey property, not a function.
-  const levelKey = String(level.dimension)
-  const ticks = (levelTickCounters[levelKey] || 0) + 1
-
-  if (ticks >= CHECK_INTERVAL_TICKS) {
-    levelTickCounters[levelKey] = 0
-    pollRegisteredAnchorChunks(level)
-  } else {
-    levelTickCounters[levelKey] = ticks
-  }
+  reactImmediatelyToAura(controller, auraAfter)
 })
 
 })()

@@ -34,9 +34,9 @@ const AURA_MEASUREMENT_RADIUS = 16
 // placementId:      A block id OR a fluid id. Fluid ids are converted to their
 //                   source-fluid block state automatically.
 // placementCount:   Number of positions forcibly replaced.
-// replaceStructure: false protects all supported anchors and every MMR block.
-//                   Use true only when the Catastrophic tier may destroy those
-//                   structures.
+// replaceStructure: false protects the anchor, other supported anchors, and
+//                   every Modular Machinery Reborn block. Use true only for a
+//                   tier that is allowed to destroy those structures.
 //
 // Placement directly changes block states and does NOT require air. Protected
 // structures are skipped until a tier sets replaceStructure: true.
@@ -99,10 +99,6 @@ const levelTickCounters = {}
 const REPLACEMENT_OFFSETS = [
   [1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1],
   [1, 1, 0], [-1, 1, 0], [0, 1, 1], [0, 1, -1],
-  // Elevated candidates avoid an anchor ritual or MMR platform below them.
-  [1, 2, 0], [-1, 2, 0], [0, 2, 1], [0, 2, -1],
-  [1, 2, 1], [1, 2, -1], [-1, 2, 1], [-1, 2, -1],
-  [2, 2, 0], [-2, 2, 0], [0, 2, 2], [0, 2, -2],
   [2, 0, 0], [-2, 0, 0], [0, 0, 2], [0, 0, -2],
   [1, 0, 1], [1, 0, -1], [-1, 0, 1], [-1, 0, -1],
   [3, 0, 0], [-3, 0, 0], [0, 0, 3], [0, 0, -3],
@@ -236,10 +232,7 @@ function getPlacementState(placementId) {
 }
 
 function isProtectedStructurePosition(level, target, center) {
-  const isCenter = Number(target.getX()) === Number(center.getX()) &&
-    Number(target.getY()) === Number(center.getY()) &&
-    Number(target.getZ()) === Number(center.getZ())
-  if (isCenter) {
+  if (target.equals(center)) {
     return true
   }
 
