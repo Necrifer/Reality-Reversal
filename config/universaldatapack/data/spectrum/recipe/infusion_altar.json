@@ -20,10 +20,6 @@
     "id": "mysticalagriculture:infusion_altar"
   },
   "required_advancement": "spectrum:midgame/collect_neolith",
-  "world_conditions": {
-    "time_of_day": "midnight",
-    "moon_phase": "new_moon"
-  },
   "start_crafting_effect": "weather_thunder_short",
   "during_crafting_effects": [
     "visual_explosions_on_shrine",

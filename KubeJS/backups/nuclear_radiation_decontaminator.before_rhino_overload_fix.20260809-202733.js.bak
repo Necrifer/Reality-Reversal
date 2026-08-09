@@ -91,6 +91,7 @@ ServerEvents.recipes(event => {
 })
 
 function nrProcessLoadedArea(event, removalFraction) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   const RadiationProfile = Java.loadClass('igentuman.nr.api.RadiationProfile')
   const AbstractWorldRadSource = Java.loadClass(
     'igentuman.nr.api.AbstractWorldRadSource'
@@ -104,12 +105,25 @@ function nrProcessLoadedArea(event, removalFraction) {
   const NRAttachments = Java.loadClass(
     'igentuman.nr.radiation.storage.NRAttachments'
   )
+  const RadiationBindings = Java.loadClass(
+    'igentuman.nr.api.binding.RadiationBindings'
+  )
+  const RadiationConfig = Java.loadClass(
+    'igentuman.nr.config.RadiationConfig'
+  )
+  const InventoryRadCache = Java.loadClass(
+    'igentuman.nr.radiation.simulation.inventory.InventoryRadCache'
+  )
+  const LivingEntity = Java.loadClass(
+    'net.minecraft.world.entity.LivingEntity'
+  )
+  const BuiltInRegistries = Java.loadClass(
+    'net.minecraft.core.registries.BuiltInRegistries'
+  )
 
   const controller = event.getTile()
   const level = controller.getLevel()
-  const controllerPos = controller.getBlockPos()
-  const centerChunkPos = level.getChunkAt(controllerPos).getPos()
-  const chunkSource = level.getChunkSource()
+  const centerChunkPos = level.getChunkAt(controller.getBlockPos()).getPos()
   const sideLength = NR_CLEANUP_RADIUS_CHUNKS * 2 + 1
   const scannedChunks = sideLength * sideLength
   let loadedChunks = 0
@@ -120,7 +134,6 @@ function nrProcessLoadedArea(event, removalFraction) {
   let orphanedSimulatorSources = 0
   let worldSourceActivityRemovedBq = 0
   const processedChunkPositions = []
-  const processedChunkKeys = {}
   const processedSourceIds = {}
 
   for (let offsetX = -NR_CLEANUP_RADIUS_CHUNKS;
@@ -129,22 +142,21 @@ function nrProcessLoadedArea(event, removalFraction) {
     for (let offsetZ = -NR_CLEANUP_RADIUS_CHUNKS;
       offsetZ <= NR_CLEANUP_RADIUS_CHUNKS;
       offsetZ++) {
-      // Level.isLoaded(BlockPos) reports false for loaded chunks in some void
-      // dimensions. getChunkNow returns only an already-loaded full chunk and
-      // never force-loads terrain, so it is the authoritative check here.
-      const chunk = chunkSource.getChunkNow(
-        centerChunkPos.x + offsetX,
-        centerChunkPos.z + offsetZ
+      // A BlockPos inside the target chunk is enough for isLoaded/getChunkAt.
+      // Constructing it directly avoids Rhino selecting an offset overload.
+      const targetPos = new BlockPos(
+        (centerChunkPos.x + offsetX) * 16,
+        0,
+        (centerChunkPos.z + offsetZ) * 16
       )
 
-      if (chunk == null) {
+      if (!level.isLoaded(targetPos)) {
         continue
       }
 
       loadedChunks++
-      const chunkPos = chunk.getPos()
-      processedChunkPositions.push(chunkPos)
-      processedChunkKeys[`${chunkPos.x},${chunkPos.z}`] = true
+      const chunk = level.getChunkAt(targetPos)
+      processedChunkPositions.push(chunk.getPos())
       const radiationData = chunk.getData(
         NRAttachments.CHUNK_RADIATION.get()
       )
@@ -172,60 +184,6 @@ function nrProcessLoadedArea(event, removalFraction) {
       activityAfterBq += radiationData.totalActivityBq()
       chunk.setUnsaved(true)
     }
-  }
-
-  // Some custom void dimensions return no chunks through isLoaded or
-  // getChunkNow even while players and block entities are ticking. A nearby
-  // player's current chunk is unquestionably resident, and getChunkAt on that
-  // position is the same access path Nuclear Radiation uses for its attachment.
-  // This fallback is kept inline because nested helpers force this Rhino build
-  // into an interpreter mode that mishandles loop-local const declarations.
-  var residentPlayers = level.players.toArray()
-  for (var residentIndex = 0;
-    residentIndex < residentPlayers.length;
-    residentIndex++) {
-    var residentPlayer = residentPlayers[residentIndex]
-    var residentChunkPos = residentPlayer.chunkPosition()
-    if (Math.abs(residentChunkPos.x - centerChunkPos.x) >
-      NR_CLEANUP_RADIUS_CHUNKS ||
-      Math.abs(residentChunkPos.z - centerChunkPos.z) >
-      NR_CLEANUP_RADIUS_CHUNKS) {
-      continue
-    }
-
-    var residentChunkKey =
-      `${residentChunkPos.x},${residentChunkPos.z}`
-    if (processedChunkKeys[residentChunkKey]) {
-      continue
-    }
-
-    var residentChunk = level.getChunkAt(residentPlayer.blockPosition())
-    var residentRadiationData = residentChunk.getData(
-      NRAttachments.CHUNK_RADIATION.get()
-    )
-    var residentBeforeBq = residentRadiationData.totalActivityBq()
-
-    processedChunkKeys[residentChunkKey] = true
-    processedChunkPositions.push(residentChunk.getPos())
-    loadedChunks++
-    if (residentBeforeBq > 0) {
-      contaminatedChunks++
-    }
-    activityBeforeBq += residentBeforeBq
-
-    if (removalFraction >= 1) {
-      residentRadiationData.setAir(RadiationProfile.empty())
-      residentRadiationData.setWater(RadiationProfile.empty())
-      residentRadiationData.setSoil(RadiationProfile.empty())
-    } else {
-      var residentReductionDivisor = 1 / (1 - removalFraction)
-      residentRadiationData.air().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.water().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.soil().reduceAtoms(residentReductionDivisor)
-    }
-
-    activityAfterBq += residentRadiationData.totalActivityBq()
-    residentChunk.setUnsaved(true)
   }
 
   // Nuclear Radiation 1.0.8 registers placed blocks, fluids, dropped items,
@@ -362,6 +320,7 @@ function nrProcessLoadedArea(event, removalFraction) {
   // but left the five-minute vomiting timer active.
   const players = level.players.toArray()
   const remainingExposureFraction = 1 - removalFraction
+  const playerDiagnostics = []
 
   for (let playerIndex = 0; playerIndex < players.length; playerIndex++) {
     const player = players[playerIndex]
@@ -377,6 +336,84 @@ function nrProcessLoadedArea(event, removalFraction) {
     const playerRadiationData = player.getData(
       NRAttachments.ENTITY_RADIATION.get()
     )
+
+    // These 1.0.8 dose inputs bypass contaminated chunks and the world-source
+    // registry. Capture them before resetting the meters so a recurring source
+    // is visible in latest.log instead of looking like phantom contamination.
+    const playerPos = player.blockPosition()
+    const blockState = level.getBlockState(playerPos)
+    const blockId = BuiltInRegistries.BLOCK.getKey(
+      blockState.getBlock()
+    ).toString()
+    const standingBlockBq = RadiationBindings.of(
+      blockState
+    ).totalActivityBq()
+
+    const biomeKey = level.getBiome(playerPos).unwrapKey().orElse(null)
+    const biomeLocation = biomeKey == null ? null : biomeKey.location()
+    const biomeId = biomeLocation == null ? 'unknown' :
+      biomeLocation.toString()
+    const dimensionId = level.dimension().location().toString()
+    let backgroundUSvPerHour = RadiationConfig.biomeBackgroundUSvPerHour(
+      biomeLocation
+    )
+    if (backgroundUSvPerHour == null) {
+      backgroundUSvPerHour = RadiationConfig.levelBackgroundUSvPerHour(
+        level.dimension().location()
+      )
+    }
+    if (backgroundUSvPerHour == null) {
+      backgroundUSvPerHour =
+        RadiationConfig.DEFAULT_BACKGROUND_USV_PER_HOUR.get()
+    }
+
+    const now = level.getGameTime()
+    const inventoryCache = InventoryRadCache.get(player)
+    inventoryCache.rescan(player, now)
+    const inventoryBq = inventoryCache.bqXRay() +
+      inventoryCache.bqAlpha() + inventoryCache.bqBeta() +
+      inventoryCache.bqNeutron()
+
+    let nearbyCarrierCount = 0
+    let nearbyCarrierBq = 0
+    const nearbyEntities = level.getEntitiesOfClass(
+      LivingEntity,
+      player.getBoundingBox().inflate(
+        RadiationConfig.MAX_SOURCE_RADIUS_M.get()
+      )
+    ).toArray()
+    for (let nearbyIndex = 0;
+      nearbyIndex < nearbyEntities.length;
+      nearbyIndex++) {
+      const nearbyEntity = nearbyEntities[nearbyIndex]
+      if (nearbyEntity.getUUID().equals(player.getUUID())) {
+        continue
+      }
+
+      const nearbyCache = InventoryRadCache.get(nearbyEntity)
+      nearbyCache.rescan(nearbyEntity, now)
+      const carrierBq = nearbyCache.bqXRay() +
+        nearbyCache.bqNeutron()
+      if (carrierBq <= 0) {
+        continue
+      }
+
+      nearbyCarrierCount++
+      nearbyCarrierBq += carrierBq
+    }
+
+    playerDiagnostics.push(
+      `${player.getName().getString()}: rate=` +
+      `${playerRadiationData.svPerHour()} Sv/h, ambient=` +
+      `${playerRadiationData.svPerHourAmbient()} Sv/h, career=` +
+      `${playerRadiationData.svTotalCareer()} Sv, dimension=` +
+      `${dimensionId}, biome=${biomeId}, occupiedBlock=${blockId}, ` +
+      `occupiedBlockBq=${standingBlockBq}, background=` +
+      `${backgroundUSvPerHour} uSv/h, inventoryBq=${inventoryBq}, ` +
+      `nearbyRadioactiveCarriers=${nearbyCarrierCount}, ` +
+      `nearbyCarrierBq=${nearbyCarrierBq}`
+    )
+
     playerRadiationData.setSvPerHour(
       playerRadiationData.svPerHour() * remainingExposureFraction
     )
@@ -423,6 +460,7 @@ function nrProcessLoadedArea(event, removalFraction) {
     cachedVectors: cachedVectors,
     cachedVectorActivityRemovedBq: cachedVectorActivityRemovedBq,
     playerMetersReset: playerMetersReset,
+    playerDiagnostics: playerDiagnostics,
     chunkActivityRemovedBq: activityBeforeBq - activityAfterBq,
     worldSourceActivityRemovedBq: worldSourceActivityRemovedBq,
     removedBq:
@@ -441,7 +479,8 @@ MMREvents.recipeFunction(NR_TEST_FUNCTION, event => {
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
     `${result.cachedVectorActivityRemovedBq} Bq; reset ` +
-    `${result.playerMetersReset} player rate meter(s).`
+    `${result.playerMetersReset} player rate meter(s). ` +
+    `Dose diagnostics: ${result.playerDiagnostics.join(' | ')}`
   )
 })
 
@@ -457,7 +496,8 @@ MMREvents.recipeFunction(NR_PERCENT_FUNCTION, event => {
     `${result.worldSources} registry source(s), ` +
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
-    `${result.cachedVectorActivityRemovedBq} Bq.`
+    `${result.cachedVectorActivityRemovedBq} Bq. Dose diagnostics: ` +
+    `${result.playerDiagnostics.join(' | ')}`
   )
 })
 

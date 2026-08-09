@@ -120,7 +120,6 @@ function nrProcessLoadedArea(event, removalFraction) {
   let orphanedSimulatorSources = 0
   let worldSourceActivityRemovedBq = 0
   const processedChunkPositions = []
-  const processedChunkKeys = {}
   const processedSourceIds = {}
 
   for (let offsetX = -NR_CLEANUP_RADIUS_CHUNKS;
@@ -142,9 +141,7 @@ function nrProcessLoadedArea(event, removalFraction) {
       }
 
       loadedChunks++
-      const chunkPos = chunk.getPos()
-      processedChunkPositions.push(chunkPos)
-      processedChunkKeys[`${chunkPos.x},${chunkPos.z}`] = true
+      processedChunkPositions.push(chunk.getPos())
       const radiationData = chunk.getData(
         NRAttachments.CHUNK_RADIATION.get()
       )
@@ -172,60 +169,6 @@ function nrProcessLoadedArea(event, removalFraction) {
       activityAfterBq += radiationData.totalActivityBq()
       chunk.setUnsaved(true)
     }
-  }
-
-  // Some custom void dimensions return no chunks through isLoaded or
-  // getChunkNow even while players and block entities are ticking. A nearby
-  // player's current chunk is unquestionably resident, and getChunkAt on that
-  // position is the same access path Nuclear Radiation uses for its attachment.
-  // This fallback is kept inline because nested helpers force this Rhino build
-  // into an interpreter mode that mishandles loop-local const declarations.
-  var residentPlayers = level.players.toArray()
-  for (var residentIndex = 0;
-    residentIndex < residentPlayers.length;
-    residentIndex++) {
-    var residentPlayer = residentPlayers[residentIndex]
-    var residentChunkPos = residentPlayer.chunkPosition()
-    if (Math.abs(residentChunkPos.x - centerChunkPos.x) >
-      NR_CLEANUP_RADIUS_CHUNKS ||
-      Math.abs(residentChunkPos.z - centerChunkPos.z) >
-      NR_CLEANUP_RADIUS_CHUNKS) {
-      continue
-    }
-
-    var residentChunkKey =
-      `${residentChunkPos.x},${residentChunkPos.z}`
-    if (processedChunkKeys[residentChunkKey]) {
-      continue
-    }
-
-    var residentChunk = level.getChunkAt(residentPlayer.blockPosition())
-    var residentRadiationData = residentChunk.getData(
-      NRAttachments.CHUNK_RADIATION.get()
-    )
-    var residentBeforeBq = residentRadiationData.totalActivityBq()
-
-    processedChunkKeys[residentChunkKey] = true
-    processedChunkPositions.push(residentChunk.getPos())
-    loadedChunks++
-    if (residentBeforeBq > 0) {
-      contaminatedChunks++
-    }
-    activityBeforeBq += residentBeforeBq
-
-    if (removalFraction >= 1) {
-      residentRadiationData.setAir(RadiationProfile.empty())
-      residentRadiationData.setWater(RadiationProfile.empty())
-      residentRadiationData.setSoil(RadiationProfile.empty())
-    } else {
-      var residentReductionDivisor = 1 / (1 - removalFraction)
-      residentRadiationData.air().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.water().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.soil().reduceAtoms(residentReductionDivisor)
-    }
-
-    activityAfterBq += residentRadiationData.totalActivityBq()
-    residentChunk.setUnsaved(true)
   }
 
   // Nuclear Radiation 1.0.8 registers placed blocks, fluids, dropped items,

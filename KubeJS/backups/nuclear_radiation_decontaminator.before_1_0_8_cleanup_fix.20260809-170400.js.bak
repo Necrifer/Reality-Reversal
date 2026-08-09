@@ -1,6 +1,6 @@
 // Modular Machinery Reborn environmental decontaminators.
 //
-// Nuclear Radiation 1.0.8 does not expose a supported KubeJS cleanup API.
+// Nuclear Radiation 1.0.6 does not expose a supported KubeJS cleanup API.
 // This integration uses its public Java methods directly; see the matching
 // warning JSON in config/codex_warnings before updating Nuclear Radiation.
 
@@ -9,7 +9,7 @@ const NR_PERCENT_MACHINE = 'modpack:environmental_decontaminator'
 const NR_TEST_FUNCTION = 'modpack:clear_nuclear_radiation_loaded_area'
 const NR_PERCENT_FUNCTION = 'modpack:reduce_nuclear_radiation_loaded_area'
 
-// Radius 9 means a 19x19 chunk square centred on the controller (361 chunks).
+// Radius 1 means the controller chunk plus its eight neighbours (a 3x3 area).
 // Unloaded chunks are skipped so that running the machine does not load terrain.
 const NR_CLEANUP_RADIUS_CHUNKS = 9
 
@@ -73,9 +73,8 @@ MMREvents.machines(event => {
 })
 
 ServerEvents.recipes(event => {
-  // Fast, inexpensive recipe intended for controlled testing. Active sources
-  // are removed from the registry on completion and stay absent until an
-  // emitter is rediscovered by a chunk/entity lifecycle event.
+  // Fast, inexpensive recipe intended for controlled testing. It removes all
+  // stored air, water, and soil contamination from every loaded target chunk.
   event.recipes.modular_machinery_reborn
     .machine_recipe(NR_TEST_MACHINE, 40)
     .requireEnergyPerTick(256)
@@ -91,9 +90,10 @@ ServerEvents.recipes(event => {
 })
 
 function nrProcessLoadedArea(event, removalFraction) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   const RadiationProfile = Java.loadClass('igentuman.nr.api.RadiationProfile')
-  const AbstractWorldRadSource = Java.loadClass(
-    'igentuman.nr.api.AbstractWorldRadSource'
+  const LeftOverRadSource = Java.loadClass(
+    'igentuman.nr.radiation.source.LeftOverRadSource'
   )
   const WorldSourceRegistry = Java.loadClass(
     'igentuman.nr.radiation.source.WorldSourceRegistry'
@@ -107,20 +107,17 @@ function nrProcessLoadedArea(event, removalFraction) {
 
   const controller = event.getTile()
   const level = controller.getLevel()
-  const controllerPos = controller.getBlockPos()
-  const centerChunkPos = level.getChunkAt(controllerPos).getPos()
-  const chunkSource = level.getChunkSource()
+  const centerChunkPos = level.getChunkAt(controller.getBlockPos()).getPos()
   const sideLength = NR_CLEANUP_RADIUS_CHUNKS * 2 + 1
   const scannedChunks = sideLength * sideLength
   let loadedChunks = 0
   let contaminatedChunks = 0
   let activityBeforeBq = 0
   let activityAfterBq = 0
-  let worldSources = 0
+  let leftoverSources = 0
   let orphanedSimulatorSources = 0
-  let worldSourceActivityRemovedBq = 0
+  let leftoverActivityRemovedBq = 0
   const processedChunkPositions = []
-  const processedChunkKeys = {}
   const processedSourceIds = {}
 
   for (let offsetX = -NR_CLEANUP_RADIUS_CHUNKS;
@@ -129,22 +126,21 @@ function nrProcessLoadedArea(event, removalFraction) {
     for (let offsetZ = -NR_CLEANUP_RADIUS_CHUNKS;
       offsetZ <= NR_CLEANUP_RADIUS_CHUNKS;
       offsetZ++) {
-      // Level.isLoaded(BlockPos) reports false for loaded chunks in some void
-      // dimensions. getChunkNow returns only an already-loaded full chunk and
-      // never force-loads terrain, so it is the authoritative check here.
-      const chunk = chunkSource.getChunkNow(
-        centerChunkPos.x + offsetX,
-        centerChunkPos.z + offsetZ
+      // A BlockPos inside the target chunk is enough for isLoaded/getChunkAt.
+      // Constructing it directly avoids Rhino selecting an offset overload.
+      const targetPos = new BlockPos(
+        (centerChunkPos.x + offsetX) * 16,
+        0,
+        (centerChunkPos.z + offsetZ) * 16
       )
 
-      if (chunk == null) {
+      if (!level.isLoaded(targetPos)) {
         continue
       }
 
       loadedChunks++
-      const chunkPos = chunk.getPos()
-      processedChunkPositions.push(chunkPos)
-      processedChunkKeys[`${chunkPos.x},${chunkPos.z}`] = true
+      const chunk = level.getChunkAt(targetPos)
+      processedChunkPositions.push(chunk.getPos())
       const radiationData = chunk.getData(
         NRAttachments.CHUNK_RADIATION.get()
       )
@@ -174,69 +170,20 @@ function nrProcessLoadedArea(event, removalFraction) {
     }
   }
 
-  // Some custom void dimensions return no chunks through isLoaded or
-  // getChunkNow even while players and block entities are ticking. A nearby
-  // player's current chunk is unquestionably resident, and getChunkAt on that
-  // position is the same access path Nuclear Radiation uses for its attachment.
-  // This fallback is kept inline because nested helpers force this Rhino build
-  // into an interpreter mode that mishandles loop-local const declarations.
-  var residentPlayers = level.players.toArray()
-  for (var residentIndex = 0;
-    residentIndex < residentPlayers.length;
-    residentIndex++) {
-    var residentPlayer = residentPlayers[residentIndex]
-    var residentChunkPos = residentPlayer.chunkPosition()
-    if (Math.abs(residentChunkPos.x - centerChunkPos.x) >
-      NR_CLEANUP_RADIUS_CHUNKS ||
-      Math.abs(residentChunkPos.z - centerChunkPos.z) >
-      NR_CLEANUP_RADIUS_CHUNKS) {
-      continue
-    }
-
-    var residentChunkKey =
-      `${residentChunkPos.x},${residentChunkPos.z}`
-    if (processedChunkKeys[residentChunkKey]) {
-      continue
-    }
-
-    var residentChunk = level.getChunkAt(residentPlayer.blockPosition())
-    var residentRadiationData = residentChunk.getData(
-      NRAttachments.CHUNK_RADIATION.get()
-    )
-    var residentBeforeBq = residentRadiationData.totalActivityBq()
-
-    processedChunkKeys[residentChunkKey] = true
-    processedChunkPositions.push(residentChunk.getPos())
-    loadedChunks++
-    if (residentBeforeBq > 0) {
-      contaminatedChunks++
-    }
-    activityBeforeBq += residentBeforeBq
-
-    if (removalFraction >= 1) {
-      residentRadiationData.setAir(RadiationProfile.empty())
-      residentRadiationData.setWater(RadiationProfile.empty())
-      residentRadiationData.setSoil(RadiationProfile.empty())
-    } else {
-      var residentReductionDivisor = 1 / (1 - removalFraction)
-      residentRadiationData.air().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.water().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.soil().reduceAtoms(residentReductionDivisor)
-    }
-
-    activityAfterBq += residentRadiationData.totalActivityBq()
-    residentChunk.setUnsaved(true)
-  }
-
-  // Nuclear Radiation 1.0.8 registers placed blocks, fluids, dropped items,
-  // containers, creative emitters, and leftovers as live world sources. The
-  // old script removed only leftovers, so real sources rebuilt the field and
-  // immediately contaminated the cleaned chunks again.
+  // When a radioactive dropped item leaves the level, Nuclear Radiation does
+  // not merely contaminate ChunkRadiationData. It deliberately creates a
+  // persistent LeftOverRadSource at the item's final block position. This
+  // point source is what the live radiation simulator and Geiger reading see.
   const registry = WorldSourceRegistry.get(level)
   const sources = registry.all().toArray()
 
   for (let index = 0; index < sources.length; index++) {
     const source = sources[index]
+
+    // Do not delete real, currently present block/fluid/item/creative sources.
+    if (!(source instanceof LeftOverRadSource)) {
+      continue
+    }
 
     const sourcePos = source.getPosition()
     const sourceChunkX = sourcePos.getX() >> 4
@@ -252,19 +199,17 @@ function nrProcessLoadedArea(event, removalFraction) {
     const sourceActivityBeforeBq = source.activityBq()
     const sourceId = source.getId()
     processedSourceIds[sourceId.toString()] = true
-    worldSources++
+    leftoverSources++
 
     if (removalFraction >= 1) {
       // Registry removal also removes the source from the simulator index.
       registry.remove(sourceId)
-      worldSourceActivityRemovedBq += sourceActivityBeforeBq
+      leftoverActivityRemovedBq += sourceActivityBeforeBq
     } else {
       const reductionDivisor = 1 / (1 - removalFraction)
       source.getProfile().reduceAtoms(reductionDivisor)
-      if (source instanceof AbstractWorldRadSource) {
-        source.recomputeExpiry()
-      }
-      worldSourceActivityRemovedBq +=
+      source.recomputeExpiry()
+      leftoverActivityRemovedBq +=
         sourceActivityBeforeBq - source.activityBq()
     }
   }
@@ -276,6 +221,10 @@ function nrProcessLoadedArea(event, removalFraction) {
   // if removal and an asynchronous field job cross in the same tick.
   for (let index = 0; index < indexedSources.length; index++) {
     const source = indexedSources[index]
+
+    if (!(source instanceof LeftOverRadSource)) {
+      continue
+    }
 
     const sourceId = source.getId()
     if (processedSourceIds[sourceId.toString()]) {
@@ -298,14 +247,12 @@ function nrProcessLoadedArea(event, removalFraction) {
 
     if (removalFraction >= 1) {
       simulator.removeSource(level, sourceId)
-      worldSourceActivityRemovedBq += sourceActivityBeforeBq
+      leftoverActivityRemovedBq += sourceActivityBeforeBq
     } else {
       const reductionDivisor = 1 / (1 - removalFraction)
       source.getProfile().reduceAtoms(reductionDivisor)
-      if (source instanceof AbstractWorldRadSource) {
-        source.recomputeExpiry()
-      }
-      worldSourceActivityRemovedBq +=
+      source.recomputeExpiry()
+      leftoverActivityRemovedBq +=
         sourceActivityBeforeBq - source.activityBq()
     }
   }
@@ -356,77 +303,49 @@ function nrProcessLoadedArea(event, removalFraction) {
   registry.saveToLevel()
   simulator.tickWorld(level)
 
-  // Version 1.0.8 computes poisoning from the greater of the current rate and
-  // accumulated career dose. It also stores internal isotopes and lung dust
-  // separately. Reducing only the two rolling rate meters made the Geiger dip,
-  // but left the five-minute vomiting timer active.
-  const players = level.players.toArray()
-  const remainingExposureFraction = 1 - removalFraction
+  // Nuclear Radiation 1.0.6's /nr clear command omits svPerHourAmbient even
+  // though the Geiger Counter reads that field. For the 100% test recipe only,
+  // reset the two rolling rate meters of players standing in the cleaned area.
+  // Career dose, internal contamination, and lung state are left untouched.
+  if (removalFraction >= 1) {
+    // ServerLevel exposes players as a Java List property in KubeJS/Rhino.
+    // Calling players() resolves the property and then attempts to call the
+    // resulting List, which Rhino rejects as "not a function".
+    const players = level.players.toArray()
 
-  for (let playerIndex = 0; playerIndex < players.length; playerIndex++) {
-    const player = players[playerIndex]
-    const playerChunkPos = player.chunkPosition()
+    for (let playerIndex = 0; playerIndex < players.length; playerIndex++) {
+      const player = players[playerIndex]
+      const playerChunkPos = player.chunkPosition()
 
-    if (Math.abs(playerChunkPos.x - centerChunkPos.x) >
-      NR_CLEANUP_RADIUS_CHUNKS ||
-      Math.abs(playerChunkPos.z - centerChunkPos.z) >
-      NR_CLEANUP_RADIUS_CHUNKS) {
-      continue
-    }
-
-    const playerRadiationData = player.getData(
-      NRAttachments.ENTITY_RADIATION.get()
-    )
-    playerRadiationData.setSvPerHour(
-      playerRadiationData.svPerHour() * remainingExposureFraction
-    )
-    playerRadiationData.setSvPerHourAmbient(
-      playerRadiationData.svPerHourAmbient() * remainingExposureFraction
-    )
-    playerRadiationData.setSvTotalCareer(
-      playerRadiationData.svTotalCareer() * remainingExposureFraction
-    )
-
-    const internal = playerRadiationData.internalContamination()
-    const isotopeIds = internal.keySet().toArray()
-    for (let isotopeIndex = 0;
-      isotopeIndex < isotopeIds.length;
-      isotopeIndex++) {
-      const isotopeId = isotopeIds[isotopeIndex]
-      const remainingAtoms = internal.get(isotopeId) *
-        remainingExposureFraction
-      if (remainingAtoms < 1) {
-        internal.remove(isotopeId)
-      } else {
-        internal.put(isotopeId, remainingAtoms)
+      if (Math.abs(playerChunkPos.x - centerChunkPos.x) >
+        NR_CLEANUP_RADIUS_CHUNKS ||
+        Math.abs(playerChunkPos.z - centerChunkPos.z) >
+        NR_CLEANUP_RADIUS_CHUNKS) {
+        continue
       }
-    }
 
-    const lungData = player.getData(NRAttachments.LUNG_POLLUTION.get())
-    lungData.setPollution(
-      lungData.pollution() * remainingExposureFraction
-    )
-
-    if (removalFraction >= 1) {
-      playerRadiationData.setLastDoseStage(0)
-      player.getPersistentData().remove('nr_next_vomit_tick')
+      const playerRadiationData = player.getData(
+        NRAttachments.ENTITY_RADIATION.get()
+      )
+      playerRadiationData.setSvPerHour(0)
+      playerRadiationData.setSvPerHourAmbient(0)
+      playerMetersReset++
     }
-    playerMetersReset++
   }
 
   return {
     scannedChunks: scannedChunks,
     loadedChunks: loadedChunks,
     contaminatedChunks: contaminatedChunks,
-    worldSources: worldSources,
+    leftoverSources: leftoverSources,
     orphanedSimulatorSources: orphanedSimulatorSources,
     cachedVectors: cachedVectors,
     cachedVectorActivityRemovedBq: cachedVectorActivityRemovedBq,
     playerMetersReset: playerMetersReset,
     chunkActivityRemovedBq: activityBeforeBq - activityAfterBq,
-    worldSourceActivityRemovedBq: worldSourceActivityRemovedBq,
+    leftoverActivityRemovedBq: leftoverActivityRemovedBq,
     removedBq:
-      activityBeforeBq - activityAfterBq + worldSourceActivityRemovedBq
+      activityBeforeBq - activityAfterBq + leftoverActivityRemovedBq
   }
 }
 
@@ -437,7 +356,7 @@ MMREvents.recipeFunction(NR_TEST_FUNCTION, event => {
     `[Radiation Cleanup Test Rig] Removed ${result.removedBq} Bq from ` +
     `${result.contaminatedChunks} contaminated chunk(s); processed ` +
     `${result.loadedChunks}/${result.scannedChunks} loaded chunks and ` +
-    `${result.worldSources} registry source(s), ` +
+    `${result.leftoverSources} registry source(s), ` +
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
     `${result.cachedVectorActivityRemovedBq} Bq; reset ` +
@@ -454,13 +373,12 @@ MMREvents.recipeFunction(NR_PERCENT_FUNCTION, event => {
     `${result.removedBq} Bq (${configuredPercent}% configured) from ` +
     `${result.contaminatedChunks} contaminated chunk(s); processed ` +
     `${result.loadedChunks}/${result.scannedChunks} loaded chunks and ` +
-    `${result.worldSources} registry source(s), ` +
+    `${result.leftoverSources} registry source(s), ` +
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
     `${result.cachedVectorActivityRemovedBq} Bq.`
   )
 })
 
-// Active radioactive materials can be rediscovered when their chunk or entity
-// reloads. Keep the machine powered to maintain suppression, or remove/seal the
-// physical emitter for a cleanup that remains permanent without the machine.
+// Active radioactive blocks, fluids, containers, and dropped items remain real
+// sources and can contaminate cleaned chunks again after either recipe ends.

@@ -9,7 +9,7 @@ const NR_PERCENT_MACHINE = 'modpack:environmental_decontaminator'
 const NR_TEST_FUNCTION = 'modpack:clear_nuclear_radiation_loaded_area'
 const NR_PERCENT_FUNCTION = 'modpack:reduce_nuclear_radiation_loaded_area'
 
-// Radius 9 means a 19x19 chunk square centred on the controller (361 chunks).
+// Radius 1 means the controller chunk plus its eight neighbours (a 3x3 area).
 // Unloaded chunks are skipped so that running the machine does not load terrain.
 const NR_CLEANUP_RADIUS_CHUNKS = 9
 
@@ -91,6 +91,7 @@ ServerEvents.recipes(event => {
 })
 
 function nrProcessLoadedArea(event, removalFraction) {
+  const BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
   const RadiationProfile = Java.loadClass('igentuman.nr.api.RadiationProfile')
   const AbstractWorldRadSource = Java.loadClass(
     'igentuman.nr.api.AbstractWorldRadSource'
@@ -107,9 +108,7 @@ function nrProcessLoadedArea(event, removalFraction) {
 
   const controller = event.getTile()
   const level = controller.getLevel()
-  const controllerPos = controller.getBlockPos()
-  const centerChunkPos = level.getChunkAt(controllerPos).getPos()
-  const chunkSource = level.getChunkSource()
+  const centerChunkPos = level.getChunkAt(controller.getBlockPos()).getPos()
   const sideLength = NR_CLEANUP_RADIUS_CHUNKS * 2 + 1
   const scannedChunks = sideLength * sideLength
   let loadedChunks = 0
@@ -120,7 +119,6 @@ function nrProcessLoadedArea(event, removalFraction) {
   let orphanedSimulatorSources = 0
   let worldSourceActivityRemovedBq = 0
   const processedChunkPositions = []
-  const processedChunkKeys = {}
   const processedSourceIds = {}
 
   for (let offsetX = -NR_CLEANUP_RADIUS_CHUNKS;
@@ -129,22 +127,21 @@ function nrProcessLoadedArea(event, removalFraction) {
     for (let offsetZ = -NR_CLEANUP_RADIUS_CHUNKS;
       offsetZ <= NR_CLEANUP_RADIUS_CHUNKS;
       offsetZ++) {
-      // Level.isLoaded(BlockPos) reports false for loaded chunks in some void
-      // dimensions. getChunkNow returns only an already-loaded full chunk and
-      // never force-loads terrain, so it is the authoritative check here.
-      const chunk = chunkSource.getChunkNow(
-        centerChunkPos.x + offsetX,
-        centerChunkPos.z + offsetZ
+      // A BlockPos inside the target chunk is enough for isLoaded/getChunkAt.
+      // Constructing it directly avoids Rhino selecting an offset overload.
+      const targetPos = new BlockPos(
+        (centerChunkPos.x + offsetX) * 16,
+        0,
+        (centerChunkPos.z + offsetZ) * 16
       )
 
-      if (chunk == null) {
+      if (!level.isLoaded(targetPos)) {
         continue
       }
 
       loadedChunks++
-      const chunkPos = chunk.getPos()
-      processedChunkPositions.push(chunkPos)
-      processedChunkKeys[`${chunkPos.x},${chunkPos.z}`] = true
+      const chunk = level.getChunkAt(targetPos)
+      processedChunkPositions.push(chunk.getPos())
       const radiationData = chunk.getData(
         NRAttachments.CHUNK_RADIATION.get()
       )
@@ -172,60 +169,6 @@ function nrProcessLoadedArea(event, removalFraction) {
       activityAfterBq += radiationData.totalActivityBq()
       chunk.setUnsaved(true)
     }
-  }
-
-  // Some custom void dimensions return no chunks through isLoaded or
-  // getChunkNow even while players and block entities are ticking. A nearby
-  // player's current chunk is unquestionably resident, and getChunkAt on that
-  // position is the same access path Nuclear Radiation uses for its attachment.
-  // This fallback is kept inline because nested helpers force this Rhino build
-  // into an interpreter mode that mishandles loop-local const declarations.
-  var residentPlayers = level.players.toArray()
-  for (var residentIndex = 0;
-    residentIndex < residentPlayers.length;
-    residentIndex++) {
-    var residentPlayer = residentPlayers[residentIndex]
-    var residentChunkPos = residentPlayer.chunkPosition()
-    if (Math.abs(residentChunkPos.x - centerChunkPos.x) >
-      NR_CLEANUP_RADIUS_CHUNKS ||
-      Math.abs(residentChunkPos.z - centerChunkPos.z) >
-      NR_CLEANUP_RADIUS_CHUNKS) {
-      continue
-    }
-
-    var residentChunkKey =
-      `${residentChunkPos.x},${residentChunkPos.z}`
-    if (processedChunkKeys[residentChunkKey]) {
-      continue
-    }
-
-    var residentChunk = level.getChunkAt(residentPlayer.blockPosition())
-    var residentRadiationData = residentChunk.getData(
-      NRAttachments.CHUNK_RADIATION.get()
-    )
-    var residentBeforeBq = residentRadiationData.totalActivityBq()
-
-    processedChunkKeys[residentChunkKey] = true
-    processedChunkPositions.push(residentChunk.getPos())
-    loadedChunks++
-    if (residentBeforeBq > 0) {
-      contaminatedChunks++
-    }
-    activityBeforeBq += residentBeforeBq
-
-    if (removalFraction >= 1) {
-      residentRadiationData.setAir(RadiationProfile.empty())
-      residentRadiationData.setWater(RadiationProfile.empty())
-      residentRadiationData.setSoil(RadiationProfile.empty())
-    } else {
-      var residentReductionDivisor = 1 / (1 - removalFraction)
-      residentRadiationData.air().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.water().reduceAtoms(residentReductionDivisor)
-      residentRadiationData.soil().reduceAtoms(residentReductionDivisor)
-    }
-
-    activityAfterBq += residentRadiationData.totalActivityBq()
-    residentChunk.setUnsaved(true)
   }
 
   // Nuclear Radiation 1.0.8 registers placed blocks, fluids, dropped items,

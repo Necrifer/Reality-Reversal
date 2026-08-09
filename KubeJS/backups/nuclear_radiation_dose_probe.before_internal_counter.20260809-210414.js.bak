@@ -1,0 +1,109 @@
+// Temporary, read-only Nuclear Radiation 1.0.8 dose-source probe.
+// It is deliberately separate from the MMR cleanup callbacks: a probe error
+// cannot stop either environmental decontaminator recipe.
+
+const NR_DOSE_PROBE_ENABLED = true
+
+const NRProbeAttachments = Java.loadClass(
+  'igentuman.nr.radiation.storage.NRAttachments'
+)
+const NRProbeConfig = Java.loadClass(
+  'igentuman.nr.config.RadiationConfig'
+)
+const NRProbeBindings = Java.loadClass(
+  'igentuman.nr.api.binding.Bindings'
+)
+const NRProbeInventoryCache = Java.loadClass(
+  'igentuman.nr.radiation.simulation.inventory.InventoryRadCache'
+)
+const NRProbeWorldRegistry = Java.loadClass(
+  'igentuman.nr.radiation.source.WorldSourceRegistry'
+)
+const NRProbeSimulator = Java.loadClass(
+  'igentuman.nr.radiation.simulation.RadiationSimulator'
+)
+const NRProbeRegistries = Java.loadClass(
+  'net.minecraft.core.registries.BuiltInRegistries'
+)
+
+PlayerEvents.tick(event => {
+  if (!NR_DOSE_PROBE_ENABLED) {
+    return
+  }
+
+  // Use var in this temporary probe because the bundled Rhino interpreter can
+  // incorrectly retain loop-local const bindings after a script reload.
+  var player = event.player
+  var level = player.serverLevel()
+  if (level.getGameTime() % 20 !== 0) {
+    return
+  }
+  var position = player.blockPosition()
+  var radiationData = player.getData(
+    NRProbeAttachments.ENTITY_RADIATION.get()
+  )
+  var lungData = player.getData(NRProbeAttachments.LUNG_POLLUTION.get())
+
+  var biomeOptional = level.getBiome(position).unwrapKey()
+  var biomeLocation = biomeOptional.isPresent() ?
+    biomeOptional.get().location() : null
+  var biomeId = biomeLocation == null ? 'unknown' : biomeLocation.toString()
+  var dimensionLocation = level.dimension().location()
+
+  var backgroundUSvPerHour = NRProbeConfig.biomeBackgroundUSvPerHour(
+    biomeLocation
+  )
+  if (backgroundUSvPerHour == null) {
+    backgroundUSvPerHour = NRProbeConfig.levelBackgroundUSvPerHour(
+      dimensionLocation
+    )
+  }
+  if (backgroundUSvPerHour == null) {
+    backgroundUSvPerHour = NRProbeConfig.DEFAULT_BACKGROUND_USV_PER_HOUR.get()
+  }
+
+  var blockState = level.getBlockState(position)
+  var blockId = NRProbeRegistries.BLOCK.getKey(
+    blockState.getBlock()
+  )
+  var blockBinding = NRProbeBindings.getBlock(blockId)
+  var occupiedBlockBq = blockBinding == null ? 0 :
+    blockBinding.get().totalActivityBq()
+
+  var inventoryCache = NRProbeInventoryCache.get(player)
+  inventoryCache.markDirty()
+  inventoryCache.rescan(player, level.getGameTime())
+  var inventoryBq = inventoryCache.bqXRay() +
+    inventoryCache.bqAlpha() + inventoryCache.bqBeta() +
+    inventoryCache.bqNeutron()
+
+  var chunk = level.getChunkAt(position)
+  var chunkRadiation = chunk.getData(
+    NRProbeAttachments.CHUNK_RADIATION.get()
+  )
+  var chunkBq = chunkRadiation.totalActivityBq()
+  var registry = NRProbeWorldRegistry.get(level)
+  var inGasCloud = registry.inGasCloud(player.position())
+
+  var vector = NRProbeSimulator.get().getChunkVector(
+    level,
+    player.chunkPosition(),
+    position.getY() >> 4
+  )
+  var vectorMaxBq = vector == null ? 0 : vector.maxBq
+
+  console.info(
+    `[NR Dose Probe] player=${player.getName().getString()}, ` +
+    `rate=${radiationData.svPerHour()} Sv/h, ` +
+    `ambient=${radiationData.svPerHourAmbient()} Sv/h, ` +
+    `career=${radiationData.svTotalCareer()} Sv, ` +
+    `stage=${radiationData.lastDoseStage()}, ` +
+    `dimension=${dimensionLocation}, biome=${biomeId}, ` +
+    `background=${backgroundUSvPerHour} uSv/h, ` +
+    `occupiedBlock=${blockId}, occupiedBlockBq=${occupiedBlockBq}, ` +
+    `inventoryBq=${inventoryBq}, ` +
+    `internalIsotopes=${radiationData.internalContamination().size()}, ` +
+    `lungPollution=${lungData.pollution()}, inGasCloud=${inGasCloud}, ` +
+    `localChunkBq=${chunkBq}, vectorMaxBq=${vectorMaxBq}`
+  )
+})
