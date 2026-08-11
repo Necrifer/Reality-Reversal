@@ -184,3 +184,11 @@
 	[<item:minecraft:end_stone>, <item:aether:icestone>, <item:aether:icestone>, <item:aether:icestone>, <item:aether:icestone>, <item:aether:icestone>, <item:aether:icestone>, <item:aether:icestone>, <item:minecraft:end_stone>], 
 	[<item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>, <item:minecraft:end_stone>]
 ]);
+<recipetype:extendedcrafting:combination>.addRecipe("modularium_simple", <item:modular_machinery_reborn:modularium> * 8, <item:malum:soul_stained_steel_ingot>, [
+	<item:nuclearcraftneohaul:tough_alloy>, <item:oritech:duratium_block>, <item:spectrum:liquid_crystal_bucket>, <item:naturesaura:aura_bottle>.withJsonComponent(<componenttype:naturesaura:aura_bottle_data>, {aura_type: "kubejs:nihil"}), <item:malum:rune_of_howling_gale>, <item:naturesaura:aura_bottle>.withJsonComponent(<componenttype:naturesaura:aura_bottle_data>, {aura_type: "naturesaura:overworld"}), <item:projectexpansion:magenta_matter>, <item:malum:wind_nucleus>, <item:kubejs:law_ingot>, <item:malum:warp_flux>, <item:malum:imitation_flesh>, <item:voidminersremastered:citrinetine>, <item:naturesaura:aura_bottle>.withJsonComponent(<componenttype:naturesaura:aura_bottle_data>, {aura_type: "naturesaura:end"}), <item:bigreactors:redfrigium_bucket>, <item:naturesaura:aura_bottle>.withJsonComponent(<componenttype:naturesaura:aura_bottle_data>, {aura_type: "naturesaura:nether"}), <item:malum:paracausal_flame>, <item:nuclearcraft:chassis>, 
+], 100000);
+<recipetype:extendedcrafting:ender_crafter>.addShaped("modular_casing", <item:modular_machinery_reborn:casing_plain> * 2, [
+	[<item:modular_machinery_reborn:modularium>, <item:spectrum:midnight_chip>, <item:hostilenetworks:prediction>.withJsonComponent(<componenttype:hostilenetworks:data_model>, "hostilenetworks:spider")], 
+	[<item:enderio:pulsating_crystal>, <item:actuallyadditions:ender_casing>, <item:enderio:vibrant_crystal>], 
+	[<item:hostilenetworks:prediction>.withJsonComponent(<componenttype:hostilenetworks:data_model>, "hostilenetworks:enderman"), <item:spectrum:midnight_chip>, <item:modular_machinery_reborn:modularium>]
+]);

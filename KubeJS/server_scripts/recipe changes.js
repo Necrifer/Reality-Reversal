@@ -32,13 +32,18 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:inferium_farmland',
     'matc:prudentium_crystal',
     'matc:inferium_crystal',
+    'modular_machinery_reborn:casing_plan',
+    'modular_machinery_reborn:modularium_ingot',
     'matc:tertium_crystal',
+    'nuclearcraft:chassis',
+    'oritech:crafting/atomicforge',
     'ars_nouveau:novice_spellbook_alt',
     'ars_nouveau:novice_spell_book',
     'ae2:network/blocks/crystal_processing_charger',
     'voidminersremastered:rubetine',
     'hostilenetworks:loot_fabricator',
     'divinerpg:shaped/arcana_portal_frame',
+    'mysticalagriculture:machine_frame',
     'woot_revived:stygian_dust',
     'bigreactors:reactor/reinforced/casing',
     'bigreactors:reactor/reinforced/casing_upgrade',
@@ -120,6 +125,7 @@ ServerEvents.recipes(event => {
     replace('primalmagick:mundane_wand', '#c:rods/wooden', 'malum:hallowed_gold_ingot')
     replace('spectrum:pedestal_basic_citrine', 'minecraft:redstone', 'minecraft:chorus_fruit')
     replace('spectrum:pedestal_basic_amethyst', 'minecraft:redstone', 'minecraft:chorus_fruit')
+    replace('ars_noveau:arcane_core', 'minecraft:gold_ingot', 'malum:osmium_code')
     replace('spectrum:pedestal_basic_topaz', 'minecraft:redstone', 'minecraft:chorus_fruit')
     replace('mysticalautomation:infusion_altarnator', '#c:ingots/iron', 'malum:soul_stained_steel_ingot')
   event.shaped(
@@ -429,6 +435,20 @@ const shapedCrafting = [
         }
     },
     {
+      id:'mysticalagriculture:machine_frame',
+      output: 'mysticalagriculture:machine_frame',
+      pattern: [
+        "EAE",
+        "ABA",
+        "EAE"
+    ],
+    keys: {
+        E: 'actuallyadditions:empowered_enori_crystal',
+        A: 'mekanism:enriched_redstone',
+        B: 'mekanism:block_steel'
+    }
+    },
+    {
         id: 'mekanism:metallurgic_infuser',
         output: 'mekanism:metallurgic_infuser',
         pattern: ['ABA', 'BCB', 'ABA'],
@@ -480,6 +500,16 @@ const shapedCrafting = [
         C: 'mekanism:steel_casing',
         D: '#c:ingots/dark_steel',
         E: 'oritech:basic_generator_block'
+      }
+    },
+    {
+      id:'ars_nouveau:imbuement_chamber',
+      output: 'ars_nouveau:imbuement_chamber',
+      pattern: ["AHA", "AFA", "AHA"],
+      keys: {
+        A: 'ars_nouveau:archwood_planks',
+        H: 'malum:hallowed_gold_ingot',
+        F: 'dimdoors:fuzzy_fireball'
       }
     },
     {
