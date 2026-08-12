@@ -1,25 +1,27 @@
 ServerEvents.recipes(event => {
-   const reciperemove = []
+   const removeRecipe = []
     removeRecipe.forEach(removeRecipe =>{
     event.remove({id: removeRecipe})
   })
   const ingotformer = [
     {
-      energyPerTick = 50,
-      fluidInputs = [{
-        amount = 144,
-        fluid = '#c:magentite'
+      energy_per_tick: 50,
+      fluid_inputs: [{
+        amount: 144,
+        fluid: 'bigreactors:magentite'
       }],
-      itemOutputs = 'bigreactors:magentite_ingot',
-      processTime: 200
+      item_outputs: [{
+        item: 'bigreactors:magentite_ingot'
+      }],
+      process_time: 200
     }]
     ingotformer.forEach(recipe=> {
         event.custom({
-            type = 'nuclearcraft:ingot_former',
-            energyPerTick = recipe.energyPerTick,
-            fluidInputs = recipe.fluidInputs,
-            itemOutputs = recipe.itemOutputs,
-            processTime = recipe.processTime
+            type: 'nuclearcraft:ingot_former',
+            energy_per_tick: recipe.energy_per_tick,
+            fluid_inputs: recipe.fluid_inputs,
+            item_outputs: recipe.item_outputs,
+            process_time: recipe.process_time
         })
     })
 })

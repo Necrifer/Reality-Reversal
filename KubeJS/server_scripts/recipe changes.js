@@ -128,6 +128,7 @@ ServerEvents.recipes(event => {
     replace('ars_noveau:arcane_core', 'minecraft:gold_ingot', 'malum:osmium_node')
     replace('spectrum:pedestal_basic_topaz', 'minecraft:redstone', 'minecraft:chorus_fruit')
     replace('mysticalautomation:infusion_altarnator', '#c:ingots/iron', 'malum:soul_stained_steel_ingot')
+    replace('ars_noveau:arcane_core', 'minecraft:gold_ingot','mysticalagriculture:inferium_ingot')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [

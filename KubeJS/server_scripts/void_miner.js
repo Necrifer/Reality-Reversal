@@ -192,22 +192,22 @@ ServerEvents.recipes(event => {
       id: 'modpack:voidminers/sapphire_ore'
     },
     {
-      item: 'nuclearcraftneohaul:boron_ore',
+      item: 'nuclearcraft:boron_ore',
       weight: 11.0,
       id: 'modpack:voidminers/boron_ore'
     },
     {
-      item: 'nuclearcraftneohaul:lithium_ore',
+      item: 'nuclearcraft:lithium_ore',
       weight: 11.0,
       id: 'modpack:voidminers/lithium_ore'
     },
     {
-      item: 'nuclearcraftneohaul:magnesium_ore',
+      item: 'nuclearcraft:magnesium_ore',
       weight: 11.0,
       id: 'modpack:voidminers/magnesium_ore'
     },
     {
-      item: 'nuclearcraftneohaul:thorium_ore',
+      item: 'nuclearcraft:thorium_ore',
       weight: 10.0,
       id: 'modpack:voidminers/thorium_ore'
     },

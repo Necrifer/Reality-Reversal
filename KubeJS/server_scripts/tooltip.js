@@ -104,4 +104,8 @@ ItemEvents.modifyTooltips(event => {
     tooltip.insert(1, Text.of('Right clicking in different dimensions gives different air').green())
     tooltip.insert(2, Text.of('You may want to grab as many as you can...').blue())
     })
+    event.modify('primalmagick:grimoire_creative', tooltip => {
+    tooltip.insert(1, Text.of('You may want to progress more before thinking about this...').green())
+    tooltip.insert(2, Text.of('No one hates broken symmetry right? Oh and costly recipes.').darkRed())
+    })
 })
