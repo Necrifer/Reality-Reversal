@@ -1,0 +1,10 @@
+{
+  "name": "Vibrant Alloy",
+  "colors": [
+    "4f690e",
+    "f3ffb4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/vibrant_alloy"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Zamak",
+  "colors": [
+    "a79594",
+    "302424"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/zamak"
+  }
+}

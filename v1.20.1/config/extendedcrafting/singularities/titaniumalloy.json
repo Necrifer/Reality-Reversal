@@ -1,0 +1,10 @@
+{
+  "name": "Titanium Alloy",
+  "colors": [
+    "1c173d",
+    "58368c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/titaniumalloy"
+  }
+}

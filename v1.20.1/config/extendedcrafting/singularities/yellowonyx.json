@@ -1,0 +1,10 @@
+{
+  "name": "Yellow Onyx",
+  "colors": [
+    "fba3ad",
+    "ffd800"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yellowonyx"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Umbranova",
+  "colors": [
+    "4fc1eb",
+    "280bca"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/umbranova"
+  }
+}

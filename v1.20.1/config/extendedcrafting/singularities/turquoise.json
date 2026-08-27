@@ -1,0 +1,10 @@
+{
+  "name": "Turquoise",
+  "colors": [
+    "00ffce",
+    "005d47"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/turquoise"
+  }
+}

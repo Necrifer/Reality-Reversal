@@ -1,0 +1,10 @@
+{
+  "name": "Unoptanium",
+  "colors": [
+    "290c51",
+    "17072d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/unobtanium"
+  }
+}

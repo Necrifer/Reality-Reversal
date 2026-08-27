@@ -1,0 +1,10 @@
+{
+  "name": "Withered Steel",
+  "colors": [
+    "751eb4",
+    "210038"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/witheredsteel"
+  }
+}

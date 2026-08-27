@@ -1,0 +1,10 @@
+{
+  "name": "Yurium",
+  "colors": [
+    "67af98",
+    "2c4e44"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yurium"
+  }
+}

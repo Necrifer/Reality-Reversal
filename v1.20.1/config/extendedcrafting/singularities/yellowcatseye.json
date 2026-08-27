@@ -1,0 +1,10 @@
+{
+  "name": "Yellow Catseye",
+  "colors": [
+    "917000",
+    "503e00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yellowcatseye"
+  }
+}

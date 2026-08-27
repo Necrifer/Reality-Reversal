@@ -1,0 +1,10 @@
+{
+  "name": "Varsium",
+  "colors": [
+    "db7c46",
+    "3d1c2a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/varsium"
+  }
+}

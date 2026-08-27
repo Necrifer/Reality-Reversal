@@ -1,0 +1,10 @@
+{
+  "name": "Zirconium Molybdenum Ingot",
+  "colors": [
+    "b3b7bc",
+    "626567"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/zirconium_molybdenum"
+  }
+}

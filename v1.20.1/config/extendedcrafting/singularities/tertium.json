@@ -1,0 +1,10 @@
+{
+  "name": "Tertium",
+  "colors": [
+    "d84800",
+    "772800"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tertium"
+  }
+}

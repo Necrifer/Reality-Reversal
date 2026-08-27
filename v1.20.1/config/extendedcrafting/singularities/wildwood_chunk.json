@@ -1,0 +1,10 @@
+{
+  "name": "Wildwood Chunk",
+  "colors": [
+    "135d03",
+    "033251"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/wildwood_chunk"
+  }
+}

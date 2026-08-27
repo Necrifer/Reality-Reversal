@@ -1,0 +1,10 @@
+{
+  "name": "Terran Stone",
+  "colors": [
+    "65d54d",
+    "e2fbd4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/terran"
+  }
+}

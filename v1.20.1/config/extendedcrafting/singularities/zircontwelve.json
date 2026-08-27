@@ -1,0 +1,10 @@
+{
+  "name": "Zircon",
+  "colors": [
+    "c10b6b",
+    "360125"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/zircontwelve"
+  }
+}

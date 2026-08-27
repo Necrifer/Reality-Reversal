@@ -1,0 +1,10 @@
+{
+  "name": "Wildwood Gem",
+  "colors": [
+    "065b93",
+    "51d3fb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/wildwood"
+  }
+}

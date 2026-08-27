@@ -1,0 +1,10 @@
+{
+  "name": "Vibrant Crystal",
+  "colors": [
+    "559322",
+    "7cff55"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/vibrant_crystal"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Yellorium",
+  "colors": [
+    "e6d871",
+    "666000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yellorium"
+  }
+}

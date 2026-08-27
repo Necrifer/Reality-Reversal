@@ -1,0 +1,10 @@
+{
+  "name": "Tough Alloy Ingot",
+  "colors": [
+    "150f21",
+    "100e13"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tough_alloy"
+  }
+}

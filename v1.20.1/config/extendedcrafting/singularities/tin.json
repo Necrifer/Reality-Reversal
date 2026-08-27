@@ -1,0 +1,10 @@
+{
+  "name": "Tin",
+  "colors": [
+    "8dacd6",
+    "cae1ee"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tin"
+  }
+}

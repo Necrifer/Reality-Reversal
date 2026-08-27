@@ -1,0 +1,10 @@
+{
+  "name": "Yellow Pearl",
+  "colors": [
+    "eccd08",
+    "fffef4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yellowpearl"
+  }
+}

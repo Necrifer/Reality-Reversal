@@ -1,0 +1,10 @@
+{
+  "name": "Zircaloy Ingot",
+  "colors": [
+    "9b9b86",
+    "e3e3e7"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/zircaloy"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Zebra Jasper",
+  "colors": [
+    "464646",
+    "cfb195"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/zebrajasper"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Vesuvianite",
+  "colors": [
+    "8f2daa",
+    "175500"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/vesuvianite"
+  }
+}

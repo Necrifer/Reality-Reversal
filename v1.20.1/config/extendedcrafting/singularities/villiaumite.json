@@ -1,0 +1,10 @@
+{
+  "name": "Villiaumite Gem",
+  "colors": [
+    "7e4639",
+    "c3a79b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/villiaumite"
+  }
+}

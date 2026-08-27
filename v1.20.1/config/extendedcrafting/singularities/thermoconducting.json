@@ -1,0 +1,10 @@
+{
+  "name": "Thermoconducting Ingot",
+  "colors": [
+    "2d331c",
+    "3e452a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/thermoconducting"
+  }
+}

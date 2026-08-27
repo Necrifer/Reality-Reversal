@@ -1,0 +1,10 @@
+{
+  "name": "Tungsten Carbide Ingot",
+  "colors": [
+    "1b1f1c",
+    "262c27"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tungsten_carbide"
+  }
+}

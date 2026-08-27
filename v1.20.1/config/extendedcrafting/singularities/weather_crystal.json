@@ -1,0 +1,10 @@
+{
+  "name": "Weather Crystal",
+  "colors": [
+    "7a448a",
+    "43254c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/weather_crystal"
+  }
+}

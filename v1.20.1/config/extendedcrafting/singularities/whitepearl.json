@@ -1,0 +1,10 @@
+{
+  "name": "White Pearl",
+  "colors": [
+    "c6c6c6",
+    "348ff6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/whitepearl"
+  }
+}

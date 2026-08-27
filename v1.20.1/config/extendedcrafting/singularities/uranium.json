@@ -1,0 +1,10 @@
+{
+  "name": "Uranium",
+  "colors": [
+    "c6dba3",
+    "77a851"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/uranium"
+  }
+}

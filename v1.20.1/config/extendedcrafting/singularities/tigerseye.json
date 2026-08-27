@@ -1,0 +1,10 @@
+{
+  "name": "Tigerseye",
+  "colors": [
+    "4e1600",
+    "2b0c00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tigerseye"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Yellow Diamond",
+  "colors": [
+    "ffca00",
+    "fff666"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yellowdiamond"
+  }
+}

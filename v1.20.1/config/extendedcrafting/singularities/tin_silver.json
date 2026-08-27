@@ -1,0 +1,10 @@
+{
+  "name": "Tin Silver Ingot",
+  "colors": [
+    "aaaac5",
+    "dfdff3"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tin_silver"
+  }
+}

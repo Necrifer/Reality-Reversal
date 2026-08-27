@@ -1,0 +1,10 @@
+{
+  "name": "Tourmaline",
+  "colors": [
+    "65690e",
+    "ffffe6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tourmaline"
+  }
+}

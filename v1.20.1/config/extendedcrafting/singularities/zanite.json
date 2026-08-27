@@ -1,0 +1,10 @@
+{
+  "name": "Zanite Gemstone",
+  "colors": [
+    "7a36e0",
+    "190838"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/zanite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Titanium Quartz",
+  "colors": [
+    "00463b",
+    "0e88b6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/titaniumquartz"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Tainted Gold Ingot",
+  "colors": [
+    "734721",
+    "3f2712"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/tainted_gold"
+  }
+}

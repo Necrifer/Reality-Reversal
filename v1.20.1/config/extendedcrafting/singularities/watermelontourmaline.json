@@ -1,0 +1,10 @@
+{
+  "name": "Watermelon Tourmaline",
+  "colors": [
+    "1a4600",
+    "f4ebe1"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/watermelontourmaline"
+  }
+}

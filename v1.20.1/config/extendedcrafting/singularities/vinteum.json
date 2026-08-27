@@ -1,0 +1,10 @@
+{
+  "name": "Vinteum Ingot",
+  "colors": [
+    "3c66c5",
+    "c9e6f0"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/vinteum"
+  }
+}

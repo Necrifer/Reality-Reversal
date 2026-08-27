@@ -1,0 +1,10 @@
+{
+  "name": "Topaz",
+  "colors": [
+    "5e2f00",
+    "ff8100"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/topaz"
+  }
+}

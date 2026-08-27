@@ -1,0 +1,10 @@
+{
+  "name": "Technetium",
+  "colors": [
+    "91b7bf",
+    "2a383a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/technetium"
+  }
+}

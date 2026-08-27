@@ -1,0 +1,10 @@
+{
+  "name": "Yellow Star Sapphire",
+  "colors": [
+    "b8a000",
+    "282200"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/yellowstarsapphire"
+  }
+}

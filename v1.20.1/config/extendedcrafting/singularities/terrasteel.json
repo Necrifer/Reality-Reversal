@@ -1,0 +1,10 @@
+{
+  "name": "Terrasteel Ingot",
+  "colors": [
+    "2bb93b",
+    "ccffb5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/terrasteel"
+  }
+}

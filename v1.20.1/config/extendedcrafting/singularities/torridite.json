@@ -1,0 +1,10 @@
+{
+  "name": "Torridite Ingot",
+  "colors": [
+    "bb1d1d",
+    "69031f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/torridite"
+  }
+}

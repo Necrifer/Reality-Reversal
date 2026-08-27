@@ -1,0 +1,10 @@
+{
+  "name": "Xernium",
+  "colors": [
+    "ff3da1",
+    "840044"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/xernium"
+  }
+}

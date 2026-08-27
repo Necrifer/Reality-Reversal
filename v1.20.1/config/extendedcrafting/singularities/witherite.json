@@ -1,0 +1,10 @@
+{
+  "name": "Witherite Ingot",
+  "colors": [
+    "505967",
+    "2b2f34"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/witherite"
+  }
+}
