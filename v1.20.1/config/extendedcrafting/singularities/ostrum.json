@@ -1,0 +1,10 @@
+{
+  "name": "Ostrum Ingot",
+  "colors": [
+    "42313d",
+    "553e4b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ostrum"
+  }
+}

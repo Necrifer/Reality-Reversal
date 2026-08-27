@@ -1,0 +1,10 @@
+{
+  "name": "Magnesium Diboride Ingot",
+  "colors": [
+    "0b0b08",
+    "151109"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/magnesium_diboride"
+  }
+}

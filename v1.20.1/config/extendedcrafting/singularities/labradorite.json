@@ -1,0 +1,10 @@
+{
+  "name": "Labradorite",
+  "colors": [
+    "001c2b",
+    "d0f5ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/labradorite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Iolite",
+  "colors": [
+    "1b1155",
+    "0f092f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/iolite"
+  }
+}

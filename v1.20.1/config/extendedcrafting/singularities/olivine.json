@@ -1,0 +1,10 @@
+{
+  "name": "Olivine",
+  "colors": [
+    "8eed00",
+    "ebd66a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/olivine"
+  }
+}

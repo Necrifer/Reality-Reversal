@@ -1,0 +1,10 @@
+{
+  "name": "Lightium",
+  "colors": [
+    "83b9dd",
+    "507087"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lightium"
+  }
+}

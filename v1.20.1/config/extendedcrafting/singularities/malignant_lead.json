@@ -1,0 +1,10 @@
+{
+  "name": "Malignant Lead",
+  "colors": [
+    "7f8cb0",
+    "ebf6f8"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/malignant_lead"
+  }
+}

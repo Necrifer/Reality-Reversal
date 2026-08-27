@@ -1,0 +1,10 @@
+{
+  "name": "Lacrima",
+  "colors": [
+    "3c569e",
+    "d9fced"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lacrima"
+  }
+}

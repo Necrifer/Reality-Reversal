@@ -1,0 +1,10 @@
+{
+  "name": "Matizium",
+  "colors": [
+    "806ec4",
+    "27203b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/matizium"
+  }
+}

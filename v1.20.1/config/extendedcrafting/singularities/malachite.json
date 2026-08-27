@@ -1,0 +1,10 @@
+{
+  "name": "Malachite",
+  "colors": [
+    "1e815b",
+    "aeffdf"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/malachite"
+  }
+}

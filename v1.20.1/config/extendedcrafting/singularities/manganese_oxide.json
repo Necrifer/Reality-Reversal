@@ -1,0 +1,10 @@
+{
+  "name": "Manganese Oxide Ingot",
+  "colors": [
+    "465147",
+    "7c997b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/manganese_oxide"
+  }
+}

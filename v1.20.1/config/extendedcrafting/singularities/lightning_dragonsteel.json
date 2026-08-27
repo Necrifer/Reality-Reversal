@@ -1,0 +1,10 @@
+{
+  "name": "Lightning Dragonsteel Ingot",
+  "colors": [
+    "ebb9db",
+    "423846"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lightning_dragonsteel"
+  }
+}

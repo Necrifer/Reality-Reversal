@@ -1,0 +1,10 @@
+{
+  "name": "Nichrome Ingot",
+  "colors": [
+    "3c3f39",
+    "d0dab9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/nichrome"
+  }
+}

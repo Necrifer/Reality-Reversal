@@ -1,0 +1,10 @@
+{
+  "name": "Malignant Pewter Ingot",
+  "colors": [
+    "4a385c",
+    "eccef6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/malignant_pewter"
+  }
+}

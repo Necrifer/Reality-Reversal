@@ -1,0 +1,10 @@
+{
+  "name": "Lumium",
+  "colors": [
+    "ffd54a",
+    "ffffd9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lumium"
+  }
+}

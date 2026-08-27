@@ -1,0 +1,10 @@
+{
+  "name": "Niobium Titanium Ingot",
+  "colors": [
+    "7f5f78",
+    "463442"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/niobium_titanium"
+  }
+}

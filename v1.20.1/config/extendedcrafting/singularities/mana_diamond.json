@@ -1,0 +1,10 @@
+{
+  "name": "Mana Diamond",
+  "colors": [
+    "00738b",
+    "7166e2"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/mana_diamond"
+  }
+}

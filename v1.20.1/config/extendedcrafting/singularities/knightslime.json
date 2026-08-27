@@ -1,0 +1,10 @@
+{
+  "name": "Knightslime Ingot",
+  "colors": [
+    "513b77",
+    "f9b0f7"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/knightslime"
+  }
+}

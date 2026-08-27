@@ -1,0 +1,10 @@
+{
+  "name": "Mythril",
+  "colors": [
+    "007e7c",
+    "00e1df"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/mythril"
+  }
+}

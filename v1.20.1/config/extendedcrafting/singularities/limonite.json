@@ -1,0 +1,10 @@
+{
+  "name": "Limonite",
+  "colors": [
+    "ef914a",
+    "7a2735"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/limonite"
+  }
+}

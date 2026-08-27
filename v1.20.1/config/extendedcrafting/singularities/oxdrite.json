@@ -1,0 +1,10 @@
+{
+  "name": "Oxdrite Ingot",
+  "colors": [
+    "a4725d",
+    "463127"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/oxdrite"
+  }
+}

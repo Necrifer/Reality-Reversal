@@ -1,0 +1,10 @@
+{
+  "name": "Iris Agate",
+  "colors": [
+    "7a6300",
+    "5ce0ce"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/irisagate"
+  }
+}

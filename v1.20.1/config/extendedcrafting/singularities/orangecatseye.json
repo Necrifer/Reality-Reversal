@@ -1,0 +1,10 @@
+{
+  "name": "Orange Catseye",
+  "colors": [
+    "a03300",
+    "ff7200"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/orangecatseye"
+  }
+}

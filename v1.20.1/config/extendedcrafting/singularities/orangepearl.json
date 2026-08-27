@@ -1,0 +1,10 @@
+{
+  "name": "Orange Pearl",
+  "colors": [
+    "be6f00",
+    "fdc36c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/orangepearl"
+  }
+}

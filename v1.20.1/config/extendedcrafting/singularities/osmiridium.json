@@ -1,0 +1,10 @@
+{
+  "name": "Osmiridium Ingot",
+  "colors": [
+    "7b81ad",
+    "cae1ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/osmiridium"
+  }
+}

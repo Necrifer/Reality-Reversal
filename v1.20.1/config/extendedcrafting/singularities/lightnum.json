@@ -1,0 +1,10 @@
+{
+  "name": "Lightnum Ingot",
+  "colors": [
+    "173157",
+    "0d1b30"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lightnum"
+  }
+}

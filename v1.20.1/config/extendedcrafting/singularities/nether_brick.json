@@ -1,0 +1,10 @@
+{
+  "name": "Nether Brick",
+  "colors": [
+    "3e1e24",
+    "221014"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/nether_brick"
+  }
+}

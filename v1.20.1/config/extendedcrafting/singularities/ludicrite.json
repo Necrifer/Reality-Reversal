@@ -1,0 +1,10 @@
+{
+  "name": "Ludicrite",
+  "colors": [
+    "ac48e0",
+    "5f287b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ludicrite"
+  }
+}

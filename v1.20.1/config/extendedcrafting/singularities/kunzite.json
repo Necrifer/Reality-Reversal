@@ -1,0 +1,10 @@
+{
+  "name": "Kunzite",
+  "colors": [
+    "5f003a",
+    "ff009d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/kunzite"
+  }
+}

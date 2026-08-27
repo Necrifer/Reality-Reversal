@@ -1,0 +1,10 @@
+{
+  "name": "Manasteel Ingot",
+  "colors": [
+    "3a63da",
+    "b5fffc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/manasteel"
+  }
+}

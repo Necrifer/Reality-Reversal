@@ -1,0 +1,10 @@
+{
+  "name": "Maroon Diamond",
+  "colors": [
+    "2b0000",
+    "ea9595"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/maroondiamond"
+  }
+}

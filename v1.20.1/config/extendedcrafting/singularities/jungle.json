@@ -1,0 +1,10 @@
+{
+  "name": "Jungle Stone",
+  "colors": [
+    "7ad53b",
+    "f9ffd4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/jungle"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Mortum Gem",
+  "colors": [
+    "141416",
+    "a8a6b1"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/mortum"
+  }
+}

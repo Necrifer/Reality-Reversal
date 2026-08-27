@@ -1,0 +1,10 @@
+{
+  "name": "Ouranium",
+  "colors": [
+    "497279",
+    "1f484f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ouranium"
+  }
+}

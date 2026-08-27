@@ -1,0 +1,10 @@
+{
+  "name": "Medusa Quartz",
+  "colors": [
+    "006c85",
+    "59bed3"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/medusaquartz"
+  }
+}

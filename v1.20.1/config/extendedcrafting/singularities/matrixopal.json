@@ -1,0 +1,10 @@
+{
+  "name": "Matrix Opal",
+  "colors": [
+    "00ffd7",
+    "3b3b3b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/matrixopal"
+  }
+}

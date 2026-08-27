@@ -1,0 +1,10 @@
+{
+  "name": "Orange Diamond",
+  "colors": [
+    "ff6e00",
+    "833200"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/orangediamond"
+  }
+}

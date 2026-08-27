@@ -1,0 +1,10 @@
+{
+  "name": "Lithium Manganese Dioxide Ingot",
+  "colors": [
+    "ea4952",
+    "2a2a2a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lithium_manganese_dioxide"
+  }
+}

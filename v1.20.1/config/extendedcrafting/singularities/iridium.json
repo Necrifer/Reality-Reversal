@@ -1,0 +1,10 @@
+{
+  "name": "Iridium",
+  "colors": [
+    "675d58",
+    "e8e8e8"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/iridium"
+  }
+}

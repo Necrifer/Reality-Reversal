@@ -1,0 +1,10 @@
+{
+  "name": "Ironwood",
+  "colors": [
+    "352b24",
+    "887c7c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ironwood"
+  }
+}

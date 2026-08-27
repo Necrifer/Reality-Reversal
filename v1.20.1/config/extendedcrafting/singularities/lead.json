@@ -1,0 +1,10 @@
+{
+  "name": "Lead",
+  "colors": [
+    "8d9ed3",
+    "373b4d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lead"
+  }
+}

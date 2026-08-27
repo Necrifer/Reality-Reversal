@@ -1,0 +1,10 @@
+{
+  "name": "Olive Pearl",
+  "colors": [
+    "779218",
+    "ecf0dd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/olivepearl"
+  }
+}

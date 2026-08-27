@@ -1,0 +1,10 @@
+{
+  "name": "Osmium",
+  "colors": [
+    "92a8ba",
+    "556066"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/osmium"
+  }
+}

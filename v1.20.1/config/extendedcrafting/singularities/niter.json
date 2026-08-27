@@ -1,0 +1,10 @@
+{
+  "name": "Niter",
+  "colors": [
+    "a89aac",
+    "5c555f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/niter"
+  }
+}

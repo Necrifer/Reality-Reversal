@@ -1,0 +1,10 @@
+{
+  "name": "Neutronite Ingot",
+  "colors": [
+    "512e7d",
+    "b17cfd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/neutronite"
+  }
+}

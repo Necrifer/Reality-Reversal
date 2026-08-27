@@ -1,0 +1,10 @@
+{
+  "name": "Mithril Ingot",
+  "colors": [
+    "bdf3f3",
+    "496c84"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/mithril"
+  }
+}

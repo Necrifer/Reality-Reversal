@@ -1,0 +1,10 @@
+{
+  "name": "Meteorite Ingot",
+  "colors": [
+    "ffa600",
+    "0a0503"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/meteorite"
+  }
+}

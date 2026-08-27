@@ -1,0 +1,10 @@
+{
+  "name": "Larimar",
+  "colors": [
+    "366665",
+    "c2ebea"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/larimar"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Iron",
+  "colors": [
+    "e89bd2",
+    "5e5e5e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/iron"
+  }
+}

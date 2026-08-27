@@ -1,0 +1,10 @@
+{
+  "name": "Ornamyte",
+  "colors": [
+    "333333",
+    "1c1c1c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ornamyte"
+  }
+}

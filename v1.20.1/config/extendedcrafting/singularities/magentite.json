@@ -1,0 +1,10 @@
+{
+  "name": "Magentite",
+  "colors": [
+    "e27ae2",
+    "9c169c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/magentite"
+  }
+}

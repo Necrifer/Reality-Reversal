@@ -1,0 +1,10 @@
+{
+  "name": "Nickel",
+  "colors": [
+    "c7c0ae",
+    "747054"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/nickel"
+  }
+}

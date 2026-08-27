@@ -1,0 +1,10 @@
+{
+  "name": "Jasper",
+  "colors": [
+    "8b2000",
+    "ff6d6e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/jasper"
+  }
+}

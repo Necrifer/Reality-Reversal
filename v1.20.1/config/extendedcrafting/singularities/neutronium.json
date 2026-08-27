@@ -1,0 +1,10 @@
+{
+  "name": "Neutronium Ingot",
+  "colors": [
+    "1c1626",
+    "0f0a18"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/neutronium"
+  }
+}

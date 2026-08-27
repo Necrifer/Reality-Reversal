@@ -1,0 +1,10 @@
+{
+  "name": "Moonstone",
+  "colors": [
+    "266f77",
+    "6adbeb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/moonstone"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Maradonyx",
+  "colors": [
+    "7eabda",
+    "bde3f4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/maradonyx"
+  }
+}

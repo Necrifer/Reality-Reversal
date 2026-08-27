@@ -1,0 +1,10 @@
+{
+  "name": "Opal",
+  "colors": [
+    "e91695",
+    "52bfff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/opal"
+  }
+}

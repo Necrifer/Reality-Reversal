@@ -1,0 +1,10 @@
+{
+  "name": "Nutritive Slimesteel Ingot",
+  "colors": [
+    "ee6dc7",
+    "fb9bdb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/nutrition_slime"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Nordic Gold",
+  "colors": [
+    "9b824e",
+    "615232"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/nordicgold"
+  }
+}

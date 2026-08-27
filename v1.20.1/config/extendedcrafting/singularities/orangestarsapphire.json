@@ -1,0 +1,10 @@
+{
+  "name": "Orange Star Sapphire",
+  "colors": [
+    "572000",
+    "ffc3a0"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/orangestarsapphire"
+  }
+}

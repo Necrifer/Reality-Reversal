@@ -1,0 +1,10 @@
+{
+  "name": "Knightmetal",
+  "colors": [
+    "c4d6ae",
+    "4d4c4b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/knightmetal"
+  }
+}

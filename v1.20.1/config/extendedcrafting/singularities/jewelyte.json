@@ -1,0 +1,10 @@
+{
+  "name": "Jewelyte",
+  "colors": [
+    "00270b",
+    "001506"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/jewelyte"
+  }
+}

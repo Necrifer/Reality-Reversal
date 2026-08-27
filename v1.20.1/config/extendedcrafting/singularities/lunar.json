@@ -1,0 +1,10 @@
+{
+  "name": "Lunar",
+  "colors": [
+    "642977",
+    "f464d5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lunar"
+  }
+}

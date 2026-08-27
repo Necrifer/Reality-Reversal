@@ -1,0 +1,10 @@
+{
+  "name": "Lucid Ingot",
+  "colors": [
+    "323749",
+    "1c1e28"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lucid"
+  }
+}

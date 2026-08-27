@@ -1,0 +1,10 @@
+{
+  "name": "Manyullyn Ingot",
+  "colors": [
+    "9261cc",
+    "481d6d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/manyullyn"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Orichalcum Ingot",
+  "colors": [
+    "3b3f5d",
+    "8b7579"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/orichalcum"
+  }
+}

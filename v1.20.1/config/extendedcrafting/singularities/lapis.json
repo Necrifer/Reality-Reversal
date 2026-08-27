@@ -1,0 +1,10 @@
+{
+  "name": "Lapis Lazuli",
+  "colors": [
+    "345ec3",
+    "052463"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lapis"
+  }
+}

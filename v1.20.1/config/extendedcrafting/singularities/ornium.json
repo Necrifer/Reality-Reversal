@@ -1,0 +1,10 @@
+{
+  "name": "Ornium",
+  "colors": [
+    "5a3b6b",
+    "432454"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ornium"
+  }
+}

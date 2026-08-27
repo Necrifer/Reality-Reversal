@@ -1,0 +1,10 @@
+{
+  "name": "Osgloglas Ingot",
+  "colors": [
+    "5ce64e",
+    "b7ffda"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/osgloglas"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Mystite",
+  "colors": [
+    "2a4f4b",
+    "b5ffc6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/mystite"
+  }
+}

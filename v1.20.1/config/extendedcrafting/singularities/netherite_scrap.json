@@ -1,0 +1,10 @@
+{
+  "name": "Netherite Scrap",
+  "colors": [
+    "654740",
+    "24110b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/netherite_scrap"
+  }
+}

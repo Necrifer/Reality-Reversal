@@ -1,0 +1,10 @@
+{
+  "name": "Mortum Chunk",
+  "colors": [
+    "665007",
+    "313136"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/mortum_chunk"
+  }
+}

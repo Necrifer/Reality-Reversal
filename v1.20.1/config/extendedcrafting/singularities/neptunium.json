@@ -1,0 +1,10 @@
+{
+  "name": "Neptunium",
+  "colors": [
+    "09d099",
+    "8cfbdc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/neptunium"
+  }
+}

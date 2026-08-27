@@ -1,0 +1,10 @@
+{
+  "name": "Netherite",
+  "colors": [
+    "31292a",
+    "1b1717"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/netherite"
+  }
+}

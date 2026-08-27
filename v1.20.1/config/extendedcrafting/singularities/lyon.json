@@ -1,0 +1,10 @@
+{
+  "name": "Lyon",
+  "colors": [
+    "e8b63a",
+    "5d606b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/lyon"
+  }
+}

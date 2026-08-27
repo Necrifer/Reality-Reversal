@@ -1,0 +1,10 @@
+{
+  "name": "Jade",
+  "colors": [
+    "337049",
+    "162123"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/jade"
+  }
+}
