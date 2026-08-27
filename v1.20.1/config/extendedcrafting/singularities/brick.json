@@ -1,0 +1,10 @@
+{
+  "name": "Brick",
+  "colors": [
+    "b75a40",
+    "7f3e2c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/brick"
+  }
+}

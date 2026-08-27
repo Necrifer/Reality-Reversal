@@ -1,0 +1,10 @@
+{
+  "name": "Brown Diamond",
+  "colors": [
+    "562100",
+    "b08367"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/browndiamond"
+  }
+}

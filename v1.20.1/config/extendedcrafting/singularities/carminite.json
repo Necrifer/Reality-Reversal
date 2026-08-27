@@ -1,0 +1,10 @@
+{
+  "name": "Carminite",
+  "colors": [
+    "490000",
+    "280000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/carminite"
+  }
+}

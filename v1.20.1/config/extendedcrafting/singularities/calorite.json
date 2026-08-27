@@ -1,0 +1,10 @@
+{
+  "name": "Calorite Ingot",
+  "colors": [
+    "6a1534",
+    "3a0c1d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/calorite"
+  }
+}

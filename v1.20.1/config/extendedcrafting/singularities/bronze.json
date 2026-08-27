@@ -1,0 +1,10 @@
+{
+  "name": "Bronze",
+  "colors": [
+    "a4790e",
+    "e4ab20"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bronze"
+  }
+}

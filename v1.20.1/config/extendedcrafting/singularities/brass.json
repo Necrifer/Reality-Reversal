@@ -1,0 +1,10 @@
+{
+  "name": "Brass",
+  "colors": [
+    "efb83e",
+    "836522"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/brass"
+  }
+}

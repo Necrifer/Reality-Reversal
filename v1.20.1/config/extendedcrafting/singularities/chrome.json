@@ -1,0 +1,10 @@
+{
+  "name": "Chrome",
+  "colors": [
+    "675e91",
+    "2c293e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/chrome"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Citrine",
+  "colors": [
+    "ffdb00",
+    "6b5c00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/citrine"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Boron Nitride Gem",
+  "colors": [
+    "59744e",
+    "a7bba5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/boron_nitride"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Cinderslime Ingot",
+  "colors": [
+    "b50000",
+    "cc6e6b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cinderslime"
+  }
+}

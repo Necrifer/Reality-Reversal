@@ -1,0 +1,10 @@
+{
+  "name": "Chimerite Gem",
+  "colors": [
+    "826876",
+    "d0c1c1"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/chimerite"
+  }
+}

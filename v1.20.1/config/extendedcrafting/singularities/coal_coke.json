@@ -1,0 +1,10 @@
+{
+  "name": "Coal Coke",
+  "colors": [
+    "393e46",
+    "535b67"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/coal_coke"
+  }
+}

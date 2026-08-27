@@ -1,0 +1,10 @@
+{
+  "name": "Chalcanthite",
+  "colors": [
+    "2559d2",
+    "a4d1ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/chalcanthite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Certus Quartz",
+  "colors": [
+    "badbff",
+    "476682"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/certus_quartz"
+  }
+}

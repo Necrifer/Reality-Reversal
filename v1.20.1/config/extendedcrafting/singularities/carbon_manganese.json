@@ -1,0 +1,10 @@
+{
+  "name": "Carbon Manganese Ingot",
+  "colors": [
+    "1b1a18",
+    "251e1b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/carbon_manganese"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Brickerite",
+  "colors": [
+    "fda513",
+    "0c103c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/brickerite"
+  }
+}

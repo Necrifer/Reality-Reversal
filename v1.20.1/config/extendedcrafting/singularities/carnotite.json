@@ -1,0 +1,10 @@
+{
+  "name": "Carnotite",
+  "colors": [
+    "b7b81f",
+    "3f3029"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/carnotite"
+  }
+}

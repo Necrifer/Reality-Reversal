@@ -1,0 +1,10 @@
+{
+  "name": "Cluster of Brilliance",
+  "colors": [
+    "97ca79",
+    "434654"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cluster_of_brilliance"
+  }
+}

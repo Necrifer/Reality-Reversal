@@ -1,0 +1,10 @@
+{
+  "name": "Cast Iron",
+  "colors": [
+    "3f3d43",
+    "8d8a91"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/castiron"
+  }
+}

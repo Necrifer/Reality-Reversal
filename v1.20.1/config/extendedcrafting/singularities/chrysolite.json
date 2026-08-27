@@ -1,0 +1,10 @@
+{
+  "name": "Chrysolite",
+  "colors": [
+    "5a711e",
+    "d1ff5e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/chrysolite"
+  }
+}

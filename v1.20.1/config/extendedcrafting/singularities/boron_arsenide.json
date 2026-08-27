@@ -1,0 +1,10 @@
+{
+  "name": "Boron Arsenide Gem",
+  "colors": [
+    "a8a795",
+    "7c7b68"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/boron_arsenide"
+  }
+}

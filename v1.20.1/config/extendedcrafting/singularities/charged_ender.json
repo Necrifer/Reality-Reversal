@@ -1,0 +1,10 @@
+{
+  "name": "Charged Ender Steel Ingot",
+  "colors": [
+    "0b4d42",
+    "e8fffa"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/charged_ender"
+  }
+}

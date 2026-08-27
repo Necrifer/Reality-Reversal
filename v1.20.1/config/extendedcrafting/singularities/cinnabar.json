@@ -1,0 +1,10 @@
+{
+  "name": "Cinnabar",
+  "colors": [
+    "2c3d11",
+    "5c0000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cinnabar"
+  }
+}

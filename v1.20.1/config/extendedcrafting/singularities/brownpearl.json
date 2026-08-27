@@ -1,0 +1,10 @@
+{
+  "name": "Brown Pearl",
+  "colors": [
+    "7e520d",
+    "b5996a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/brownpearl"
+  }
+}
