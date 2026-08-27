@@ -1,0 +1,35 @@
+// Custom registry items required by the 1.20.1 recipe and tooltip scripts.
+// Backported from the 1.21.1 instance; NeoForge common tags use Forge tags here.
+StartupEvents.registry('item', event => {
+  event.create('eyes1')
+    .tooltip('§4To know one knows nothing, is your first lesson.')
+    .color(0, 0xFA2800)
+    .displayName('§4Eyes of The Fool')
+    .glow(true)
+    .fireResistant(true)
+    .tag('twilightforest:portal/activator')
+    .tag('forge:arcana')
+
+  event.create('eyes2')
+    .tooltip('§eAnd now you understand the Rules.')
+    .color(0, 0xFCFF00)
+    .displayName('§eEyes of The Magician')
+    .glow(true)
+    .fireResistant(true)
+    .tag('forge:arcana')
+
+  event.create('law_ingot')
+    .tooltip('§kTo understand.')
+    .color(0, 0xF5EB27)
+    .displayName('Ingots of Law')
+    .tag('forge:ingots')
+
+  event.create('stellarium_ingot')
+    .displayName('Stellarium Ingot')
+    .tooltip('It is recommended to make this in large batches.')
+    .tag('forge:ingots')
+  event.create('modular_ingot')
+    .displayName('Modular Ingot')
+    .tooltip('This will be used in all custom multiblocks!')
+    .tag('forge:ingots')
+})
