@@ -1,0 +1,10 @@
+{
+  "name": "Bloodstone",
+  "colors": [
+    "e05543",
+    "632136"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bloodstone"
+  }
+}

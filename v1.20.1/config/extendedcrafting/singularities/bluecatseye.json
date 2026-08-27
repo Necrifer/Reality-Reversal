@@ -1,0 +1,10 @@
+{
+  "name": "Blue Catseye",
+  "colors": [
+    "00b1ec",
+    "003040"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bluecatseye"
+  }
+}

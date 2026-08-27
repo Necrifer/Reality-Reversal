@@ -1,0 +1,10 @@
+{
+  "name": "Blitz Lumium",
+  "colors": [
+    "fceea8",
+    "eaa436"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blitz_lumium"
+  }
+}

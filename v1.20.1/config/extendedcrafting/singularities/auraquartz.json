@@ -1,0 +1,10 @@
+{
+  "name": "Aura Quartz",
+  "colors": [
+    "a2cbd9",
+    "f9d2fb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/auraquartz"
+  }
+}

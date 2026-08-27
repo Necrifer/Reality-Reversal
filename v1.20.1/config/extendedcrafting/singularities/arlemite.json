@@ -1,0 +1,10 @@
+{
+  "name": "Arlemite Ingot",
+  "colors": [
+    "70bd4f",
+    "126521"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/arlemite"
+  }
+}

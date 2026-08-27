@@ -1,0 +1,10 @@
+{
+  "name": "Blue Pearl",
+  "colors": [
+    "47a7d8",
+    "f0f3ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bluepearl"
+  }
+}

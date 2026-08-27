@@ -1,0 +1,10 @@
+{
+  "name": "Blizz Enderium",
+  "colors": [
+    "1d7d8a",
+    "adf4ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blizz_enderium"
+  }
+}

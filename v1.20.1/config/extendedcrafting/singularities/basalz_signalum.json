@@ -1,0 +1,10 @@
+{
+  "name": "Basalz Signalum",
+  "colors": [
+    "d61900",
+    "760e00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/basalz_signalum"
+  }
+}

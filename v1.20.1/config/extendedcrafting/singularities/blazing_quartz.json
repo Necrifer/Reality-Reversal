@@ -1,0 +1,10 @@
+{
+  "name": "Blazing Quartz",
+  "colors": [
+    "ec9633",
+    "ab254b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blazing_quartz"
+  }
+}

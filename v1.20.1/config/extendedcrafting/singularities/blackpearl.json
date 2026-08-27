@@ -1,0 +1,10 @@
+{
+  "name": "Black Pearl",
+  "colors": [
+    "1d1d1d",
+    "b0b0b0"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blackpearl"
+  }
+}

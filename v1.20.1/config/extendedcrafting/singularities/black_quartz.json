@@ -1,0 +1,10 @@
+{
+  "name": "Black Quartz",
+  "colors": [
+    "101118",
+    "09090d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/black_quartz"
+  }
+}

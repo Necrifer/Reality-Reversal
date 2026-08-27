@@ -1,0 +1,10 @@
+{
+  "name": "Baratol Ingot",
+  "colors": [
+    "b56725",
+    "643914"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/baratol"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Black Tungsten Alloy Ingot",
+  "colors": [
+    "35424f",
+    "0d0d14"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/black_tungsten_alloy"
+  }
+}

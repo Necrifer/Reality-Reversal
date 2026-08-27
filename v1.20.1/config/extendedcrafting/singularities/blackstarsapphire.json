@@ -1,0 +1,10 @@
+{
+  "name": "Star Sapphire",
+  "colors": [
+    "ffff8c",
+    "191919"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blackstarsapphire"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Arcanium",
+  "colors": [
+    "2987a9",
+    "9cfff6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/arcanium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Black Opal",
+  "colors": [
+    "1f3a38",
+    "11201f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blackopal"
+  }
+}

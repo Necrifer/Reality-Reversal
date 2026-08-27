@@ -1,0 +1,10 @@
+{
+  "name": "Shadow Diamond",
+  "colors": [
+    "3d3d3d",
+    "171717"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blackdiamond"
+  }
+}

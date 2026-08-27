@@ -1,0 +1,10 @@
+{
+  "name": "Azurite",
+  "colors": [
+    "f10808",
+    "004a54"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/azurite"
+  }
+}

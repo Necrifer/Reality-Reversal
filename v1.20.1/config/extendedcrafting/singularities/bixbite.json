@@ -1,0 +1,10 @@
+{
+  "name": "Bixbite",
+  "colors": [
+    "e30057",
+    "74012c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bixbite"
+  }
+}

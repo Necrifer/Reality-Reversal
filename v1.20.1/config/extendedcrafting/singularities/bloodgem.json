@@ -1,0 +1,10 @@
+{
+  "name": "Bloodgem",
+  "colors": [
+    "e76587",
+    "530e41"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bloodgem"
+  }
+}

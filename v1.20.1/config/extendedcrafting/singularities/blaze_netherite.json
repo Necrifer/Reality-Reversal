@@ -1,0 +1,10 @@
+{
+  "name": "Blaze Netherite",
+  "colors": [
+    "ffb10b",
+    "4f4442"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blaze_netherite"
+  }
+}

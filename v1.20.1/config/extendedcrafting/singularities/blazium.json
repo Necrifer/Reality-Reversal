@@ -1,0 +1,10 @@
+{
+  "name": "Blazium",
+  "colors": [
+    "8c2e25",
+    "ffee70"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blazium"
+  }
+}

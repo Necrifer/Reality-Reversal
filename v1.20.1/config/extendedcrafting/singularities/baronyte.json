@@ -1,0 +1,10 @@
+{
+  "name": "Baronyte",
+  "colors": [
+    "891e27",
+    "ff9c51"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/baronyte"
+  }
+}

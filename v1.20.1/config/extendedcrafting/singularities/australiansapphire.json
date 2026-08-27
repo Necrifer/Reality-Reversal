@@ -1,0 +1,10 @@
+{
+  "name": "Sapphire",
+  "colors": [
+    "1a8df1",
+    "676767"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/australiansapphire"
+  }
+}

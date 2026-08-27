@@ -1,0 +1,10 @@
+{
+  "name": "Black Iron",
+  "colors": [
+    "888888",
+    "0e0e0e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/black_iron"
+  }
+}

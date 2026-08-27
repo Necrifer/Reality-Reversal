@@ -1,0 +1,10 @@
+{
+  "name": "Awakened Supremium",
+  "colors": [
+    "d37b00",
+    "960000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/awakened_supremium"
+  }
+}

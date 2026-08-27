@@ -1,0 +1,10 @@
+{
+  "name": "Boron Ingot",
+  "colors": [
+    "474747",
+    "5d5d5d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/boron"
+  }
+}

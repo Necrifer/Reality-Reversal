@@ -1,0 +1,10 @@
+{
+  "name": "Blood Quartz",
+  "colors": [
+    "af3f3f",
+    "a52c2c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/bloodquartz"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Black Steel Ingot",
+  "colors": [
+    "2d313d",
+    "1f232c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/black_steel"
+  }
+}

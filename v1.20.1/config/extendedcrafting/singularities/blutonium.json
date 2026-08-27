@@ -1,0 +1,10 @@
+{
+  "name": "Blutonium",
+  "colors": [
+    "3535cc",
+    "1d1d70"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/blutonium"
+  }
+}
