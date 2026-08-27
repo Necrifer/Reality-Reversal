@@ -1,0 +1,10 @@
+{
+  "name": "Tanzanite",
+  "colors": [
+    "1900fd",
+    "43ab3d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/raretanzanite"
+  }
+}

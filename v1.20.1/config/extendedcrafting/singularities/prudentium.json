@@ -1,0 +1,10 @@
+{
+  "name": "Prudentium",
+  "colors": [
+    "00ad1a",
+    "005f0e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/prudentium"
+  }
+}

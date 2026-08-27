@@ -1,0 +1,10 @@
+{
+  "name": "Pink Star Sapphire",
+  "colors": [
+    "b800b5",
+    "280028"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pinkstarsapphire"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Quicksilver",
+  "colors": [
+    "656565",
+    "62d192"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/quicksilver"
+  }
+}

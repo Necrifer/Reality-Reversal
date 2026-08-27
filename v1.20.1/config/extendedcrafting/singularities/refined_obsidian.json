@@ -1,0 +1,10 @@
+{
+  "name": "Refined Obsidian",
+  "colors": [
+    "2d204d",
+    "19122a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/refined_obsidian"
+  }
+}

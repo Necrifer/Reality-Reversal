@@ -1,0 +1,10 @@
+{
+  "name": "Platinum",
+  "colors": [
+    "8994ae",
+    "dae9f0"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/platinum"
+  }
+}

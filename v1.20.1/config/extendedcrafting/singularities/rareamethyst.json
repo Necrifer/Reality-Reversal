@@ -1,0 +1,10 @@
+{
+  "name": "Rare Amethyst",
+  "colors": [
+    "8135d8",
+    "36f9bd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rareamethyst"
+  }
+}

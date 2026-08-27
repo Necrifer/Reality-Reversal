@@ -1,0 +1,10 @@
+{
+  "name": "Purified Vinteum Ingot",
+  "colors": [
+    "464efe",
+    "815fbf"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/purified_vinteum"
+  }
+}

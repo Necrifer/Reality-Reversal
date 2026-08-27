@@ -1,0 +1,10 @@
+{
+  "name": "Pewter",
+  "colors": [
+    "4c453f",
+    "aa9a8e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pewter"
+  }
+}

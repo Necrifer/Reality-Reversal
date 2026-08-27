@@ -1,0 +1,10 @@
+{
+  "name": "Peacock Ore",
+  "colors": [
+    "ff8f4c",
+    "76d4fb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/peacockore"
+  }
+}

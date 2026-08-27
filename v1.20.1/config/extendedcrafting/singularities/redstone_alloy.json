@@ -1,0 +1,10 @@
+{
+  "name": "Redstone Alloy",
+  "colors": [
+    "d34848",
+    "502929"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/redstone_alloy"
+  }
+}

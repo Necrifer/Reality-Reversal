@@ -1,0 +1,10 @@
+{
+  "name": "Peacock Topaz",
+  "colors": [
+    "00aed8",
+    "520062"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/peacocktopaz"
+  }
+}

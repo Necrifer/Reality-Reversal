@@ -1,0 +1,10 @@
+{
+  "name": "Red Diamond",
+  "colors": [
+    "7c0000",
+    "ffe9e9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/reddiamond"
+  }
+}

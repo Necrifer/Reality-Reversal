@@ -1,0 +1,10 @@
+{
+  "name": "Pulsating Crystal",
+  "colors": [
+    "229d7a",
+    "99fefc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pulsating_crystal"
+  }
+}

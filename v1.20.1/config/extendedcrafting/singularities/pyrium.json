@@ -1,0 +1,10 @@
+{
+  "name": "Pyrium Ingot",
+  "colors": [
+    "d6af39",
+    "491b10"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pyrium"
+  }
+}

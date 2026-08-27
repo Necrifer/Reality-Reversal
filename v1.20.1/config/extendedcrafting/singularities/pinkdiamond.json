@@ -1,0 +1,10 @@
+{
+  "name": "Pink Diamond",
+  "colors": [
+    "ff9fd8",
+    "60003a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pinkdiamond"
+  }
+}

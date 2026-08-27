@@ -1,0 +1,10 @@
+{
+  "name": "René 41",
+  "colors": [
+    "2f3543",
+    "979fb1"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rene41"
+  }
+}

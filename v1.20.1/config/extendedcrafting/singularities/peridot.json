@@ -1,0 +1,10 @@
+{
+  "name": "Peridot",
+  "colors": [
+    "e8f244",
+    "425b00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/peridot"
+  }
+}

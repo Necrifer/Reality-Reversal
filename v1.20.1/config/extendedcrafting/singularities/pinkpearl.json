@@ -1,0 +1,10 @@
+{
+  "name": "Pink Pearl",
+  "colors": [
+    "df61b3",
+    "ffa5ef"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pinkpearl"
+  }
+}

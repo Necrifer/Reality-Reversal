@@ -1,0 +1,10 @@
+{
+  "name": "Rhodonite",
+  "colors": [
+    "2b0016",
+    "ffd0ee"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rhodonite"
+  }
+}

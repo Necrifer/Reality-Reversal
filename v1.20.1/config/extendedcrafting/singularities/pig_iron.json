@@ -1,0 +1,10 @@
+{
+  "name": "Pig Iron Ingot",
+  "colors": [
+    "f0a8a4",
+    "7e484c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pig_iron"
+  }
+}

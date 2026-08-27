@@ -1,0 +1,10 @@
+{
+  "name": "Prescient Crystal",
+  "colors": [
+    "668150",
+    "c5e9bb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/prescient_crystal"
+  }
+}

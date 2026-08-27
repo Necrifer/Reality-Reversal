@@ -1,0 +1,10 @@
+{
+  "name": "Processed Soulstone",
+  "colors": [
+    "874483",
+    "2d1d34"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/processed_soulstone"
+  }
+}

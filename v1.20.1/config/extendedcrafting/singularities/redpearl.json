@@ -1,0 +1,10 @@
+{
+  "name": "Red Pearl",
+  "colors": [
+    "ff6073",
+    "8e0000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/redpearl"
+  }
+}

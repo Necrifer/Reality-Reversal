@@ -1,0 +1,10 @@
+{
+  "name": "Primalite Ingot",
+  "colors": [
+    "7bf4d9",
+    "14a8a9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/primalite"
+  }
+}

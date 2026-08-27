@@ -1,0 +1,10 @@
+{
+  "name": "Pyrite",
+  "colors": [
+    "cfa913",
+    "826800"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pyrite"
+  }
+}

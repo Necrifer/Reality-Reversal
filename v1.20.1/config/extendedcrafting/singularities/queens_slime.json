@@ -1,0 +1,10 @@
+{
+  "name": "Queen's Slime Ingot",
+  "colors": [
+    "561f14",
+    "2f110b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/queens_slime"
+  }
+}

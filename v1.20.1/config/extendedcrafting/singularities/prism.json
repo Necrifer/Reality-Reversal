@@ -1,0 +1,10 @@
+{
+  "name": "Prism",
+  "colors": [
+    "ff9c92",
+    "40ddd6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/prism"
+  }
+}

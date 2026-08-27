@@ -1,0 +1,10 @@
+{
+  "name": "Pink Ruby",
+  "colors": [
+    "52001b",
+    "ffa8c5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pinkruby"
+  }
+}

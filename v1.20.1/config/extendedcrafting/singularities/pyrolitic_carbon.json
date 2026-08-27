@@ -1,0 +1,10 @@
+{
+  "name": "Pyrolitic Carbon Ingot",
+  "colors": [
+    "fd742a",
+    "0d0d0d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pyrolitic_carbon"
+  }
+}

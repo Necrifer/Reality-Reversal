@@ -1,0 +1,10 @@
+{
+  "name": "Resonating Ore",
+  "colors": [
+    "bc3737",
+    "441414"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/resonating_ore"
+  }
+}

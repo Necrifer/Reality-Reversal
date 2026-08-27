@@ -1,0 +1,10 @@
+{
+  "name": "Pelenium",
+  "colors": [
+    "fc3393",
+    "7d1747"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pelenium"
+  }
+}

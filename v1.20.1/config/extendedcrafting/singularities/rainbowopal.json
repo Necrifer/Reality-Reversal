@@ -1,0 +1,10 @@
+{
+  "name": "Rainbow Opal",
+  "colors": [
+    "994ee4",
+    "1b4d37"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rainbowopal"
+  }
+}

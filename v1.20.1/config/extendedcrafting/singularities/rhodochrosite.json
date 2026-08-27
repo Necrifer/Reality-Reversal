@@ -1,0 +1,10 @@
+{
+  "name": "Rhodochrosite Gem",
+  "colors": [
+    "942838",
+    "d08b94"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rhodochrosite"
+  }
+}

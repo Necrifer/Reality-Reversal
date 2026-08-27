@@ -1,0 +1,10 @@
+{
+  "name": "Plutonium",
+  "colors": [
+    "7ca982",
+    "679b6e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/plutonium"
+  }
+}

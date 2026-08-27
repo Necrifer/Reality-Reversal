@@ -1,0 +1,10 @@
+{
+  "name": "Pink Tigerseye",
+  "colors": [
+    "54004c",
+    "2e002a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pinktigerseye"
+  }
+}

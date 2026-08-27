@@ -1,0 +1,10 @@
+{
+  "name": "Rare Citrine",
+  "colors": [
+    "a64200",
+    "cdcdcd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rarecitrine"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Purple Star Sapphire",
+  "colors": [
+    "9000b8",
+    "1f0028"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/purplestarsapphire"
+  }
+}

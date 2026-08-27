@@ -1,0 +1,10 @@
+{
+  "name": "Raspberry Diamond",
+  "colors": [
+    "ff0088",
+    "57002e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/raspberrydiamond"
+  }
+}

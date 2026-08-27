@@ -1,0 +1,10 @@
+{
+  "name": "Purple Diamond",
+  "colors": [
+    "8006bd",
+    "f5e1ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/purplediamond"
+  }
+}

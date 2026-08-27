@@ -1,0 +1,10 @@
+{
+  "name": "Red Catseye",
+  "colors": [
+    "460000",
+    "260000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/redcatseye"
+  }
+}

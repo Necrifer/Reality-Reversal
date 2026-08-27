@@ -1,0 +1,10 @@
+{
+  "name": "Pearl",
+  "colors": [
+    "ef90f8",
+    "83abc6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pearl"
+  }
+}

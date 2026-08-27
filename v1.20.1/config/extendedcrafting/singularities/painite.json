@@ -1,0 +1,10 @@
+{
+  "name": "Painite",
+  "colors": [
+    "4c0111",
+    "212121"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/painite"
+  }
+}

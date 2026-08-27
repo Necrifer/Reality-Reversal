@@ -1,0 +1,10 @@
+{
+  "name": "Purple Pearl",
+  "colors": [
+    "c972fd",
+    "63008e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/purplepearl"
+  }
+}

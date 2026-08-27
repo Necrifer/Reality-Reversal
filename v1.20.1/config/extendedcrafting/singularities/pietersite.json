@@ -1,0 +1,10 @@
+{
+  "name": "Pietersite",
+  "colors": [
+    "8f341a",
+    "6f9ea7"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pietersite"
+  }
+}

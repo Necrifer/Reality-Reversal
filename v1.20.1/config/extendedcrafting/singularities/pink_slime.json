@@ -1,0 +1,10 @@
+{
+  "name": "Pink Slime Ingot",
+  "colors": [
+    "e7cae2",
+    "733469"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/pink_slime"
+  }
+}

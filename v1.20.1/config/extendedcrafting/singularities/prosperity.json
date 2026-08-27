@@ -1,0 +1,10 @@
+{
+  "name": "Prosperity",
+  "colors": [
+    "e0fefe",
+    "729191"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/prosperity"
+  }
+}

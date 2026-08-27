@@ -1,0 +1,10 @@
+{
+  "name": "Prismarine",
+  "colors": [
+    "49645c",
+    "dfe9dc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/prismarine"
+  }
+}

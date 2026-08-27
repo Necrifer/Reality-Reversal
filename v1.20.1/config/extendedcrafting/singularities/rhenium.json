@@ -1,0 +1,10 @@
+{
+  "name": "Rhenium",
+  "colors": [
+    "595759",
+    "333233"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rhenium"
+  }
+}

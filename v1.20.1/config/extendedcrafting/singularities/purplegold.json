@@ -1,0 +1,10 @@
+{
+  "name": "Purple Gold",
+  "colors": [
+    "dda3ff",
+    "713bab"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/purplegold"
+  }
+}

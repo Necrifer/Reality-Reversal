@@ -1,0 +1,10 @@
+{
+  "name": "Palintinium",
+  "colors": [
+    "ff9633",
+    "9a4a00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/palintinium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Quantum Alloy",
+  "colors": [
+    "130f30",
+    "e087ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/quantum_alloy"
+  }
+}

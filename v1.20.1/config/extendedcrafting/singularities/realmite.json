@@ -1,0 +1,10 @@
+{
+  "name": "Realmite Ingot",
+  "colors": [
+    "c1671b",
+    "6d2f04"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/realmite"
+  }
+}
