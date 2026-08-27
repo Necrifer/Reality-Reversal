@@ -1,0 +1,10 @@
+{
+  "name": "Scorched Brick",
+  "colors": [
+    "3e3029",
+    "2d231d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/scorched_brick"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Skythern Gem",
+  "colors": [
+    "524d5c",
+    "aea6b9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/skythern"
+  }
+}

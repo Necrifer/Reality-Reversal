@@ -1,0 +1,10 @@
+{
+  "name": "Serpentine",
+  "colors": [
+    "a4ff00",
+    "4c7500"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/serpentine"
+  }
+}

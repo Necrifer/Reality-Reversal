@@ -1,0 +1,10 @@
+{
+  "name": "Rutile",
+  "colors": [
+    "590000",
+    "310000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rutile"
+  }
+}

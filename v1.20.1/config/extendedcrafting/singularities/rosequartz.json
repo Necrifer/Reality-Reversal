@@ -1,0 +1,10 @@
+{
+  "name": "Rose Quartz",
+  "colors": [
+    "e58cda",
+    "ae65a5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rosequartz"
+  }
+}

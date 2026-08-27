@@ -1,0 +1,10 @@
+{
+  "name": "Super Alloy Ingot",
+  "colors": [
+    "4a4346",
+    "6e6467"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/super_alloy"
+  }
+}

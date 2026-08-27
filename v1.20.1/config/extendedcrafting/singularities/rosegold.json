@@ -1,0 +1,10 @@
+{
+  "name": "Rose Gold",
+  "colors": [
+    "f9bdce",
+    "c26b8e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rosegold"
+  }
+}

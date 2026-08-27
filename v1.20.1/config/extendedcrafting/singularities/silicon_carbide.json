@@ -1,0 +1,10 @@
+{
+  "name": "Silicon Carbide Ingot",
+  "colors": [
+    "524f44",
+    "6e6b60"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/silicon_carbide"
+  }
+}

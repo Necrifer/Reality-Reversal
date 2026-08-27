@@ -1,0 +1,10 @@
+{
+  "name": "Star Ruby",
+  "colors": [
+    "b8004d",
+    "ffa0c8"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/starruby"
+  }
+}

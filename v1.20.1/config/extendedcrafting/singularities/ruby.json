@@ -1,0 +1,10 @@
+{
+  "name": "Ruby",
+  "colors": [
+    "cd0134",
+    "6b0510"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ruby"
+  }
+}

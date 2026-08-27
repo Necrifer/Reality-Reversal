@@ -1,0 +1,10 @@
+{
+  "name": "Silicon",
+  "colors": [
+    "2f3a39",
+    "1a201f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/silicon"
+  }
+}

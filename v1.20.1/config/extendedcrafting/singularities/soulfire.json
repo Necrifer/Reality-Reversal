@@ -1,0 +1,10 @@
+{
+  "name": "Soulfire Stone",
+  "colors": [
+    "4a87ed",
+    "1b216e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/soulfire"
+  }
+}

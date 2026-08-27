@@ -1,0 +1,10 @@
+{
+  "name": "Salt",
+  "colors": [
+    "b1b5b8",
+    "c0c3c5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/salt"
+  }
+}

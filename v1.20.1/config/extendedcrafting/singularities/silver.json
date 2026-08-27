@@ -1,0 +1,10 @@
+{
+  "name": "Silver",
+  "colors": [
+    "8d8ab5",
+    "eaeaea"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/silver"
+  }
+}

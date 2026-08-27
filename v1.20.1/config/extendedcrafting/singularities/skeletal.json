@@ -1,0 +1,10 @@
+{
+  "name": "Skeletal",
+  "colors": [
+    "68574b",
+    "b5ab99"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/skeletal"
+  }
+}

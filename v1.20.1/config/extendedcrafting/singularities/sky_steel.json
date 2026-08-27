@@ -1,0 +1,10 @@
+{
+  "name": "Sky Steel",
+  "colors": [
+    "323232",
+    "e85de2"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sky_steel"
+  }
+}

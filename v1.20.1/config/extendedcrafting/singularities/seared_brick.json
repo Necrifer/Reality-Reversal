@@ -1,0 +1,10 @@
+{
+  "name": "Seared Brick",
+  "colors": [
+    "383433",
+    "1f1d1c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/seared_brick"
+  }
+}

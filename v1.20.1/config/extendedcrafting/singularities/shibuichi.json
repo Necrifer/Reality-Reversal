@@ -1,0 +1,10 @@
+{
+  "name": "Shibuichi Ingot",
+  "colors": [
+    "8f8d8b",
+    "bcb5b1"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/shibuichi"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Stygian Ingot",
+  "colors": [
+    "d0b0d0",
+    "5d465d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/stygian"
+  }
+}

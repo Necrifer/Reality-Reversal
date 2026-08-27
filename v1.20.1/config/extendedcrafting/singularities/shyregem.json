@@ -1,0 +1,10 @@
+{
+  "name": "Shyregem",
+  "colors": [
+    "02aaa4",
+    "91fef8"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/shyregem"
+  }
+}

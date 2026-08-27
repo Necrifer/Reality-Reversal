@@ -1,0 +1,10 @@
+{
+  "name": "Sugillite",
+  "colors": [
+    "0c0019",
+    "07000e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sugillite"
+  }
+}

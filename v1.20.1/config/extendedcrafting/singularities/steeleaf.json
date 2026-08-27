@@ -1,0 +1,10 @@
+{
+  "name": "Steeleaf",
+  "colors": [
+    "1e3214",
+    "101c0b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/steeleaf"
+  }
+}

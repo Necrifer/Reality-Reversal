@@ -1,0 +1,10 @@
+{
+  "name": "Supremium",
+  "colors": [
+    "d30000",
+    "740000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/supremium"
+  }
+}

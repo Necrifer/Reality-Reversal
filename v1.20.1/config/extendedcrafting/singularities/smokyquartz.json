@@ -1,0 +1,10 @@
+{
+  "name": "Smoky Quartz",
+  "colors": [
+    "74481e",
+    "402810"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/smokyquartz"
+  }
+}

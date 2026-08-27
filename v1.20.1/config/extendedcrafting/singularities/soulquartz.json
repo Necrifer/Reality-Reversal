@@ -1,0 +1,10 @@
+{
+  "name": "Soul Quartz",
+  "colors": [
+    "4dbcff",
+    "0068ab"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/soulquartz"
+  }
+}

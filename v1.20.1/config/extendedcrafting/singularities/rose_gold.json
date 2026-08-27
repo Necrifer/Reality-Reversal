@@ -1,0 +1,10 @@
+{
+  "name": "Rose Gold Ingot",
+  "colors": [
+    "e8b3a0",
+    "bf8070"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rose_gold"
+  }
+}

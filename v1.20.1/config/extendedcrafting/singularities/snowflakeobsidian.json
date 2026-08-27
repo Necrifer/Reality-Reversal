@@ -1,0 +1,10 @@
+{
+  "name": "Snowflake Obsidian",
+  "colors": [
+    "4b4b4b",
+    "1579ec"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/snowflakeobsidian"
+  }
+}

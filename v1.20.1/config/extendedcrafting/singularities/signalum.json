@@ -1,0 +1,10 @@
+{
+  "name": "Signalum",
+  "colors": [
+    "ec9517",
+    "831900"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/signalum"
+  }
+}

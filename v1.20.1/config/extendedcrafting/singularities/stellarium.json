@@ -1,0 +1,10 @@
+{
+  "name": "Stellarium Ingot",
+  "colors": [
+    "faecfa",
+    "8a828a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/stellarium"
+  }
+}

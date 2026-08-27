@@ -1,0 +1,10 @@
+{
+  "name": "Sonoranite",
+  "colors": [
+    "181d14",
+    "0d100b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sonoranite"
+  }
+}

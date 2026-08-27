@@ -1,0 +1,10 @@
+{
+  "name": "Sic Sic Cmc Ingot",
+  "colors": [
+    "464238",
+    "6c685e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sic_sic_cmc"
+  }
+}

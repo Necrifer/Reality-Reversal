@@ -1,0 +1,10 @@
+{
+  "name": "Ingot of the Skies",
+  "colors": [
+    "7dd6ff",
+    "4ea3cb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sky"
+  }
+}

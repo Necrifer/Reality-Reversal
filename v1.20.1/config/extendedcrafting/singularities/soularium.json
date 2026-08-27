@@ -1,0 +1,10 @@
+{
+  "name": "Soularium",
+  "colors": [
+    "2c1f18",
+    "83725c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/soularium"
+  }
+}

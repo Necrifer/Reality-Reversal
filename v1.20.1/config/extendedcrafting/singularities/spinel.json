@@ -1,0 +1,10 @@
+{
+  "name": "Spinel",
+  "colors": [
+    "6e0061",
+    "e700cc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/spinel"
+  }
+}

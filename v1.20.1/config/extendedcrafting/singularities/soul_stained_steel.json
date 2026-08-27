@@ -1,0 +1,10 @@
+{
+  "name": "Soulstained Steel Ingot",
+  "colors": [
+    "ce7cee",
+    "593b7c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/soul_stained_steel"
+  }
+}

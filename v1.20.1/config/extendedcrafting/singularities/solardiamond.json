@@ -1,0 +1,10 @@
+{
+  "name": "Solar Diamond",
+  "colors": [
+    "ffd900",
+    "fffbdf"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/solardiamond"
+  }
+}

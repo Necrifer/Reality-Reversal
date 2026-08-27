@@ -1,0 +1,10 @@
+{
+  "name": "Ridiculite",
+  "colors": [
+    "e8c3ed",
+    "4e3154"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ridiculite"
+  }
+}

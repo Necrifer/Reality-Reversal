@@ -1,0 +1,10 @@
+{
+  "name": "Shyrestone",
+  "colors": [
+    "2a316d",
+    "a3edff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/shyrestone"
+  }
+}

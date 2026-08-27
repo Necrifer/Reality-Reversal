@@ -1,0 +1,10 @@
+{
+  "name": "Sunstone",
+  "colors": [
+    "421d13",
+    "bd684f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sunstone"
+  }
+}

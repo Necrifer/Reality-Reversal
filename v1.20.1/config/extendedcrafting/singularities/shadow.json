@@ -1,0 +1,10 @@
+{
+  "name": "Shadow Bar",
+  "colors": [
+    "4f4f4f",
+    "f2c2ee"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/shadow"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Soul-Fused Ingot",
+  "colors": [
+    "22cae9",
+    "000c0f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/soul_fused"
+  }
+}

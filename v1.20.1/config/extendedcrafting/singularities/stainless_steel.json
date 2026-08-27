@@ -1,0 +1,10 @@
+{
+  "name": "Stainless Steel",
+  "colors": [
+    "a1afc7",
+    "59606d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/stainless_steel"
+  }
+}

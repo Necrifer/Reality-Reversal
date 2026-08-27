@@ -1,0 +1,10 @@
+{
+  "name": "Rupee Ingot",
+  "colors": [
+    "34a1c8",
+    "095089"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/rupee"
+  }
+}

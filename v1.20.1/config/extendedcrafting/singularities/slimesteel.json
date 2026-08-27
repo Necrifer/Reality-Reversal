@@ -1,0 +1,10 @@
+{
+  "name": "Slimesteel Ingot",
+  "colors": [
+    "2ba7b5",
+    "157891"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/slimesteel"
+  }
+}

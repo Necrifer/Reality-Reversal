@@ -1,0 +1,10 @@
+{
+  "name": "Sardonyx",
+  "colors": [
+    "722800",
+    "ffa678"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sardonyx"
+  }
+}

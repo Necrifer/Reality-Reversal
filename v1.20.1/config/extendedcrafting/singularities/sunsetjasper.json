@@ -1,0 +1,10 @@
+{
+  "name": "Sunset Jasper",
+  "colors": [
+    "fb0000",
+    "179500"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sunsetjasper"
+  }
+}

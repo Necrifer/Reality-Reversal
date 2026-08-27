@@ -1,0 +1,10 @@
+{
+  "name": "Sulfur",
+  "colors": [
+    "c5b32e",
+    "dbcc61"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/sulfur"
+  }
+}

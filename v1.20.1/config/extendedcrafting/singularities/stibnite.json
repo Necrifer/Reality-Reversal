@@ -1,0 +1,10 @@
+{
+  "name": "Stibnite",
+  "colors": [
+    "9755a6",
+    "a3a3a3"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/stibnite"
+  }
+}

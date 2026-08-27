@@ -1,0 +1,10 @@
+{
+  "name": "Seaborgium",
+  "colors": [
+    "650000",
+    "ff6300"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/seaborgium"
+  }
+}

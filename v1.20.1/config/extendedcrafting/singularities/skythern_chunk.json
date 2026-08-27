@@ -1,0 +1,10 @@
+{
+  "name": "Skythern Chunk",
+  "colors": [
+    "373440",
+    "2d8b1c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/skythern_chunk"
+  }
+}
