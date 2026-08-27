@@ -1,0 +1,10 @@
+{
+  "name": "Cursium Ingot",
+  "colors": [
+    "39d2b2",
+    "13584a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cursium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Enhanced Redstone Ingot",
+  "colors": [
+    "aa4701",
+    "411b00"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/enhanced_redstone_ingot"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Draconium",
+  "colors": [
+    "7942ae",
+    "090037"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/draconium"
+  }
+}

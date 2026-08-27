@@ -1,0 +1,10 @@
+{
+  "name": "Dragon Scale",
+  "colors": [
+    "200134",
+    "12011d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/dragonscale"
+  }
+}

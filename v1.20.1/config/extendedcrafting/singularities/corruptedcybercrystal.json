@@ -1,0 +1,10 @@
+{
+  "name": "Corrupted Cyber Crystal",
+  "colors": [
+    "484545",
+    "b4b3b3"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/corruptedcybercrystal"
+  }
+}

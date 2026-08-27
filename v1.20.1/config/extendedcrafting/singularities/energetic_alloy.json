@@ -1,0 +1,10 @@
+{
+  "name": "Energetic Alloy",
+  "colors": [
+    "e9a300",
+    "6d3f0c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/energetic_alloy"
+  }
+}

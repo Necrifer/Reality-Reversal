@@ -1,0 +1,10 @@
+{
+  "name": "Desh",
+  "colors": [
+    "9e4539",
+    "7a3045"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/desh"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Crimson Gold",
+  "colors": [
+    "ff915a",
+    "c14400"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/crimsongold"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Eden Chunk",
+  "colors": [
+    "7a06e4",
+    "550000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/eden_chunk"
+  }
+}

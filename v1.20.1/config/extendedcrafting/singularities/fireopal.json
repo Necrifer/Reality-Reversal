@@ -1,0 +1,10 @@
+{
+  "name": "Fire Opal",
+  "colors": [
+    "ac3800",
+    "fe8e4e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/fireopal"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Elecanium",
+  "colors": [
+    "28cf62",
+    "287fbe"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/elecanium"
+  }
+}

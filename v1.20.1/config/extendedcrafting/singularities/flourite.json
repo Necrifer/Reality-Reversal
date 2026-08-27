@@ -1,0 +1,10 @@
+{
+  "name": "Flourite",
+  "colors": [
+    "b88108",
+    "550057"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/flourite"
+  }
+}

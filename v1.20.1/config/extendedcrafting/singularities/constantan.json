@@ -1,0 +1,10 @@
+{
+  "name": "Constantan",
+  "colors": [
+    "e8ce69",
+    "947d43"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/constantan"
+  }
+}

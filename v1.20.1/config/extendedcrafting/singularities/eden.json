@@ -1,0 +1,10 @@
+{
+  "name": "Eden Gem",
+  "colors": [
+    "8c1800",
+    "ff9c54"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/eden"
+  }
+}

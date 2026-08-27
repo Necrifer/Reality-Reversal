@@ -1,0 +1,10 @@
+{
+  "name": "Emberstone",
+  "colors": [
+    "8c6b63",
+    "513e41"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/emberstone"
+  }
+}

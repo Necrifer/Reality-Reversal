@@ -1,0 +1,10 @@
+{
+  "name": "Cthonic Gold",
+  "colors": [
+    "f7c431",
+    "232129"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cthonic_gold"
+  }
+}

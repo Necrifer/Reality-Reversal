@@ -1,0 +1,10 @@
+{
+  "name": "Enderite Ingot",
+  "colors": [
+    "db60f0",
+    "241826"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/enderite"
+  }
+}

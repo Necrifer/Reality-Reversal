@@ -1,0 +1,10 @@
+{
+  "name": "Corrupted Stone",
+  "colors": [
+    "678ce4",
+    "36135e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/corrupted"
+  }
+}

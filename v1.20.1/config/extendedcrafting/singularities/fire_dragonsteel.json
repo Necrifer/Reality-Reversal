@@ -1,0 +1,10 @@
+{
+  "name": "Fire Dragonsteel Ingot",
+  "colors": [
+    "e04029",
+    "fffed8"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/fire_dragonsteel"
+  }
+}

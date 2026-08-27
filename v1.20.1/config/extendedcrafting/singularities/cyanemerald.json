@@ -1,0 +1,10 @@
+{
+  "name": "Cyan Emerald",
+  "colors": [
+    "004e34",
+    "c2ffeb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cyanemerald"
+  }
+}

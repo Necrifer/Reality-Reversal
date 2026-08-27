@@ -1,0 +1,10 @@
+{
+  "name": "Diamond",
+  "colors": [
+    "4aedd9",
+    "145e53"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/diamond"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Fiery",
+  "colors": [
+    "662d09",
+    "191313"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/fiery"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Copper Alloy Ingot",
+  "colors": [
+    "6b5127",
+    "d4ae61"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/copper_alloy"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Awakened Draconium",
+  "colors": [
+    "fe6500",
+    "9b0000"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/draconium_awakened"
+  }
+}

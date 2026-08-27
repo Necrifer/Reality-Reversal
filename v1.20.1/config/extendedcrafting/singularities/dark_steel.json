@@ -1,0 +1,10 @@
+{
+  "name": "Dark Steel",
+  "colors": [
+    "2d2d2d",
+    "b8b8b8"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/dark_steel"
+  }
+}

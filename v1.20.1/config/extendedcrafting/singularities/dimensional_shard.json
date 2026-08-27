@@ -1,0 +1,10 @@
+{
+  "name": "Dimensional Shard",
+  "colors": [
+    "66a0ae",
+    "dfebee"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/dimensional_shard"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Etrium Ingot",
+  "colors": [
+    "42908d",
+    "82dbbb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/etrium"
+  }
+}

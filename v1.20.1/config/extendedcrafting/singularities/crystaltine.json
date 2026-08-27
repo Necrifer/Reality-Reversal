@@ -1,0 +1,10 @@
+{
+  "name": "Crystaltine",
+  "colors": [
+    "9cdffc",
+    "4099bc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/crystaltine"
+  }
+}

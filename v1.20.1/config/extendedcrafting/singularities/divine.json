@@ -1,0 +1,10 @@
+{
+  "name": "Divine Stone",
+  "colors": [
+    "ece184",
+    "654b18"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/divine"
+  }
+}

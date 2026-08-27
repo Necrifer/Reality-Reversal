@@ -1,0 +1,10 @@
+{
+  "name": "Dark Blue Diamond",
+  "colors": [
+    "004aff",
+    "02206e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/darkbluediamond"
+  }
+}

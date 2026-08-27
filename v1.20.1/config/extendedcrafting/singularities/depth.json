@@ -1,0 +1,10 @@
+{
+  "name": "Ingot of the Depths",
+  "colors": [
+    "362a3c",
+    "725c7e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/depth"
+  }
+}

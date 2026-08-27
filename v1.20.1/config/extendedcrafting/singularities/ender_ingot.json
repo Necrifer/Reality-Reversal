@@ -1,0 +1,10 @@
+{
+  "name": "Ender Ingot",
+  "colors": [
+    "1b7b6b",
+    "0f443b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ender_ingot"
+  }
+}

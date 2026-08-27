@@ -1,0 +1,10 @@
+{
+  "name": "Cobalt",
+  "colors": [
+    "5f5fef",
+    "373789"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cobalt"
+  }
+}

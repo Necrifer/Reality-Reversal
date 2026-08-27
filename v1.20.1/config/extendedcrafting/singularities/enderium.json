@@ -1,0 +1,10 @@
+{
+  "name": "Enderium",
+  "colors": [
+    "0b4b4b",
+    "062929"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/enderium"
+  }
+}

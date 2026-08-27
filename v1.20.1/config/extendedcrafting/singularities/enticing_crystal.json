@@ -1,0 +1,10 @@
+{
+  "name": "Enticing Crystal",
+  "colors": [
+    "0c372b",
+    "d78d2d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/enticing_crystal"
+  }
+}

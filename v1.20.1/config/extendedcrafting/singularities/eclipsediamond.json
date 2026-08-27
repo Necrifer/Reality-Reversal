@@ -1,0 +1,10 @@
+{
+  "name": "Eclipse Diamond",
+  "colors": [
+    "1a1a1a",
+    "9334ff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/eclipsediamond"
+  }
+}

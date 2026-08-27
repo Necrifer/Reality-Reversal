@@ -1,0 +1,10 @@
+{
+  "name": "Extreme Ingot",
+  "colors": [
+    "401631",
+    "230c1b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/extreme"
+  }
+}

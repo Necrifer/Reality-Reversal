@@ -1,0 +1,10 @@
+{
+  "name": "Ender Steel Ingot",
+  "colors": [
+    "71b105",
+    "349988"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ender"
+  }
+}

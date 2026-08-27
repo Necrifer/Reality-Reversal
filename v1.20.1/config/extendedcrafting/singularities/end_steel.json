@@ -1,0 +1,10 @@
+{
+  "name": "End Steel",
+  "colors": [
+    "6f6935",
+    "fff59d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/end_steel"
+  }
+}

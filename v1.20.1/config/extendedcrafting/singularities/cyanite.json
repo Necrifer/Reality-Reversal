@@ -1,0 +1,10 @@
+{
+  "name": "Cyanite",
+  "colors": [
+    "acddff",
+    "2b6391"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cyanite"
+  }
+}

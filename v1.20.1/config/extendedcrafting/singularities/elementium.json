@@ -1,0 +1,10 @@
+{
+  "name": "Elementium Ingot",
+  "colors": [
+    "e084a5",
+    "7a1892"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/elementium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Draculite Ingot",
+  "colors": [
+    "4a0404",
+    "290202"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/draculite"
+  }
+}

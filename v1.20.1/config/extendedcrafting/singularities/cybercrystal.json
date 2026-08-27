@@ -1,0 +1,10 @@
+{
+  "name": "Cyber Crystal",
+  "colors": [
+    "6bb8da",
+    "476b7c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cybercrystal"
+  }
+}

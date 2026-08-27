@@ -1,0 +1,10 @@
+{
+  "name": "Energized Fluix Crystal",
+  "colors": [
+    "171135",
+    "ff61d9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/energized_fluix_crystal"
+  }
+}

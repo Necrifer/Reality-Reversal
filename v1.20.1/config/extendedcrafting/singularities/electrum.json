@@ -1,0 +1,10 @@
+{
+  "name": "Electrum",
+  "colors": [
+    "d5ca6d",
+    "f5f180"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/electrum"
+  }
+}

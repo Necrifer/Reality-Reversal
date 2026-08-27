@@ -1,0 +1,10 @@
+{
+  "name": "Energized Crystal",
+  "colors": [
+    "266096",
+    "1a4066"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/energized_crystal"
+  }
+}

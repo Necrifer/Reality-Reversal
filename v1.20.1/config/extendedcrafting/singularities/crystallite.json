@@ -1,0 +1,10 @@
+{
+  "name": "Crystallite",
+  "colors": [
+    "f7c05b",
+    "b7442d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/crystallite"
+  }
+}

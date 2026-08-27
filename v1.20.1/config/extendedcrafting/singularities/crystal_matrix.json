@@ -1,0 +1,10 @@
+{
+  "name": "Crystal Matrix Ingot",
+  "colors": [
+    "499590",
+    "fffad6"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/crystal_matrix"
+  }
+}

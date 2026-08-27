@@ -1,0 +1,10 @@
+{
+  "name": "Green Star Sapphire",
+  "colors": [
+    "00b87b",
+    "00281a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cyanstarsapphire"
+  }
+}

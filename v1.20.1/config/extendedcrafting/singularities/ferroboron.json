@@ -1,0 +1,10 @@
+{
+  "name": "Ferroboron Ingot",
+  "colors": [
+    "fad40c",
+    "6a6a6a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ferroboron"
+  }
+}

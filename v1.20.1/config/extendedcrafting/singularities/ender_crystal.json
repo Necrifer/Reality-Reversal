@@ -1,0 +1,10 @@
+{
+  "name": "Ender Crystal",
+  "colors": [
+    "00512a",
+    "e5e5e5"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ender_crystal"
+  }
+}

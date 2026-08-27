@@ -1,0 +1,10 @@
+{
+  "name": "Crystal",
+  "colors": [
+    "cca2d9",
+    "705977"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/crystal"
+  }
+}

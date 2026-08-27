@@ -1,0 +1,10 @@
+{
+  "name": "Cupronickel",
+  "colors": [
+    "ffaaaa",
+    "9a3c3c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/cupronickel"
+  }
+}

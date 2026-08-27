@@ -1,0 +1,10 @@
+{
+  "name": "Conductive Alloy",
+  "colors": [
+    "796262",
+    "ffe1dd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/conductive_alloy"
+  }
+}

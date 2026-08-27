@@ -1,0 +1,10 @@
+{
+  "name": "Energized Superconductive Ingot",
+  "colors": [
+    "5170bb",
+    "585464"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/energized_superconductive"
+  }
+}

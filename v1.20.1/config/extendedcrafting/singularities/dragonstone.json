@@ -1,0 +1,10 @@
+{
+  "name": "Dragonstone",
+  "colors": [
+    "5c2475",
+    "e567bc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/dragonstone"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Densium Ingot",
+  "colors": [
+    "8000c0",
+    "400060"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/densium"
+  }
+}

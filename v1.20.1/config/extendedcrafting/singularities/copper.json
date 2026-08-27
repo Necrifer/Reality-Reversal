@@ -1,0 +1,10 @@
+{
+  "name": "Copper",
+  "colors": [
+    "c15a36",
+    "e77c56"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/copper"
+  }
+}

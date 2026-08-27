@@ -1,0 +1,10 @@
+{
+  "name": "Duralumin",
+  "colors": [
+    "572e23",
+    "e4beb4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/duralumin"
+  }
+}
