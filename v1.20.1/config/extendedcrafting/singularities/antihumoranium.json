@@ -1,0 +1,10 @@
+{
+  "name": "Anti-Humoranium",
+  "colors": [
+    "37005c",
+    "1e0033"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/antihumoranium"
+  }
+}

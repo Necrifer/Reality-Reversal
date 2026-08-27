@@ -1,0 +1,10 @@
+{
+  "name": "Angerite",
+  "colors": [
+    "5d0903",
+    "330502"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/angerite"
+  }
+}

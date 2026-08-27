@@ -1,0 +1,10 @@
+{
+  "name": "Americium",
+  "colors": [
+    "b27f7f",
+    "794646"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/americium"
+  }
+}

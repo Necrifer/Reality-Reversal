@@ -1,0 +1,10 @@
+{
+  "name": "Arcane Ingot",
+  "colors": [
+    "496fc2",
+    "f3cefd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/arcane"
+  }
+}

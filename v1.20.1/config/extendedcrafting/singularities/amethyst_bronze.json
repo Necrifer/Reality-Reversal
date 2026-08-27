@@ -1,0 +1,10 @@
+{
+  "name": "Amethyst Bronze Ingot",
+  "colors": [
+    "eec6de",
+    "8b4991"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/amethyst_bronze"
+  }
+}

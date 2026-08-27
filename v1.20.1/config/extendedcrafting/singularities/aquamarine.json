@@ -1,0 +1,10 @@
+{
+  "name": "Aquamarine Gem",
+  "colors": [
+    "6de7c2",
+    "1d4f68"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/aquamarine"
+  }
+}

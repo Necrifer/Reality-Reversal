@@ -1,0 +1,10 @@
+{
+  "name": "Anti-Neutronium Ingot",
+  "colors": [
+    "c01000",
+    "6a0900"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/anti_neutronium"
+  }
+}

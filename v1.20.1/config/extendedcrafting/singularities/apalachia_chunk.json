@@ -1,0 +1,10 @@
+{
+  "name": "Apalachia Chunk",
+  "colors": [
+    "8a16b2",
+    "b3ce23"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/apalachia_chunk"
+  }
+}

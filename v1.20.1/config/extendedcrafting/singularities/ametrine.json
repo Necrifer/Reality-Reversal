@@ -1,0 +1,10 @@
+{
+  "name": "Ametrine",
+  "colors": [
+    "7a3200",
+    "390576"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ametrine"
+  }
+}

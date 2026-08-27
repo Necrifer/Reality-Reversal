@@ -1,0 +1,10 @@
+{
+  "name": "Ammolite",
+  "colors": [
+    "cc1b33",
+    "008b1b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ammolite"
+  }
+}

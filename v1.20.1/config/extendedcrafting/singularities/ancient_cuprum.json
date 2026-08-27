@@ -1,0 +1,10 @@
+{
+  "name": "Ancient Cuprum Ingot",
+  "colors": [
+    "80beff",
+    "32527c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ancient_cuprum"
+  }
+}

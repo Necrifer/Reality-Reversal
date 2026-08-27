@@ -1,0 +1,10 @@
+{
+  "name": "Adamantite",
+  "colors": [
+    "ff6bf6",
+    "760072"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/adamantium"
+  }
+}

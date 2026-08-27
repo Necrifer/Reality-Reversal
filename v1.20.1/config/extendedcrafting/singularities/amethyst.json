@@ -1,0 +1,10 @@
+{
+  "name": "Amethyst",
+  "colors": [
+    "b400ff",
+    "4b1561"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/amethyst"
+  }
+}

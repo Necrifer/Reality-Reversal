@@ -1,0 +1,10 @@
+{
+  "name": "Amazonite",
+  "colors": [
+    "00493a",
+    "c6fff1"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/amazonite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Ancient Metal Ingot",
+  "colors": [
+    "b98a3c",
+    "682e22"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ancient_metal"
+  }
+}

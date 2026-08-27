@@ -1,0 +1,10 @@
+{
+  "name": "Apatite",
+  "colors": [
+    "3a97c6",
+    "112a37"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/apatite"
+  }
+}

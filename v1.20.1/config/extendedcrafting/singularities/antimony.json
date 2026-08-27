@@ -1,0 +1,10 @@
+{
+  "name": "Antimony",
+  "colors": [
+    "57464e",
+    "30262b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/antimony"
+  }
+}

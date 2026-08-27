@@ -1,0 +1,10 @@
+{
+  "name": "Aquatic Ingot",
+  "colors": [
+    "4cafe4",
+    "085592"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/aquatic"
+  }
+}

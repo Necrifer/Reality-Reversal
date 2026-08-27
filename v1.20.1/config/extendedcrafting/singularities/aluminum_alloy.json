@@ -1,0 +1,10 @@
+{
+  "name": "Aluminum Alloy Ingot",
+  "colors": [
+    "4d4d67",
+    "cbccd4"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/aluminum_alloy"
+  }
+}

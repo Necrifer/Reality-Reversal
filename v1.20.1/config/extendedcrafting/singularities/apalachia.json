@@ -1,0 +1,10 @@
+{
+  "name": "Apalachia Gem",
+  "colors": [
+    "cb39d6",
+    "2d1243"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/apalachia"
+  }
+}

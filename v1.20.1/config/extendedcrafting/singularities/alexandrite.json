@@ -1,0 +1,10 @@
+{
+  "name": "Alexandrite",
+  "colors": [
+    "fb00e7",
+    "1c835c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/alexandrite"
+  }
+}

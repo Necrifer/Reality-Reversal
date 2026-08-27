@@ -1,0 +1,10 @@
+{
+  "name": "Alnico",
+  "colors": [
+    "142525",
+    "bacdcd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/alnico"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Aluminium Bronze",
+  "colors": [
+    "483c38",
+    "ebd3cc"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/aluminiumbronze"
+  }
+}

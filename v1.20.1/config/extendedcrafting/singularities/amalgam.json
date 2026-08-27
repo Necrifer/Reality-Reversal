@@ -1,0 +1,10 @@
+{
+  "name": "Amalgam",
+  "colors": [
+    "cbc2b9",
+    "322d2a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/amalgam"
+  }
+}
