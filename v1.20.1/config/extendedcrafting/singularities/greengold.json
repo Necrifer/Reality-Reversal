@@ -1,0 +1,10 @@
+{
+  "name": "Green Gold",
+  "colors": [
+    "d4ed00",
+    "62711c"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/greengold"
+  }
+}

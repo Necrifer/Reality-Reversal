@@ -1,0 +1,10 @@
+{
+  "name": "Howlite",
+  "colors": [
+    "414141",
+    "dddddd"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/howlite"
+  }
+}

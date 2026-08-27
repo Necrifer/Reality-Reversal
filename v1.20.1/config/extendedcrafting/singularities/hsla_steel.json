@@ -1,0 +1,10 @@
+{
+  "name": "Hsla Steel Ingot",
+  "colors": [
+    "57587d",
+    "8988ac"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hsla_steel"
+  }
+}

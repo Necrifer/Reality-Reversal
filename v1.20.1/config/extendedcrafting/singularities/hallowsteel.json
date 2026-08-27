@@ -1,0 +1,10 @@
+{
+  "name": "Hallowsteel Ingot",
+  "colors": [
+    "fdffe0",
+    "8b8c7b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hallowsteel"
+  }
+}

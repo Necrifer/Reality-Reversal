@@ -1,0 +1,10 @@
+{
+  "name": "Ghastly",
+  "colors": [
+    "a4c95e",
+    "194226"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ghastly"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Hackmantite",
+  "colors": [
+    "87198a",
+    "f5d3fe"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hackmantite"
+  }
+}

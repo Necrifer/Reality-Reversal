@@ -1,0 +1,10 @@
+{
+  "name": "HOP Graphite",
+  "colors": [
+    "111111",
+    "3e3e3e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hop_graphite"
+  }
+}

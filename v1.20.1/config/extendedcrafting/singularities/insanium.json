@@ -1,0 +1,10 @@
+{
+  "name": "Insanium",
+  "colors": [
+    "7100b2",
+    "40005e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/insanium"
+  }
+}

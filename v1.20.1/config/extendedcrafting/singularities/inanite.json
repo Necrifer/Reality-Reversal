@@ -1,0 +1,10 @@
+{
+  "name": "Inanite",
+  "colors": [
+    "f42665",
+    "861538"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/inanite"
+  }
+}

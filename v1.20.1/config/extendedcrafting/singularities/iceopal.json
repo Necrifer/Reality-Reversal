@@ -1,0 +1,10 @@
+{
+  "name": "Ice Opal",
+  "colors": [
+    "1ea8d6",
+    "f8ffff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/iceopal"
+  }
+}

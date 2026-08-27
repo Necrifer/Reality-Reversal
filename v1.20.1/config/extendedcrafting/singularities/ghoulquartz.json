@@ -1,0 +1,10 @@
+{
+  "name": "Ghoul Quartz",
+  "colors": [
+    "43cd00",
+    "7cff3e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ghoulquartz"
+  }
+}

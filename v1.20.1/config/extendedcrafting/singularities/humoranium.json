@@ -1,0 +1,10 @@
+{
+  "name": "Humoranium",
+  "colors": [
+    "e08400",
+    "7b4900"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/humoranium"
+  }
+}

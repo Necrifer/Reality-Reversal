@@ -1,0 +1,10 @@
+{
+  "name": "Grindstone",
+  "colors": [
+    "1d1a14",
+    "13110d"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/grindstone"
+  }
+}

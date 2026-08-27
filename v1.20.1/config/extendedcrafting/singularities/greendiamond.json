@@ -1,0 +1,10 @@
+{
+  "name": "Green Diamond",
+  "colors": [
+    "1aff00",
+    "074700"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/greendiamond"
+  }
+}

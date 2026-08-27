@@ -1,0 +1,10 @@
+{
+  "name": "Hexium Ingot",
+  "colors": [
+    "791e29",
+    "100736"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hexium"
+  }
+}

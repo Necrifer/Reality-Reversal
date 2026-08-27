@@ -1,0 +1,10 @@
+{
+  "name": "German Silver",
+  "colors": [
+    "5b524b",
+    "e0d6ce"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/germansilver"
+  }
+}

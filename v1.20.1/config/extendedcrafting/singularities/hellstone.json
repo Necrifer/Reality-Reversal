@@ -1,0 +1,10 @@
+{
+  "name": "Hellstone Ingot",
+  "colors": [
+    "673521",
+    "391d12"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hellstone"
+  }
+}

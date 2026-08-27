@@ -1,0 +1,10 @@
+{
+  "name": "Inferium",
+  "colors": [
+    "94b200",
+    "516200"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/inferium"
+  }
+}

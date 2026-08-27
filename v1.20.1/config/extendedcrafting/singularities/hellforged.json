@@ -1,0 +1,10 @@
+{
+  "name": "Hellforged Ingot",
+  "colors": [
+    "79cbbb",
+    "b9f3e9"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hellforged"
+  }
+}

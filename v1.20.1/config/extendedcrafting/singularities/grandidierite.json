@@ -1,0 +1,10 @@
+{
+  "name": "Grandidierite",
+  "colors": [
+    "00c295",
+    "005944"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/grandidierite"
+  }
+}

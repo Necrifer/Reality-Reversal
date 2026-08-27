@@ -1,0 +1,10 @@
+{
+  "name": "Green Pearl",
+  "colors": [
+    "14c900",
+    "ecffde"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/greenpearl"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Hard Flesh Ingot",
+  "colors": [
+    "1d0909",
+    "100505"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hard_flesh"
+  }
+}

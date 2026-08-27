@@ -1,0 +1,10 @@
+{
+  "name": "Gemenyte",
+  "colors": [
+    "006722",
+    "003913"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/gemenyte"
+  }
+}

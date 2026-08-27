@@ -1,0 +1,10 @@
+{
+  "name": "Graphite",
+  "colors": [
+    "a0a0a2",
+    "303032"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/graphite"
+  }
+}

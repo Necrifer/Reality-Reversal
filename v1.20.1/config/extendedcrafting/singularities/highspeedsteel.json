@@ -1,0 +1,10 @@
+{
+  "name": "High-Speed Steel",
+  "colors": [
+    "4e2e38",
+    "d7c5cb"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/highspeedsteel"
+  }
+}

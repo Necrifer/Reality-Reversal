@@ -1,0 +1,10 @@
+{
+  "name": "Hepatizon Ingot",
+  "colors": [
+    "1d0628",
+    "452e50"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hepatizon"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Ice Stone",
+  "colors": [
+    "69bbc3",
+    "313f47"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ice"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Hydrated Pottasium",
+  "colors": [
+    "c5d5e3",
+    "9b6a97"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hydratedpotassium"
+  }
+}

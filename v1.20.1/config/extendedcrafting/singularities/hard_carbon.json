@@ -1,0 +1,10 @@
+{
+  "name": "Hard Carbon Ingot",
+  "colors": [
+    "03043e",
+    "0a214b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hard_carbon"
+  }
+}

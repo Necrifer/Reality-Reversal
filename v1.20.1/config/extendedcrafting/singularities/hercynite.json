@@ -1,0 +1,10 @@
+{
+  "name": "Hercynite",
+  "colors": [
+    "765651",
+    "1e1e1e"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/hercynite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Ignitium Ingot",
+  "colors": [
+    "370605",
+    "ffff84"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ignitium"
+  }
+}

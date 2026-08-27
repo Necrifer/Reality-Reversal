@@ -1,0 +1,10 @@
+{
+  "name": "Insanite",
+  "colors": [
+    "39d88f",
+    "1f774f"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/insanite"
+  }
+}

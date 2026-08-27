@@ -1,0 +1,10 @@
+{
+  "name": "Galaxite",
+  "colors": [
+    "503ab0",
+    "cb9fff"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/galaxite"
+  }
+}

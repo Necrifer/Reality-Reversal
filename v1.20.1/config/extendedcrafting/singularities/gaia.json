@@ -1,0 +1,10 @@
+{
+  "name": "Gaia Spirit Ingot",
+  "colors": [
+    "727272",
+    "dadada"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/gaia"
+  }
+}

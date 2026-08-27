@@ -1,0 +1,10 @@
+{
+  "name": "Ice Dragonsteel Ingot",
+  "colors": [
+    "2b3564",
+    "c6daed"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ice_dragonsteel"
+  }
+}

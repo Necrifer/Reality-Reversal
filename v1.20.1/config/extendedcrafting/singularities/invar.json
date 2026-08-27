@@ -1,0 +1,10 @@
+{
+  "name": "Invar",
+  "colors": [
+    "848c7f",
+    "d9dbd2"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/invar"
+  }
+}

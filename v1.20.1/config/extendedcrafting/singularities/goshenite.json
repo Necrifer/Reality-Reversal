@@ -1,0 +1,10 @@
+{
+  "name": "Goshenite",
+  "colors": [
+    "a9a7a7",
+    "ececec"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/goshenite"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Infinity Ingot",
+  "colors": [
+    "d6d9cd",
+    "3d7456"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/infinity"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Indigolite",
+  "colors": [
+    "1c5749",
+    "1cc1a3"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/indigolite"
+  }
+}

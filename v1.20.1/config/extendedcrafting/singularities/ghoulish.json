@@ -1,0 +1,10 @@
+{
+  "name": "Ghoulish",
+  "colors": [
+    "7faaff",
+    "3c2263"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ghoulish"
+  }
+}

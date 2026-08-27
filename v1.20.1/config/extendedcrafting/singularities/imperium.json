@@ -1,0 +1,10 @@
+{
+  "name": "Imperium",
+  "colors": [
+    "0085dd",
+    "00497a"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/imperium"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Ilmenite",
+  "colors": [
+    "8b4628",
+    "c77653"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/ilmenite"
+  }
+}

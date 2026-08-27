@@ -1,0 +1,10 @@
+{
+  "name": "Garnet",
+  "colors": [
+    "630000",
+    "c68787"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/garnet"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Inconel",
+  "colors": [
+    "282234",
+    "655a7b"
+  ],
+  "ingredient": {
+    "tag": "forge:singularity_materials/inconel"
+  }
+}
