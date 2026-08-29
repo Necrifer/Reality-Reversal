@@ -1,0 +1,10 @@
+{
+  "name": "Extreme Ingot",
+  "colors": [
+    "401631",
+    "70293c"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/extreme"
+  }
+}

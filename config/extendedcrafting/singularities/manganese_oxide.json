@@ -1,0 +1,10 @@
+{
+  "name": "Manganese Oxide Ingot",
+  "colors": [
+    "465147",
+    "7a9779"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/manganese_oxide"
+  }
+}

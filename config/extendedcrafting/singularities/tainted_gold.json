@@ -1,0 +1,10 @@
+{
+  "name": "Tainted Gold Ingot",
+  "colors": [
+    "734721",
+    "cf7629"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/tainted_gold"
+  }
+}

@@ -20,27 +20,6 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:adamantium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:adamantum"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:aluminium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:aluminum"
       }
     },
@@ -83,6 +62,13 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:arcane"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:arlemite"
       }
     },
@@ -98,6 +84,13 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:awakened_supremium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:baratol"
       }
     },
     {
@@ -160,6 +153,13 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:blazegold"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:blazium"
       }
     },
@@ -175,6 +175,27 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:blutonium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:boron"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:boron_arsenide"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:boron_nitride"
       }
     },
     {
@@ -209,7 +230,21 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:carbon_manganese"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:carminite"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:carobbiite"
       }
     },
     {
@@ -231,13 +266,6 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:cesium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:chrome"
       }
     },
     {
@@ -356,6 +384,13 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:depth"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:desh"
       }
     },
@@ -420,6 +455,13 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:dysprosium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:eclipsealloy"
       }
     },
     {
@@ -525,48 +567,6 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:entro"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:erbium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:europium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:fiery"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:firmament_alloy"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:fluix"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:fluorite"
       }
     }
   ],

@@ -1,0 +1,10 @@
+{
+  "name": "Magnesium Diboride Ingot",
+  "colors": [
+    "151109",
+    "0a0804"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/magnesium_diboride"
+  }
+}

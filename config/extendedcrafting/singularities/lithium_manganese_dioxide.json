@@ -1,0 +1,10 @@
+{
+  "name": "Lithium Manganese Dioxide Ingot",
+  "colors": [
+    "4d4d4d",
+    "6c6c6c"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/lithium_manganese_dioxide"
+  }
+}

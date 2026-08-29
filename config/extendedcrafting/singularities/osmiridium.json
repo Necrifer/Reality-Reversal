@@ -1,0 +1,10 @@
+{
+  "name": "Osmiridium Ingot",
+  "colors": [
+    "7b81ad",
+    "f2ffff"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/osmiridium"
+  }
+}

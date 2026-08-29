@@ -16,6 +16,7 @@ ServerEvents.recipes(event => {
       event.remove({id:recipeID})
     })
   })
+//Side note: This script may need to be split later, as it covers all Oritech machines.
   recipe('oritech:assembler_mythicalfarmland1', {
     type: 'oritech:assembler',
     ingredients: [
@@ -36,6 +37,17 @@ ServerEvents.recipes(event => {
       item('#c:ender_pearls')
     ],
     results: [stack('minecraft:ender_eye', 2)],
+    time: 300
+    });
+  recipe('oritech:assembler_copper_coil', {
+    type: 'oritech:assembler',
+    ingredients: [
+      item('#c:ingots/constantan'),
+      item('#c:ingots/end_steel'),
+      item('#c:ingots/constantan'),
+      item('#c:ingots/end_steel')
+    ],
+    results: [stack('nuclearcraft:coil_copper', 1)],
     time: 300
     });
   recipe('oritech:atomic_forge_mythical_seed', {

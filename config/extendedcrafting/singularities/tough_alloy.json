@@ -1,0 +1,10 @@
+{
+  "name": "Tough Alloy Ingot",
+  "colors": [
+    "181322",
+    "0c0911"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/tough_alloy"
+  }
+}

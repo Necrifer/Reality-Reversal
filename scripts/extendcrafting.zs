@@ -203,3 +203,10 @@
 	[<item:divinerpg:icy_stone>, <item:dimdoors:black_fabric>, <item:actuallyadditions:empowered_palis_crystal_block>, <item:projectexpansion:white_matter>, <item:divinerpg:dramix_statue>, <item:projectexpansion:orange_matter>, <item:dimdoors:enduring_fibers>, <item:actuallyadditions:empowered_diamatine_crystal_block>, <item:jaopca:storage_blocks.ouranium>], 
 	[<item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>, <item:modular_machinery_reborn:modularium>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("quantum_compressor", 2, <item:extendedcrafting:compressor>, [
+	[<item:modular_machinery_reborn:modularium>, <item:extendedcrafting:black_iron_ingot>, <item:extendedcrafting:elite_catalyst>, <item:extendedcrafting:black_iron_ingot>, <item:modular_machinery_reborn:modularium>], 
+	[<item:extendedcrafting:black_iron_ingot>, <item:bigreactors:reinforced_reactorglass>, <item:bigreactors:reinforced_reactorglass>, <item:bigreactors:reinforced_reactorglass>, <item:extendedcrafting:black_iron_ingot>], 
+	[<item:extendedcrafting:elite_catalyst>, <item:extendedcrafting:elite_component>, <item:extendedcrafting:frame>, <item:extendedcrafting:elite_component>, <item:extendedcrafting:elite_catalyst>], 
+	[<item:extendedcrafting:black_iron_ingot>, <item:ae2:quartz_vibrant_glass>, <item:ae2:quartz_vibrant_glass>, <item:ae2:quartz_vibrant_glass>, <item:extendedcrafting:black_iron_ingot>], 
+	[<item:modular_machinery_reborn:modularium>, <item:extendedcrafting:black_iron_ingot>, <item:extendedcrafting:elite_catalyst>, <item:extendedcrafting:black_iron_ingot>, <item:modular_machinery_reborn:modularium>]
+]);

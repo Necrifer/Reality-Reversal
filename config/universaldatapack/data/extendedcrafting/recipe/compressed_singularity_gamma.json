@@ -6,6 +6,181 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:nichrome"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:nickel"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:niobium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:niobium_tin"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:niobium_titanium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:niter"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:olivine"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:ornamyte"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:ornium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:osmiridium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:osmium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:ouranium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:oxdrite"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:palladium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:peridot"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:pink_slime"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:platinum"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:plutonium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:polonium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:potassium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:praseodymium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:prescient_crystal"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:primalite"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:prismarine"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:prometheum"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:prosperity"
       }
     },
@@ -42,6 +217,20 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:pulsating_crystal"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:pyrium"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:pyrolitic_carbon"
       }
     },
     {
@@ -125,6 +314,13 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:rhodochrosite"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:ridiculite"
       }
     },
@@ -188,6 +384,13 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:shibuichi"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:shyregem"
       }
     },
@@ -196,6 +399,13 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:shyrestone"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:sic_sic_cmc"
       }
     },
     {
@@ -216,6 +426,13 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:silicon_carbide"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:silver"
       }
     },
@@ -224,6 +441,13 @@
       "items": "extendedcrafting:singularity",
       "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:skeletal"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:sky"
       }
     },
     {
@@ -307,7 +531,7 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:stratus"
+        "extendedcrafting:singularity_id": "extendedcrafting:stellarium"
       }
     },
     {
@@ -335,231 +559,14 @@
       "type": "neoforge:components",
       "items": "extendedcrafting:singularity",
       "components": {
+        "extendedcrafting:singularity_id": "extendedcrafting:super_alloy"
+      }
+    },
+    {
+      "type": "neoforge:components",
+      "items": "extendedcrafting:singularity",
+      "components": {
         "extendedcrafting:singularity_id": "extendedcrafting:supremium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tantalum"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:terbium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tertium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:thallium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tharsite"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:the_ultimate"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:thorium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:thulium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tin"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:titanium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:titanum"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tornium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:torridite"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tungsten"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tungsten_steel"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:tungstensteel"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:uranium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:uranum"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:vanadium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:varsium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:vibrant_alloy"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:vibrant_crystal"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:weather_crystal"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:white_dwarf_fragment"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:witherite"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:wrought_iron"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:yellorium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:ytterbium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:yttrium"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:zinc"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:zinq"
-      }
-    },
-    {
-      "type": "neoforge:components",
-      "items": "extendedcrafting:singularity",
-      "components": {
-        "extendedcrafting:singularity_id": "extendedcrafting:zirconium"
       }
     }
   ],

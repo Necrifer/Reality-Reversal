@@ -1,0 +1,10 @@
+{
+  "name": "Ingot of the Skies",
+  "colors": [
+    "6ec7f1",
+    "b7e8ff"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/sky"
+  }
+}

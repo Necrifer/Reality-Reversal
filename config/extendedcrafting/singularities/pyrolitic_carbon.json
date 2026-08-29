@@ -1,0 +1,10 @@
+{
+  "name": "Pyrolitic Carbon Ingot",
+  "colors": [
+    "1f1f1f",
+    "343434"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/pyrolitic_carbon"
+  }
+}

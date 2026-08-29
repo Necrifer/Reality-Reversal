@@ -1,0 +1,10 @@
+{
+  "name": "Silicon Carbide Ingot",
+  "colors": [
+    "6c695e",
+    "454137"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/silicon_carbide"
+  }
+}

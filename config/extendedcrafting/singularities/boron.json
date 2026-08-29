@@ -1,0 +1,10 @@
+{
+  "name": "Boron Ingot",
+  "colors": [
+    "474747",
+    "9b9b9b"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/boron"
+  }
+}

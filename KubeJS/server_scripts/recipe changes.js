@@ -58,6 +58,7 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:supremium_farmland',
     'oritech:crafting/fluidpipe',
     'oritech:crafting/metalbeams',
+    'nuclearcraft:coil_copper',
     'nuclearcraft:plate_basic',
     'nuclearcraft:plate_basic2',
     'oritech:compat/enderio/crafting/pump',
@@ -71,6 +72,7 @@ ServerEvents.recipes(event => {
     'projecte:transmutation_table',
     'mekanismgenerators:generator/bio',
     'mysticalagriculture:infusion_altar',
+    'extendedcrafting:crystaltine_ingot',
     'mysticalagriculture:infusion_pedestal',
     'matc:master_infusion_crystal',
     'matc:supremium_crystal',
@@ -93,11 +95,13 @@ ServerEvents.recipes(event => {
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
   })
+//Todo: Split this whole chunky mess of removal recipes below and above into another script later.
   const replace = (result, oldInput, newInput) => {
     event.replaceInput ({output: result}, oldInput, Ingredient.of(newInput))
   }
     replace('extendedcrafting:basic_table', '#c:storage_blocks/iron', '#c:storage_blocks/dark_steel')
     replace('projecte:condenser_mk1', '#c:gems/diamond', '#c:dusts/diamond')
+    replace('nuclearcraft:alloy_smelter', 'minecraft:redstone', '#c:ingots/redstone_alloy')
     replace('projecte:condenser_mk1', 'minecraft:obsidian', 'enderio:reinforced_obsidian_block')
     replace('projectexpansion:basic_emc_link', 'projecte:condenser_mk1', 'projecte:condenser_mk2')
     replace('minecraft:blast_furnace', '#c:ingots/iron', '#c:ingots/steel')
@@ -129,6 +133,7 @@ ServerEvents.recipes(event => {
     replace('spectrum:pedestal_basic_topaz', 'minecraft:redstone', 'minecraft:chorus_fruit')
     replace('mysticalautomation:infusion_altarnator', '#c:ingots/iron', 'malum:soul_stained_steel_ingot')
     replace('ars_noveau:arcane_core', 'minecraft:gold_ingot','mysticalagriculture:inferium_ingot')
+    replace('refinedstorage:machine_casing', '#c:stones', 'bigreactors:anglesite_crystal')
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [
@@ -157,6 +162,19 @@ const shapelessCrafting = [
     },
   ];
 const shapedCrafting = [
+  {
+    id: 'modular_machinery_reborn:gravital_singularity_controller',
+    output: 'modular_machinery_reborn:controller[modular_machinery_reborn:machine="minecraft:gravital_singularity"]',
+    pattern: [
+        "  C",
+        " S ",
+        "   "
+    ],
+    keys: {
+        S: 'modular_machinery_reborn:casing_plain',
+        C: 'kubejs:law_ingot',
+    }
+  },
   {
     id: 'mysticalagriculture:master_infusion_crystal',
     output: 'mysticalagriculture:master_infusion_crystal',

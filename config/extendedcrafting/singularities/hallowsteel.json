@@ -1,0 +1,10 @@
+{
+  "name": "Hallowsteel Ingot",
+  "colors": [
+    "fdffe0",
+    "bfb179"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/hallowsteel"
+  }
+}

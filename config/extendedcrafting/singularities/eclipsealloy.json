@@ -1,0 +1,10 @@
+{
+  "name": "Eclipse Alloy Ingot",
+  "colors": [
+    "36414f",
+    "6d9195"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/eclipsealloy"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Carobbiite Gem",
+  "colors": [
+    "a7b56a",
+    "848530"
+  ],
+  "ingredient": {
+    "tag": "c:gems/carobbiite"
+  }
+}

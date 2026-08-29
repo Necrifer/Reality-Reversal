@@ -1,0 +1,10 @@
+{
+  "name": "Lead Platinum Ingot",
+  "colors": [
+    "344246",
+    "5a7c7f"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/lead_platinum"
+  }
+}

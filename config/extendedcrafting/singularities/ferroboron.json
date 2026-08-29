@@ -1,0 +1,10 @@
+{
+  "name": "Ferroboron Ingot",
+  "colors": [
+    "1d1d1d",
+    "666666"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/ferroboron"
+  }
+}

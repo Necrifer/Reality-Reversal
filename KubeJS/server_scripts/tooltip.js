@@ -94,7 +94,8 @@ ItemEvents.modifyTooltips(event => {
     event.modify('oritech:atomic_forge_block', tooltip => {
     tooltip.insert(1, Text.of('Have a few running at all times.').red())
     })
-    event.modify('extendedcrafting:singularity[extendedcrafting:singularity_id="extendedcrafting:iron"]', tooltip => {
+    event.modify('extendedcrafting:singularity', tooltip => {
+    tooltip.insert(1, Text.of('Use the Gravital Singularity multiblock for all Singularities!').gold())    
     tooltip.insert(1, Text.of('Did you think because of EMC we will let you off?').red())
     })
     event.modify('naturesaura:aura_bottle[naturesaura:aura_bottle_data={aura_type:"naturesaura:nether"}]', tooltip => {

@@ -1,0 +1,10 @@
+{
+  "name": "Arcane Ingot",
+  "colors": [
+    "496fc2",
+    "f9f0fd"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/arcane"
+  }
+}

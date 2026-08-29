@@ -117,18 +117,9 @@ function nrProcessLoadedArea(event, removalFraction) {
   const RadiationEffects = Java.loadClass(
     'igentuman.nr.radiation.simulation.entity.RadiationEffects'
   )
-  const ResourceLocation = Java.loadClass(
-    'net.minecraft.resources.ResourceLocation'
-  )
 
   const controller = event.getTile()
   const level = controller.getLevel()
-  // KubeJS exposes Level.dimension as an object property in this version.
-  // Convert its stable namespaced string instead of calling dimension() or
-  // dimension.location(), both of which collide with Rhino's property bridge.
-  const levelDimensionLocation = ResourceLocation.parse(
-    String(level.dimension)
-  )
   const controllerPos = controller.getBlockPos()
   const centerChunkPos = level.getChunkAt(controllerPos).getPos()
   const chunkSource = level.getChunkSource()
@@ -412,7 +403,7 @@ function nrProcessLoadedArea(event, removalFraction) {
       RadiationConfig.biomeBackgroundUSvPerHour(biomeLocation)
     if (backgroundUSvPerHour == null) {
       backgroundUSvPerHour = RadiationConfig.levelBackgroundUSvPerHour(
-        levelDimensionLocation
+        level.dimension().location()
       )
     }
     if (backgroundUSvPerHour == null) {
@@ -426,9 +417,7 @@ function nrProcessLoadedArea(event, removalFraction) {
       playerPos.getY() * 0.015625,
       playerPos.getZ() * 0.015625
     )
-    // KubeJS 1.21 does not expose Level#getGameTime() to scripts. Its
-    // documented working bridge is Level.levelData.gameTime.
-    const timeSeconds = Number(level.levelData.gameTime) * 0.05
+    const timeSeconds = level.getGameTime() * 0.05
     const temporalNoise = PerlinNoise.noise(timeSeconds * 0.3, 0, 0)
     const backgroundMultiplier =
       1 + spatialNoise * 0.1 + temporalNoise * 0.05

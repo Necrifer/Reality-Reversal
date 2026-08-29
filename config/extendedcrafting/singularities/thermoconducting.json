@@ -1,0 +1,10 @@
+{
+  "name": "Thermoconducting Ingot",
+  "colors": [
+    "2d331c",
+    "6d7b58"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/thermoconducting"
+  }
+}

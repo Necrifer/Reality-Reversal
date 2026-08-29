@@ -1,0 +1,10 @@
+{
+  "name": "Zirconium Molybdenum Ingot",
+  "colors": [
+    "b3b7bc",
+    "d7daec"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/zirconium_molybdenum"
+  }
+}

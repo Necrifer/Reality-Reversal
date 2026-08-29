@@ -1,0 +1,10 @@
+{
+  "name": "Ingots of Law",
+  "colors": [
+    "393a04",
+    "dad711"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/law"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Stellarium Ingot",
+  "colors": [
+    "faecfa",
+    "ec98f5"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/stellarium"
+  }
+}

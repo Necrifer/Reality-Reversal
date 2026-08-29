@@ -1,0 +1,10 @@
+{
+  "name": "Mithril Ingot",
+  "colors": [
+    "bdf3f3",
+    "335160"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/mithril"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Boron Arsenide Gem",
+  "colors": [
+    "9c9a85",
+    "c0c1b7"
+  ],
+  "ingredient": {
+    "tag": "c:gems/boron_arsenide"
+  }
+}

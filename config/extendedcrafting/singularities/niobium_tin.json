@@ -1,0 +1,10 @@
+{
+  "name": "Niobium Tin Ingot",
+  "colors": [
+    "999a9e",
+    "e7e7e8"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/niobium_tin"
+  }
+}

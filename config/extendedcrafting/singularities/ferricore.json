@@ -1,0 +1,10 @@
+{
+  "name": "Ferricore Ingot",
+  "colors": [
+    "2b464e",
+    "e4fff9"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/ferricore"
+  }
+}

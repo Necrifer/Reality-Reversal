@@ -1,0 +1,10 @@
+{
+  "name": "Blazegold Ingot",
+  "colors": [
+    "311e29",
+    "f6b06d"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/blazegold"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Baratol Ingot",
+  "colors": [
+    "b56725",
+    "cc864c"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/baratol"
+  }
+}

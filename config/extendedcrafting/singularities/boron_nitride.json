@@ -1,0 +1,10 @@
+{
+  "name": "Boron Nitride Gem",
+  "colors": [
+    "87a380",
+    "56744d"
+  ],
+  "ingredient": {
+    "tag": "c:gems/boron_nitride"
+  }
+}

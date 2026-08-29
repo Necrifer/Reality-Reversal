@@ -9,4 +9,7 @@ StartupEvents.registry('item', event => {
   event.create('compressed_singularity_gamma')
     .displayName('Compressed Singularity Gamma')
     .tooltip('A folded lattice of late-material singularities.');
+  event.create('compressed_singularity_delta')
+    .displayName('Compressed Singularity Delta')
+    .tooltip('A folded lattice of newly discovered singularities.');
 });

@@ -3,9 +3,9 @@
 // Nuclear Radiation 1.0.9 does not expose a supported KubeJS cleanup API.
 // This integration uses its public Java methods directly; see the matching
 // warning JSON in config/codex_warnings before updating Nuclear Radiation.
-// Natural biome/dimension background radiation is preserved as the minimum
-// live reading. Contamination-derived rate, accumulated poisoning dose,
-// internal isotopes, and lung pollution are reduced by each cleanup.
+// Natural biome/dimension background radiation and accumulated dose history
+// are measurements rather than contamination, so this script does not alter
+// either of them.
 
 const NR_TEST_MACHINE = 'modpack:environmental_decontaminator_test'
 const NR_PERCENT_MACHINE = 'modpack:environmental_decontaminator'
@@ -107,28 +107,9 @@ function nrProcessLoadedArea(event, removalFraction) {
   const NRAttachments = Java.loadClass(
     'igentuman.nr.radiation.storage.NRAttachments'
   )
-  const RadiationConfig = Java.loadClass(
-    'igentuman.nr.config.RadiationConfig'
-  )
-  const PerlinNoise = Java.loadClass('igentuman.nr.util.PerlinNoise')
-  const ArmorProtectionRegistry = Java.loadClass(
-    'igentuman.nr.api.shielding.ArmorProtectionRegistry'
-  )
-  const RadiationEffects = Java.loadClass(
-    'igentuman.nr.radiation.simulation.entity.RadiationEffects'
-  )
-  const ResourceLocation = Java.loadClass(
-    'net.minecraft.resources.ResourceLocation'
-  )
 
   const controller = event.getTile()
   const level = controller.getLevel()
-  // KubeJS exposes Level.dimension as an object property in this version.
-  // Convert its stable namespaced string instead of calling dimension() or
-  // dimension.location(), both of which collide with Rhino's property bridge.
-  const levelDimensionLocation = ResourceLocation.parse(
-    String(level.dimension)
-  )
   const controllerPos = controller.getBlockPos()
   const centerChunkPos = level.getChunkAt(controllerPos).getPos()
   const chunkSource = level.getChunkSource()
@@ -378,12 +359,12 @@ function nrProcessLoadedArea(event, removalFraction) {
   registry.saveToLevel()
   simulator.tickWorld(level)
 
-  // Nuclear Radiation 1.0.9 folds natural biome/dimension background into the
-  // same rolling meters as removable exposure. Reproduce its background formula
-  // and remove only the excess above that floor. Accumulated career dose is also
-  // reduced because RadiationEffects treats it as ongoing poisoning even after
-  // every environmental source has gone; natural background immediately resumes
-  // contributing normally after the cleanup.
+  // Nuclear Radiation 1.0.9 calculates natural background radiation directly
+  // from biome/dimension configuration and folds it into the rolling player
+  // meters. Do not overwrite either rate meter or the accumulated career dose:
+  // doing so creates a false zero reading that immediately climbs back to the
+  // natural baseline. Internal isotopes and lung dust are actual contamination,
+  // so the decontaminator still removes the configured fraction of those.
   const players = level.players.toArray()
   const remainingExposureFraction = 1 - removalFraction
 
@@ -400,71 +381,6 @@ function nrProcessLoadedArea(event, removalFraction) {
 
     const playerRadiationData = player.getData(
       NRAttachments.ENTITY_RADIATION.get()
-    )
-
-    const biomeKey = level.getBiome(player.blockPosition()).unwrapKey()
-    let biomeLocation = null
-    if (biomeKey.isPresent()) {
-      biomeLocation = biomeKey.get().location()
-    }
-
-    let backgroundUSvPerHour =
-      RadiationConfig.biomeBackgroundUSvPerHour(biomeLocation)
-    if (backgroundUSvPerHour == null) {
-      backgroundUSvPerHour = RadiationConfig.levelBackgroundUSvPerHour(
-        levelDimensionLocation
-      )
-    }
-    if (backgroundUSvPerHour == null) {
-      backgroundUSvPerHour =
-        RadiationConfig.DEFAULT_BACKGROUND_USV_PER_HOUR.get()
-    }
-
-    const playerPos = player.blockPosition()
-    const spatialNoise = PerlinNoise.noise(
-      playerPos.getX() * 0.015625,
-      playerPos.getY() * 0.015625,
-      playerPos.getZ() * 0.015625
-    )
-    // KubeJS 1.21 does not expose Level#getGameTime() to scripts. Its
-    // documented working bridge is Level.levelData.gameTime.
-    const timeSeconds = Number(level.levelData.gameTime) * 0.05
-    const temporalNoise = PerlinNoise.noise(timeSeconds * 0.3, 0, 0)
-    const backgroundMultiplier =
-      1 + spatialNoise * 0.1 + temporalNoise * 0.05
-    const protectionFactor = Math.max(
-      0,
-      Math.min(1, playerRadiationData.protectionFactor())
-    )
-    const physicalExposure = 1 - protectionFactor
-    const naturalAmbientRate = Math.max(
-      0,
-      Number(backgroundUSvPerHour) * 0.000001 *
-        backgroundMultiplier * 72 * physicalExposure
-    )
-    const armorProtection = ArmorProtectionRegistry.summed(player)
-    const naturalBodyRate = naturalAmbientRate *
-      (1 - Math.max(0, Math.min(1, armorProtection.xray())))
-
-    const oldBodyRate = playerRadiationData.svPerHour()
-    const oldAmbientRate = playerRadiationData.svPerHourAmbient()
-    const cleanedBodyRate = naturalBodyRate +
-      Math.max(0, oldBodyRate - naturalBodyRate) *
-        remainingExposureFraction
-    const cleanedAmbientRate = naturalAmbientRate +
-      Math.max(0, oldAmbientRate - naturalAmbientRate) *
-        remainingExposureFraction
-
-    // A cleanup must never raise a meter that happens to be below its natural
-    // rolling baseline; the simulator will let it converge upward by itself.
-    playerRadiationData.setSvPerHour(
-      Math.min(oldBodyRate, cleanedBodyRate)
-    )
-    playerRadiationData.setSvPerHourAmbient(
-      Math.min(oldAmbientRate, cleanedAmbientRate)
-    )
-    playerRadiationData.setSvTotalCareer(
-      playerRadiationData.svTotalCareer() * remainingExposureFraction
     )
 
     const internal = playerRadiationData.internalContamination()
@@ -486,15 +402,6 @@ function nrProcessLoadedArea(event, removalFraction) {
     lungData.setPollution(
       lungData.pollution() * remainingExposureFraction
     )
-
-    const cleanedDoseStage = RadiationEffects.computeStage(
-      playerRadiationData.svPerHour(),
-      playerRadiationData.svTotalCareer()
-    )
-    playerRadiationData.setLastDoseStage(cleanedDoseStage)
-    if (cleanedDoseStage <= 0) {
-      player.getPersistentData().remove('nr_next_vomit_tick')
-    }
 
     playersDecontaminated++
   }
@@ -526,8 +433,8 @@ MMREvents.recipeFunction(NR_TEST_FUNCTION, event => {
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
     `${result.cachedVectorActivityRemovedBq} Bq; decontaminated ` +
-    `${result.playersDecontaminated} player(s), preserving their natural ` +
-    `background radiation floor.`
+    `${result.playersDecontaminated} player(s) without altering natural ` +
+    `background radiation or accumulated dose.`
   )
 })
 
@@ -544,8 +451,8 @@ MMREvents.recipeFunction(NR_PERCENT_FUNCTION, event => {
     `${result.orphanedSimulatorSources} orphaned simulator source(s), and ` +
     `${result.cachedVectors} cached vector(s) containing ` +
     `${result.cachedVectorActivityRemovedBq} Bq; decontaminated ` +
-    `${result.playersDecontaminated} player(s), preserving their natural ` +
-    `background radiation floor.`
+    `${result.playersDecontaminated} player(s) without altering natural ` +
+    `background radiation or accumulated dose.`
   )
 })
 

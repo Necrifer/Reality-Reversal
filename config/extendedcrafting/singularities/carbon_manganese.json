@@ -1,0 +1,10 @@
+{
+  "name": "Carbon Manganese Ingot",
+  "colors": [
+    "1b1a18",
+    "0d0d0c"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/carbon_manganese"
+  }
+}

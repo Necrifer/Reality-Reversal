@@ -1,0 +1,10 @@
+{
+  "name": "Hard Carbon Ingot",
+  "colors": [
+    "0a204b",
+    "217570"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/hard_carbon"
+  }
+}

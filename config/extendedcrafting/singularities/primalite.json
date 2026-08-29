@@ -1,0 +1,10 @@
+{
+  "name": "Primalite Ingot",
+  "colors": [
+    "7bf4d9",
+    "026278"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/primalite"
+  }
+}

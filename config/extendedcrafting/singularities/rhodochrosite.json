@@ -1,0 +1,10 @@
+{
+  "name": "Rhodochrosite Gem",
+  "colors": [
+    "992737",
+    "ceaaa7"
+  ],
+  "ingredient": {
+    "tag": "c:gems/rhodochrosite"
+  }
+}

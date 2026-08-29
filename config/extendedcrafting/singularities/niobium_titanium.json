@@ -1,0 +1,10 @@
+{
+  "name": "Niobium Titanium Ingot",
+  "colors": [
+    "7f5f78",
+    "4b3d45"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/niobium_titanium"
+  }
+}

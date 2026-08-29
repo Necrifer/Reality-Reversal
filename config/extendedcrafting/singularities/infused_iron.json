@@ -1,0 +1,10 @@
+{
+  "name": "Infused Iron Ingot",
+  "colors": [
+    "297d2f",
+    "51d75a"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/infused_iron"
+  }
+}

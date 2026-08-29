@@ -1,0 +1,10 @@
+{
+  "name": "Sic Sic Cmc Ingot",
+  "colors": [
+    "656257",
+    "423e35"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/sic_sic_cmc"
+  }
+}

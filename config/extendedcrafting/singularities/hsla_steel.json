@@ -1,0 +1,10 @@
+{
+  "name": "Hsla Steel Ingot",
+  "colors": [
+    "57587b",
+    "898aac"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/hsla_steel"
+  }
+}

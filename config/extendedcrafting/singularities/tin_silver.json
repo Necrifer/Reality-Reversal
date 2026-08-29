@@ -1,0 +1,10 @@
+{
+  "name": "Tin Silver Ingot",
+  "colors": [
+    "aaaac5",
+    "f4f4ff"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/tin_silver"
+  }
+}

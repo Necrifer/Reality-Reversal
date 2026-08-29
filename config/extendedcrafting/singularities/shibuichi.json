@@ -1,0 +1,10 @@
+{
+  "name": "Shibuichi Ingot",
+  "colors": [
+    "8f8d8b",
+    "c2bbb7"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/shibuichi"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Tungsten Carbide Ingot",
+  "colors": [
+    "1b1f1c",
+    "0d0f0e"
+  ],
+  "ingredient": {
+    "tag": "c:ingots/tungsten_carbide"
+  }
+}
