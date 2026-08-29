@@ -55,6 +55,7 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:imperium_farmland_till',
     'mysticalagriculture:supremium_farmland_till',
     'mysticalagriculture:supremium_farmland',
+    'mysticalagriculture:seed/infusion/gaia_spirit',
     'oritech:crafting/fluidpipe',
     'oritech:crafting/metalbeams',
     'nuclearcraft:coil_copper',
@@ -79,6 +80,12 @@ ServerEvents.recipes(event => {
     'oritech:compat/immersiveengineering/arcalloying/adamant',
     'oritech:crafting/alloy/adamant',
     'minecraft:ender_eye',
+    'thermal:fire_charge/enderium_ingot_2',
+    'thermal:enderium_dust_2',
+    'alltheores:enderium_dust_from_alloy_blending',
+    'thermal:augments/upgrade_augment_1',
+    'thermal:augments/upgrade_augment_2',
+    'thermal:augments/upgrade_augment_3',
     'botania:runic_altar/air',
     'ae2:materials/advancedcard',
     'oritech:crafting/core2',
@@ -97,6 +104,13 @@ ServerEvents.recipes(event => {
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
   })
+  event.replaceInput({
+    mod: 'botanypots',
+    type: 'minecraft:crafting_shaped',
+  },
+  'minecraft:flower_pot',
+  'aoa3:ghastly_ingot'
+)
 //Todo: Split this whole chunky mess of removal recipes below and above into another script later.
   const replace = (result, oldInput, newInput) => {
     event.replaceInput ({output: result}, oldInput, Ingredient.of(newInput))
@@ -210,6 +224,16 @@ const shapedCrafting = [
     keys: {
       A: 'hammerlib:test_machine',
       B: 'kubejs:modular_ingot'
+    }
+  },
+  {
+    id: 'modpack:energy_tablet',
+    output: 'mekanism:energy_tablet',
+    pattern: ['AAA', 'BCB', 'AAA'],
+    keys: {
+      A: '#forge:ingots/steel',
+      B: 'mekanism:alloy_reinforced',
+      C: 'mekanism:basic_control_circuit'
     }
   },
   {
@@ -578,4 +602,3 @@ const shapedCrafting = [
     event.shapeless(Item.of(recipe.output), recipe.inputs).id(recipe.id);
   });
 })
-
