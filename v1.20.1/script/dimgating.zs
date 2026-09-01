@@ -42,6 +42,7 @@ ReDimensionStages.restrictWithMessage("adastraextra:uranus", "You have not unloc
 //ReDimensionStages.restrictWithMessage("adastraextra:uranus_orbit", "You have not unlocked this dimension yet.", "uranus_orbit");
 
 // Adventure and magic dimensions
+ReDimensionStages.restrictWithMessage("theabyss:frost_world", "The Frost denies you.", "frost");
 ReDimensionStages.restrictWithMessage("aether:the_aether", "Defeat the guardian of the Skies first.", "floating_sky");
 ReDimensionStages.restrictWithMessage("astral_dimension:astral_dimension", "Fury of Solar burns.", "astral");
 ReDimensionStages.restrictWithMessage("astral_dimension:setback", "The touch of Void curses.", "setback");
@@ -57,7 +58,6 @@ ReDimensionStages.restrictWithMessage("infinite_abyss:fourth_layer", "You have n
 ReDimensionStages.restrictWithMessage("infinite_abyss:fifth_layer", "Master the control of the Frost.", "abyss5");
 ReDimensionStages.restrictWithMessage("infinite_abyss:sixth_layer", "You have not unlocked this dimension yet.", "abyss6");
 ReDimensionStages.restrictWithMessage("infinite_abyss:seventh_layer", "You have not unlocked this dimension yet.", "abyss7");
-ReDimensionStages.restrictWithMessage("the_deep_void:deep_void", "The Void rejects you.", "void_edge");
 ReDimensionStages.restrictWithMessage("voidscape:void", "Be One of Void born, or you do not deserve.", "void_edge");
 
 // Advent of Ascension
@@ -88,4 +88,3 @@ ReDimensionStages.restrictWithMessage("divinerpg:mortum", "You have not unlocked
 ReDimensionStages.restrictWithMessage("divinerpg:skythern", "You have not unlocked this dimension yet.", "skythern");
 ReDimensionStages.restrictWithMessage("divinerpg:vethea", "You have not unlocked this dimension yet.", "vethea");
 ReDimensionStages.restrictWithMessage("divinerpg:wildwood", "You have not unlocked this dimension yet.", "wildwood");
-

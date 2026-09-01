@@ -15,6 +15,18 @@ ServerEvents.recipes(event => {
         .energy(10000)
         .experience(3)
         .id("kubejs:enderio/alloy_smelting/end_steel_ingot")
+
+    event.recipes.enderio
+        .alloy_smelting(Item.of("woot_revived:stygian_ingot", 5), [
+            // These must be exact registered item IDs. Unknown IDs become
+            // empty ingredients without necessarily rejecting the recipe.
+            Ingredient.of("woot_revived:diamond_shard").withCount(3),
+            Ingredient.of("kubejs:stellarium_ingot").withCount(8),
+            Ingredient.of("botania:corporea_spark_master"),
+        ])
+        .energy(50000)
+        .experience(1)
+        .id("kubejs:enderio/alloy_smelting/stygian_ingot")
     // removes all slicing recipes
     // event.remove({ type: "enderio:slicing" })
 
