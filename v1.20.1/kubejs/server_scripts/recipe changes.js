@@ -33,8 +33,11 @@ ServerEvents.recipes(event => {
     'matc:crystals/prudentium',
     'matc:crystals/inferium',
     'thermal:machine_smelter',
+    'matc:crystals/tertium',
     'matc:crystal/tertium',
     'nuclearcraft:chassis',
+    'projectexpansion:matter_upgrader_1',
+    'projectexpansion:matter_upgrader_2',
     'ae2:network/blocks/crystal_processing_charger',
     'voidminers:rubetine',
     'hostilenetworks:loot_fabricator',
@@ -43,6 +46,7 @@ ServerEvents.recipes(event => {
     'thermal:fire_charge/lumium_ingot_4',
     'woot_revived:stygian_dust',
     'thermal:lumium_dust_4',
+    'rftoolsbase:dimensionalshard',
     'alltheores:lumium_dust_from_alloy_blending',
     'bigreactors:reactor/reinforced/casing',
     'bigreactors:reactor/reinforced/casing_upgrade',
@@ -70,9 +74,11 @@ ServerEvents.recipes(event => {
     'nuclearcraft:plate_advanced',
     'extendedcrafting:crystaltine_ingot',
     'botania:petal_apothecary',
-    'matc:crystal/supremium',
-    'matc:crystal/imperium',
+    'matc:crystals/supremium',
+    'matc:crystals/imperium',
+    'matc:crystals/master_infusion_crystal',
     'mekanism:energy_tablet',
+    'astral_dimension:dustandsteelrecipe',
     'tconstruct:smeltery/casting/ender/eye',
     'ae2:network/blocks/controller',
     'crystalcraft_unlimited_java:crafting_fusion_11',
@@ -80,6 +86,7 @@ ServerEvents.recipes(event => {
     'oritech:compat/immersiveengineering/arcalloying/adamant',
     'oritech:crafting/alloy/adamant',
     'minecraft:ender_eye',
+    'dog:cosmic_worm',
     'thermal:fire_charge/enderium_ingot_2',
     'thermal:enderium_dust_2',
     'alltheores:enderium_dust_from_alloy_blending',
@@ -91,6 +98,7 @@ ServerEvents.recipes(event => {
     'oritech:crafting/core2',
     'extendedcrafting:compressor',
     'projectexpansion:power_flower/basic',
+    'astral_dimension:glowing_obsidian_recipe',
     'botania:apothecary_default',
     'mysticalagriculture:prosperity_seed_base',
     'oritech:crafting/core2alt',
@@ -167,6 +175,7 @@ ServerEvents.recipes(event => {
     replace('thermal:machine_refinery', '#forge:glass', 'minecraft:ender_eye')
     replace('extendedcrafting:crafing_core', 'extendedcrafting:black_iron_ingot', twilight)
     replace('rftoolsbuilder:builder', 'minecraft:bricks', 'ae2:fluix_block')
+    replace('primalmagick:quartz_nugget', 'minecraft:quartz', 'actuallyadditions:ethetic_green_block')
     replace('packagedauto:package_component', 'minecraft:gold_ingot', twilight)
     replace('mekanism:elite_fluid_tank', iron, '#forge:ingots/end_steel')
     replace('mekanism:ultimate_fluid_tank', iron, 'kubejs:stellarium_ingot')
@@ -203,6 +212,11 @@ const shapelessCrafting = [
         id: 'twilightforest:fiery_tears',
         output: 'twilightforest:fiery_tears',
         inputs: ['minecraft:ghast_tear', 'twilightforest:carminite']
+    },
+    {
+      id: 'modpack:glint_and_steel',
+      output: Item.of('astral_dimension:astral_dimension', '{Damage:0}'),
+      inputs: ['kubejs:seeneyes2', 'kubejs:modular_ingot']
     }
   ];
 // Can't do any better to compact the ones below, no other options...
@@ -215,6 +229,18 @@ const shapedCrafting = [
       A: 'enderio:clear_glass',
       B: 'ae2:certus_quartz_dust',
       C: 'dimdoors_clod'
+    }
+  },
+  {
+    id: 'modpack:master_crystal',
+    output: 'mysticalagriculture:master_infusion_crystal',
+    pattern: [' A ', 'BCD', ' E '],
+    keys: {
+      A: 'minecraft:oak_log',
+      B: 'minecraft:cobblestone',
+      C: Item.of('matc:supremium_crystal', '{Damage:0}'),
+      D: 'minecraft:dirt',
+      E: 'minecraft:stone'
     }
   },
   {
@@ -602,3 +628,4 @@ const shapedCrafting = [
     event.shapeless(Item.of(recipe.output), recipe.inputs).id(recipe.id);
   });
 })
+
