@@ -189,3 +189,8 @@
 	[<item:minecraft:air>, <item:ae2:fluix_crystal>, <item:ae2:fluix_crystal>, <item:ae2:fluix_crystal>, <item:minecraft:air>], 
 	[<item:ae2:engineering_processor>, <item:minecraft:air>, <item:ae2:engineering_processor>, <item:minecraft:air>, <item:ae2:engineering_processor>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("glowing_obsidian", 1, <item:astral_dimension:glowing_obsidian> * 10, [
+	[<item:minecraft:air>, <item:kubejs:seeneyes2>, <item:minecraft:air>], 
+	[<item:kubejs:seeneyes2>, <item:draconicevolution:infused_obsidian>, <item:kubejs:seeneyes2>], 
+	[<item:minecraft:air>, <item:kubejs:seeneyes2>, <item:minecraft:air>]
+]);
