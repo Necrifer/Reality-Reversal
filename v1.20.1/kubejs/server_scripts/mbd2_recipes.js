@@ -65,7 +65,8 @@
           ],
           outputs: [
             { item: 'botania:terrasteel_ingot', count: 8 },
-            { item: 'botania:life_essence', count: 5 }
+            { item: 'botania:life_essence', count: 5 },
+            { item: 'naturesaura:gold_leaf', count: 16}
           ]
         },
         {
@@ -122,7 +123,9 @@
             {
               item: 'naturesaura:aura_bottle',
               count: 5,
-              nbt: '{stored_type:"kubejs:nihil"}'
+              // Nature's Aura owns the aura-type ID. Minecraft's dimension ID
+              // is not a valid substitute and makes the bottle unrenderable.
+              nbt: '{stored_type:"naturesaura:overworld"}'
             }
           ],
           outputs: [

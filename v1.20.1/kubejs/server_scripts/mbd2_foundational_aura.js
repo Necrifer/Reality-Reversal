@@ -18,8 +18,10 @@
 // MACHINE AND AURA SETTINGS
 // ---------------------------------------------------------------------------
 
-// This is the registry ID of the current Multiblocked2 controller.
-var RR_AURA_MACHINE = 'mbd2:foundational'
+// This is the registry ID of the current Multiblocked2 controller block.
+// It is deliberately not the recipe type (`mbd2:foundational`). MBD2 machine
+// events identify their source by machine definition/controller ID.
+var RR_AURA_MACHINE = 'minecraft:foundational_breaker'
 
 // Every completed recipe not overridden below drains this much Aura.
 // Set this to 0 if only recipes listed in RR_AURA_DRAIN_BY_RECIPE should drain.
@@ -47,12 +49,12 @@ var RR_AURA_DRAIN_BY_RECIPE = {
 // entityId/count: Entities summoned at random positions in this chunk.
 // entityNbt:      Optional SNBT appended to the summon command.
 // effects:        Effects given to players near the controller.
-// placementId:    Block/fluid placed into random AIR positions in the chunk.
-// placementCount: Number of successful placements requested.
+// placementId:    Spectrum block placed when this tier is entered.
+// placementCount: Number of distinct nearby blocks replaced.
+// minimumRadius:  Closest placement distance from the controller.
 //
-// All defaults below are vanilla IDs because the original 1.21 hazards came
-// from mods that are missing in this backport. They can safely be replaced by
-// any registered 1.20.1 entity, block, fluid-block, or effect ID.
+// Spectrum's original Dragonrot and Forfeiture consequences are restored.
+// NuclearCraft's corium fluid block replaces the removed Nuclear Radiation one.
 var RR_LOW_AURA_TIERS = [
   {
     name: 'unstable',
@@ -64,8 +66,9 @@ var RR_LOW_AURA_TIERS = [
     effects: [
       { id: 'minecraft:weakness', durationSeconds: 15, amplifier: 0 }
     ],
-    placementId: 'minecraft:sculk',
-    placementCount: 4
+    placementId: 'spectrum:dragonrot',
+    placementCount: 4,
+    minimumRadius: 6
   },
   {
     name: 'critical',
@@ -78,8 +81,9 @@ var RR_LOW_AURA_TIERS = [
       { id: 'minecraft:slowness', durationSeconds: 20, amplifier: 1 },
       { id: 'minecraft:weakness', durationSeconds: 20, amplifier: 1 }
     ],
-    placementId: 'minecraft:soul_sand',
-    placementCount: 8
+    placementId: 'nuclearcraft:corium_fluid_block',
+    placementCount: 8,
+    minimumRadius: 6
   },
   {
     name: 'catastrophic',
@@ -92,8 +96,9 @@ var RR_LOW_AURA_TIERS = [
       { id: 'minecraft:wither', durationSeconds: 12, amplifier: 1 },
       { id: 'minecraft:blindness', durationSeconds: 12, amplifier: 0 }
     ],
-    placementId: 'minecraft:lava',
-    placementCount: 5
+    placementId: 'spectrum:forfeiture',
+    placementCount: 5,
+    minimumRadius: 1
   }
 ]
 
@@ -103,12 +108,9 @@ var RR_REACTION_STATE_KEY = 'realityReversalAuraLowTierV1'
 
 // Random hazards use the controller's current 16x16 chunk. Y is relative to
 // the controller so this remains usable in dimensions with unusual heights.
-var RR_PLACEMENT_MIN_Y_OFFSET = -4
-var RR_PLACEMENT_MAX_Y_OFFSET = 4
 var RR_ENTITY_MIN_Y_OFFSET = 1
 var RR_ENTITY_MAX_Y_OFFSET = 4
 var RR_PLAYER_EFFECT_RADIUS = 12
-var RR_PLACEMENT_ATTEMPTS_PER_BLOCK = 20
 
 // ---------------------------------------------------------------------------
 // SMALL HELPERS
@@ -218,46 +220,6 @@ function rrApplyTierEffects(level, center, tier) {
   }
 }
 
-function rrPlaceTierBlocks(level, center, tier) {
-  var requested = Math.max(0, Math.floor(Number(tier.placementCount)))
-  var maximumAttempts = Math.max(64, requested * RR_PLACEMENT_ATTEMPTS_PER_BLOCK)
-  var attempted = {}
-  var placed = 0
-
-  for (var attempt = 0; attempt < maximumAttempts && placed < requested; attempt++) {
-    var target = rrRandomChunkPosition(
-      center,
-      RR_PLACEMENT_MIN_Y_OFFSET,
-      RR_PLACEMENT_MAX_Y_OFFSET
-    )
-    var key = target.x + ',' + target.y + ',' + target.z
-    if (attempted[key] === true) {
-      continue
-    }
-    attempted[key] = true
-
-    // Only replace air. This prevents a backfire from silently deleting the
-    // controller, a multiblock component, storage, wiring, or terrain.
-    var result = rrRunCommand(
-      level,
-      'execute if block ' + target.x + ' ' + target.y + ' ' + target.z +
-      ' minecraft:air run setblock ' + target.x + ' ' + target.y + ' ' +
-      target.z + ' ' + tier.placementId
-    )
-    if (result > 0) {
-      placed++
-    }
-  }
-
-  if (placed < requested) {
-    console.warn(
-      '[Foundational Aura] ' + tier.name + ' requested ' + requested +
-      ' placements but found only ' + placed + ' valid air positions.'
-    )
-  }
-  return placed
-}
-
 function rrFireTierBackfire(machine, tier, tierNumber, aura, recipeId) {
   // A destructive effect scheduled from recipe completion may run after the
   // controller was broken. Abort cleanly if the machine is no longer valid.
@@ -269,14 +231,26 @@ function rrFireTierBackfire(machine, tier, tierNumber, aura, recipeId) {
   var center = machine.getPos()
   rrSummonTierEntities(level, center, tier)
   rrApplyTierEffects(level, center, tier)
-  var placementsMade = rrPlaceTierBlocks(level, center, tier)
+  var placementResult = 'Spectrum placement helper unavailable'
+  if (typeof global.rrPlaceSpectrumAuraBlocks === 'function') {
+    placementResult = global.rrPlaceSpectrumAuraBlocks(
+      level,
+      center,
+      tier.placementId,
+      tier.placementCount,
+      tier.minimumRadius
+    )
+  } else {
+    console.error(
+      '[Foundational Aura] Spectrum Aura helper did not load.'
+    )
+  }
 
   console.info(
     '[Foundational Aura] LOW tier ' + tierNumber + ' (' + tier.name +
     ') fired for ' + recipeId + ' at ' + center.toShortString() +
     '; aura=' + aura + '; entities=' + tier.entityCount +
-    '; placements=' + placementsMade + '/' + tier.placementCount + ' x ' +
-    tier.placementId + '.'
+    '; ' + placementResult + '.'
   )
 }
 
@@ -332,9 +306,17 @@ function rrReactToAura(machine, aura, recipeId) {
 // MBD2 COMPLETION HOOK
 // ---------------------------------------------------------------------------
 
-MBDMachineEvents.onRecipeFinish(RR_AURA_MACHINE, wrapper => {
+// Use the unfiltered event and inspect the definition explicitly. MBD2 1.0.39
+// did not dispatch the old recipe-type extra selector used by the first port,
+// so that callback loaded successfully but never received completions.
+MBDMachineEvents.onRecipeFinish(wrapper => {
   var mbdEvent = wrapper.event
   var machine = mbdEvent.machine
+  var machineId = String(machine.getDefinition().id())
+  if (machineId !== RR_AURA_MACHINE) {
+    return
+  }
+
   var recipeId = rrRecipeId(mbdEvent.recipe)
   var drainAmount = rrDrainForRecipe(recipeId)
 

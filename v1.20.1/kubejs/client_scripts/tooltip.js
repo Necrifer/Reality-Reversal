@@ -103,6 +103,9 @@ ItemEvents.tooltip(event => {
     'minecraft:anomalous_condenser': [
       Text.of('Similar to the other multiblock, only accept I/O through here!')
     ],
+    'valoria:elemental_manipulator': [
+      Text.of('Requires Charging from the 4 Cores of power').green()
+    ],
     'naturesaura:bottle_two_the_rebottling': [
       Text.of('Right clicking in different dimensions gives different air').green(),
       Text.of('You may want to grab as many as you can...').blue()
@@ -111,13 +114,23 @@ ItemEvents.tooltip(event => {
       Text.of('You may want to progress more before thinking about this...').green(),
       Text.of('No one hates broken symmetry right? Oh and costly recipes.').darkRed()
     ],
-    'hammerlib:test_machine': [
+    'minecraft:foundational_breaker': [
       Text.of('This is the controller of the multiblock.').green(),
       Text.of('I/O only goes through the controller').green(),
       Text.of('Controller must face North to form correctly!').blue()
+    ],
+    'minecraft:smithing_table': [
+      Text.of('Many of the trims were hidden due to lag. They still exist in game.').green()
+    ],
+    'astral_dimension:glowing_obsidian': [
+      Text.of('Build it similar to a Nether Portal.').green()
+    ],
+    'valoria:alchemy_station_tier_1': [
+      Text.of('Needs to be upgraded before use').green()
     ]
   }
 
+  // Why is 1.20 like this... 1.21 doesn't need this nonsense below!
   function addOnce(tooltip, line) {
     const message = line.getString()
 
@@ -131,22 +144,16 @@ ItemEvents.tooltip(event => {
     tooltip.add(line)
   }
 
-  event.addAdvancedToAll((item, advanced, tooltip) => {
-    let lines = tooltips[item.id]
+  // Building the table above does not register any tooltip by itself. Attach
+  // one dynamic handler to every configured item so the de-duplication step is
+  // run against the final live tooltip assembled by Minecraft and other mods.
+  Object.keys(tooltips).forEach(itemId => {
+    event.addAdvanced(itemId, (item, advanced, tooltip) => {
+      const lines = tooltips[itemId]
 
-    // This tooltip applies only to the Nether-filled Aura Bottle. In 1.20.1
-    // its captured aura type is stored in NBT rather than a data component.
-    if (item.id === 'naturesaura:aura_bottle') {
-      const nbt = item.nbt
-      if (nbt && nbt.getString('stored_type') === 'kubejs:nihil') {
-        lines = [Text.of('Obtained by right clicking bottle and cork in pocket Void Dimension').green()]
+      for (let index = 0; index < lines.length; index++) {
+        addOnce(tooltip, lines[index])
       }
-    }
-
-    if (!lines) return
-
-    for (let index = 0; index < lines.length; index++) {
-      addOnce(tooltip, lines[index])
-    }
+    })
   })
 })
