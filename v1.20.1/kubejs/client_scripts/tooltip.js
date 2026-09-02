@@ -125,8 +125,17 @@ ItemEvents.tooltip(event => {
     'astral_dimension:glowing_obsidian': [
       Text.of('Build it similar to a Nether Portal.').green()
     ],
+    'astral_dimension:burning_shards': [
+      Text.of('Locate mushrooms in Fiery forest to get these.').green()
+    ],
     'valoria:alchemy_station_tier_1': [
       Text.of('Needs to be upgraded before use').green()
+    ],
+    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gold"}'): [
+      Text.of('The Singularity is reusable for the gold powder').green()
+    ],
+    'nuclearcraft:fission_reactor_casing': [
+      Text.of('Use the universal variant for the multiblock.').green()
     ]
   }
 

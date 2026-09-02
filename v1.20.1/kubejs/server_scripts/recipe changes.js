@@ -32,6 +32,7 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:inferium_farmland',
     'matc:crystals/prudentium',
     'matc:crystals/inferium',
+    'draconicevolution:components/draconium_core',
     'thermal:machine_smelter',
     'matc:crystals/tertium',
     'matc:crystal/tertium',
@@ -70,11 +71,15 @@ ServerEvents.recipes(event => {
     'divinerpg:compat/projecte/conversions/anthracite_from_charcoal',
     'divinerpg:shaped/blue_stone',
     'projecte:transmutation_table',
+    'callfromthedepth_:stone',
     'mekanismgenerators:generator/bio',
     'nuclearcraft:plate_advanced',
     'extendedcrafting:crystaltine_ingot',
     'botania:petal_apothecary',
     'matc:crystals/supremium',
+    'nuclearcraft:centrifuge/irradiated_lithium',
+    'nuclearcraft:electrolyzer/heavy_water',
+    'nuclearcraft:centrifuge/technical_water',
     'matc:crystals/imperium',
     'matc:crystals/master_infusion_crystal',
     'mekanism:energy_tablet',
@@ -87,6 +92,7 @@ ServerEvents.recipes(event => {
     'oritech:crafting/alloy/adamant',
     'minecraft:ender_eye',
     'dog:cosmic_worm',
+    'nuclearcraft:fission_reactor_casing',
     'thermal:fire_charge/enderium_ingot_2',
     'thermal:enderium_dust_2',
     'alltheores:enderium_dust_from_alloy_blending',
@@ -183,6 +189,8 @@ ServerEvents.recipes(event => {
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
     replace('enderio:end_steel_ingot', 'minecraft:obsidian', 'mekanism:ingot_refined_obsidian')
     replace('industrialforegoing:machine_frame_pity', iron, 'enderio:end_steel_ingot')
+    replace('industrialforegoing:machine_frame_pity', "minecraft:redstone_block", 'mekanism:steel_casing')
+    replace('nuclearcraft:empty_heat_sink', 'minecraft:bucket', 'rftoolsbase:machine_frame')
     replace('industrialforegoing:fluid_extractor', iron, darksteel)
     replace('primalmagick:mundane_wand', '#forge:rods/wooden', 'malum:hallowed_gold_ingot')
     replace('refinedstorage:machine_casing', '#forge:stones', 'bigreactors:anglesite_crystal')
@@ -217,6 +225,11 @@ const shapelessCrafting = [
       id: 'modpack:glint_and_steel',
       output: Item.of('astral_dimension:astral_dimension', '{Damage:0}'),
       inputs: ['kubejs:seeneyes2', 'kubejs:modular_ingot']
+    },
+    {
+      id: 'modpack:corruption_containment_controller',
+      output: 'minecraft:corruption_containment',
+      inputs: ['hammerlib:test_machine', 'kubejs:modular_ingot', 'kubejs:void_sculk']
     }
   ];
 // Can't do any better to compact the ones below, no other options...

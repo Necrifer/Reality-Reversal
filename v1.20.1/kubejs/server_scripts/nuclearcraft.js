@@ -1,4 +1,18 @@
 ServerEvents.recipes(event => {
+
+  // The Glowing Mushroom belongs to the Fluid Enricher recipe that produces
+  // RadAway fluid. Filtering by the RadAway item targets the later Fluid
+  // Infuser recipe instead, whose item input is Bioplastic, so nothing matches.
+  event.replaceInput(
+    { id: 'nuclearcraft:fluid_enricher/glowing_mushroom-ethanol' },
+    'nuclearcraft:glowing_mushroom',
+    '#forge:mushrooms'
+  )
+  event.replaceInput(
+    { id: 'nuclearcraft:fluid_enricher/glowing_mushroom-redstone_ethanol' },
+    'nuclearcraft:glowing_mushroom',
+    '#forge:mushrooms'
+  )
   event.custom({
     type: 'nuclearcraft:alloy_smelter',
     input: [

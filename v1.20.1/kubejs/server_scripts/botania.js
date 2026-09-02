@@ -1,7 +1,7 @@
 ServerEvents.recipes(event => {
     //event.remove({ output: "botania:livingrock" })
 
-    //event.recipes.botania.mana_infusion("minecraft:acacia_boat", "minecraft:acacia_door", 200, "minecraft:acacia_log")
+    //event.recipes.botania.mana_infusion(output, intput, mana)
    
     //event.recipes.botania.elven_trade(["minecraft:acacia_boat"], "minecraft:diamond")
     //event.recipes.botania.elven_trade(["minecraft:acacia_boat", "minecraft:acacia_button"], ["minecraft:diamond_block", "minecraft:gold_ingot"])
@@ -31,4 +31,7 @@ ServerEvents.recipes(event => {
     event.recipes.botania.runic_altar("botania:rune_fire", [Item.of('hostilenetworks:prediction', '{data_model:{id:"hostilenetworks:blaze"}}').weakNBT(), 'tconstruct:blazewood', 'twilightforest:fiery_block', 'malum:infernal_spirit', 'tconstruct:blazing_blood_bucket'], 5200)
     event.recipes.botania.runic_altar("botania:rune_water", ['minecraft:water_bucket', 'divinerpg:aquatic_ingot', 'minecraft:heart_of_the_sea', 'primalmagick:essence_shard_sea', 'projecte:evertide_amulet'], 5200)
     event.recipes.botania.runic_altar("botania:rune_winter", ['botania:rune_earth', 'botania:rune_water', 'divinerpg:frozen_stone', 'minecraft:blue_ice', Item.of('aether:ice_ring', '{Damage:0}')], 8000)
+    // 1.20 Botania recipe order: output, input, mana, optional catalyst.
+    // This recipe has no catalyst, so only the first three arguments are used.
+    event.recipes.botania.mana_infusion('callfromthedepth_:energypowder', 'minecraft:blaze_powder', 200)
 })

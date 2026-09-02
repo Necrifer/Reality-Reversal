@@ -53,7 +53,7 @@
 ]);
 <recipetype:extendedcrafting:table>.addShaped("nuclearcraft_basic_plating_easy", 1, <item:nuclearcraft:plate_basic>, [
 	[<item:aoa3:ghastly_ingot>, <item:divinerpg:arcanium>, <item:aoa3:ghastly_ingot>], 
-	[<item:divinerpg:arcanium>, <item:minecraft:air>, <item:divinerpg:arcanium>], 
+	[<item:divinerpg:arcanium>, <item:spectrum:citrine_shard>, <item:divinerpg:arcanium>], 
 	[<item:aoa3:ghastly_ingot>, <item:divinerpg:arcanium>, <item:aoa3:ghastly_ingot>]
 ]);
 <recipetype:extendedcrafting:table>.addShaped("ae2_charger", 1, <item:ae2:charger>, [
@@ -99,11 +99,16 @@
 	[<item:malum:soul_stained_steel_ingot>, <item:mysticalagriculture:prosperity_shard>, <item:malum:soul_stained_steel_ingot>]
 ]);
 <recipetype:extendedcrafting:table>.addShaped("prudentium_crystal", 2, <item:matc:prudentium_crystal>, [
-	[<item:botania:rune_lust>, <item:botania:rune_gluttony>, <item:voidminers:rubetine>, <item:botania:rune_sloth>, <item:botania:rune_greed>], 
-	[<item:divinerpg:arcanite_stone>, <item:mna:purified_vinteum_ingot>, <item:voidminers:rubetine>, <item:mna:purified_vinteum_ingot>, <item:divinerpg:arcanite_sand>], 
-	[<item:divinerpg:arcanite_stone>, <item:mna:purified_vinteum_ingot>, <item:matc:inferium_crystal>, <item:mna:purified_vinteum_ingot>, <item:divinerpg:arcanite_sand>], 
-	[<item:divinerpg:arcanite_stone>, <item:mna:purified_vinteum_ingot>, <item:voidminers:rubetine>, <item:mna:purified_vinteum_ingot>, <item:divinerpg:arcanite_sand>], 
-	[<item:botania:rune_envy>, <item:botania:rune_wrath>, <item:voidminers:rubetine>, <item:botania:rune_mana>, <item:botania:rune_pride>]
+	[<item:spectrum:lime_sapling>, <item:spectrum:yellow_sapling>, <item:voidminers:rubetine>, <item:spectrum:orange_sapling>, <item:spectrum:light_blue_sapling>], 
+	[<item:divinerpg:arcanite_stone>, <item:spectrum:vegetal>, <item:voidminers:rubetine>, <item:spectrum:vegetal>, <item:divinerpg:arcanite_sand>], 
+	[<item:divinerpg:arcanite_stone>, <item:spectrum:vegetal>, <item:matc:inferium_crystal>, <item:spectrum:vegetal>, <item:divinerpg:arcanite_sand>], 
+	[<item:divinerpg:arcanite_stone>, <item:spectrum:vegetal>, <item:voidminers:rubetine>, <item:spectrum:vegetal>, <item:divinerpg:arcanite_sand>], 
+	[<item:spectrum:pink_sapling>, <item:spectrum:purple_sapling>, <item:voidminers:rubetine>, <item:spectrum:cyan_sapling>, <item:spectrum:blue_sapling>]
+]);
+<recipetype:extendedcrafting:ender_crafter>.addShaped("onyx_ore", <item:spectrum:onyx_ore> * 2, [
+	[<item:spectrum:amethyst_powder>, <item:minecraft:air>, <item:spectrum:topaz_powder>], 
+	[<item:minecraft:air>, <item:primalmagick:primalite_ingot>, <item:minecraft:air>], 
+	[<item:dimdoors:amalgam_block>, <item:spectrum:citrine_powder>, <item:dimdoors:clod_block>]
 ]);
 <recipetype:extendedcrafting:ender_crafter>.addShaped("titanium_gear", <item:ftbmaterials:titanium_gear>, [
 	[<item:minecraft:air>, <item:nuclearcraft:titanium_ingot>, <item:minecraft:air>], 
@@ -116,7 +121,7 @@
 	[<item:divinerpg:oxdrite_ingot>, <item:projecte:red_matter>, <item:ae2:calculation_processor>, <item:ae2:fluix_crystal>, <item:ae2:logic_processor>, <item:projecte:dark_matter>, <item:primalmagick:primalite_ingot>], 
 	[<item:divinerpg:oxdrite_ingot>, <item:projecte:dark_matter>, <item:ae2:engineering_processor>, <item:matc:prudentium_crystal>, <item:ae2:engineering_processor>, <item:projecte:red_matter>, <item:primalmagick:primalite_ingot>], 
 	[<item:divinerpg:oxdrite_ingot>, <item:projecte:red_matter>, <item:ae2:calculation_processor>, <item:ae2:fluix_crystal>, <item:ae2:logic_processor>, <item:projecte:dark_matter>, <item:primalmagick:primalite_ingot>], 
-	[<item:actuallyadditions:empowered_enori_crystal_block>, <item:mekanism:advanced_fluid_tank>.withTag({mekData: {FluidTanks: [{Tank: 0, stored: {FluidName: "thermal:heavy_oil", Amount: 64000}}]}}), <item:botania:rune_earth>, <item:botania:rune_fire>, <item:botania:rune_water>, <item:mekanism:advanced_fluid_tank>.withTag({mekData: {FluidTanks: [{Tank: 0, stored: {FluidName: "immersivepetroleum:diesel", Amount: 64000}}]}}), <item:actuallyadditions:empowered_restonia_crystal_block>], 
+	[<item:actuallyadditions:empowered_enori_crystal_block>, <item:mekanism:advanced_fluid_tank>.withTag({mekData: {FluidTanks: [{Tank: 0, stored: {FluidName: "thermal:heavy_oil", Amount: 64000}}]}}), <item:spectrum:onyx_shard>, <item:spectrum:onyx_shard>, <item:spectrum:onyx_shard>, <item:mekanism:advanced_fluid_tank>.withTag({mekData: {FluidTanks: [{Tank: 0, stored: {FluidName: "immersivepetroleum:diesel", Amount: 64000}}]}}), <item:actuallyadditions:empowered_restonia_crystal_block>], 
 	[<item:actuallyadditions:empowered_enori_crystal_block>, <item:actuallyadditions:empowered_enori_crystal_block>, <item:actuallyadditions:empowered_void_crystal_block>, <item:actuallyadditions:empowered_void_crystal_block>, <item:actuallyadditions:empowered_void_crystal_block>, <item:actuallyadditions:empowered_restonia_crystal_block>, <item:actuallyadditions:empowered_restonia_crystal_block>]
 ]);
 <recipetype:extendedcrafting:table>.addShaped("imperium_crystal", 4, <item:matc:imperium_crystal>, [
@@ -157,21 +162,21 @@
 	[<item:aoa3:ghastly_ingot>, <item:aoa3:ghastly_ingot>, <item:aoa3:ghastly_ingot>, <item:aoa3:ghastly_ingot>, <item:aoa3:ghastly_ingot>]
 ]);
 <recipetype:extendedcrafting:combination>.addRecipe("modularium_simple", <item:kubejs:modular_ingot> * 8, 100000, [<item:malum:soul_stained_steel_ingot>, 
-	<item:nuclearcraft:tough_alloy_ingot>, <item:extendedcrafting:crystaltine_block>, <item:kubejs:fluid_charged_fluix_bucket>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:overworld"}), <item:botania:dragonstone>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:overworld"}), <item:projectexpansion:magenta_matter>, <item:botania:dreamwood>, <item:kubejs:law_ingot>, <item:malum:warp_flux>, <item:botania:elementium_ingot>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:end"}), <item:bigreactors:redfrigium_bucket>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:nether"}), <item:extrabotany:elementium_quartz>, <item:nuclearcraft:chassis>, 
+	<item:nuclearcraft:tough_alloy_ingot>, <item:extendedcrafting:crystaltine_block>, <item:spectrum:liquid_crystal_bucket>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:overworld"}), <item:botania:dragonstone>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:overworld"}), <item:projectexpansion:magenta_matter>, <item:botania:dreamwood>, <item:kubejs:law_ingot>, <item:malum:warp_flux>, <item:botania:elementium_ingot>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:end"}), <item:bigreactors:redfrigium_bucket>, <item:naturesaura:aura_bottle>.withTag({stored_type: "naturesaura:nether"}), <item:extrabotany:elementium_quartz>, <item:nuclearcraft:chassis>, 
 ]);
 <recipetype:extendedcrafting:ender_crafter>.addShaped("modular_casing", <item:hammerlib:test_machine> * 2, [
-	[<item:kubejs:modular_ingot>, <item:valoria:pearlium_ingot>, <item:hostilenetworks:prediction>.withTag({data_model: {id: "hostilenetworks:spider"}})], 
+	[<item:kubejs:modular_ingot>, <item:spectrum:midnight_chip>, <item:hostilenetworks:prediction>.withTag({data_model: {id: "hostilenetworks:spider"}})], 
 	[<item:enderio:pulsating_crystal>, <item:actuallyadditions:ender_casing>, <item:enderio:vibrant_crystal>], 
-	[<item:hostilenetworks:prediction>.withTag({data_model: {id: "hostilenetworks:enderman"}}), <item:valoria:pearlium_ingot>, <item:kubejs:modular_ingot>]
+	[<item:hostilenetworks:prediction>.withTag({data_model: {id: "hostilenetworks:enderman"}}), <item:spectrum:midnight_chip>, <item:kubejs:modular_ingot>]
 ]);
 <recipetype:extendedcrafting:table>.addShaped("creative_grimoire", 0, <item:primalmagick:grimoire_creative>, [
 	[<item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>], 
 	[<item:draconicevolution:draconium_ingot>, <item:draconicevolution:draconium_ingot>, <item:draconicevolution:draconium_ingot>, <item:draconicevolution:draconium_ingot>, <item:projectexpansion:fading_matter>, <item:draconicevolution:draconium_ingot>, <item:draconicevolution:draconium_ingot>, <item:draconicevolution:draconium_ingot>, <item:draconicevolution:draconium_ingot>], 
 	[<item:mna:resonating_dust>, <item:aether:zanite_gemstone>, <item:actuallyadditions:empowered_restonia_crystal_block>, <item:projecte:dark_matter>, <item:divinerpg:parasecta_statue>, <item:projectexpansion:violet_matter>, <item:dimdoors:enduring_fibers>, <item:actuallyadditions:empowered_enori_crystal_block>, <item:divinerpg:arcanium_rich_sand>], 
-	[<item:mna:resonating_dust>, <item:mysticalagriculture:awakened_supremium_ingot_block>, <item:botania:rune_summer>, <item:projecte:red_matter>, <item:nuclearcraft:plate_basic>, <item:projectexpansion:blue_matter>, <item:dimdoors:enduring_fibers>, <item:dimdoors:black_fabric>, <item:divinerpg:arcanium_rich_sand>], 
-	[<item:naturesaura:token_euphoria>, <item:aether:enchanted_gravitite>, <item:botania:rune_autumn>, <item:projectexpansion:magenta_matter>, <item:dimdoors:black_fabric>, <item:projectexpansion:cyan_matter>, <item:dimdoors:enduring_fibers>, <item:actuallyadditions:empowered_emeradic_crystal_block>, <item:malum:blighted_gunk>], 
-	[<item:naturesaura:token_grief>, <item:aether:ambrosium_shard>, <item:actuallyadditions:empowered_void_crystal_block>, <item:projectexpansion:pink_matter>, <item:dimdoors:black_fabric>, <item:projectexpansion:green_matter>, <item:dimdoors:enduring_fibers>, <item:botania:rune_winter>, <item:malum:blighted_gunk>], 
-	[<item:divinerpg:icy_stone>, <item:mysticalagriculture:awakened_supremium_ingot_block>, <item:divinerpg:oxdrite_ingot>, <item:projectexpansion:purple_matter>, <item:nuclearcraft:plate_basic>, <item:projectexpansion:lime_matter>, <item:dimdoors:enduring_fibers>, <item:botania:rune_spring>, <item:jaopca:storage_blocks.ouranium>], 
+	[<item:mna:resonating_dust>, <item:mysticalagriculture:awakened_supremium_ingot_block>, <item:spectrum:bedrock_dust>, <item:projecte:red_matter>, <item:nuclearcraft:plate_basic>, <item:projectexpansion:blue_matter>, <item:dimdoors:enduring_fibers>, <item:dimdoors:black_fabric>, <item:divinerpg:arcanium_rich_sand>], 
+	[<item:naturesaura:token_euphoria>, <item:aether:enchanted_gravitite>, <item:spectrum:bedrock_dust>, <item:projectexpansion:magenta_matter>, <item:dimdoors:black_fabric>, <item:projectexpansion:cyan_matter>, <item:dimdoors:enduring_fibers>, <item:actuallyadditions:empowered_emeradic_crystal_block>, <item:malum:blighted_gunk>], 
+	[<item:naturesaura:token_grief>, <item:aether:ambrosium_shard>, <item:actuallyadditions:empowered_void_crystal_block>, <item:projectexpansion:pink_matter>, <item:dimdoors:black_fabric>, <item:projectexpansion:green_matter>, <item:dimdoors:enduring_fibers>, <item:spectrum:bedrock_dust>, <item:malum:blighted_gunk>], 
+	[<item:divinerpg:icy_stone>, <item:mysticalagriculture:awakened_supremium_ingot_block>, <item:divinerpg:oxdrite_ingot>, <item:projectexpansion:purple_matter>, <item:nuclearcraft:plate_basic>, <item:projectexpansion:lime_matter>, <item:dimdoors:enduring_fibers>, <item:spectrum:bedrock_dust>, <item:jaopca:storage_blocks.ouranium>], 
 	[<item:divinerpg:icy_stone>, <item:dimdoors:black_fabric>, <item:actuallyadditions:empowered_palis_crystal_block>, <item:projectexpansion:white_matter>, <item:divinerpg:dramix_statue>, <item:projectexpansion:orange_matter>, <item:dimdoors:enduring_fibers>, <item:actuallyadditions:empowered_diamatine_crystal_block>, <item:jaopca:storage_blocks.ouranium>], 
 	[<item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:modular_ingot>]
 ]);
@@ -189,8 +194,57 @@
 	[<item:minecraft:air>, <item:ae2:fluix_crystal>, <item:ae2:fluix_crystal>, <item:ae2:fluix_crystal>, <item:minecraft:air>], 
 	[<item:ae2:engineering_processor>, <item:minecraft:air>, <item:ae2:engineering_processor>, <item:minecraft:air>, <item:ae2:engineering_processor>]
 ]);
+<recipetype:extendedcrafting:table>.addShaped("hardened_component", 1, <item:thermal:upgrade_augment_1>, [
+	[<item:thermal:invar_ingot>, <item:minecraft:blaze_rod>, <item:minecraft:air>], 
+	[<item:thermal:invar_ingot>, <item:mekanism:enriched_redstone>, <item:mekanism:enriched_redstone>], 
+	[<item:thermal:invar_ingot>, <item:minecraft:blaze_rod>, <item:minecraft:air>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("reinforced_component", 2, <item:thermal:upgrade_augment_2>, [
+	[<item:thermal:electrum_ingot>, <item:thermal:electrum_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:malum:sacred_spirit>, <item:ae2:printed_calculation_processor>, <item:thermal:electrum_ingot>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:mekanism:ultimate_control_circuit>, <item:thermal:upgrade_augment_1>, <item:malum:hallowed_gold_ingot>, <item:thermal:redstone_bucket>, <item:thermal:redstone_bucket>], 
+	[<item:malum:wicked_spirit>, <item:ae2:printed_engineering_processor>, <item:thermal:electrum_ingot>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:thermal:electrum_ingot>, <item:thermal:electrum_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("resonant_component", 3, <item:thermal:upgrade_augment_3>, [
+	[<item:thermal:enderium_ingot>, <item:alltheores:enderium_rod>, <item:thermal:enderium_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:botania:rune_water>, <item:botania:rune_water>, <item:botania:rune_water>, <item:thermal:enderium_gear>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:actuallyadditions:empowered_restonia_crystal>, <item:actuallyadditions:empowered_palis_crystal>, <item:actuallyadditions:empowered_diamatine_crystal>, <item:botania:rune_earth>, <item:thermal:enderium_ingot>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:botania:rune_air>, <item:botania:rune_air>, <item:botania:rune_air>, <item:botania:rune_earth>, <item:thermal:upgrade_augment_2>, <item:mysticalagriculture:redstone_seeds>, <item:immersiveengineering:wirecoil_redstone>], 
+	[<item:actuallyadditions:empowered_void_crystal>, <item:actuallyadditions:empowered_emeradic_crystal>, <item:actuallyadditions:empowered_enori_crystal>, <item:botania:rune_earth>, <item:thermal:enderium_ingot>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:botania:rune_fire>, <item:botania:rune_fire>, <item:botania:rune_fire>, <item:thermal:enderium_gear>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>], 
+	[<item:thermal:enderium_ingot>, <item:alltheores:enderium_rod>, <item:thermal:enderium_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>, <item:minecraft:air>]
+]);
 <recipetype:extendedcrafting:table>.addShaped("glowing_obsidian", 1, <item:astral_dimension:glowing_obsidian> * 10, [
 	[<item:minecraft:air>, <item:kubejs:seeneyes2>, <item:minecraft:air>], 
 	[<item:kubejs:seeneyes2>, <item:draconicevolution:infused_obsidian>, <item:kubejs:seeneyes2>], 
 	[<item:minecraft:air>, <item:kubejs:seeneyes2>, <item:minecraft:air>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("draconium_core", 3, <item:draconicevolution:draconium_core>, [
+	[<item:spectrum:bedrock_dust>, <item:minecraft:air>, <item:minecraft:air>, <item:draconicevolution:draconium_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:spectrum:bedrock_dust>], 
+	[<item:spectrum:bedrock_dust>, <item:spectrum:bedrock_dust>, <item:draconicevolution:draconium_ingot>, <item:aoa3:jade>, <item:draconicevolution:draconium_ingot>, <item:spectrum:bedrock_dust>, <item:spectrum:bedrock_dust>], 
+	[<item:minecraft:air>, <item:draconicevolution:draconium_ingot>, <item:kubejs:stellarium_ingot>, <item:divinerpg:hellstone_ingot>, <item:kubejs:stellarium_ingot>, <item:draconicevolution:draconium_ingot>, <item:minecraft:air>], 
+	[<item:draconicevolution:draconium_ingot>, <item:divinerpg:torridite_ingot>, <item:divinerpg:shadow_bar>, <item:minecraft:netherite_ingot>, <item:divinerpg:shadow_bar>, <item:divinerpg:torridite_ingot>, <item:draconicevolution:draconium_ingot>], 
+	[<item:minecraft:air>, <item:draconicevolution:draconium_ingot>, <item:kubejs:stellarium_ingot>, <item:divinerpg:hellstone_ingot>, <item:kubejs:stellarium_ingot>, <item:draconicevolution:draconium_ingot>, <item:minecraft:air>], 
+	[<item:spectrum:bedrock_dust>, <item:spectrum:bedrock_dust>, <item:draconicevolution:draconium_ingot>, <item:aoa3:jade>, <item:draconicevolution:draconium_ingot>, <item:spectrum:bedrock_dust>, <item:spectrum:bedrock_dust>], 
+	[<item:spectrum:bedrock_dust>, <item:minecraft:air>, <item:minecraft:air>, <item:draconicevolution:draconium_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:spectrum:bedrock_dust>]
+]);
+<recipetype:extendedcrafting:ender_crafter>.addShaped("great_soul_essence", <item:callfromthedepth_:greatsoulessence>, [
+	[<item:minecraft:echo_shard>, <item:minecraft:echo_shard>, <item:minecraft:echo_shard>], 
+	[<item:minecraft:echo_shard>, <item:deeperdarker:heart_of_the_deep>, <item:minecraft:echo_shard>], 
+	[<item:deeperdarker:warden_carapace>, <item:deeperdarker:warden_carapace>, <item:deeperdarker:warden_carapace>]
+]);
+<recipetype:extendedcrafting:combination>.addRecipe("void_sculk_containment", <item:kubejs:void_sculk>, 10000000, [
+	<item:astral_dimension:amethyst_eye>, <item:deeperdarker:heart_of_the_deep>, <item:minecraft:sculk_catalyst>, <item:callfromthedepth_:soulofsorrow>, <item:callfromthedepth_:soulofagony>, <item:minecraft:sculk>, <item:callfromthedepth_:soulingot>, <item:callfromthedepth_:soulofabyss>, <item:kubejs:star_remains>
+]);
+<recipetype:extendedcrafting:table>.addShaped("fission_reactor_casing", 4, <item:nuclearcraft:fission_reactor_casing> * 6, [
+	[<item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>], 
+	[<item:naturesaura:gold_powder>, <item:extendedcrafting:crystaltine_ingot>, <item:extendedcrafting:crystaltine_ingot>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:mekanism:ingot_refined_glowstone>, <item:extendedcrafting:crystaltine_ingot>, <item:extendedcrafting:crystaltine_ingot>, <item:voidminers:citrinetine_block>], 
+	[<item:naturesaura:gold_powder>, <item:enderio:void_chassis>, <item:extendedcrafting:crystaltine_ingot>, <item:immersiveengineering:component_steel>, <item:immersiveengineering:component_steel>, <item:immersiveengineering:component_steel>, <item:extendedcrafting:crystaltine_ingot>, <item:industrialforegoing:machine_frame_supreme>, <item:voidminers:citrinetine_block>], 
+	[<item:mysticalagradditions:insanium_essence>, <item:immersiveengineering:graphite_electrode>.withTag({graphDmg: 0 as int}), <item:woot_revived:stygian_plate>, <item:hostilenetworks:twilight_prediction>, <item:hostilenetworks:twilight_prediction>, <item:hostilenetworks:twilight_prediction>, <item:woot_revived:stygian_plate>, <item:immersiveengineering:graphite_electrode>.withTag({graphDmg: 0 as int}), <item:mysticalagradditions:insanium_essence>], 
+	[<item:aether:zanite_gemstone>, <item:woot_revived:stygian_plate>, <item:nuclearcraft:uranium_bucket>, <item:hostilenetworks:twilight_prediction>, <item:nuclearcraft:chassis>, <item:hostilenetworks:twilight_prediction>, <item:nuclearcraft:uranium_bucket>, <item:woot_revived:stygian_plate>, <item:aether:zanite_gemstone>], 
+	[<item:mysticalagradditions:insanium_essence>, <item:immersiveengineering:graphite_electrode>.withTag({graphDmg: 0 as int}), <item:woot_revived:stygian_plate>, <item:hostilenetworks:twilight_prediction>, <item:hostilenetworks:twilight_prediction>, <item:hostilenetworks:twilight_prediction>, <item:woot_revived:stygian_plate>, <item:immersiveengineering:graphite_electrode>.withTag({graphDmg: 0 as int}), <item:mysticalagradditions:insanium_essence>], 
+	[<item:bigreactors:reinforced_reactorcasing>, <item:industrialforegoing:machine_frame_supreme>, <item:extendedcrafting:crystaltine_ingot>, <item:immersiveengineering:component_iron>, <item:immersiveengineering:component_iron>, <item:immersiveengineering:component_iron>, <item:extendedcrafting:crystaltine_ingot>, <item:kubejs:void_sculk>, <item:aether:enchanted_gravitite>], 
+	[<item:bigreactors:reinforced_reactorcasing>, <item:extendedcrafting:crystaltine_ingot>, <item:extendedcrafting:crystaltine_ingot>, <item:mekanism:ingot_refined_obsidian>, <item:mekanism:ingot_refined_obsidian>, <item:mekanism:ingot_refined_obsidian>, <item:extendedcrafting:crystaltine_ingot>, <item:extendedcrafting:crystaltine_ingot>, <item:aether:enchanted_gravitite>], 
+	[<item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>, <item:nuclearcraft:plate_advanced>]
 ]);
