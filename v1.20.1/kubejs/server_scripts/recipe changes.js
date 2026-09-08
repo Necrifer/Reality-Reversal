@@ -3,6 +3,7 @@ const twilight = 'aoa3:ghastly_ingot'
 const steel = '#forge:ingots/steel'
 const darksteel = '#forge:ingots/dark_steel'
 const iron = '#forge:ingots/iron'
+const modular = 'kubejs:modular_ingot'
 ServerEvents.recipes(event => {
     const removalout = [
         'dimdoors:tesselating_loom',
@@ -36,6 +37,7 @@ ServerEvents.recipes(event => {
     'thermal:machine_smelter',
     'matc:crystals/tertium',
     'matc:crystal/tertium',
+    'gtceu:shaped/hv_machine_hull',
     'nuclearcraft:chassis',
     'projectexpansion:matter_upgrader_1',
     'projectexpansion:matter_upgrader_2',
@@ -52,6 +54,7 @@ ServerEvents.recipes(event => {
     'bigreactors:reactor/reinforced/casing',
     'bigreactors:reactor/reinforced/casing_upgrade',
     'oritech:crafting/refinerymodulealt',
+    'ad_astra:fuel_refinery',
     'mysticalagriculture:prudentium_farmland_till',
     'mysticalagriculture:prudentium_farmland',
     'mysticalagriculture:tertium_farmland_till',
@@ -62,6 +65,7 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:supremium_farmland',
     'mysticalagriculture:seed/infusion/gaia_spirit',
     'oritech:crafting/fluidpipe',
+    'theabyss:jungle_planks_rcp_2', //This one is due to the mod author's negligence
     'oritech:crafting/metalbeams',
     'nuclearcraft:coil_copper',
     'nuclearcraft:plate_basic',
@@ -100,7 +104,9 @@ ServerEvents.recipes(event => {
     'thermal:augments/upgrade_augment_2',
     'thermal:augments/upgrade_augment_3',
     'botania:runic_altar/air',
+    'gtceu:shaped/hv_assembler',
     'ae2:materials/advancedcard',
+    'gtceu:hv_assembler',
     'oritech:crafting/core2',
     'extendedcrafting:compressor',
     'projectexpansion:power_flower/basic',
@@ -108,11 +114,13 @@ ServerEvents.recipes(event => {
     'botania:apothecary_default',
     'mysticalagriculture:prosperity_seed_base',
     'oritech:crafting/core2alt',
+    'ad_astra:nasa_workbench',
     'mysticalagriculture:soulium_seed_base',
     'oritech:crafting/biogen',
     'divinerpg:compat/projecte/conversions/oxdrite_ingot',
     'divinerpg:compat/projecte/conversions/shadow_bar_from_ingots',
     'divinerpg:shaped/snow_globe',
+    'bswb:command_block',
     'nuclearcraft:manufactory/ender_pearl'
   ]
   idRemoval.forEach(idRemoval => {
@@ -130,16 +138,26 @@ ServerEvents.recipes(event => {
     event.replaceInput ({output: result}, oldInput, Ingredient.of(newInput))
   }
     replace('extendedcrafting:basic_table', '#forge:storage_blocks/iron', '#forge:storage_blocks/dark_steel')
-    replace('mna:runeforge', "minecraft:iron_ingot", "twilight")
+    replace('mna:runeforge', "minecraft:iron_ingot", twilight)
+    replace('gtceu:hv_extractor', 'gtceu:tempered_glass', 'enderio:clear_glass')
+    replace('gtceu:hv_extractor', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
+    replace('nuclearcraft:actuator', 'minecraft:copper_ingot', '#forge:plates/copper')
     replace('mekanism:laser','mekanism:alloy_reinforced', 'actuallyadditions:empowered_diamatine_crystal')
     replace('mna:reonating_lump', 'minecraft:glow_lichen', 'kubejs:stellarium_ingot')
+    replace('gtceu:hv_electic_motor', 'gtceu:magnetic_steel_rod', '#forge:rods/steel')
     replace('projecte:condenser_mk1', '#forge:gems/diamond', '#forge:dusts/diamond')
+    replace('ad_astra:steel_tank', '#c:plates/steel', 'tconstruct:slimesteel_ingot')
+    replace('ad_astra:steel_tank', '#c:steel_rods', '#forge:rods/netherite')
+    replace('ad_astra:steel_engine', '#c:plates/steel', '#forge:plates/stainless_steel')
+    replace('ad_astra:rocket_nose_cone', 'minecraft:lightning_rod', 'astral_dimension:astral_eye')
     replace('nuclearcraft:alloy_smelter', 'minecraft:redstone', '#forge:ingots/redstone_alloy')
     replace('expatternprovider:ex_molecular_assembler', 'ae2:engineering_processor', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:eden"}'))
     replace('projecte:condenser_mk1', 'minecraft:obsidian', 'enderio:reinforced_obsidian_block')
     replace('projectexpansion:basic_emc_link', 'projecte:condenser_mk1', 'projecte:condenser_mk2')
     replace('ae2:interface', iron, twilight)
     replace('minecraft:blast_furnace', iron, steel)
+    replace('nuclearcraft:motor', 'minecraft:gold_nugget', 'malum:hallowed_gold_ingot')
+    replace('nuclearcraft:motor', iron, darksteel)
     replace('ae2:me_p2p_tunnel', iron, twilight)
     replace('mining_dimension:teleporter', '#minecraft:planks', 'cyclic:eye_redstone')
     replace('minecraft:crafter', iron, darksteel)
@@ -158,9 +176,18 @@ ServerEvents.recipes(event => {
     replace('ae2:pattern_provider', iron, twilight)
     replace('ae2:crafting_unit', iron, twilight)
     replace('ae2:chest', iron, "#forge:ingots/dark_steel")
+    replace('bigreactors:basic_reactorcasing', 'minecraft:iron_ingot', 'minecraft:barrier')
+    replace('draconicevolution:particle_generator', 'minecraft:redstone_block', 'enderio:redstone_alloy_grinding_ball')
+    replace('draconicevolution:energy_core_stabilizer', 'minecraft:diamond', 'botania:mana_diamond')
     replace('ae2:chest', 'minecraft:copper_ingot', 'enderio:dark_bimetal_gear')
     replace('ae2:basic_card', iron, twilight)
+    replace('draconicevolution:energy_pylon', 'minecraft:emerald', 'mysticalagriculture:emerald_seeds')
+    replace('draconicevolution:energy_pylon', 'minecraft:diamond', 'primalmagick:energized_diamond')
     replace('ae2:wireless_booster', iron, twilight)
+    replace('actuallyadditions:atomic_reconstructor', 'minecraft:redstone', 'mekanism:enriched_redstone')
+    replace('actuallyadditions:atomic_reconstructor', 'minecraft:iron_ingot', '#forge:ingots/steel')
+    replace('enderio:fluid_tank', 'minecraft:iron_ingot', '#forge:ingots/steel')
+    replace('enderio:pressurized_fluid_tank', 'enderio:dark_steel_ingot', twilight)
     replace('ae2:drive', iron, 'enderio:end_steel_ingot')
     replace('nuclearcraft:alloy_smelter', '#forge:bricks', 'industrialforegoing:pink_slime_ingot')
     replace('nuclearcraft:alloy_smelter', 'minecraft:blast_furnace', 'thermal:machine_smelter')
@@ -179,8 +206,14 @@ ServerEvents.recipes(event => {
     replace('mekanism:advanced_fluid_tank', iron, darksteel)
     replace('thermal:machine_refinery', 'minecraft:copper_ingot', twilight)
     replace('thermal:machine_refinery', '#forge:glass', 'minecraft:ender_eye')
+    replace('gtceu:hv_chemical_reactor', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
     replace('extendedcrafting:crafing_core', 'extendedcrafting:black_iron_ingot', twilight)
+    replace('gtceu:hv_chemical_reactor', '#gtceu:circuits/hv', 'mekanism:elite_control_circuit')
     replace('rftoolsbuilder:builder', 'minecraft:bricks', 'ae2:fluix_block')
+    replace('gtceu:hv_chemical_reactor', 'gtceu:polyethylene_normal_fluid_pipe', 'mekanism:ultimate_mechanical_pipe')
+    replace('gtceu:hv_centrifuge', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
+    replace('gtceu:hv_centrifuge', '#gtceu:circuits/hv', 'gtceu:basic_electronic_circuit')
+    replace('gtceu:hv_centrifuge', 'gtceu:hv_electric_motor', 'nuclearcraft:motor')
     replace('primalmagick:quartz_nugget', 'minecraft:quartz', 'actuallyadditions:ethetic_green_block')
     replace('packagedauto:package_component', 'minecraft:gold_ingot', twilight)
     replace('mekanism:elite_fluid_tank', iron, '#forge:ingots/end_steel')
@@ -225,11 +258,6 @@ const shapelessCrafting = [
       id: 'modpack:glint_and_steel',
       output: Item.of('astral_dimension:astral_dimension', '{Damage:0}'),
       inputs: ['kubejs:seeneyes2', 'kubejs:modular_ingot']
-    },
-    {
-      id: 'modpack:corruption_containment_controller',
-      output: 'minecraft:corruption_containment',
-      inputs: ['hammerlib:test_machine', 'kubejs:modular_ingot', 'kubejs:void_sculk']
     }
   ];
 // Can't do any better to compact the ones below, no other options...
@@ -257,12 +285,15 @@ const shapedCrafting = [
     }
   },
   {
-    id: 'modpack:foundational_breaker',
-    output: 'minecraft:foundational_breaker',
-    pattern: [' AB', '   ', '   '],
+    id: "modpack:hv_assembler",
+    output: 'gtceu:hv_assembler',
+    pattern: ['DBD', 'EAE', 'CBC'],
     keys: {
-      A: 'hammerlib:test_machine',
-      B: 'kubejs:modular_ingot'
+      A: 'gtceu:hv_machine_hull',
+      B: 'ae2:calculation_processor',
+      C: 'gtceu:gold_single_wire',
+      D: 'spectrum:neolith',
+      E: 'mysticalagradditions:insanium_ingot'
     }
   },
   {
@@ -273,24 +304,6 @@ const shapedCrafting = [
       A: '#forge:ingots/steel',
       B: 'mekanism:alloy_reinforced',
       C: 'mekanism:basic_control_circuit'
-    }
-  },
-  {
-    id: 'modpack:anomalous_condenser',
-    output: 'minecraft:anomalous_condenser',
-    pattern: ['BA ', '   ', '   '],
-    keys: {
-      A: 'hammerlib:test_machine',
-      B: 'kubejs:modular_ingot'
-    }
-  },
-  {
-    id: 'modpack:soul_capturer',
-    output: 'minecraft:soul_capturer',
-    pattern: [' B ', ' A ', '   '],
-    keys: {
-      A: 'hammerlib:test_machine',
-      B: 'kubejs:modular_ingot'
     }
   },
   {
@@ -311,6 +324,25 @@ const shapedCrafting = [
     }
   },
   {
+    id: 'modpack:radiation_cleanser',
+    output: 'gtceu:radiation_cleanser',
+    pattern: ['   ', ' AC', '  B'],
+    keys: {
+      A: 'gtceu:hv_energy_input_hatch',
+      B: 'nuclearcraft:uranium_238',
+      C: 'kubejs:modular_ingot'
+    }
+  },
+  {
+    id: 'modpack:hv_assembler',
+    output: 'gtceu:hv_assembler',
+    pattern: [' B ', ' A ', 'EBE'],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'ae2:logic_processor'
+    }
+  },
+  {
     id: "modpack:inscriber",
     output: 'ae2:inscriber',
     pattern: [
@@ -326,12 +358,23 @@ const shapedCrafting = [
 
   },
   {
+    id: 'modpack:fuel_refinery',
+    output: 'ad_astra:fuel_refinery',
+    pattern: ['CCC', 'BAB', 'DDD'],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'mekanism:hdpe_sheet',
+      C: 'kubejs:stellarium_ingot',
+      D: '#forge:plates/stainless_steel'
+    }
+  },
+  {
     id: 'modpack:advanced_card',
     output: 'ae2:advanced_card',
     pattern: [
-        'AB',
+        'AB ',
         'CDB',
-        'AB'
+        'AB '
     ],
     keys: {
         B: twilight,
@@ -339,6 +382,75 @@ const shapedCrafting = [
         D: 'ae2:calculation_processor',
         C: 'thermal:redstone_bucket'
     }
+  },
+  {
+    id: 'modpack:hv_machine_hull',
+    output: 'gtceu:hv_machine_hull',
+    pattern: [
+        'CBC',
+        'BDB',
+        'CAC'
+    ],
+    keys: {
+        A: 'gtceu:hv_machine_casing',
+        B: 'actuallyadditions:solidified_experience',
+        D: 'hammerlib:test_machine',
+        C: 'immersiveengineering:ingot_hop_graphite'
+    }
+  },
+  {
+    id: 'modpack:plate_du',
+    output: 'nuclearcraft:plate_du',
+    pattern: [
+      'CBC',
+      'DAD',
+      'CBC'
+    ],
+    keys: {
+      A: 'nuclearcraft:plate_advanced',
+      B: 'nuclearcraft:uranium_238',
+      C: 'ftbmaterials:iridium_plate',
+      D: 'nuclearcraft:uranium_235'
+    }
+  },
+  {
+    id: 'modpack:hv_mixer',
+    output: 'gtceu:hv_mixer',
+    pattern: ['ABA', 'ACA', 'DED'],
+    keys: {
+      A: 'tconstruct:clear_glass',
+      B: 'ad_astra:fan',
+      C: 'nuclearcraft:motor',
+      D: 'mekanism:ultimate_control_circuit',
+      E: 'gtceu:hv_machine_hull'
+    }
+  },
+  {
+    id: 'gtceu:foundational_breaker',
+    output: 'gtceu:foundational_breaker',
+    pattern: ['   ', ' AB', '   '],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'kubejs:modular_ingot'
+    }
+  },
+  {
+    id: 'gtceu:soul_capturer',
+    output: 'gtceu:soul_capturer',
+    pattern: ['   ', ' A ', ' B '],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'kubejs:modular_ingot'
+    }    
+  },
+  {
+    id: 'gtceu:anomalous_condenser',
+    output: 'gtceu:anomalous_condenser',
+    pattern: [' B ', ' A ', '   '],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'kubejs:modular_ingot'
+    }    
   },
   {
     id: 'hostilenetworks:sim_chamber',
@@ -484,15 +596,6 @@ const shapedCrafting = [
     }
   },
   {
-    id: 'kubejs:refined_obsidian_gear',
-    output: 'kubejs:refined_obsidian_gear',
-    pattern: [' A ', 'ABA', ' A '],
-    keys: {
-      A: 'mekanism:ingot_refined_obsidian',
-      B: 'mekanism:alloy_atomic'
-    }
-  },
-  {
     id: 'tiab:time_in_a_bottle',
     output: 'tiab:time_in_a_bottle',
     pattern: ['AAA', 'BCB', 'DED'],
@@ -505,15 +608,6 @@ const shapedCrafting = [
     }
   },
   {
-    id: 'kubejs:energetic_alloy_gear',
-    output: 'kubejs:energetic_alloy_gear',
-    pattern: [' A ', 'ABA', ' A '],
-    keys: {
-      A: 'enderio:energetic_alloy_ingot',
-      B: '#forge:nuggets/dark_steel'
-    }
-  },
-  {
     id: 'projecte:transmutation_tablet',
     output: 'projecte:transmutation_tablet',
     pattern: ['ABA', 'BCB', 'ABA'],
@@ -522,13 +616,13 @@ const shapedCrafting = [
       B: 'projecte:dark_matter_block',
       C: 'projecte:transmutation_table'}
   },
-    {
-        id: 'minecraft:anvil',
-        output: 'minecraft:anvil',
-        pattern: ['AAA', ' B ', 'BBB'],
-        keys: {
-            A: '#forge:storage_blocks/steel',
-            B: darksteel
+  {
+    id: 'minecraft:anvil',
+    output: 'minecraft:anvil',
+    pattern: ['AAA', ' B ', 'BBB'],
+    keys: {
+        A: '#forge:storage_blocks/steel',
+        B: darksteel
         }
     },
     {

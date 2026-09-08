@@ -100,8 +100,8 @@ ItemEvents.tooltip(event => {
     'extrabotany:spirit_fuel': [
       Text.of('Usual method broke. Mod Dev again.').green(),
     ],
-    'minecraft:anomalous_condenser': [
-      Text.of('Similar to the other multiblock, only accept I/O through here!')
+    'gtceu:rr_anomalous_condenser': [
+      Text.of('Use the dedicated GregTech item buses and fluid/energy hatches.')
     ],
     'valoria:elemental_manipulator': [
       Text.of('Requires Charging from the 4 Cores of power').green()
@@ -114,10 +114,10 @@ ItemEvents.tooltip(event => {
       Text.of('You may want to progress more before thinking about this...').green(),
       Text.of('No one hates broken symmetry right? Oh and costly recipes.').darkRed()
     ],
-    'minecraft:foundational_breaker': [
+    'gtceu:rr_foundational_breaker': [
       Text.of('This is the controller of the multiblock.').green(),
-      Text.of('I/O only goes through the controller').green(),
-      Text.of('Controller must face North to form correctly!').blue()
+      Text.of('Use the dedicated GregTech item buses and fluid/energy hatches.').green(),
+      Text.of('Horizontal rotations are supported. Check the GregTech structure preview.').blue()
     ],
     'minecraft:smithing_table': [
       Text.of('Many of the trims were hidden due to lag. They still exist in game.').green()
@@ -131,15 +131,25 @@ ItemEvents.tooltip(event => {
     'valoria:alchemy_station_tier_1': [
       Text.of('Needs to be upgraded before use').green()
     ],
-    Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:gold"}'): [
-      Text.of('The Singularity is reusable for the gold powder').green()
-    ],
     'nuclearcraft:fission_reactor_casing': [
       Text.of('Use the universal variant for the multiblock.').green()
+    ],
+    'gtceu:hv_mixer': [
+      Text.of('More and more of Gregtech will start appearing in recipes...').green(),
+      Text.of('You are encouraged to start making the machines as you go along').green()
     ]
   }
 
-  // Why is 1.20 like this... 1.21 doesn't need this nonsense below!
+  // Extended Crafting stores every material Singularity under the same item
+  // ID and distinguishes it with the Id NBT field. Do not put Item.of(...) in
+  // the object above as a property key: that is invalid object-literal syntax
+  // and prevents this entire client script from loading.
+  const singularityTooltips = {
+    'extendedcrafting:gold': [
+      Text.of('The Singularity is reusable for the gold powder').green()
+    ]
+  }
+
   function addOnce(tooltip, line) {
     const message = line.getString()
 
@@ -162,6 +172,17 @@ ItemEvents.tooltip(event => {
 
       for (let index = 0; index < lines.length; index++) {
         addOnce(tooltip, lines[index])
+      }
+
+      if (itemId === 'extendedcrafting:singularity' && item.nbt) {
+        const singularityId = String(item.nbt.Id || '')
+        const specialLines = singularityTooltips[singularityId]
+
+        if (specialLines) {
+          for (let index = 0; index < specialLines.length; index++) {
+            addOnce(tooltip, specialLines[index])
+          }
+        }
       }
     })
   })

@@ -25,14 +25,113 @@ ServerEvents.recipes(event => {
     timeModifier: 1.0
   }).id('modpack:nuclearcraft/alloy_smelter/crystaltine')
 
+const assembler = [
+    {
+    input: [
+      {item: 'gtceu:hv_machine_hull', count: 1},
+      {item: 'industrialforegoing:common_black_hole_tank', count: 1}
+    ],
+    output: [{ item: 'gtceu:hv_input_hatch', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0,
+    outputID: 'hv_input_hatch'
+  },
+  {
+    type: 'nuclearcraft:assembler',
+    input: [
+      {item: 'gtceu:hv_machine_hull', count: 1},
+      {item: 'enderio:fluid_tank', count: 1}
+    ],
+    output: [{ item: 'gtceu:hv_output_hatch', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0,
+    outputID: 'hv_output_hatch'
+  },
+  {
+    type: 'nuclearcraft:assembler',
+    input: [
+      {item: 'gtceu:hv_machine_hull', count: 1},
+      {item: 'industrialforegoing:common_black_hole_unit', count: 1}
+    ],
+    output: [{ item: 'gtceu:hv_input_bus', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0,
+    outputID: 'hv_input_bus'
+  },
+  {
+    type: 'nuclearcraft:assembler',
+    input: [
+      {item: 'gtceu:hv_machine_hull', count: 1},
+      {item: 'mekanism:ultimate_universal_cable', count: 5},
+      {item: 'kubejs:stellarium_ingot', count: 3}
+    ],
+    output: [{ item: 'gtceu:hv_energy_input_hatch', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0,
+    outputID: 'hv_energy_input_hatch'
+  },
+  {
+    type: 'nuclearcraft:assembler',
+    input: [
+      {item: 'gtceu:hv_machine_hull', count: 1},
+      {item: 'nuclearcraft:pipe', count: 5},
+      {item: 'kubejs:stellarium_ingot', count: 3}
+    ],
+    output: [{ item: 'gtceu:hv_energy_output_hatch', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0,
+    outputID: 'hv_energy_output_hatch'
+  },
+  {
+    type: 'nuclearcraft:assembler',
+    input: [
+      {item: 'gtceu:hv_machine_hull', count: 1},
+      {item: 'ae2:chest', count: 1}
+    ],
+    output: [{ item: 'gtceu:hv_output_bus', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0,
+    outputID: 'hv_output_bus'
+  }
+]
+
+assembler.forEach(recipe=> {
   event.custom({
-    type: 'nuclearcraft:manufactory',
+    type: 'nuclearcraft:assembler',
+    input: recipe.input,
+    output: recipe.output,
+    powerModifier: recipe.powerModifier,
+    radiation: recipe.radiation,
+    timeModifier: recipe.timeModifier
+  }).id('modpack:nuclearcraft/assembler/' + recipe.outputID)
+})
+const manufactor = [
+  {
     input: [
       { item: 'kubejs:eyes2', count: 1 },
     ],
     output: [{ item: 'kubejs:seeneyes2', count: 4 }],
     powerModifier: 1.0,
     radiation: 0.0,
-    timeModifier: 1.0
-  }).id('modpack:nuclearcraft/manufactory/eyes2_dust')
+    timeModifier: 1.0,
+    outputID: 'seeneyes2'
+}
+]
+manufactor.forEach(recipe=> {
+  event.custom({
+    type: 'nuclearcraft:manufactory',
+    input: recipe.input,
+    output: recipe.output,
+    powerModifier: recipe.powerModifier,
+    radiation: recipe.radiation,
+    timeModifier: recipe.timeModifier
+  }).id('modpack:nuclearcraft/manufactory/' + recipe.outputID)
+})
+
 })
