@@ -1,0 +1,11 @@
+{
+  "type": "sunken_city:template",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "sunken_city:template",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "sunken_city:template_plains"
+    }
+  }
+}
