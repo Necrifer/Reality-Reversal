@@ -259,3 +259,6 @@
 	[<item:woot_revived:stygian_ingot>, <item:ftbmaterials:invar_rod>, <item:nuclearcraft:uranium_233>, <item:nuclearcraft:neptunium_236>, <item:valoria:elemental_crystal>, <item:nuclearcraft:neptunium_237>, <item:nuclearcraft:caesium_137_dust>, <item:ftbmaterials:invar_rod>, <item:woot_revived:stygian_ingot>], 
 	[<item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>, <item:woot_revived:stygian_ingot>]
 ]);
+<recipetype:extendedcrafting:combination>.addRecipe("maintenance_hatch", <item:gtceu:maintenance_hatch>, 100000, [
+	<item:gtceu:hv_machine_hull>, <item:thermal:machine_frame>, <item:kubejs:modular_ingot>, <item:thermal:steel_block>, <item:rftoolsbase:machine_frame>, <item:botania:rune_mana>
+]);

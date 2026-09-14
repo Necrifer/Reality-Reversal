@@ -131,12 +131,16 @@ ItemEvents.tooltip(event => {
     'valoria:alchemy_station_tier_1': [
       Text.of('Needs to be upgraded before use').green()
     ],
-    'nuclearcraft:fission_reactor_casing': [
-      Text.of('Use the universal variant for the multiblock.').green()
-    ],
     'gtceu:hv_mixer': [
       Text.of('More and more of Gregtech will start appearing in recipes...').green(),
       Text.of('You are encouraged to start making the machines as you go along').green()
+    ],
+    'gtceu:gallium_dust': [
+      Text.of('The 2 ores for this dust have been moved!').green(),
+      Text.of('Find them on Mars and Moon, and yes you will need both types!').green()
+    ],    
+    'gtceu:aluminium_dust': [
+      Text.of('Hint: 2 Macerators is all you need to start').gold(),
     ]
   }
 

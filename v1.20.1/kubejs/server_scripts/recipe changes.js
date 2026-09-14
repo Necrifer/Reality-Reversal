@@ -146,6 +146,7 @@ ServerEvents.recipes(event => {
     replace('mna:reonating_lump', 'minecraft:glow_lichen', 'kubejs:stellarium_ingot')
     replace('gtceu:hv_electic_motor', 'gtceu:magnetic_steel_rod', '#forge:rods/steel')
     replace('projecte:condenser_mk1', '#forge:gems/diamond', '#forge:dusts/diamond')
+    replace('gtceu:hv_circuit_assembler', '#gtceu:circuits/ev', '#gtceu:circuits/lv')
     replace('ad_astra:steel_tank', '#c:plates/steel', 'tconstruct:slimesteel_ingot')
     replace('ad_astra:steel_tank', '#c:steel_rods', '#forge:rods/netherite')
     replace('ad_astra:steel_engine', '#c:plates/steel', '#forge:plates/stainless_steel')
@@ -212,8 +213,18 @@ ServerEvents.recipes(event => {
     replace('rftoolsbuilder:builder', 'minecraft:bricks', 'ae2:fluix_block')
     replace('gtceu:hv_chemical_reactor', 'gtceu:polyethylene_normal_fluid_pipe', 'mekanism:ultimate_mechanical_pipe')
     replace('gtceu:hv_centrifuge', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
-    replace('gtceu:hv_centrifuge', '#gtceu:circuits/hv', 'gtceu:basic_electronic_circuit')
+    replace('gtceu:hv_centrifuge', '#gtceu:circuits/hv', 'nuclearcraft:basic_electric_circuit')
     replace('gtceu:hv_centrifuge', 'gtceu:hv_electric_motor', 'nuclearcraft:motor')
+    replace('gtceu:hv_macerator', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_electric_motor', 'gtceu:silver_double_cable', 'gtceu:silver_double_wire')
+    replace('gtceu:hv_polarizer', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
+    replace('gtceu:hv_thermal_centrifuge', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_extractor', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_bender', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_cutter', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_lathe', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_laser_engraver', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:hv_distillery', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('primalmagick:quartz_nugget', 'minecraft:quartz', 'actuallyadditions:ethetic_green_block')
     replace('packagedauto:package_component', 'minecraft:gold_ingot', twilight)
     replace('mekanism:elite_fluid_tank', iron, '#forge:ingots/end_steel')
@@ -227,6 +238,9 @@ ServerEvents.recipes(event => {
     replace('industrialforegoing:fluid_extractor', iron, darksteel)
     replace('primalmagick:mundane_wand', '#forge:rods/wooden', 'malum:hallowed_gold_ingot')
     replace('refinedstorage:machine_casing', '#forge:stones', 'bigreactors:anglesite_crystal')
+    replace('gtceu:hv_emitter', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:vacuum_freezer', '#gtceu:circuits/ev', '#gtceu:circuits/lv')
+    replace('gtceu:hv_robot_arm', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('thermal:dynamo_magmatic', iron, darksteel)
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
@@ -250,6 +264,11 @@ const shapelessCrafting = [
       inputs: ['minecraft:flint', darksteel]
     },
     {
+      id: 'modpack:glass_tube',
+      output: 'gtceu:glass_tube',
+      inputs: ['enderio:clear_glass', 'enderio:clear_glass', 'enderio:clear_glass']
+    },
+    {
         id: 'twilightforest:fiery_tears',
         output: 'twilightforest:fiery_tears',
         inputs: ['minecraft:ghast_tear', 'twilightforest:carminite']
@@ -258,6 +277,11 @@ const shapelessCrafting = [
       id: 'modpack:glint_and_steel',
       output: Item.of('astral_dimension:astral_dimension', '{Damage:0}'),
       inputs: ['kubejs:seeneyes2', 'kubejs:modular_ingot']
+    },
+    {
+      id: 'modpack:programmed_circuit',
+      output: 'gtceu:programmed_circuit',
+      inputs: ['gtceu:basic_electronic_circuit']
     }
   ];
 // Can't do any better to compact the ones below, no other options...
@@ -282,6 +306,16 @@ const shapedCrafting = [
       C: Item.of('matc:supremium_crystal', '{Damage:0}'),
       D: 'minecraft:dirt',
       E: 'minecraft:stone'
+    }
+  },
+  {
+    id: 'modpack:alloy_smelter_hv',
+    output: 'gtceu:hv_alloy_smelter',
+    pattern: ['CBC', 'BAB', 'CBC'],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'gtceu:gold_single_wire',
+      C: 'woot_revived:stygian_ingot'
     }
   },
   {
@@ -381,6 +415,16 @@ const shapedCrafting = [
         A: 'mekanism:enriched_diamond',
         D: 'ae2:calculation_processor',
         C: 'thermal:redstone_bucket'
+    }
+  },
+  {
+    id: 'modpack:smeltery_controller',
+    output: 'tconstruct:smeltery_controller',
+    pattern: ['ABA', 'BCB', 'ABA'],
+    keys: {
+      A: 'tconstruct:seared_brick',
+      B: iron,
+      C: 'minecraft:redstone_block'
     }
   },
   {

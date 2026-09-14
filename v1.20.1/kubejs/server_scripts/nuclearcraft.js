@@ -24,6 +24,27 @@ ServerEvents.recipes(event => {
     radiation: 0.0,
     timeModifier: 1.0
   }).id('modpack:nuclearcraft/alloy_smelter/crystaltine')
+  event.custom({
+    type: 'nuclearcraft:extractor',
+    input: [
+      {item: 'ad_astra:moon_stone'}
+    ],
+    output: [{fluid: 'nuclearcraft:deuterium'}],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0    
+  }).id('modpack:nuclearcraft/extractor/deuterium')
+  // NuclearCraft raw JSON uses tag keys without '#', and separate fluid arrays.
+  // Item + fluid -> item is Fluid Infuser; Fluid Enricher produces a fluid.
+  event.custom({
+    type: 'nuclearcraft:fluid_infuser',
+    input: [{ tag: 'forge:ingots/copper', count: 1 }],
+    inputFluids: [{ tag: 'c:oxygen', amount: 1200 }],
+    output: [{ item: 'gtceu:annealed_copper_ingot', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0
+  }).id('modpack:nuclearcraft/fluid_infused/annealed_copper_ingot')
 
 const assembler = [
     {
@@ -38,7 +59,6 @@ const assembler = [
     outputID: 'hv_input_hatch'
   },
   {
-    type: 'nuclearcraft:assembler',
     input: [
       {item: 'gtceu:hv_machine_hull', count: 1},
       {item: 'enderio:fluid_tank', count: 1}
@@ -50,7 +70,6 @@ const assembler = [
     outputID: 'hv_output_hatch'
   },
   {
-    type: 'nuclearcraft:assembler',
     input: [
       {item: 'gtceu:hv_machine_hull', count: 1},
       {item: 'industrialforegoing:common_black_hole_unit', count: 1}
@@ -62,7 +81,6 @@ const assembler = [
     outputID: 'hv_input_bus'
   },
   {
-    type: 'nuclearcraft:assembler',
     input: [
       {item: 'gtceu:hv_machine_hull', count: 1},
       {item: 'mekanism:ultimate_universal_cable', count: 5},
@@ -75,7 +93,6 @@ const assembler = [
     outputID: 'hv_energy_input_hatch'
   },
   {
-    type: 'nuclearcraft:assembler',
     input: [
       {item: 'gtceu:hv_machine_hull', count: 1},
       {item: 'nuclearcraft:pipe', count: 5},
@@ -88,7 +105,6 @@ const assembler = [
     outputID: 'hv_energy_output_hatch'
   },
   {
-    type: 'nuclearcraft:assembler',
     input: [
       {item: 'gtceu:hv_machine_hull', count: 1},
       {item: 'ae2:chest', count: 1}
@@ -100,7 +116,6 @@ const assembler = [
     outputID: 'hv_output_bus'
   }
 ]
-
 assembler.forEach(recipe=> {
   event.custom({
     type: 'nuclearcraft:assembler',
@@ -123,6 +138,7 @@ const manufactor = [
     outputID: 'seeneyes2'
 }
 ]
+
 manufactor.forEach(recipe=> {
   event.custom({
     type: 'nuclearcraft:manufactory',
