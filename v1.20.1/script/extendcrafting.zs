@@ -262,3 +262,34 @@
 <recipetype:extendedcrafting:combination>.addRecipe("maintenance_hatch", <item:gtceu:maintenance_hatch>, 100000, [
 	<item:gtceu:hv_machine_hull>, <item:thermal:machine_frame>, <item:kubejs:modular_ingot>, <item:thermal:steel_block>, <item:rftoolsbase:machine_frame>, <item:botania:rune_mana>
 ]);
+
+<recipetype:extendedcrafting:ender_crafter>.addShapeless("taint_block", <item:gtceu:taint_block>, 
+[<item:gtceu:taint_ingot>,<item:gtceu:taint_ingot>,<item:witherstormmod:withered_bone>,<item:witherstormmod:withered_spider_eye>,
+<item:gtceu:taint_ingot>,<item:gtceu:taint_ingot>,<item:gtceu:taint_ingot>,<item:witherstormmod:withered_flesh>,
+<item:gtceu:taint_ingot>
+]);
+<recipetype:extendedcrafting:table>.addShaped("entry_draconium", 4, <item:draconicevolution:awakened_draconium_block>, [
+	[<item:kubejs:void_sculk>, <item:primalmagick:essence_cluster_void>, <item:astral_dimension:astranite_ingot>, <item:astral_dimension:void_shards>, <item:kubejs:void_sculk>, <item:astral_dimension:void_shards>, <item:astral_dimension:astranite_ingot>, <item:primalmagick:essence_cluster_void>, <item:kubejs:void_sculk>], 
+	[<item:tinkers_advanced:activated_chromatic_steel>, <item:gtceu:blue_steel_ingot>, <item:gtceu:taint_block>, <item:spectrum:refined_azurite>, <item:gtceu:blue_steel_ingot>, <item:spectrum:refined_azurite>, <item:gtceu:taint_block>, <item:gtceu:blue_steel_ingot>, <item:tinkers_advanced:activated_chromatic_steel>], 
+	[<item:enderio:sentient_ender>, <item:gtceu:taint_block>, <item:kubejs:eyes1>, <item:gtceu:silicon_boule>, <item:gtceu:silicon_boule>, <item:gtceu:silicon_boule>, <item:kubejs:eyes1>, <item:gtceu:taint_block>, <item:immersiveengineering:component_steel>], 
+	[<item:nuclearcraft:curium_243>, <item:gtceu:blue_steel_ingot>, <item:gtceu:polyethylene_bucket>, <item:extrabotany:das_rheingold>, <item:extendedcrafting:singularity>.withTag({Id: "extendedcrafting:gaia"}), <item:extrabotany:das_rheingold>, <item:gtceu:polyethylene_bucket>, <item:gtceu:blue_steel_ingot>, <item:aether:ambrosium_shard>], 
+	[<item:astral_dimension:void_block>, <item:gtceu:taint_block>, <item:kubejs:eyes2>, <item:extendedcrafting:singularity>.withTag({Id: "extendedcrafting:crystaltine"}), <item:kubejs:containment_failure>, <item:extendedcrafting:singularity>.withTag({Id: "extendedcrafting:law"}), <item:kubejs:eyes2>, <item:gtceu:taint_block>, <item:astral_dimension:void_block>], 
+	[<item:ad_astra:desh_block>, <item:gtceu:blue_steel_ingot>, <item:gtceu:polyethylene_bucket>, <item:extrabotany:das_rheingold>, <item:extendedcrafting:singularity>.withTag({Id: "extendedcrafting:refined_glowstone"}), <item:extrabotany:das_rheingold>, <item:gtceu:polyethylene_bucket>, <item:gtceu:blue_steel_ingot>, <item:ad_astra:desh_block>], 
+	[<item:nuclearcraft:curium_243>, <item:gtceu:taint_block>, <item:kubejs:eyes1>, <item:gtceu:silicon_boule>, <item:gtceu:silicon_boule>, <item:gtceu:silicon_boule>, <item:kubejs:eyes1>, <item:gtceu:taint_block>, <item:aether:ambrosium_shard>], 
+	[<item:enderio:sentient_ender>, <item:gtceu:blue_steel_ingot>, <item:gtceu:taint_block>, <item:spectrum:refined_azurite>, <item:gtceu:blue_steel_ingot>, <item:spectrum:refined_azurite>, <item:gtceu:taint_block>, <item:gtceu:blue_steel_ingot>, <item:immersiveengineering:component_iron>], 
+	[<item:kubejs:void_sculk>, <item:nuclearcraft:curium_245>, <item:divinerpg:oxdrite_ingot>, <item:astral_dimension:void_shards>, <item:kubejs:void_sculk>, <item:astral_dimension:void_shards>, <item:divinerpg:oxdrite_ingot>, <item:nuclearcraft:curium_245>, <item:kubejs:void_sculk>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("wyvern_core", 3, <item:draconicevolution:wyvern_core> * 2, [
+	[<item:gtceu:taint_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:draconicevolution:draconium_core>, <item:minecraft:air>, <item:minecraft:air>, <item:gtceu:taint_ingot>], 
+	[<item:minecraft:air>, <item:gtceu:taint_ingot>, <item:draconicevolution:draconium_core>, <item:minecraft:end_crystal>, <item:draconicevolution:draconium_core>, <item:gtceu:taint_ingot>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:draconicevolution:draconium_core>, <item:draconicevolution:draconium_block>, <item:dog:draconic_soul_fragment>, <item:draconicevolution:draconium_block>, <item:draconicevolution:draconium_core>, <item:minecraft:air>], 
+	[<item:draconicevolution:draconium_core>, <item:minecraft:end_crystal>, <item:dog:draconic_soul_fragment>, <item:draconicevolution:dragon_heart>, <item:dog:draconic_soul_fragment>, <item:minecraft:end_crystal>, <item:draconicevolution:draconium_core>], 
+	[<item:minecraft:air>, <item:draconicevolution:draconium_core>, <item:draconicevolution:draconium_block>, <item:dog:draconic_soul_fragment>, <item:draconicevolution:draconium_block>, <item:draconicevolution:draconium_core>, <item:minecraft:air>], 
+	[<item:minecraft:air>, <item:gtceu:taint_ingot>, <item:draconicevolution:draconium_core>, <item:minecraft:end_crystal>, <item:draconicevolution:draconium_core>, <item:gtceu:taint_ingot>, <item:minecraft:air>], 
+	[<item:gtceu:taint_ingot>, <item:minecraft:air>, <item:minecraft:air>, <item:draconicevolution:draconium_core>, <item:minecraft:air>, <item:minecraft:air>, <item:gtceu:taint_ingot>]
+]);
+<recipetype:extendedcrafting:table>.addShaped("ultimate_farm", 1, <item:tinymobfarm:ultimate_farm>, [
+	[<item:productivebees:configurable_honeycomb>.withTag({EntityTag: {type: "productivebees:magentite"}}), <item:draconicevolution:draconium_core>, <item:projectexpansion:white_fuel>], 
+	[<item:kubejs:law_ingot>, <item:kubejs:modular_ingot>, <item:kubejs:law_ingot>], 
+	[<item:productivebees:configurable_honeycomb>.withTag({EntityTag: {type: "productivebees:magentite"}}), <item:draconicevolution:draconium_core>, <item:projectexpansion:white_fuel>]
+]);

@@ -31,6 +31,13 @@ StartupEvents.registry('item', event => {
     .displayName('Ingots of Law')
     .tag('forge:ingots')
 
+  event.create('containment_failure')
+    .tooltip('Be careful how you handle this.')
+    .displayName('§kContainment§r Failure')
+    .glow(true)
+    .fireResistant(true)
+    .tag('forge:arcana')
+  
   event.create('stellarium_ingot')
     .displayName('Stellarium Ingot')
     .tooltip('It is recommended to make this in large batches.')
