@@ -15,7 +15,9 @@ ServerEvents.recipes(event => {
         'mekanismgenerators:heat_generator',
         'projex:arcane_tablet',
       ]
-    const removalin = []
+    const removalin = [
+      'mysticalagriculture:soulium_seed_base'
+    ]
 
   removalin.forEach(removalin => {
     event.remove({input: removalin})
@@ -33,6 +35,7 @@ ServerEvents.recipes(event => {
     'mysticalagriculture:inferium_farmland',
     'matc:crystals/prudentium',
     'matc:crystals/inferium',
+    'forestry:sturdy_casing',
     'draconicevolution:components/draconium_core',
     'thermal:machine_smelter',
     'matc:crystals/tertium',
@@ -47,9 +50,18 @@ ServerEvents.recipes(event => {
     'divinerpg:shaped/arcana_portal_frame',
     'mysticalagriculture:machine_frame',
     'thermal:fire_charge/lumium_ingot_4',
+    'aether:skyroot_beehive',
+    'minecraft:beehive',
     'woot_revived:stygian_dust',
     'thermal:lumium_dust_4',
     'rftoolsbase:dimensionalshard',
+    'tinymobfarm:wood_farm',
+    'tinymobfarm:stone_farm',
+    'tinymobfarm:iron_farm',
+    'tinymobfarm:gold_farm',
+    'tinymobfarm:diamond_farm',
+    'tinymobfarm:emerald_farm',
+    'tinymobfarm:inferno_farm',
     'alltheores:lumium_dust_from_alloy_blending',
     'bigreactors:reactor/reinforced/casing',
     'bigreactors:reactor/reinforced/casing_upgrade',
@@ -68,6 +80,7 @@ ServerEvents.recipes(event => {
     'theabyss:jungle_planks_rcp_2', //This one is due to the mod author's negligence
     'oritech:crafting/metalbeams',
     'nuclearcraft:coil_copper',
+    'minecraft:creaking_heart',
     'nuclearcraft:plate_basic',
     'nuclearcraft:plate_basic2',
     'divinerpg:compat/projecte/conversions/anthracite_from_coal',
@@ -93,9 +106,13 @@ ServerEvents.recipes(event => {
     'crystalcraft_unlimited_java:crafting_fusion_11',
     'oritech:compat/immersiveengineering/alloying/adamant',
     'oritech:compat/immersiveengineering/arcalloying/adamant',
+    'avaritia:neutron_compressor',
     'oritech:crafting/alloy/adamant',
     'minecraft:ender_eye',
+    'productivebees/nests/beehive',
     'dog:cosmic_worm',
+    'mysticalagriculture:infusion_pedestal',
+    'mysticalagriculture:infusion_altar',
     'nuclearcraft:fission_reactor_casing',
     'thermal:fire_charge/enderium_ingot_2',
     'thermal:enderium_dust_2',
@@ -114,14 +131,23 @@ ServerEvents.recipes(event => {
     'botania:apothecary_default',
     'mysticalagriculture:prosperity_seed_base',
     'oritech:crafting/core2alt',
+    'draconicevolution:machines/basic_crafting_injector',
     'ad_astra:nasa_workbench',
+    'tinymobfarm:ultimate_farm',
     'mysticalagriculture:soulium_seed_base',
     'oritech:crafting/biogen',
     'divinerpg:compat/projecte/conversions/oxdrite_ingot',
     'divinerpg:compat/projecte/conversions/shadow_bar_from_ingots',
     'divinerpg:shaped/snow_globe',
     'bswb:command_block',
-    'nuclearcraft:manufactory/ender_pearl'
+    'draconicevolution:components/wyvern_core',
+    'jei:/mekanismgenerators/rotary/deuterium',
+    'gtceu:centrifuge/hydrogen_separation',
+    'gtceu:centrifuge/ender_air_separation',
+    'nuclearcraft:manufactory/ender_pearl',
+    'productivebees:nests/beehive',
+    'cataclysm:flame_eye',
+    'toomanyrecipeviewers:/cataclysm/flame_eye'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
@@ -142,6 +168,10 @@ ServerEvents.recipes(event => {
     replace('gtceu:hv_extractor', 'gtceu:tempered_glass', 'enderio:clear_glass')
     replace('gtceu:hv_extractor', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
     replace('nuclearcraft:actuator', 'minecraft:copper_ingot', '#forge:plates/copper')
+    replace('productivebees:bottler', iron, twilight)
+    replace('productivebees:gene_indexer', iron, twilight)
+    replace('productivebees:catcher', iron, twilight)
+    replace('productivebees:catcher', 'minecraft:dispenser', 'actuallyadditions:dropper')
     replace('mekanism:laser','mekanism:alloy_reinforced', 'actuallyadditions:empowered_diamatine_crystal')
     replace('mna:reonating_lump', 'minecraft:glow_lichen', 'kubejs:stellarium_ingot')
     replace('gtceu:hv_electic_motor', 'gtceu:magnetic_steel_rod', '#forge:rods/steel')
@@ -155,10 +185,16 @@ ServerEvents.recipes(event => {
     replace('expatternprovider:ex_molecular_assembler', 'ae2:engineering_processor', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:eden"}'))
     replace('projecte:condenser_mk1', 'minecraft:obsidian', 'enderio:reinforced_obsidian_block')
     replace('projectexpansion:basic_emc_link', 'projecte:condenser_mk1', 'projecte:condenser_mk2')
+    replace('draconicevolution:crafting_core', 'minecraft:diamond', )
     replace('ae2:interface', iron, twilight)
     replace('minecraft:blast_furnace', iron, steel)
     replace('nuclearcraft:motor', 'minecraft:gold_nugget', 'malum:hallowed_gold_ingot')
     replace('nuclearcraft:motor', iron, darksteel)
+    replace('productivebees:nest_locator', "minecraft:iron_bars", 'enderio:dark_steel_bars')
+    replace('productivebees:nest_locator', 'minecraft:gold_nugget', 'malum:hallowed_gold_nugget')
+    replace('productivebees:incubator', iron, twilight)
+    replace('productivebees:incubator', "minecraft:hay_block", 'botania:pure_daisy')
+    replace('productivebees:gene_indexer', 'minecraft:comparator', 'actuallyadditions:empowered_restonia_crystal')
     replace('ae2:me_p2p_tunnel', iron, twilight)
     replace('mining_dimension:teleporter', '#minecraft:planks', 'cyclic:eye_redstone')
     replace('minecraft:crafter', iron, darksteel)
@@ -176,6 +212,7 @@ ServerEvents.recipes(event => {
     replace('thermal:dynamo_stirling', iron, '#forge:ingots/nickel')
     replace('ae2:pattern_provider', iron, twilight)
     replace('ae2:crafting_unit', iron, twilight)
+    replace('draconicevolution:energy_core', 'draconicevolution:wyvern_core', 'mekanism:ultimate_energy_cube')
     replace('ae2:chest', iron, "#forge:ingots/dark_steel")
     replace('bigreactors:basic_reactorcasing', 'minecraft:iron_ingot', 'minecraft:barrier')
     replace('draconicevolution:particle_generator', 'minecraft:redstone_block', 'enderio:redstone_alloy_grinding_ball')
@@ -199,10 +236,6 @@ ServerEvents.recipes(event => {
     replace('advanced_ae:small_adv_pattern_provider', 'minecraft:ender_pearl', 'enderio:ender_crystal_powder')
     replace('thermal:dynamo_stirling', '#forge:gears/iron', '#forge:gears/steel')
     replace('thermal:dynamo_stirling', '#forge:stone', "#forge:storage_blocks/copper")
-    replace('mysticalagriculture:infusion_altar', 'minecraft:gold_ingot', 'valoria:nature_ingot'),
-    replace('mysticalagriculture:infusion_altar', 'minecraft:red_wool', 'divinerpg:torridite_ingot')
-    replace('mysticalagriculture:infusion_pedestal', 'minecraft:gold_ingot', 'divinerpg:aquatic_ingot')
-    replace('mysticalagriculture:infusion_pedestal', 'minecraft:red_wool', 'voidminers:rubetine')
     replace('mekanism:basic_fluid_tank', iron, steel)
     replace('mekanism:advanced_fluid_tank', iron, darksteel)
     replace('thermal:machine_refinery', 'minecraft:copper_ingot', twilight)
@@ -220,6 +253,7 @@ ServerEvents.recipes(event => {
     replace('gtceu:hv_polarizer', 'gtceu:gold_single_cable', 'gtceu:gold_single_wire')
     replace('gtceu:hv_thermal_centrifuge', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:hv_extractor', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('gtceu:terminal', 'gtceu:wrought_iron_plate', '#c:plates/steel')
     replace('gtceu:hv_bender', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:hv_cutter', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:hv_lathe', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
@@ -241,6 +275,7 @@ ServerEvents.recipes(event => {
     replace('gtceu:hv_emitter', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:vacuum_freezer', '#gtceu:circuits/ev', '#gtceu:circuits/lv')
     replace('gtceu:hv_robot_arm', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
+    replace('resourcestrees:water_essence', 'minecraft:clay_ball', 'botania:rune_water')
     replace('thermal:dynamo_magmatic', iron, darksteel)
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
@@ -264,6 +299,11 @@ const shapelessCrafting = [
       inputs: ['minecraft:flint', darksteel]
     },
     {
+      id: 'modpack:wizard_wand_gem',
+      output: 'primalmagick:wizard_wand_gem_item',
+      inputs: ['#primalmagick:essences/terrestrial_crystals', 'minecraft:diamond']
+    },
+    {
       id: 'modpack:glass_tube',
       output: 'gtceu:glass_tube',
       inputs: ['enderio:clear_glass', 'enderio:clear_glass', 'enderio:clear_glass']
@@ -282,7 +322,107 @@ const shapelessCrafting = [
       id: 'modpack:programmed_circuit',
       output: 'gtceu:programmed_circuit',
       inputs: ['gtceu:basic_electronic_circuit']
-    }
+    },
+    {
+      id: 'modpack:primalmagick/earth_rune',
+      output: 'primalmagick:rune_earth',
+      inputs: ['botania:rune_earth']
+    },
+    {
+      id: 'modpack:primalmagick/sea_rune',
+      output: 'primalmagick:rune_sea',
+      inputs: ['botania:rune_water']
+    },
+    {
+      id: 'modpack:primalmagick/sun_rune',
+      output: 'primalmagick:rune_sun',
+      inputs: ['botania:rune_fire']
+    },
+    {
+      id: 'modpack:primalmagick/sky_rune',
+      output: 'primalmagick:rune_sky',
+      inputs: ['botania:rune_air']
+    },
+    {
+      id: 'modpack:primalmagick/moon_rune',
+      output: 'primalmagick:rune_moon',
+      inputs: ['spectrum:moonstone_shard']
+    },
+    {
+      id: 'modpack:primalmagick/blood_rune',
+      output: 'primalmagick:rune_blood',
+      inputs: ['divinerpg:bloodgem']
+    },
+    {
+      id: 'modpack:primalmagick/infernal_rune',
+      output: 'primalmagick:rune_infernal',
+      inputs: ['valoria:infernal_ingot']
+    },
+    {
+      id: 'modpack:primalmagick/void_rune',
+      output: 'primalmagick:rune_void',
+      inputs: ['astral_dimension:void_gem']
+    },
+    {
+      id: 'modpack:primalmagick/hallowed_rune',
+      output: 'primalmagick:rune_hallowed',
+      inputs: ['botania:quartz_sunny']
+    },
+    {
+      id: 'modpack:primalmagick/absorb_rune',
+      output: 'primalmagick:rune_absorb',
+      inputs: ['botania:rune_gluttony']
+    },
+    {
+      id: 'modpack:primalmagick/dispel_rune',
+      output: 'primalmagick:rune_dispel',
+      inputs: ['botania:rune_winter']
+    },
+    {
+      id: 'modpack:primalmagick/project_rune',
+      output: 'primalmagick:rune_project',
+      inputs: ['botania:rune_summer']
+    },
+    {
+      id: 'modpack:primalmagick/summon_rune',
+      output: 'primalmagick:rune_summon',
+      inputs: ['primalmagick:ritual_altar']
+    },
+    {
+      id: 'modpack:primalmagick/area_rune',
+      output: 'primalmagick:rune_area',
+      inputs: ['malum:runewood_totem_base']
+    },
+    {
+      id: 'modpack:primalmagick/creature_rune',
+      output: 'primalmagick:rune_creature',
+      inputs: ['minecraft:porkchop']
+    },
+    {
+      id: 'modpack:primalmagick/item_rune',
+      output: 'primalmagick:rune_item',
+      inputs: ['minecraft:stone_slab']
+    },
+    {
+      id: 'modpack:primalmagick/self_rune',
+      output: 'primalmagick:rune_self',
+      inputs: ['tconstruct:clear_glass']
+    },
+    {
+      id: 'modpack:primalmagick/insight_rune',
+      output: 'primalmagick:rune_insight',
+      inputs: ['botania:rune_mana']
+    },
+    {
+      id: 'modpack:primalmagick/power_rune',
+      output: 'primalmagick:rune_power',
+      inputs: ['aoa3:energy_rune']
+    },
+    {
+      id: 'modpack:primalmagick/grace_rune',
+      output: 'primalmagick:rune_grace',
+      inputs: ['cyclic:peace_candle']
+    },
   ];
 // Can't do any better to compact the ones below, no other options...
 const shapedCrafting = [
@@ -294,6 +434,53 @@ const shapedCrafting = [
       A: 'enderio:clear_glass',
       B: 'ae2:certus_quartz_dust',
       C: 'dimdoors_clod'
+    }
+  },
+  {
+    id: 'modpack:unattuned_rune',
+    output: 'primalmagick:rune_unattuned',
+    pattern: ['AAA', 'ABA', 'AAA'],
+    keys: {
+      A: 'primalmagick:marble_raw',
+      B: 'twilightforest:castle_brick'
+    }
+  },
+  {
+    id: 'modpack:smoked_marble',
+    output: 'primalmagick:marble_smoked',
+    pattern: ['BBB', 'BAB', 'BBB'],
+    keys: {
+      A: 'immersiveengineering:coal_coke',
+      B: 'primalmagick:marble_raw'
+    }
+  },
+  {
+    id: 'modpack:purpur_wand_core',
+    output: 'primalmagick:purpur_wand_core_item',
+    pattern: ['AB ', 'BA ', '   '],
+    keys: {
+      A: 'astraldimension:void_gem',
+      B: 'minecraft:purpur_block'
+    }
+  },
+  {
+    id: 'modpack:obsidian_staff_core',
+    output: 'primalmagick:obsidian_staff_core_item',
+    pattern: [' AB', 'ABA', 'BA '],
+    keys: {
+      A: 'primalmagick:essence_shard_earth',
+      B: 'cyclic:gem_obsidian'
+    },
+  },
+  {
+    id: 'modpack:beehive',
+    output: 'minecraft:beehive',
+    pattern: ['DCD', 'BAB', 'DCD'],
+    keys: {
+      A: 'malum:sacred_spirit',
+      B: '#forge:honeycombs',
+      C: '#minecraft:planks',
+      D: 'nasturesaura:gold_powder'
     }
   },
   {
@@ -358,22 +545,50 @@ const shapedCrafting = [
     }
   },
   {
+    id: 'modpack:dim_tear',
+    output: 'gtceu:dim_tear',
+    pattern: ['B  ', ' A ', '   '],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'kubejs:modular_ingot'
+    }
+  },
+  {
+    id: 'modpack:forestry/sturdy_casing',
+    output: 'forestry:sturdy_machine',
+    pattern: ['BBB', 'BAB', 'BBB'],
+    keys: {
+      A: twilight,
+      B: "#c:ingots/bronze"
+    }
+  },
+  {
     id: 'modpack:radiation_cleanser',
     output: 'gtceu:radiation_cleanser',
     pattern: ['   ', ' AC', '  B'],
     keys: {
-      A: 'gtceu:hv_energy_input_hatch',
+      A: 'gtceu:hv_machine_hull',
       B: 'nuclearcraft:uranium_238',
       C: 'kubejs:modular_ingot'
     }
   },
   {
-    id: 'modpack:hv_assembler',
-    output: 'gtceu:hv_assembler',
-    pattern: [' B ', ' A ', 'EBE'],
+    id: 'modpack:taint_replicant',
+    output: 'gtceu:taint_replicant',
+    pattern: ['   ', ' A ', '  B'],
     keys: {
       A: 'gtceu:hv_machine_hull',
-      B: 'ae2:logic_processor'
+      B: 'kubejs:modular_ingot'
+    }
+  },
+  {
+    id: 'modpack:fusion_core',
+    output: 'draconicevolution:crafting_core',
+    pattern: ['BCB', 'CAC', 'BCB'],
+    keys: {
+      A: 'draconicevolution:dragon_heart',
+      B: 'draconicevolution:draconium_core',
+      C: 'mysticalagradditions:dragon_scale'
     }
   },
   {
