@@ -1,4 +1,4 @@
-// Boss arenas: disallow new Mob Crusher placements for all Cataclysm boss dimensions
+// Blocks placement of Mob Crusher in all Cataclysm dimensions. No cheesing!
 
 BlockEvents.placed('industrialforegoing:mob_crusher', function (event) {
   // Retain an exact check: an unresolved filtered ID can otherwise match all blocks.
