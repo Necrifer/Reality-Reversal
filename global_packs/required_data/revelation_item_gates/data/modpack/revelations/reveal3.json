@@ -1,9 +1,0 @@
-{
-  "block_states": {
-    "astral_dimension:glowing_obsidian": "minecraft:obsidian"
-  },
-  "items": {
-    "Item.of('astral_dimension:astral_dimension', '{Damage:0}')": "minecraft:redstone"
-  },
-  "advancement": "modpack:seen"
-}
