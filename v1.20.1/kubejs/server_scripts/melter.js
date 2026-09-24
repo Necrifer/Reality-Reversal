@@ -10,21 +10,21 @@ ServerEvents.recipes(event => {
         }]
         },
         {
-            input: [{
-                item: 'tconstruct:blaze_head'
-            }],
-            outputFluids: [{
-                amount: 144,
-                fluid: 'tconstruct:blazing_blood'
-            }]
+        input: [{
+            item: 'tconstruct:blaze_head'
+        }],
+        outputFluids: [{
+            amount: 144,
+            fluid: 'tconstruct:blazing_blood'
+        }]
         },
         {
-            intput: [{
+        input: [{
                 item: 'minecraft:blaze_rod'
             }],
-            outputFluids: [{
-                amount:144,
-                fluid: 'tconstruct:blazing_blood'
+        outputFluids: [{
+            amount:144,
+            fluid: 'tconstruct:blazing_blood'
             }]
         }
     ]

@@ -1,4 +1,4 @@
-// All pack tooltips are handled by one advanced callback.
+// Pack tooltips use one advanced callback per configured item.
 //
 // Some client reload paths can leave an older callback registered. Before a
 // line is added, addOnce() removes any existing copies with the same visible
@@ -78,9 +78,6 @@ ItemEvents.tooltip(event => {
     'mysticalagriculture:master_infusion_crystal': [
       Text.of('Things always comes with a price.').gold()
     ],
-    'extendedcrafting:singularity': [
-      Text.of('Did you think because of EMC we will let you off?').red()
-    ],
     'infinite_abyss:fourth_layer_deepstone':[
       Text.of('Use this to access the next layer. Bad labelling.').aqua()
     ],
@@ -141,13 +138,63 @@ ItemEvents.tooltip(event => {
     ],    
     'gtceu:aluminium_dust': [
       Text.of('Hint: 2 Macerators is all you need to start').gold(),
+    ],
+    'ad_astra:raw_desh': [
+      Text.of('Ask around, some of the enemies should have what you need...').gold(),
+    ],
+    'gtceu:dim_tear': [
+      Text.of('Right click the Dimensional Rift with the relevant items to bring you to the intended destination.').blue(),
+    ],
+    'kubejs:containment_failure': [
+      Text.of('Right click on the Dimensional Rift to enter Sunken City.').blue(),
+      Text.of('Consumed on use.').green(),
+    ],
+    'gtceu:kanthal_coil': [
+      Text.of('Find the first 16 in Sunken City').green()
+    ],
+    'kubejs:taint_ore': [
+      Text.of('The madness reached the Heavens first, to ensure God does not interfere').green(),
+      Text.of('The Golden Trees should tell you a story.').green()
+    ],
+    'aether:golden_oak_log': [
+      Text.of('God used to plant us around as saplings').gold(),
+      Text.of('However, when madness came, God became only a husk of the grandness.').gold(),
+      Text.of('Why not pay hell a visit? The Fallen Ones may give you more in their fortress.').gold()
+    ],
+    'cataclysm:flame_eye': [
+      Text.of('Boss fight. Make sure to prepare a way out too.').red(),
+      Text.of('Structure is randomly scattered, look around a bit.').green()
+    ],
+    'astral_dimension:astral_eye': [
+      Text.of('Have you tried clicking?').blue(),
+      Text.of('Clicking what? Something to fuel the flames?').red()
+    ],
+    'cataclysm:burning_ashes': [
+      Text.of('Right click the Altar of Fire to summon the boss')
+    ],
+    'cataclysm:ignitium_ingot': [
+      Text.of('I long to see them again.').black(),
+      Text.of('Please, return me with others, and with the failures, we can rise again...').gold()
+    ],
+    'bedrockminer:bedrock_chunk': [
+      Text.of('Get bedrock through Neutronium Compressor').green()
+    ],
+    'dimdoors:leak_bucket': [
+      Text.of ('Water converts to leak when near Reality Sponge')
+    ],
+    'draconicevolution:dragon_heart': [
+      Text.of ('Woot is your solution').green()
+    ],
+    'kubejs:chaos_infused': [
+      Text.of ('This is unbreakable if placed, read the quest carefully on what to do!').red()
+    ],
+    'naturesaura:birth_spirit': [
+      Text.of('Obtained when breeding animals in areas with high aura')
     ]
+
   }
 
-  // Extended Crafting stores every material Singularity under the same item
-  // ID and distinguishes it with the Id NBT field. Do not put Item.of(...) in
-  // the object above as a property key: that is invalid object-literal syntax
-  // and prevents this entire client script from loading.
+  // These keys are Singularity NBT Id values, not item registry IDs.
   const singularityTooltips = {
     'extendedcrafting:gold': [
       Text.of('The Singularity is reusable for the gold powder').green()
@@ -170,6 +217,8 @@ ItemEvents.tooltip(event => {
   // Building the table above does not register any tooltip by itself. Attach
   // one dynamic handler to every configured item so the de-duplication step is
   // run against the final live tooltip assembled by Minecraft and other mods.
+
+  // Why on 1.20 is everything THIS COMPLICATED
   Object.keys(tooltips).forEach(itemId => {
     event.addAdvanced(itemId, (item, advanced, tooltip) => {
       const lines = tooltips[itemId]

@@ -24,6 +24,13 @@ StartupEvents.registry('item', event => {
     .displayName('§4Shattered Eyes')
     .glow(true)
     .fireResistant(true)
+  
+  event.create('eyes3')
+    .tooltip('§2With knowledge, to expand, to further your defence and strength.')
+    .color(0, 0x27F53C)
+    .displayName('§2Eyes of The High Priestess')
+    .fireResistant(true)
+    .tag('forge:arcana')
 
   event.create('law_ingot')
     .tooltip('§kTo understand.')

@@ -246,7 +246,7 @@ var groups=[
             "count": 16
           },
           {
-            "item": "aoa3:archaic_token",
+            "item": "aoa3:raw_charger_shank",
             "count": 5
           },
           {
@@ -276,6 +276,40 @@ var groups=[
         ],
         "gtId": "modpack:gt_port/modpack/easier_botania",
         "EUt": 1920
+      },
+      {
+        "id": "modpack:dragonsteel",
+        "duration": 600,
+        "inputs": [
+          {
+            "item": "mysticalagradditions:dragon_scale",
+            "count": 3
+          },
+          {
+            "item": "valoria:elemental_crystal",
+            "count": 1
+          },
+          {
+            "item": "aoa3:ghastly_ingot",
+            "count": 5
+          }
+        ],
+        "outputs": [
+          {
+            "item": "iceandfire:dragonsteel_ice_ingot",
+            "output": 1
+          },
+          {
+            "item": "iceandfire:dragonsteel_fire_ingot",
+            "output": 1
+          },
+          {
+            "item": "iceandfire:dragonsteel_lightning_ingot",
+            "output": 1
+          }
+        ],
+        "gtId": "modpack:gt_port/modpack/easier_dragonsteel",
+        "EUt": 1920        
       },
       {
         "id": "minecraft:foundation",

@@ -31,7 +31,12 @@ ServerEvents.recipes(event => {
     event.recipes.botania.runic_altar("botania:rune_fire", [Item.of('hostilenetworks:prediction', '{data_model:{id:"hostilenetworks:blaze"}}').weakNBT(), 'tconstruct:blazewood', 'twilightforest:fiery_block', 'malum:infernal_spirit', 'tconstruct:blazing_blood_bucket'], 5200)
     event.recipes.botania.runic_altar("botania:rune_water", ['minecraft:water_bucket', 'divinerpg:aquatic_ingot', 'minecraft:heart_of_the_sea', 'primalmagick:essence_shard_sea', 'projecte:evertide_amulet'], 5200)
     event.recipes.botania.runic_altar("botania:rune_winter", ['botania:rune_earth', 'botania:rune_water', 'divinerpg:frozen_stone', 'minecraft:blue_ice', Item.of('aether:ice_ring', '{Damage:0}')], 8000)
+    event.recipes.botania.petal_apothecary("botania:orechid", ["draconicevolution:awakened_draconium_ingot", 'botania:rune_pride', 'botania:rune_greed', '#botania:petals/yellow', '#botania:petals/gray', '#botania:petals/green', '#botania:petals/red', 'kubejs:taint_ore'])
+    event.recipes.botania.petal_apothecary("botania:orechid_ignem", ["botania:orechid", 'botania:rune_pride', 'botania:rune_greed', '#botania:petals/white', '#botania:petals/pink', '#botania:petals/red', 'theabyss:abyss_powder'])
     // 1.20 Botania recipe order: output, input, mana, optional catalyst.
     // This recipe has no catalyst, so only the first three arguments are used.
     event.recipes.botania.mana_infusion('callfromthedepth_:energypowder', 'minecraft:blaze_powder', 200)
+    event.recipes.botania.elven_trade(["naturesaura:token_joy"], "aether:ambrosia")
+    event.recipes.botania.elven_trade(["naturesaura:token_fear"], "aether:golden_oak_log")
+
 })

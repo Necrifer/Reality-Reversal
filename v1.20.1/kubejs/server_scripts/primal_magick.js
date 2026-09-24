@@ -135,7 +135,7 @@ ServerEvents.recipes(event => {
 
   const arcaneCraftingShaped = [
   {
-    recipeId: 'ars_nouveau:novice_spell_book',
+    recipeId: 'mysticalagriculture:prudentium_farmland',
     mana: {
       hallowed: 25,
       earth: 25,

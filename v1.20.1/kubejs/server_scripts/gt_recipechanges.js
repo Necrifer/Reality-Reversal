@@ -117,4 +117,11 @@ ServerEvents.recipes(function(event) {
     .itemOutputs('dimdoors:rift_pearl')
     .duration(200)
     .EUt(256)
+  event.recipes.gtceu.lathe('modpack:taint_rod/lathe')
+    .itemInputs([
+      {item:'gtceu:taint_ingot', amount: 1},
+    ])
+    .itemOutputs([{item:'gtceu:taint_rod', amount: 2}])
+    .duration(100)
+    .EUt(256)
 })

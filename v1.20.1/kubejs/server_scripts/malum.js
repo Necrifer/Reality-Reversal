@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
       spirit('aqueous', 2)
     ],
     extra_items: [
-      sizedItem('nuclearcraft:stainless_steel_ingot', 3),
+      sizedItem('malum:soul_stained_steel_ingot', 3),
       sizedItem('nuclearcraft:tough_alloy_ingot', 2)
     ]
   })

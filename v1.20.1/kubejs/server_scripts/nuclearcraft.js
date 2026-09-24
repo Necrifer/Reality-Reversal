@@ -3,6 +3,13 @@ ServerEvents.recipes(event => {
   // The Glowing Mushroom belongs to the Fluid Enricher recipe that produces
   // RadAway fluid. Filtering by the RadAway item targets the later Fluid
   // Infuser recipe instead, whose item input is Bioplastic, so nothing matches.
+  const idRemoval = [
+    'nuclearcraft:supercooler/condensate_water',
+    'nuclearcraft:fluid_enricher/dusts_coal-water'
+  ]
+  idRemoval.forEach(idRemoval => {
+    event.remove({id: idRemoval})
+  })
   event.replaceInput(
     { id: 'nuclearcraft:fluid_enricher/glowing_mushroom-ethanol' },
     'nuclearcraft:glowing_mushroom',
@@ -24,18 +31,27 @@ ServerEvents.recipes(event => {
     radiation: 0.0,
     timeModifier: 1.0
   }).id('modpack:nuclearcraft/alloy_smelter/crystaltine')
+
   event.custom({
     type: 'nuclearcraft:extractor',
     input: [
       {item: 'ad_astra:moon_stone'}
     ],
-    output: [{fluid: 'nuclearcraft:deuterium'}],
+    outputFluids: [{fluid: 'nuclearcraft:deuterium', amount: 1200}], 
     powerModifier: 1.0,
     radiation: 0.0,
     timeModifier: 1.0    
-  }).id('modpack:nuclearcraft/extractor/deuterium')
-  // NuclearCraft raw JSON uses tag keys without '#', and separate fluid arrays.
-  // Item + fluid -> item is Fluid Infuser; Fluid Enricher produces a fluid.
+  }).id('modpack:nuclearcraft/extractor/moon_stone')
+  event.custom({
+    type: 'nuclearcraft:extractor',
+    input: [
+      {item: 'ad_astra:moon_sand'}
+    ],
+    outputFluids: [{fluid: 'nuclearcraft:deuterium', amount: 1200}],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0    
+  }).id('modpack:nuclearcraft/extractor/moon_sand')
   event.custom({
     type: 'nuclearcraft:fluid_infuser',
     input: [{ tag: 'forge:ingots/copper', count: 1 }],
@@ -45,6 +61,25 @@ ServerEvents.recipes(event => {
     radiation: 0.0,
     timeModifier: 1.0
   }).id('modpack:nuclearcraft/fluid_infused/annealed_copper_ingot')
+
+  event.custom({
+    type: 'nuclearcraft:fluid_infuser',
+    input: [{ item: 'gtceu:chaos_infused_block', count: 1 }],
+    inputFluids: [{ fluid: 'nuclearcraft:technical_water', amount: 200 }],
+    output: [{ item: 'gtceu:chaos_infused_ingot', count: 9 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0
+  }).id('modpack:nuclearcraft/fluid_infused/chaos_infused_ingot')
+
+  event.custom({
+    type: 'nuclearcraft:pressurizer',
+    input: [{ item: 'gtceu:chaos_infused_ingot', count: 1 }],
+    output: [{ item: 'gtceu:chaos_infused_plate', count: 1 }],
+    powerModifier: 1.0,
+    radiation: 0.0,
+    timeModifier: 1.0
+  }).id('modpack:nuclearcraft/fluid_infused/chaos_infused_plate')
 
 const assembler = [
     {

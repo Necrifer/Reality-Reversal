@@ -29,6 +29,7 @@ ServerEvents.recipes(event => {
     'ae2:network/blocks/inscribers',
     'botania:runic_altar/earth',
     'botania:runic_altar/fire',
+    'avaritia:eternal_singularity',
     'botania:runic_altar/water',
     'botania:runic_altar/winter',
     'mysticalagriculture:inferium_farmland_till',
@@ -94,10 +95,14 @@ ServerEvents.recipes(event => {
     'extendedcrafting:crystaltine_ingot',
     'botania:petal_apothecary',
     'matc:crystals/supremium',
+    'botania:petal_apothecary/orechid',
     'nuclearcraft:centrifuge/irradiated_lithium',
     'nuclearcraft:electrolyzer/heavy_water',
     'nuclearcraft:centrifuge/technical_water',
     'matc:crystals/imperium',
+    'draconicevolution:components/awakened_core',
+    'draconicevolution:components/chaotic_core',
+    'productivebees:draconicevolution/chaos_bee',
     'matc:crystals/master_infusion_crystal',
     'mekanism:energy_tablet',
     'astral_dimension:dustandsteelrecipe',
@@ -277,6 +282,23 @@ ServerEvents.recipes(event => {
     replace('gtceu:hv_robot_arm', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('resourcestrees:water_essence', 'minecraft:clay_ball', 'botania:rune_water')
     replace('thermal:dynamo_magmatic', iron, darksteel)
+
+  // Productive Bees uses nested chance outputs; replace this exact recipe explicitly.
+  event.remove({id: 'productivebees:centrifuge/draconicevolution/honeycomb_chaos'})
+  event.custom({
+    type: 'productivebees:centrifuge',
+    ingredient: {
+      type: 'forge:nbt',
+      item: 'productivebees:configurable_honeycomb',
+      nbt: {EntityTag: {type: 'productivebees:chaos'}}
+    },
+    outputs: [
+      {item: {item: 'draconicevolution:medium_chaos_frag'}, chance: 100},
+      {item: {tag: 'forge:wax'}}
+    ],
+    conditions: [{type: 'forge:mod_loaded', modid: 'draconicevolution'}]
+  }).id('productivebees:centrifuge/draconicevolution/honeycomb_chaos')
+  
   event.shaped(
     Item.of('extendedcrafting:basic_table', 2),
     [

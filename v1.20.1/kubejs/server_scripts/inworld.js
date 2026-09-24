@@ -14,6 +14,14 @@ ServerEvents.recipes(event => {
   }).id('modpack:lychee/expensive_ender_block')
 
   event.custom({
+    type: 'lychee:item_inside',
+    item_in: [{ item: 'ad_astra:ice_shard' }],
+    block_in: { blocks: ['minecraft:water'] },
+    // Lychee places a block state, not a fluid-registry entry.
+    post: [{ type: 'place', block: 'nuclearcraft:technical_water_fluid_block' }]
+  }).id('modpack:lychee/technical_water')
+
+  event.custom({
     type: 'lychee:item_exploding',
     item_in: [{ item: 'minecraft:nether_star' }, { item: 'enderio:end_steel_ingot' }],
     post: [{ type: 'drop_item', item: 'kubejs:stellarium_ingot', count: 32 }]

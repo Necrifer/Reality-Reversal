@@ -7,8 +7,6 @@ ServerEvents.recipes(event => {
   const gasInput = (id, amount) => ({ amount: amount, gas: id });
   const stack = (item, count) => ({ count: count, item: item });
 
-  // KubeJS Mekanism has no Forge 1.20.1 build, so these use Mekanism's native
-  // 10.4 datapack schema rather than addon-provided recipe builders.
   recipe('kubejs:mekanism/basic_control_circuit', {
     type: 'mekanism:metallurgic_infusing',
     chemicalInput: chemicalTag('mekanism:redstone', 10),
@@ -26,5 +24,30 @@ ServerEvents.recipes(event => {
     type: 'mekanism:crushing',
     input: itemInput('immersiveengineering:coal_coke'),
     output: stack('immersiveengineering:dust_coke', 1)
+  });
+  recipe('spectrum_amethyst_powder', {
+    type: 'mekanism:crushing',
+    input: itemInput('minecraft:amethyst_block'),
+    output: stack('spectrum:amethyst_powder', 1)
+  });
+  recipe('spectrum_topaz_powder', {
+    type: 'mekanism:crushing',
+    input: itemInput('spectrum:topaz_block'),
+    output: stack('spectrum:topaz_powder', 1)
+  });
+  recipe('spectrum_citrine_powder', {
+    type: 'mekanism:crushing',
+    input: itemInput('spectrum:citrine_block'),
+    output: stack('spectrum:citrine_powder', 1)
+  });
+  recipe('spectrum_onyx_powder', {
+    type: 'mekanism:crushing',
+    input: itemInput('spectrum:onyx_block'),
+    output: stack('spectrum:onyx_powder', 1)
+  });
+  recipe('spectrum_moonstone_powder', {
+    type: 'mekanism:crushing',
+    input: itemInput('spectrum:moonstone_block'),
+    output: stack('spectrum:moonstone_powder', 1)
   });
 });

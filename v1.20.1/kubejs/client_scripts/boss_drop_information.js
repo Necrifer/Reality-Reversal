@@ -11,14 +11,6 @@ JEIEvents.information(event => {
     Text.gray('One Dragon Heart hovers at End exit portal after the dragon dies.')
   ])
 
-  // Devourer of Gods schedules this reward through its own dragon-devour
-  // gameplay loot table. The item normally appears near the End exit portal
-  // shortly after the dragon's death, so it is not indexed as an entity drop.
-  event.addItem('dog:cosmic_larva', [
-    Text.lightPurple('Boss Drop: Ender Dragon'),
-    Text.gray('The Cosmic Larva appears near the End exit portal a certain entity visits.')
-  ])
-
   // The Wither Storm spawns this item directly from its completed death
   // sequence rather than returning it from an entity loot table.
   event.addItem('witherstormmod:withered_nether_star', [

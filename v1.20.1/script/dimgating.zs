@@ -52,13 +52,11 @@ ReDimensionStages.restrictWithMessage("undergarden:undergarden", "Understand how
 ReDimensionStages.restrictWithMessage("nuclearcraft:wasteland", "You have not unlocked this dimension yet.", "wasteland");
 ReDimensionStages.restrictWithMessage("twilightforest:twilight_forest", "Satisfy The Fool first.", "twilight");
 ReDimensionStages.restrictWithMessage("valoria:the_valoria", "Discover the Nature of Void first.", "valoria");
-ReDimensionStages.restrictWithMessage("infinite_abyss:first_layer", "Conquer the First Born of Voidlings.", "abyss1");
-ReDimensionStages.restrictWithMessage("infinite_abyss:second_layer", "Realise the Flames of The Astral.", "abyss2");
-ReDimensionStages.restrictWithMessage("infinite_abyss:fourth_layer", "You have not unlocked this dimension yet.", "abyss4");
-ReDimensionStages.restrictWithMessage("infinite_abyss:fifth_layer", "Master the control of the Frost.", "abyss5");
-ReDimensionStages.restrictWithMessage("infinite_abyss:sixth_layer", "You have not unlocked this dimension yet.", "abyss6");
-ReDimensionStages.restrictWithMessage("infinite_abyss:seventh_layer", "You have not unlocked this dimension yet.", "abyss7");
 ReDimensionStages.restrictWithMessage("voidscape:void", "Be One of Void born, or you do not deserve.", "void_edge");
+ReDimensionStages.restrictWithMessage("theabyss:pocket_dimension", "You have not unlocked this dimension yet.", "abyss_pocket");
+ReDimensionStages.restrictWithMessage("theabyss:spectral_world", "You have not unlocked this dimension yet.", "spectral");
+ReDimensionStages.restrictWithMessage("theabyss:the_abyss", "You have not unlocked this dimension yet.", "abyssal");
+ReDimensionStages.restrictWithMessage("theabyss:frost_world", "You have not unlocked this dimension yet.", "abyss_frost");
 
 // Advent of Ascension
 ReDimensionStages.restrictWithMessage("aoa3:barathos", "You have not unlocked this dimension yet.", "barathos");
@@ -81,9 +79,9 @@ ReDimensionStages.restrictWithMessage("aoa3:precasia_backup", "You have not unlo
 
 // DivineRPG
 ReDimensionStages.restrictWithMessage("divinerpg:apalachia", "You have not unlocked this dimension yet.", "apalachia");
-ReDimensionStages.restrictWithMessage("divinerpg:arcana", "You have not unlocked this dimension yet.", "arcana");
-ReDimensionStages.restrictWithMessage("divinerpg:eden", "You have not unlocked this dimension yet.", "eden");
-ReDimensionStages.restrictWithMessage("divinerpg:iceika", "You have not unlocked this dimension yet.", "iceika");
+ReDimensionStages.restrictWithMessage("divinerpg:arcana", "Speak with the Creatures of Ice.", "arcana");
+ReDimensionStages.restrictWithMessage("divinerpg:eden", "Gaze into The High Priestess first.", "eden");
+ReDimensionStages.restrictWithMessage("divinerpg:iceika", "See the Ends of Heaven itself first.", "iceika");
 ReDimensionStages.restrictWithMessage("divinerpg:mortum", "You have not unlocked this dimension yet.", "mortum");
 ReDimensionStages.restrictWithMessage("divinerpg:skythern", "You have not unlocked this dimension yet.", "skythern");
 ReDimensionStages.restrictWithMessage("divinerpg:vethea", "You have not unlocked this dimension yet.", "vethea");
