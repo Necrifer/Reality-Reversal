@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "draconicevolution:basic_crafting_injector"
+    },
+    "title": "Lost Technology",
+    "description": "Retrace the experiment of your last self.",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "modpack:main_story",
+  "criteria": {
+    "main_story": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "draconicevolution:basic_crafting_injector"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

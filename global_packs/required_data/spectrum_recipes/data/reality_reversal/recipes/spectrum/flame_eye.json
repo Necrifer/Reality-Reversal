@@ -1,0 +1,22 @@
+{
+  "type": "spectrum:pedestal_shapeless",
+  "required_advancement": "modpack:flames",
+  "ingredients": [
+    {
+      "item": "astral_dimension:astral_eye"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "item": "cataclysm:flame_eye"
+  },
+  "tier": "basic",
+  "time": 200,
+  "experience": 0,
+  "magenta": 0,
+  "yellow": 0,
+  "cyan": 0,
+  "black": 0,
+  "white": 0,
+  "disable_yield_upgrades": true
+}

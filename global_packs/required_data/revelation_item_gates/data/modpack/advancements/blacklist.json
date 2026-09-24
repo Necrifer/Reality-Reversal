@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "never_reveal_automatically": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["never_reveal_automatically"]
+  ]
+}

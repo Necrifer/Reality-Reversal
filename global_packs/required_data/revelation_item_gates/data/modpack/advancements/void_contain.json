@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kubejs:void_sculk"
+    },
+    "title": "Origin",
+    "description": "Discover the Infection",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "modpack:seen",
+  "criteria": {
+    "main_story": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kubejs:void_sculk"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

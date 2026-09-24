@@ -1,0 +1,10 @@
+{
+  "advancement": "modpack:blacklist",
+  "items": {
+    "mysticalagriculture:soulium_seed_base": "minecraft:wheat_seeds",
+    "bigreactors:basic_reactorcasing": "minecraft:stone"
+  },
+  "block_states": {
+    "bigreactors:basic_reactorcasing": "minecraft:stone"
+  }
+}
