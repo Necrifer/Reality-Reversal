@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "kubejs:eyes2"
+    },
+    "title": "We see. We think. We failed.",
+    "description": "Understand the test of The Magician",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "modpack:philosophers_stone",
+  "criteria": {
+    "main_story": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "kubejs:eyes2"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "criteria": {
+    "stage_bridge": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    ["stage_bridge"]
+  ]
+}
