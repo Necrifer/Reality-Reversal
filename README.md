@@ -5,6 +5,9 @@ An attempt of a Tech + Magic + RPG modpack on Minecraft 1.21.1, replicating (and
 Update: 1.21.1 has proven too many broken mods to continue development, Project is now downgraded to 1.20.1 to continue development.
 Files will appear once the backporting is fully completed to signify progress towards alpha test.
 
+Update2: Astral Sorcery, Botania and Thaumcraft is now available on 1.21, together with a new form of MMCE. Once Thaumaturge is ready on 1.21, project will resume back on 1.21.
+1.20 will be archived when that happens.
+
 This is a massive project undertaken by someone with nearly 0 background in CS, so expect lots of fixes/bugs/changes frequently. 
 A lot of features are still heavily underdeveloped/exist as concept and not yet fixed, so there is not much to look around yet.
 Due to very frequent changes on 1.21 mods development environment, files may be removed/changed in massive chunks at times.
