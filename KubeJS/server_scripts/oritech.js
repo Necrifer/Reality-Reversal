@@ -17,17 +17,6 @@ ServerEvents.recipes(event => {
     })
   })
 //Side note: This script may need to be split later, as it covers all Oritech machines.
-  recipe('oritech:assembler_mythicalfarmland1', {
-    type: 'oritech:assembler',
-    ingredients: [
-      item('minecraft:dirt'),
-      item('mysticalagriculture:inferium_essence'),
-      item('bigreactors:blutonium_ingot'),
-      item('#c:ingots/uranium')
-    ],
-    results: [stack('mysticalagriculture:inferium_farmland', 1)],
-    time: 300
-    });
   recipe('oritech:assembler_ender_eye', {
     type: 'oritech:assembler',
     ingredients: [
@@ -60,17 +49,6 @@ ServerEvents.recipes(event => {
     results: [stack('mysticalagriculture:prosperity_seed_base', 1)],
     time: 10
   });
-  recipe('oritech:assembler_conductive_alloy_plate', {
-    type: 'oritech:assembler',
-    ingredients: [
-      item('#c:ingots/conductive_alloy'),
-      item('#c:ingots/conductive_alloy'),
-      item('#c:ingots/conductive_alloy'),
-      item('#c:ingots/conductive_alloy')
-    ],
-    results: [stack('kubejs:conductive_alloy_plate', 1)],
-    time: 300
-    });
     recipe('oritech:assembler_industrial_support_beam',{
       type: 'oritech:assembler',
       ingredients: [
