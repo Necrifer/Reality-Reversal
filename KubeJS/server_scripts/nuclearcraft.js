@@ -1,4 +1,6 @@
 ServerEvents.recipes(event => {
+  event.remove({id: 'nuclearcraft:fluid_enricher/0'})
+  event.remove({output: 'nuclearcraft:technical_water'})
 const records = [
   {
     type: "nuclearcraft:alloy_smelter",
@@ -49,24 +51,24 @@ const records = [
     energy_per_tick: 50
   },
   {
-    "type": "nuclearcraft:fluid_infuser",
-    "item_inputs": [
+    type: "nuclearcraft:fluid_infuser",
+    item_inputs: [
       {
-        "tag": "c:ingots/copper",
-        "count": 1
+        tag: "c:ingots/copper",
+        count: 1
       }],
-    "item_outputs": [
+    item_outputs: [
       {
-        "item": "gtceu:annealed_copper_ingot",
-        "count": 1
+        item: "gtceu:annealed_copper_ingot",
+        count: 1
       }],
-    "fluid_inputs": [
+    fluid_inputs: [
       {
-        "tag": "c:oxygen",
-        "amount": 1200
+        tag: "c:oxygen",
+        amount: 1200
       }],
-    "process_time": 200,
-    "energy_per_tick": 50
+    process_time: 200,
+    energy_per_tick: 50
   },
   {
     type: "nuclearcraft:fluid_infuser",
@@ -227,6 +229,46 @@ const records = [
     process_time: 200,
     energy_per_tick: 50
     },
+  {
+    type: "nuclearcraft:melter",
+    item_inputs: [
+      {
+        item: "divinerpg:frosted_allure",
+        count: 1
+      }],
+    fluid_outputs: [
+      {
+        fluid: "nuclearcraft:cryotheum",
+        amount: 2000
+      }],
+    process_time: 1000,
+    energy_per_tick: 50
+    },
+    {
+    type: "nuclearcraft:fluid_infuser",
+    item_inputs: [{item: "ad_astra:mars_stone",count: 1}],
+    fluid_inputs: [{fluid: "nuclearcraft:cryotheum",amount: 1200}],
+    item_outputs: [{item: "ad_astra:mars_ice_shard_ore", count: 1}],
+    process_time: 1000,
+    energy_per_tick: 50
+    },
+  {
+    type: "nuclearcraft:fluid_infuser",
+    item_inputs: [{item: "botania:bifrost_dirt",count: 1}],
+    fluid_inputs: [{fluid: "nuclearcraft:cryotheum",amount: 1200}],
+    item_outputs: [{item: "undergarden:froststeel_ingot", count: 1}],
+    process_time: 1000,
+    energy_per_tick: 50
+  },
+
+  {
+    type: "nuclearcraft:fluid_enricher",
+    item_inputs: [{item: "astralsorcery:resonating_gem",count: 1}],
+    fluid_inputs: [{fluid: "water",amount: 1200}],
+    fluid_outputs: [{fluid: "nuclearcraft:technical_water", amount: 200}],
+    process_time: 1000,
+    energy_per_tick: 50
+  },
   ];
 
   // Copy only the fields a record defines: undefined values become JsonNull and break event.custom.

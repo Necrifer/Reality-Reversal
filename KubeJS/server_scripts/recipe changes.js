@@ -116,12 +116,16 @@ ServerEvents.recipes(event => {
     'minecraft:ender_eye',
     'productivebees/nests/beehive',
     'dog:cosmic_worm',
+    'draconicevolution:crafting_core',
     'mysticalagriculture:infusion_pedestal',
     'mysticalagriculture:infusion_altar',
     'nuclearcraft:fission_reactor_casing',
     'alltheores:enderium_dust_from_alloy_blending',
     'botania:runic_altar/air',
+    'appliedas:compat/extendedae/cutter/astral_processor',
+    'appliedas:compat/extendedae/assembler/astral_processor',
     'oritech:crafting/alloy/electrum',
+    'jei:/divinerpg/fire_conversion/icy_fire/frozen_clock',
     'gtceu:shaped/hv_assembler',
     'ae2:materials/advancedcard',
     'gtceu:hv_assembler',
@@ -178,6 +182,7 @@ ServerEvents.recipes(event => {
     replace('productivebees:bottler', iron, twilight)
     replace('productivebees:gene_indexer', iron, twilight)
     replace('productivebees:catcher', iron, twilight)
+    replace('mmcr:basic_casing', 'mmcr:modularium', 'kubejs:modular_ingot')
     replace('productivebees:catcher', 'minecraft:dispenser', 'actuallyadditions:dropper')
     replace('mekanism:laser','mekanism:alloy_reinforced', 'actuallyadditions:empowered_diamatine_crystal')
     replace('mna:resonating_lump', 'minecraft:glow_lichen', 'kubejs:stellarium_ingot')
@@ -191,6 +196,7 @@ ServerEvents.recipes(event => {
     replace('nuclearcraft:alloy_smelter', 'minecraft:redstone', '#c:ingots/redstone_alloy')
     replace('extendedae:ex_molecular_assembler', 'ae2:engineering_processor', Item.of('extendedcrafting:singularity', {'extendedcrafting:singularity_id': 'extendedcrafting:eden'}))
     replace('projecte:condenser_mk1', 'minecraft:obsidian', 'enderio:reinforced_obsidian_block')
+    replace('oritech:fuel_generator_block', '#c:oritech/plating', 'ender_eye')
     replace('projectexpansion:basic_emc_link', 'projecte:condenser_mk1', 'projecte:condenser_mk2')
     replace('oritech:assembler_block', 'minecraft:copper_ingot', twilight)
     replace('ae2:interface', iron, twilight)
@@ -273,8 +279,12 @@ ServerEvents.recipes(event => {
     replace('mekanism:ultimate_fluid_tank', iron, 'kubejs:stellarium_ingot')
     replace('oritech:small_tank_block', 'copper_ingot', 'enderio:conductive_alloy_ingot')
     replace('oritech:refinery_module_block', 'copper_ingot', 'enderio:conductive_alloy_ingot')
+    replace('oritech:refinery_block', 'cauldron', 'ender_eye')
     replace('oritech:machine_frame_block', iron, steel)
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
+    replace('jamd:portal_block', 'diamond_pickaxe', 'ae2:engineering_processor')
+    replace('jamd:nether_portal', 'netherite_pickaxe', 'ae2:logic_processor')
+    replace('jamd:end_portal', 'diamond_pickaxe', 'ae2:calculation_processor')
     replace('enderio:end_steel_ingot', 'minecraft:obsidian', 'mekanism:ingot_refined_obsidian')
     replace('industrialforegoing:machine_frame_pity', iron, 'enderio:end_steel_ingot')
     replace('industrialforegoing:machine_frame_pity', "minecraft:redstone_block", 'mekanism:steel_casing')
@@ -287,6 +297,7 @@ ServerEvents.recipes(event => {
     replace('gtceu:hv_robot_arm', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('resourcestrees:water_essence', 'minecraft:clay_ball', 'botania:rune_water')
     replace('thermal:dynamo_magmatic', iron, darksteel)
+    replace('astralsorcery:astrolabe', 'gold_ingot', 'malum:gold_node')
 
   // Productive Bees uses nested chance outputs; replace this exact recipe explicitly.
   event.remove({id: 'productivebees:centrifuge/draconicevolution/honeycomb_chaos'})
@@ -704,7 +715,7 @@ const shapedCrafting = [
     output: 'gtceu:hv_mixer',
     pattern: ['ABA', 'ACA', 'DED'],
     keys: {
-      A: 'excessive_utilities:ineffable_glass',
+      A: 'cyclic:glass_connected',
       B: 'ad_astra:fan',
       C: 'nuclearcraft:motor',
       D: 'mekanism:ultimate_control_circuit',
@@ -712,7 +723,7 @@ const shapedCrafting = [
     }
   },
   {
-    id: 'gtceu:foundational_breaker',
+    id: 'mmcr:foundational_breaker',
     output: 'mmcr:foundational_breaker_controller',
     pattern: ['   ', ' AB', '   '],
     keys: {
@@ -721,7 +732,7 @@ const shapedCrafting = [
     }
   },
   {
-    id: 'gtceu:soul_capturer',
+    id: 'mmcr:soul_capturer',
     output: 'mmcr:soul_capturer_controller',
     pattern: ['   ', ' A ', ' B '],
     keys: {
@@ -730,9 +741,18 @@ const shapedCrafting = [
     }    
   },
   {
-    id: 'gtceu:anomalous_condenser',
+    id: 'mmcr:anomalous_condenser',
     output: 'mmcr:anomalous_condenser_controller',
     pattern: [' B ', ' A ', '   '],
+    keys: {
+      A: 'gtceu:hv_machine_hull',
+      B: 'kubejs:modular_ingot'
+    }    
+  },
+  {
+    id: 'mmcr:corruption_containment_unit',
+    output: 'mmcr:corruption_containment_controller',
+    pattern: ['   ', 'BA ', '   '],
     keys: {
       A: 'gtceu:hv_machine_hull',
       B: 'kubejs:modular_ingot'
@@ -790,21 +810,6 @@ const shapedCrafting = [
     keys: {
         S: 'minecraft:stick',
         R: 'minecraft:gold_ingot'
-    }
-  },
-  {
-    id:'kubejs:easy_rubetine', 
-    output: 'voidminersremastered:rubetine',
-    pattern: [
-        "RDM",
-        "EEE",
-        "MDR"
-    ],
-    keys:{
-        R: 'projecte:red_matter',
-        D: 'projecte:dark_matter',
-        M: 'projectexpansion:magenta_matter',
-        E: 'enderio:end_steel_ingot'
     }
   },
   {

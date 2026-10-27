@@ -1,39 +1,67 @@
-// Listen to item registry event
-//StartupEvents.registry('item', event => {
-  // The texture for this item has to be placed in kubejs/assets/kubejs/textures/item/test_item.png
-  // If you want a custom item model, you can create one in Blockbench and put it in kubejs/assets/kubejs/models/item/test_item.json
- // event.create('test_item')
-
-  // If you want to specify a different texture location you can do that too, like this:
-  //event.create('test_item_1').texture('mobbo:item/lava') // This texture would be located at kubejs/assets/mobbo/textures/item/lava.png
-
-  // You can chain builder methods as much as you like
-  //event.create('test_item_2').maxStackSize(16).glow(true)
-
-  // You can specify item type as 2nd argument in create(), some types have different available methods
-  //event.create('custom_sword', 'sword').tier('diamond').attackDamageBaseline(10)
-//})
-
+// Custom registry items required by the 1.20.1 recipe and tooltip scripts.
+// Ported to Minecraft 1.21.1 NeoForge; shared item tags use the c namespace.
 StartupEvents.registry('item', event => {
-    event.create('eyes1')
-    .tooltip("§4To know one knows nothing, is your first lesson.").color(0, 0xFA2800)
-    .displayName("§4Eyes of The Fool").color(0, 0xFA2800)
+  event.create('eyes1')
+    .tooltip('§4To know one knows nothing, is your first lesson.')
+    .color(0, 0xFA2800)
+    .formattedDisplayName(Text.of('Eyes of The Fool').darkRed())
     .glow(true)
     .fireResistant(true)
     .tag('twilightforest:portal/activator')
-    .tag('neoforge:arcana')
-    event.create('eyes2')
-    .tooltip("§eAnd now you understand the Rules.").color(0, 0xFCFF00)
-    .displayName("§eEyes of The Magician").color(0, 0xFCFF00)
+    .tag('c:arcana')
+
+  event.create('eyes2')
+    .tooltip('§eAnd now you understand the Rules.')
+    .color(0, 0xFCFF00)
+    .formattedDisplayName(Text.of('Eyes of The Magician').yellow())
     .glow(true)
     .fireResistant(true)
-    .tag('neoforge:arcana')
-    event.create('law_ingot')
-    .tooltip("§kTo understand.").color(0, 0xF5EB27)
-    .displayName("Ingots of Law").color(0, 0xF5EB27)
+    .tag('c:arcana')
+
+  event.create('seeneyes2')
+    .tooltip('§4Now, answers She will provide.')
+    .color(0, 0xFCFF00)
+    .formattedDisplayName(Text.of('Shattered Eyes').darkRed())
+    .glow(true)
+    .fireResistant(true)
+  
+  event.create('eyes3')
+    .tooltip('§2With knowledge, to expand, to further your defence and strength.')
+    .color(0, 0x27F53C)
+    .formattedDisplayName(Text.of('Eyes of The High Priestess').darkGreen())
+    .fireResistant(true)
+    .tag('c:arcana')
+
+  event.create('law_ingot')
+    .tooltip('§kTo understand.')
+    .color(0, 0xF5EB27)
+    .displayName('Ingots of Law')
     .tag('c:ingots')
-    event.create('stellarium_ingot')
-    .displayName("Stellarium Ingot")
-    .tooltip("it is recommended to make this in large batches.")
+
+  event.create('containment_failure')
+    .tooltip('Be careful how you handle this.')
+    .formattedDisplayName(Text.empty()
+      .append(Text.of('Containment').obfuscated(true))
+      .append(Text.of(' Failure').obfuscated(false)))
+    .glow(true)
+    .fireResistant(true)
+    .tag('c:arcana')
+  
+  event.create('stellarium_ingot')
+    .displayName('Stellarium Ingot')
+    .tooltip('It is recommended to make this in large batches.')
     .tag('c:ingots')
+  event.create('sol_astral_ingot')
+    .formattedDisplayName(Text.of('Solar Astral Ingot').blue())
+    .tag('c:ingots')
+  event.create('modular_ingot')
+    .displayName('Modular Ingot')
+    .tooltip('This will be used in all custom multiblocks!')
+    .tag('c:ingots')
+  event.create('star_remains')
+    .displayName('Remains of a Star')
+    .tooltip('How did this get here?')
+  event.create('void_sculk')
+    .displayName('Void Containment Sculk mixture')
+    .tooltip('A result of another failed experiment.')
 })
