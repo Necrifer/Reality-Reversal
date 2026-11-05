@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/enderium",
+      "required": false
+    },
+    {
+      "id": "#c:gems/enderium",
+      "required": false
+    },
+    {
+      "id": "oritech:enderic_compound",
+      "required": false
+    }
+  ]
+}

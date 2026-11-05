@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/onyx",
+      "required": false
+    },
+    {
+      "id": "spectrum:onyx_shard",
+      "required": false
+    }
+  ]
+}

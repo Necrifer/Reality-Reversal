@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "mna:superheated_purified_vinteum_ingot",
+      "required": false
+    }
+  ]
+}

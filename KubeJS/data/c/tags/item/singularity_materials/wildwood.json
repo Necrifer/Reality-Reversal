@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/wildwood",
+      "required": false
+    },
+    {
+      "id": "divinerpg:wildwood_gem",
+      "required": false
+    }
+  ]
+}

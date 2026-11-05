@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/ice",
+      "required": false
+    },
+    {
+      "id": "ad_astra:ice_shard",
+      "required": false
+    },
+    {
+      "id": "aoa3:ice_crystal",
+      "required": false
+    }
+  ]
+}

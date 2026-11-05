@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/signalum",
+      "required": false
+    },
+    {
+      "id": "oritech:fluxite",
+      "required": false
+    }
+  ]
+}

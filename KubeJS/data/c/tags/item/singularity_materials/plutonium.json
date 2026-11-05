@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/plutonium",
+      "required": false
+    },
+    {
+      "id": "#c:gems/plutonium",
+      "required": false
+    }
+  ]
+}

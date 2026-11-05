@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/sulfur",
+      "required": false
+    },
+    {
+      "id": "chemlib:sulfur",
+      "required": false
+    }
+  ]
+}

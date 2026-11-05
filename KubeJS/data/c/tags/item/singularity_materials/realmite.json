@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/realmite",
+      "required": false
+    },
+    {
+      "id": "divinerpg:realmite_ingot",
+      "required": false
+    }
+  ]
+}

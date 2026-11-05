@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/ruby",
+      "required": false
+    },
+    {
+      "id": "gtceu:ruby_gem",
+      "required": false
+    }
+  ]
+}

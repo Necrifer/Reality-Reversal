@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/rupee",
+      "required": false
+    },
+    {
+      "id": "divinerpg:rupee_ingot",
+      "required": false
+    }
+  ]
+}

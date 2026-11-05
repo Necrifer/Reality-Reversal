@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/citrine",
+      "required": false
+    },
+    {
+      "id": "spectrum:citrine_shard",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/arcanium",
+      "required": false
+    },
+    {
+      "id": "divinerpg:arcanium",
+      "required": false
+    }
+  ]
+}

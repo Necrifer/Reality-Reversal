@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/soul_stained_steel",
+      "required": false
+    },
+    {
+      "id": "malum:soul_stained_steel_ingot",
+      "required": false
+    }
+  ]
+}

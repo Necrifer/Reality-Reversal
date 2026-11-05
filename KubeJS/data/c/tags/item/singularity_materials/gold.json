@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#c:ingots/gold",
+    "#c:ingots/gold",
+    "#c:gems/gold"
+  ]
+}

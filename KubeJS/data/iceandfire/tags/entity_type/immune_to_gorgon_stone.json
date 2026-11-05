@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "#c:bosses",
+    "dog:devourer_head",
+    "dog:devourer_segment",
+    "dog:devourer_tail",
+    {
+      "id": "witherstormmod:wither_storm",
+      "required": false
+    },
+    {
+      "id": "witherstormmod:wither_storm_segment",
+      "required": false
+    },
+    {
+      "id": "witherstormmod:wither_storm_head",
+      "required": false
+    },
+    {
+      "id": "witherstormmod:command_block",
+      "required": false
+    },
+    {
+      "id": "witherstormmod:tentacle",
+      "required": false
+    },
+    {
+      "id": "witherstormmod:withered_symbiont",
+      "required": false
+    }
+  ]
+}

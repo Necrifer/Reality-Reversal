@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/witherite",
+      "required": false
+    },
+    {
+      "id": "cataclysm:witherite_ingot",
+      "required": false
+    }
+  ]
+}

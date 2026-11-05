@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/chromium",
+      "required": false
+    },
+    {
+      "id": "#c:gems/chromium",
+      "required": false
+    }
+  ]
+}

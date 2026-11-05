@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/apalachia",
+      "required": false
+    },
+    {
+      "id": "divinerpg:apalachia_gem",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/skythern",
+      "required": false
+    },
+    {
+      "id": "divinerpg:skythern_gem",
+      "required": false
+    }
+  ]
+}

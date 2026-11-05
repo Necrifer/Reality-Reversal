@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/aquatic",
+      "required": false
+    },
+    {
+      "id": "divinerpg:aquatic_ingot",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "mna:vinteum_ingot",
+      "required": false
+    }
+  ]
+}

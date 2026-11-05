@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/oxdrite",
+      "required": false
+    },
+    {
+      "id": "divinerpg:oxdrite_ingot",
+      "required": false
+    }
+  ]
+}

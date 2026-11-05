@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/ender",
+      "required": false
+    },
+    {
+      "id": "ae2omnicells:ender_ingot",
+      "required": false
+    },
+    {
+      "id": "extendedcrafting:ender_ingot",
+      "required": false
+    }
+  ]
+}

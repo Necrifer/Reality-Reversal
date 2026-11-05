@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/amber",
+      "required": false
+    },
+    {
+      "id": "cyclic:gem_amber",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:amber",
+      "required": false
+    }
+  ]
+}

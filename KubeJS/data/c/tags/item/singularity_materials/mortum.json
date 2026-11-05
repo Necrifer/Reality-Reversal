@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/mortum",
+      "required": false
+    },
+    {
+      "id": "divinerpg:mortum_gem",
+      "required": false
+    }
+  ]
+}

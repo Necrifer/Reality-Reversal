@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "dog:devourer_head", "required": false },
+    { "id": "nuclearcraft:feral_ghoul_boss", "required": false },
+    { "id": "voidscape:null_servant", "required": false },
+    { "id": "voidscape:corrupted_pawn", "required": false },
+    { "id": "aquamirae:captain_cornelia", "required": false },
+    { "id": "astral_dimension:anomal", "required": false },
+    { "id": "astral_dimension:jailor", "required": false },
+    { "id": "astral_dimension:tower_of_malice", "required": false },
+    { "id": "astral_dimension:void_giant", "required": false },
+    { "id": "astral_dimension:void_titan", "required": false },
+    { "id": "astral_dimension:void_visage", "required": false },
+    { "id": "avaritia_expand:extreme_wither", "required": false },
+    { "id": "avaritia_expand:blaze_vindicator", "required": false },
+    { "id": "gaiadimension:malachite_guard", "required": false },
+    { "id": "iceandfire:dread_queen", "required": false },
+    { "id": "mecrh:ender_chicken", "required": false },
+    { "id": "thaumaturge:eldritch_hierophant", "required": false },
+    { "id": "thaumaturge:eldritch_warden", "required": false },
+    { "id": "fdbosses:chesed", "required": false },
+    { "id": "fdbosses:malkuth", "required": false },
+    { "id": "fdbosses:geburah", "required": false }
+  ]
+}

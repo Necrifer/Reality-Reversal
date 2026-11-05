@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/hellstone",
+      "required": false
+    },
+    {
+      "id": "divinerpg:hellstone_ingot",
+      "required": false
+    }
+  ]
+}

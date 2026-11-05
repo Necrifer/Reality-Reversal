@@ -1,72 +1,30 @@
-// Listen to item tag event
-//ServerEvents.tags('item', event => {
-  // Get the #forge:cobblestone tag collection and add Diamond Ore to it
-  //event.add('forge:cobblestone', 'minecraft:diamond_ore')
-
-  // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
-  //event.remove('forge:cobblestone', 'minecraft:mossy_cobblestone')
-
-  // Get #forge:ingots/copper tag and remove all entries from it
-  //event.removeAll('forge:ingots/copper')
-
-  // Required for FTB Quests to check item NBT
-  //event.add('itemfilters:check_nbt', 'some_item:that_has_nbt_types')
-
-  // You can create new tags the same way you add to existing, just give it a name
-  //event.add('forge:completely_new_tag', 'minecraft:clay_ball')
-
-  // It supports adding tags to tags as well. Just prefix the second tag with #
-  //event.add('c:stones', '#forge:stone')
-
-  // Removes all tags from this entry
-  //event.removeAllTagsFrom('minecraft:stick')
-
-  // Add all items from the forge:stone tag to the c:stone tag, unless the id contains diorite
-  //const stones = event.get('forge:stone').getObjectIds()
-  //const blacklist = Ingredient.of(/.*diorite.*/)
- // stones.forEach(stone => {
-  //  if (!blacklist.test(stone)) event.add('c:stone', stone)
- // })
-//})
-
-// Listen to item tag event
-//ServerEvents.tags('item', event => {
-  // Get the #forge:cobblestone tag collection and add Diamond Ore to it
-//  event.add('forge:cobblestone', 'minecraft:diamond_ore')
-
-  // Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
-//  event.remove('forge:cobblestone', 'minecraft:mossy_cobblestone')
-
-  // Get #forge:ingots/copper tag and remove all entries from it
-//  event.removeAll('forge:ingots/copper')
-
-  // Required for FTB Quests to check item NBT
-//  event.add('itemfilters:check_nbt', 'some_item:that_has_nbt_types')
-
-  // You can create new tags the same way you add to existing, just give it a name
-//  event.add('forge:completely_new_tag', 'minecraft:clay_ball')
-
-  // It supports adding tags to tags as well. Just prefix the second tag with #
-//  event.add('c:stones', '#forge:stone')
-
-  // Removes all tags from this entry
-//  event.removeAllTagsFrom('minecraft:stick')
-
-  // Add all items from the forge:stone tag to the c:stone tag, unless the id contains diorite
-//  const stones = event.get('forge:stone').getObjectIds()
-//  const blacklist = Ingredient.of(/.*diorite.*/)
-//  stones.forEach(stone => {
-//    if (!blacklist.test(stone)) event.add('c:stone', stone)
-//  })
-//})
-priority: 5
 ServerEvents.tags('item', event => {
-    event.remove('twilightforest:portal/activator', '#c:gems/diamond')
-    event.add('neoforge:arcana', 'kubejs:eyes1')
-    event.add('neoforge:arcana', 'kubejs:eyes2')
+  event.remove('twilightforest:portal/activator', '#c:gems/diamond')
 
-    // Spectrum attempts to create enchanted Exchanging Staff variants for its
-    // creative tab. Without this vanilla tag, the unchanged stack is submitted
-    // twice and Fractal rejects the duplicate while the inventory is opening.
-    event.add('minecraft:enchantable/mining', 'spectrum:exchanging_staff')
+  
+  
+  event.add('c:sandstone/venus_sandstone', 'ad_astra:venus_sandstone')
+  event.add('c:fluids/sulfuric_acid', 'mekanism:sulfuric_acid')
+  event.add('c:fluids/sulfuric_acid', 'nuclearcraft:sulfuric_acid')
+  event.add('c:ingots/cobalt', 'valoria:cobalt_ingot')
+  event.add('c:ores/cobalt', 'valoria:cobalt_ore')
+  event.add('c:ores/cobalt', 'valoria:deepslate_cobalt_ore')
+  event.add('c:ingots/quicksilver', 'mna:transmuted_silver')
+  event.add('c:singularity_materials/quicksilver', 'mna:transmuted_silver')
+  event.add('c:singularity_materials/onyx', 'spectrum:onyx_shard')
+  event.add('c:singularity_materials/moonstone', 'spectrum:moonstone_shard')
+  event.add('c:singularity_materials/enderium', 'oritech:enderic_compound')
+  event.add('c:singularity_materials/citrine', 'spectrum:citrine_shard')
+  event.add('c:singularity_materials/azurite', 'spectrum:refined_azurite')
+})
+ServerEvents.tags('block', event => {
+  
+  event.add('minecraft:mineable/pickaxe', 'dimdoors:unravelled_fabric')
+
+  const nullBlack = 'voidscape:null_black'
+  const nullWhite = 'voidscape:null_white'
+  event.add('minecraft:mineable/pickaxe', nullWhite)
+  event.add('minecraft:needs_diamond_tool', nullWhite)
+  event.add('minecraft:mineable/pickaxe', nullBlack)
+  event.add('minecraft:needs_diamond_tool', nullBlack)
 })

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/seaborgium",
+      "required": false
+    },
+    {
+      "id": "chemlib:seaborgium",
+      "required": false
+    }
+  ]
+}

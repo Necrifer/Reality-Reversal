@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/ancient_metal",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ancient_metal_ingot",
+      "required": false
+    }
+  ]
+}

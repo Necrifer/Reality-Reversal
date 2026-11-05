@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "tinkers_advanced:neutronite_ingot",
+      "required": false
+    }
+  ]
+}

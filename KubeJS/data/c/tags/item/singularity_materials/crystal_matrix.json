@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/crystal_matrix",
+      "required": false
+    },
+    {
+      "id": "avaritia:crystal_matrix_ingot",
+      "required": false
+    }
+  ]
+}

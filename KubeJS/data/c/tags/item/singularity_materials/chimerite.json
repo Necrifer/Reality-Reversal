@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "mna:chimerite_gem",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/infinity",
+      "required": false
+    },
+    {
+      "id": "avaritia:infinity_ingot",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/pyrite",
+      "required": false
+    },
+    {
+      "id": "gaiadimension:pyrite",
+      "required": false
+    }
+  ]
+}

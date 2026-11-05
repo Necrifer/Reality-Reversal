@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/hallowed_gold",
+      "required": false
+    },
+    {
+      "id": "malum:hallowed_gold_ingot",
+      "required": false
+    }
+  ]
+}

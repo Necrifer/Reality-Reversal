@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/malignant_pewter",
+      "required": false
+    },
+    {
+      "id": "malum:malignant_pewter_ingot",
+      "required": false
+    }
+  ]
+}

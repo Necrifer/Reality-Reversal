@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:ingots/technetium",
+      "required": false
+    },
+    {
+      "id": "chemlib:technetium",
+      "required": false
+    }
+  ]
+}

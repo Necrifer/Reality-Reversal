@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/malignant_lead",
+      "required": false
+    },
+    {
+      "id": "malum:malignant_lead",
+      "required": false
+    }
+  ]
+}

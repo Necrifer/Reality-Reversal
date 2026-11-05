@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/eden",
+      "required": false
+    },
+    {
+      "id": "divinerpg:eden_gem",
+      "required": false
+    }
+  ]
+}

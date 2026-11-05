@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#c:gems/cthonic_gold",
+      "required": false
+    },
+    {
+      "id": "malum:cthonic_gold",
+      "required": false
+    }
+  ]
+}
