@@ -2,6 +2,8 @@ ServerEvents.tags('item', event => {
   event.remove('twilightforest:portal/activator', '#c:gems/diamond')
   event.add('c:gems/moonstone', 'excessive_utilities:moon_stone')
   event.add('c:gems/moonstone', 'gaiadimension:moonstone')
+  // Cyclic's amber joins Thaumaturge's, so Avaritia's Amber singularity (Re:JAOPCA, #c:gems/amber) accepts it.
+  event.add('c:gems/amber', 'cyclic:gem_amber')
   event.add('c:sandstone/venus_sandstone', 'ad_astra:venus_sandstone')
   event.add('c:fluids/sulfuric_acid', 'mekanism:sulfuric_acid')
   event.add('c:fluids/sulfuric_acid', 'nuclearcraft:sulfuric_acid')

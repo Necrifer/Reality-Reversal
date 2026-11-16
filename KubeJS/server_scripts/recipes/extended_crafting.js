@@ -568,7 +568,8 @@ ServerEvents.recipes(event => {
         'ACC',
         'AB '
     ], {
-        A: 'oritech:steel_ingot',
+        // Any steel: Oritech's own steel ingot has no recipe (steel is unified).
+        A: '#c:ingots/steel',
         B: 'minecraft:blaze_rod',
         C: 'mekanism:enriched_redstone'
     })
@@ -586,9 +587,28 @@ ServerEvents.recipes(event => {
         D: 'mekanism:ultimate_control_circuit',
         E: 'oritech:machine_core_4',
         F: 'malum:hallowed_gold_ingot',
-        G: 'nuclearcraft:redstone_bucket',
+        // NuclearCraft's melter makes Cyclic's redstone fluid, so either redstone bucket is accepted.
+        G: [{ item: 'nuclearcraft:redstone_bucket' }, { item: 'cyclic:redstone_bucket' }],
         H: 'malum:wicked_spirit',
         I: 'ae2:printed_engineering_processor'
+    })
+
+    table('bio_generator', 2, 'oritech:bio_generator_block', [
+        'E   A',
+        'E C A',
+        'EFBFA',
+        'GHDHG',
+        'IIIII'
+    ], {
+        B: 'oritech:machine_core_2',
+        A: 'aoa3:ghastly_ingot',
+        C: 'divinerpg:legendary_ender_eye',
+        D: 'actuallyadditions:ender_star',
+        E: 'immersiveengineering:ingot_constantan',
+        F: 'minecraft:wheat',
+        G: 'minecraft:oak_planks',
+        H: 'minecraft:oak_log',
+        I: 'minecraft:vine'
     })
 
     table('resonant_component', 3, 'oritech:machine_core_7', [
@@ -983,20 +1003,38 @@ ServerEvents.recipes(event => {
     })
 
     table('eyes_of_the_empress', 4, 'kubejs:eyes4', [
-        'A HDDDH A',
-        ' HrB BrH ',
-        'SOFB BFOS',
+        'AbHDDDHaA',
+        'cHeBxBrHz',
+        'SOFBvBFOS',
         'NBBUCWBBN',
-        'N REdER N',
+        'NfREdERjN',
         'NBBUCWBBN',
-        'TOFB BFOT',
-        ' HHB  HH ',
-        'A HDDDH A'
+        'TOFBgBFOT',
+        'oHqByBtHL',
+        'ApHDDDHtA'
     ], {
         U: 'kubejs:eyes2',
+        a: singularity('aquamarine'),
+        v: singularity('iridium'),
+        b: singularity('starmetal'),
+        c: singularity('dragonstone'),
+        z: singularity('blutonium'),
+        L: singularity('law'),
+        y: singularity('stellarium'),
+        t: singularity('sterling_silver'),
+        o: singularity('ornium'),
+        x: singularity('ferroboron'),
+        f: singularity('forgotten'),
+        j: singularity('certus_quartz'),
+       g: singularity('steeleaf'),
+       p: singularity('moonstone'),
+       f: singularity('demon'),
         W: 'kubejs:eyes1',
         d: 'kubejs:void_sculk',
-        r: withComponents('enderio:fluid_tank', { 'enderio:item_fluid_content':[{ amount:16000,id:"kubejs:faint_arcane"}]}),
+        r: withComponents('enderio:fluid_tank', { 'enderio:item_fluid_content': { id: 'kubejs:faint_arcane', amount: 16000 } }),
+        e: withComponents('mekanism:advanced_fluid_tank', { 'mekanism:fluids': { fluid_tanks: [{ id: 'kubejs:aurorial_call', amount: 64000 }] } }),
+        q: withComponents('mob_grinding_utils:tank', {'mob_grinding_utils:fluid': {amount: 32000, id: 'kubejs:instability'}}),
+        t: 'kubejs:eden_fluid_bucket',
         N: 'auroral:shimmersteel_ingot',
         D: 'gtceu:gtna_chronomatic_glass_ingot',
         C: 'kubejs:eyes3',

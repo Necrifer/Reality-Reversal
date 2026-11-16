@@ -5,9 +5,10 @@
 ServerEvents.generateData('after_mods', event => {
   const COUNT = 1000000
 
-  // [name, ingredient (item ID or '#tag'), overlay colour, underlay colour] - colours copied from Avaritia.
+  // [name, ingredient (item ID, '#tag', or a list of them), overlay colour, underlay colour] - colours copied from Avaritia.
   const singularities = [
-    ['aluminum', '#c:ingots/aluminum', 13290714, 10132646],
+    // GregTech spells it aluminium (c:ingots/aluminium), so both spellings are accepted.
+    ['aluminum', ['#c:ingots/aluminum', '#c:ingots/aluminium'], 13290714, 10132646],
     ['amethyst_shard', 'minecraft:amethyst_shard', 13607155, 9267916],
     ['blue_ice', 'minecraft:blue_ice', 9353470, 7052795],
     ['bronze', '#c:ingots/bronze', 14262083, 12282683],
@@ -37,12 +38,14 @@ ServerEvents.generateData('after_mods', event => {
   ]
 
   singularities.forEach(entry => {
-    const name = entry[0], ingredient = entry[1], overlay = entry[2], underlay = entry[3]
+    const name = entry[0], refs = [].concat(entry[1]), overlay = entry[2], underlay = entry[3]
+    const toJson = ref => ref.startsWith('#') ? { tag: ref.slice(1) } : { item: ref }
+    const ingredient = refs[0]
     const isTag = ingredient.startsWith('#')
     const json = {
       name: 'avaritia:' + name,
       displayName: 'singularity.avaritia.' + name,
-      ingredient: isTag ? { tag: ingredient.slice(1) } : { item: ingredient },
+      ingredient: refs.length > 1 ? refs.map(toJson) : toJson(ingredient),
       count: COUNT,
       underlayColor: underlay
     }

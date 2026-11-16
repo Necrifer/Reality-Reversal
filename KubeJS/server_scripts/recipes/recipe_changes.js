@@ -741,7 +741,8 @@ const shapedCrafting = [
         B: twilight,
         A: 'mekanism:enriched_diamond',
         D: 'ae2:calculation_processor',
-        C: 'nuclearcraft:redstone_bucket'
+        // NuclearCraft's melter makes Cyclic's redstone fluid, so either redstone bucket is accepted.
+        C: ['nuclearcraft:redstone_bucket', 'cyclic:redstone_bucket']
     }
   },
   {

@@ -1,5 +1,4 @@
 // Converted from industrial_foregoing.js for Minecraft 1.21.1 NeoForge.
-ServerEvents.recipes(event => {
 (function () {
 
 function materialize(v) {
@@ -170,4 +169,4 @@ ServerEvents.recipes(function (event) {
     } catch (error) { console.error('[1.21.1 port] ' + r.source + ' / ' + r.kind + ': ' + error); }
   });
 });
-})});
+})();
