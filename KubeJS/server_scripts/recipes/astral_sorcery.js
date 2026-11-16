@@ -10,12 +10,16 @@ const starlight = 'astralsorcery:liquid_starlight'
 const staringot = 'astralsorcery:starmetal_ingot'
 const stardust = 'astralsorcery:stardust'
 const shinygem = 'astralsorcery:resonating_gem'
+const solingot = 'kubejs:sol_astral_ingot'
 AstralSorcery.recipes(event => {
+   function inputchange (result, itemin, itemout) {event.replaceInput({output: Item.of(result)}, itemin, itemout)}
     event.remove({id: 'astralsorcery:focal_combine/altar_illumination'})
     event.remove({id: 'astralsorcery:altar/astrolabe'})
     event.remove({output: 'appliedas:constellation_core'})
     event.focal_combine('astralsorcery:altar_illumination', ['astralsorcery:marble_raw', 'astralsorcery:marble_raw', 'astralsorcery:marble_raw', 'crafting_table', 'kubejs:eyes3'])
         .duration(100)
+    event.infusion('appliedas:lumen_processor', 'appliedas:printed_lumen_processor')
+        .duration(400)
     event.altar_crafting('kubejs:sol_astral_ingot', [' C ', 'BAB', ' C '],  
         {A: 'draconicevolution:small_chaos_frag', B: staringot, C: 'kubejs:containment_failure'})
         .relay([' fge ', 's m n', 'bo kc', 'a p u', ' liv '])
@@ -41,7 +45,41 @@ AstralSorcery.recipes(event => {
         .additional('2x dog:draconic_soul_fragment')
         .fluid('astralsorcery:liquid_starlight', 2000)
         .id('modpack:altar/sol_astral_ingot')
-
+    // A plain item ID accepts a rock crystal with any properties (Astral's own recipes do the same).
+    event.altar_crafting('astralsorcery:dynamism_gem_sky', ['BBB','CAC','BBB'],
+        {A: 'astralsorcery:rock_crystal', B: 'astralsorcery:illumination_powder', C: 'voidminersremastered:solar_verdium'})
+        .relay(['sr rs', 'S   S','     ','S   S','sr rs'])
+        .define('r', 'astralsorcery:resonating_gem')
+        .define('s', 'astralsorcery:starmetal_ingot')
+        .define('S', 'spectrum:shimmerstone_gem')
+        .type('resonance')
+        .duration(1500)
+        .anyTime()
+        .fluid('astralsorcery:liquid_starlight', 5000)
+        .id('modpack:altar/ourium_dynamism_gem')
+    event.altar_crafting('astralsorcery:dynamism_gem_day', ['BBB','CAC','BBB'],
+        {A: 'astralsorcery:rock_crystal', B: 'astralsorcery:vivid_powder', C: 'voidminersremastered:solar_verdium'})
+        .relay(['sr rs', 'S   S','ee ee','S   S','sr rs'])
+        .define('r', 'astralsorcery:resonating_gem')
+        .define('s', 'astralsorcery:starmetal_ingot')
+        .define('S', 'spectrum:shimmerstone_gem')
+        .define('e', 'primalmagick:essence_crystal_sun')
+        .type('resonance')
+        .duration(1500)
+        .anyTime() // Astral's altar has no day-only option: only .night() or .anyTime()
+        .fluid('astralsorcery:liquid_starlight', 5000)
+        .id('modpack:altar/ilium_dynamism_gem')
+    event.altar_crafting('astralsorcery:dynamism_gem_night', ['BBB','CAC','BBB'],
+        {A: 'astralsorcery:rock_crystal', B: 'astralsorcery:nocturnal_powder', C: 'voidminersremastered:solar_verdium'})
+        .relay(['sr rs', 'S   S','     ','S   S','sr rs'])
+        .define('r', 'astralsorcery:resonating_gem')
+        .define('s', 'astralsorcery:starmetal_ingot')
+        .define('S', 'spectrum:shimmerstone_gem')
+        .type('resonance')
+        .duration(1500)
+        .night()
+        .fluid('astralsorcery:liquid_starlight', 5000)
+        .id('modpack:altar/fengarum_dynamism_gem')
     //event.altar_crafting('minecraft:elytra', ['FFF', 'FDF', 'FFF'], { F: 'minecraft:feather', D: 'minecraft:diamond' })
     //    .type('radiance')
     //    .constellation('vicio')

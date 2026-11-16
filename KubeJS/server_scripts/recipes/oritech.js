@@ -18,6 +18,12 @@ ServerEvents.recipes(event => {
   })
   removeId('oritech:foundry/alloy/compat/enderio/darksteel')
 //Side note: This script may need to be split later, as it covers all Oritech machines.
+recipe('oritech:pulveriser_salt', {
+  type: 'oritech:pulverizer',
+  ingredients: [item('gaiadimension:salt')],
+  results: [stack('gtceu:salt_dust', 1)],
+  time: 600
+})
   recipe('oritech:foundry_dark_steel', {
     type: 'oritech:foundry',
     ingredients: [item('#c:ingots/steel'),item('mekanism:enriched_refined_obsidian')],

@@ -3,6 +3,7 @@ const twilight = 'aoa3:ghastly_ingot'
 const steel = '#c:ingots/steel'
 const darksteel = '#c:ingots/dark_steel'
 const iron = '#c:ingots/iron'
+const endsteel = '#c:ingots/end_steel'
 const modular = 'kubejs:modular_ingot'
 const hvhull = 'gtceu:hv_machine_hull'
 const sunastral = 'kubejs:sol_astral_ingot'
@@ -38,9 +39,13 @@ ServerEvents.recipes(event => {
     'botania:runic_altar/fire',
     'excessive_utilities:machine_block',
     'avaritia:eternal_singularity',
+    'nuclearcraft:plate_du',
+    'nuclearcraft:fusion_reactor_core',
     'botania:runic_altar/water',
     'botania:runic_altar/winter',
     'enderio:dark_steel_ingot_with_coal',
+    'auroral:glacial_basin',
+    'auroral:unrefined_shimmersteel',
     'enderio:alloy_smelting/dark_steel_ingot',
     'divinerpg:compat/enderio/alloy_smelting/dark_steel_ingot_from_anthracite',
     'mysticalagriculture:inferium_farmland_till',
@@ -152,6 +157,7 @@ ServerEvents.recipes(event => {
     'divinerpg:shapeless/divine_rock',
     'mmcr:basic_casing',
     'mysticalagriculture:soulium_seed_base',
+    'gaiadimension:keystone_block',
     'oritech:crafting/biogen',
     'divinerpg:compat/projecte/conversions/oxdrite_ingot',
     'divinerpg:compat/projecte/conversions/shadow_bar_from_ingots',
@@ -159,12 +165,21 @@ ServerEvents.recipes(event => {
     'bswb:command_block',
     'draconicevolution:components/wyvern_core',
     'jei:/mekanismgenerators/rotary/deuterium',
+    'gaiadimension:glint_and_gold',
+    'spectrum:liquid_crystal_converting/resin_clump_from_log',
+    'spectrum:liquid_crystal_converting/resin_clump_from_heart',
     'gtceu:centrifuge/hydrogen_separation',
+    'oritech:crafting/core4',
+    'oritech:crafting/core3',
+    'oritech:crafting/core3alt',
     'gtceu:centrifuge/ender_air_separation',
     'nuclearcraft:manufactory/ender_pearl',
     'productivebees:nests/beehive',
     'cataclysm:flame_eye',
-    'toomanyrecipeviewers:/cataclysm/flame_eye'
+    'toomanyrecipeviewers:/cataclysm/flame_eye',
+    // Mech Eye is puzzle-only (see rr_mech_eye_puzzle.js)
+    'cataclysm:mech_eye',
+    'toomanyrecipeviewers:/cataclysm/mech_eye'
   ]
   idRemoval.forEach(idRemoval => {
     event.remove({id: idRemoval})
@@ -177,13 +192,8 @@ ServerEvents.recipes(event => {
   'aoa3:ghastly_ingot'
 )
 //Todo: Split this whole chunky mess of removal recipes below and above into another script later.
-  const replace = (result, oldInput, newInput) => {
-    // Missing source systems stay archived; never turn a missing target into an air filter.
-    if (!Item.exists(result)) return;
-    if (typeof oldInput === 'string' && oldInput.charAt(0) !== '#' && !Item.exists(oldInput)) return;
-    const match = typeof oldInput === 'string' && oldInput.charAt(0) !== '#'
-      ? Item.of(oldInput) : Ingredient.of(oldInput);
-    event.replaceInput({output: Item.of(result)}, match, newInput)
+  function replace(result, oldInput, newInput){
+    return event.replaceInput(result, oldInput, newInput)
   }
     replace('extendedcrafting:basic_table', '#c:storage_blocks/iron', '#c:storage_blocks/dark_steel')
     replace('mna:runeforge', "minecraft:iron_ingot", twilight)
@@ -205,6 +215,7 @@ ServerEvents.recipes(event => {
     replace('ad_astra:rocket_nose_cone', 'minecraft:lightning_rod', 'astral_dimension:astral_eye')
     replace('nuclearcraft:alloy_smelter', 'minecraft:redstone', '#c:ingots/redstone_alloy')
     replace('extendedae:ex_molecular_assembler', 'ae2:engineering_processor', Item.of('extendedcrafting:singularity', {'extendedcrafting:singularity_id': 'extendedcrafting:eden'}))
+    replace('extendedcraft:epic_component', 'netherite_ingot', 'barrier')
     replace('projecte:condenser_mk1', 'minecraft:obsidian', 'enderio:reinforced_obsidian_block')
     replace('oritech:fuel_generator_block', '#c:oritech/plating', 'ender_eye')
     replace('projectexpansion:basic_emc_link', 'projecte:condenser_mk1', 'projecte:condenser_mk2')
@@ -230,6 +241,8 @@ ServerEvents.recipes(event => {
     replace('ae2:formation_plane', iron, twilight)
     replace('ae2:blank_pattern', iron, twilight)
     replace('ae2:quartz_glass', 'ae2:certus_quartz_dust', 'ae2:fluix_dust')
+    replace('ae2:item_cell_housing', 'copper_ingot', twilight)
+    replace('ae2:item_cell_housing', 'iron_ingot', )
     replace('ae2:wireless_receiver', iron, twilight)
     replace('ae2:quantum_ring', iron, twilight)
     replace('oritech:basic_generator_block', iron, '#c:ingots/nickel')
@@ -280,23 +293,21 @@ ServerEvents.recipes(event => {
     replace('gtceu:terminal', 'gtceu:wrought_iron_plate', '#c:plates/steel')
     replace('gtceu:hv_bender', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:hv_cutter', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
-    replace('mmcr:terminal', 'mmrc:modularium', 'kubejs:modular_ingot')
-    replace('excessive_utilities:manual_mill', 'excessive_utilities:polised_stone', 'divinerpg:divine_rock')
+    replace('mmcr:terminal', 'mmcr:modularium', 'kubejs:modular_ingot')
+    replace('excessive_utilities:manual_mill', 'excessive_utilities:polished_stone', 'divinerpg:divine_rock')
     replace('gtceu:hv_lathe', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:hv_laser_engraver', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('gtceu:hv_distillery', '#gtceu:circuits/hv', '#gtceu:circuits/lv')
     replace('primalmagick:quartz_nugget', 'minecraft:quartz', 'actuallyadditions:ethetic_green_block')
     replace('packagedauto:package_component', 'minecraft:gold_ingot', twilight)
     replace('mekanism:elite_fluid_tank', iron, '#c:ingots/end_steel')
+    replace('ae2:item_cell_housing', 'redstone', 'excessive_utilties:eye_of_redstone')
     replace('mekanism:ultimate_fluid_tank', iron, 'kubejs:stellarium_ingot')
     replace('oritech:small_tank_block', 'copper_ingot', 'enderio:conductive_alloy_ingot')
     replace('oritech:refinery_module_block', 'copper_ingot', 'enderio:conductive_alloy_ingot')
     replace('oritech:refinery_block', 'cauldron', 'ender_eye')
     replace('oritech:machine_frame_block', iron, steel)
     replace('javd:portal_block', 'minecraft:ender_pearl', 'minecraft:ender_eye')
-    replace('jamd:portal_block', 'diamond_pickaxe', 'ae2:engineering_processor')
-    replace('jamd:nether_portal', 'netherite_pickaxe', 'ae2:logic_processor')
-    replace('jamd:end_portal', 'diamond_pickaxe', 'ae2:calculation_processor')
     replace('enderio:end_steel_ingot', 'minecraft:obsidian', 'mekanism:ingot_refined_obsidian')
     replace('industrialforegoing:machine_frame_pity', iron, 'enderio:end_steel_ingot')
     replace('industrialforegoing:machine_frame_pity', "minecraft:redstone_block", 'mekanism:steel_casing')
@@ -468,9 +479,35 @@ const shapelessCrafting = [
       output: 'primalmagick:rune_grace',
       inputs: ['cyclic:candle_peace']
     },
+    {
+      id: 'modpack:moonstone_block',
+      output: 'gaiadimension:moonstone_block',
+      inputs: ['9x excessive_utilities:moon_stone']
+    },
+    {
+      id: 'modpack:bedrock_dust_block',
+      output: 'spectrum:bedrock_dust_block',
+      inputs: ['9x spectrum:bedrock_dust']
+    }
   ];
 // Can't do any better to compact the ones below, no other options...
 const shapedCrafting = [
+  {
+    id: 'modpack:shimmersteel_ingot',
+    output: 'auroral:shimmersteel_ingot',
+    pattern: ['ABC', 'DEF', 'GHI'],
+    keys: {
+      A: 'gaiadimension:aura_cluster',
+      B: 'gaiadimension:goldstone',
+      C: 'gaiadimension:tektite',
+      D: 'gaiadimension:goshenite',
+      E: 'gaiadimension:bismuth_crystal',
+      F: 'gaiadimension:euclase',
+      G: 'gaiadimension:labradorite',
+      H: 'gaiadimension:proustite',
+      I: 'gaiadimension:stibnite'
+    }
+  },
   {
     id:'modpack:quartz_fiber',
     output: 'ae2:quartz_fiber',
@@ -479,6 +516,15 @@ const shapedCrafting = [
       A: 'enderio:clear_glass',
       B: 'ae2:certus_quartz_dust',
       C: 'dimdoors:clod'
+    }
+  },
+  {
+    id: 'modpack:biomic_terraformer',
+    output: 'mmcr:biomic_terraformer_controller',
+    pattern: ['   ', 'AB ', '   '],
+    keys: {
+      A: 'auroral:shimmersteel_ingot',
+      B: 'gtceu:ev_machine_hull'
     }
   },
   {
@@ -897,7 +943,7 @@ const shapedCrafting = [
       A: 'projecte:low_covalence_dust',
       B: 'projecte:medium_covalence_dust',
       C: 'projecte:high_covalence_dust',
-      D: 'bigreactors:benitoite_crystal',
+      D: '#c:gems/benitoite',
       E: 'mekanism:enriched_diamond',
       F: 'divinerpg:terran_shards',
       G: 'divinerpg:ender_shards',

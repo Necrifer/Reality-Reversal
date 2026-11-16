@@ -1,4 +1,5 @@
 // Converted from tree_aura_ritual.js for Minecraft 1.21.1 NeoForge.
+ServerEvents.recipes(custom => {
 (function () {
 
 function materialize(v) {
@@ -9,7 +10,7 @@ function materialize(v) {
   if (v._fluid) return Fluid.of(v.id, v.amount);
   var o = {}; Object.keys(v).forEach(function (k) { o[k] = materialize(v[k]); }); return o;
 }
-
+function treeritual(){}
 const records = [
   {
     "file": "tree_aura_ritual.js",
@@ -100,4 +101,4 @@ ServerEvents.recipes(function (event) {
     } catch (error) { console.error('[1.21.1 port] ' + r.source + ' / ' + r.kind + ': ' + error); }
   });
 });
-})();
+})})

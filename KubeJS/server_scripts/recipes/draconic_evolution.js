@@ -1,5 +1,7 @@
-
 ServerEvents.recipes(event => {
+  function idRemoval(idremove) {return event.remove({id: idremove})}
+  idRemoval('draconicevolution:machines/awakened_crafting_injector')
+  idRemoval('draconicevolution:machines/wyvern_crafting_injector')
 const fusion = [
   {
     "catalyst": {
@@ -411,6 +413,31 @@ const fusion = [
   //"techLevel": "draconic",
   //"totalEnergy": 10000000
   //},
+  
+  {
+  "catalyst": {"item": "cataclysm:witherite_block"},
+  "ingredients": [
+    {"ingredient":{"item": "wither_rose"}, "consume": true},
+    {"ingredient": {"item": "aoa3:wither_rune"}, "consume": true},
+    {"ingredient":{"item": "wither_rose"}, "consume": true},
+    {"ingredient": {"item": 'aoa3:wither_rune'}, "consume": true},
+    {"ingredient": {"item": "kubejs:seeneyes2"}, "consume": true},
+    {"ingredient": {"item": "gtceu:chaos_infused_ingot"}, "consume": true},
+    {"ingredient": {"item": "gtceu:chaos_infused_ingot"}, "consume": true},
+    {"ingredient": {"item": "astralsorcery:vivid_powder"}, "consume": true},
+    {"ingredient": {"item": "astralsorcery:vivid_powder"}, "consume": true},
+    {"ingredient": {"item": "gtceu:nether_star_lens"}, "consume": true},
+    {"ingredient": {"item": "gtceu:nether_star_lens"}, "consume": true},
+    {"ingredient": {"item": "kubejs:seeneyes2"}, "consume": true},
+    {"ingredient": {"item": "kubejs:seeneyes2"}, "consume": true},
+  ],
+  "result": {
+    "id": "cataclysm:witherite_block",
+    "count": 6
+  },
+  "techLevel": "draconic",
+  "totalEnergy": 10000000
+  },
   {
   "catalyst": {"item": "draconicevolution:large_chaos_frag"},
   "ingredients": [
@@ -432,6 +459,7 @@ const fusion = [
   "techLevel": "draconic",
   "totalEnergy": 10000000
   },
+
     ];
     fusion.forEach(recipe => {
       event.custom({

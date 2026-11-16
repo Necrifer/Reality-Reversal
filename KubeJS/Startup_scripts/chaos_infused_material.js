@@ -30,7 +30,7 @@
       GTMaterialFlags.GENERATE_FINE_WIRE,
       GTMaterialFlags.GENERATE_FRAME,
       GTMaterialFlags.FORCE_GENERATE_BLOCK,
-      GTMaterialFlags.DISABLE_MATERIAL_RECIPES
+      GTMaterialFlags.NO_SMELTING
     )
 });
   global.gregMaterials.register('gtceu:taint', function (material) {
@@ -43,7 +43,6 @@
     .flags(
       GTMaterialFlags.GENERATE_ROD,
       GTMaterialFlags.GENERATE_LONG_ROD,
-      GTMaterialFlags.DISABLE_MATERIAL_RECIPES
     )
 });
 })();

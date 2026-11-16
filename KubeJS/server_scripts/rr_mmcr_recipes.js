@@ -5,9 +5,6 @@
     recipes.forEach(function (r) { event.custom(r.json).id(r.id); });
     console.info('[RR_MMCR_RECIPES] registered ' + recipes.length + ' migrated recipes');
   });
-  global.rrServerHooks.rrMmcrRecipeTick = function (machineId, context) {
-    if (machineId !== 'realityreversal:radiation_cleanser') global.rrServerHooks.rrMmcrAuraPollution(context.machineContext().controller());
-  };
   global.rrServerHooks.rrMmcrRecipeFinish = function (machineId, context) {
     var tile = context.machineContext().controller();
     var data = tile.getPersistentData();

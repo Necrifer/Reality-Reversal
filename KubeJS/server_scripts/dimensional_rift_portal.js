@@ -6,7 +6,8 @@
     // slowFallTicks > 0 grants Slow Falling on arrival, which cancels fall damage until landing.
     var ROUTES = {
         'kubejs:containment_failure': { dimension: 'sunken_city:template', name: 'Sunken City', arrivalY: 200, slowFallTicks: 0 },
-        'kubejs:sol_astral_ingot': { dimension: 'divinerpg:eden', name: 'Eden', arrivalY: 200, slowFallTicks: 2400 }
+        'kubejs:sol_astral_ingot': { dimension: 'divinerpg:eden', name: 'Eden', arrivalY: 200, slowFallTicks: 2400 },
+        'gaiadimension:glint_and_gold': { dimension: 'gaiadimension:gaia_dimension', name: 'Gaia Dimension', arrivalY: 200, slowFallTicks: 2400 }
     };
     var COOLDOWN_TICKS = 20;
     var COOLDOWN_KEY = 'rr_dimensional_rift_cooldown';

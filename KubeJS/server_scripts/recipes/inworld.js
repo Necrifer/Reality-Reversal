@@ -1,5 +1,7 @@
 // Lychee 6.5 (1.21): item actions take the stack inline as id/count/components, not item: "...".
 ServerEvents.recipes(event => {
+  let post = PostBuilder.create()
+  let contextual = ContextualBuilder.create()
   event.custom({
     type: 'lychee:item_inside',
     item_in: [{ item: 'dimdoors:driftwood_log' }],
@@ -28,6 +30,22 @@ ServerEvents.recipes(event => {
     block_in: { blocks: ['spectrum:dragonrot'] },
     post: [{ type: 'set_item', id: 'excessive_utilities:demon_ingot', count: 1 }]
   }).id('modpack:lychee/demon_ingot')
+
+  // Mech Eye puzzle, step 2: a stable Midnight Aberration dropped into Light of Dawn in the Green Agate Jungle.
+  // hide_in_viewer keeps it out of JEI/EMI. Step 1 is server_scripts/rr_mech_eye_puzzle.js.
+  event.custom({
+    type: 'lychee:item_inside',
+    hide_in_viewer: true,
+    item_in: [{
+      type: 'neoforge:components',
+      items: 'spectrum:midnight_aberration',
+      components: { 'spectrum:stable': {} },
+      strict: false
+    }],
+    block_in: { blocks: ['kubejs:eden_fluid'] },
+    contextual: [{ type: 'location', predicate: { biomes: 'gaiadimension:green_agate_jungle' } }],
+    post: [{ type: 'set_item', id: 'aoa3:observing_eye', count: 1 }]
+  }).id('modpack:lychee/observing_eye_dawn')
 
   event.custom({
     type: 'lychee:item_exploding',

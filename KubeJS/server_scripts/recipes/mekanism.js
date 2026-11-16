@@ -1,6 +1,15 @@
 // Converted from mekanism.js for Minecraft 1.21.1 NeoForge.
 (function () {
+// Mekanism Combiner. Inputs accept an item ID or '#tag'; JSON format matches Mekanism's own combining recipes.
+function combinerInput(id, count) {
+  return id.startsWith('#') ? { count: count, tag: id.slice(1) } : { count: count, item: id };
+}
+function combiner(event, extrainput, extracount, maininput, maincount, outcount, output) {
+  return event.custom({ type: 'mekanism:combining', extra_input: combinerInput(extrainput, extracount),
+    main_input: combinerInput(maininput, maincount), output: { count: outcount, id: output } });
+}
 
+// The below is old code during porting. I haven't bother factoring it properly. One day...
 function materialize(v) {
   if (Array.isArray(v)) return v.map(materialize);
   if (!v || typeof v !== 'object') return v;
@@ -9,7 +18,6 @@ function materialize(v) {
   if (v._fluid) return Fluid.of(v.id, v.amount);
   var o = {}; Object.keys(v).forEach(function (k) { o[k] = materialize(v[k]); }); return o;
 }
-
 const records = [
   {
     "kind": "custom",
@@ -216,6 +224,9 @@ const records = [
 ];
 
 ServerEvents.recipes(function (event) {
+  // extra input, extra count, main input, main count, output count, output
+  combiner(event, 'gtceu:chaos_infused_dust', 1, 'gaiadimension:white_opal', 1, 1, 'gaiadimension:green_opal');
+
   records.forEach(function (r) {
     try {
       var a = r.kind === 'custom' ? r.args : materialize(r.args);

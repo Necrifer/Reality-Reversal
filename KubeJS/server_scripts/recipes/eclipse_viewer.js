@@ -33,10 +33,10 @@ ServerEvents.recipes(event => {
         fluidOut('kubejs:eden_fluid', 10)
     ])
     viewer('aberrant_crystal', 300, [
-        itemIn('ae2:fluix_crystal', 16),
+        itemIn('appliedas:astral_fluix_crystal', 1),
         fluidIn('kubejs:fluid_charged_fluix', 8000),
         fluidIn('#c:sulfuric_acid', 1500),
-        itemOut('appliedas:astral_fluix_crystal', 1)
+        itemOut('appliedas:astral_fluix_crystal', 16)
     ])
     viewer('sol_astral_ingot_easy', 600, [
         itemIn('appliedas:constellation_core'),

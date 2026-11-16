@@ -89,7 +89,6 @@
         registry['setChunkRadiation(net.minecraft.world.level.ChunkPos,igentuman.nr.api.RadiationProfile,igentuman.nr.api.RadiationProfile,igentuman.nr.api.RadiationProfile)'](cp, air, water, soil);
         changed++;
       }
-      if (typeof global.rrServerHooks.rrCleanAuraPollution === 'function') global.rrServerHooks.rrCleanAuraPollution(level, cp.x, cp.z);
     }
     // Picking up/despawning dropped fuel creates LeftOverRadSource objects.
     // These irradiate entities and redeposit contamination separately from chunk data.

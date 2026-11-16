@@ -31,6 +31,12 @@ StartupEvents.registry('item', event => {
     .formattedDisplayName(Text.of('Eyes of The High Priestess').darkGreen())
     .fireResistant(true)
     .tag('c:arcana')
+  event.create('eyes4')
+    .tooltip('§9In abundance, one starts to yearn for structure and reliability')
+    .color(0, 0x9604ff)
+    .formattedDisplayName(Text.of('Eyes of The Empress').darkPurple())
+    .fireResistant(true)
+    .tag('c:arcana')
 
   event.create('law_ingot')
     .tooltip('§kTo understand.')

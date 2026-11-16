@@ -11,6 +11,8 @@ ServerEvents.recipes(event => {
   })
  const removeIds = [
     // 'productivebees:centrifuge/honeycomb_withered'
+    'productivebees:centrifuge/gems/honeycomb_aquamarine',
+    'productivebees:aquamarine_honeycomb'
   ]
   removeIds.forEach(id => event.remove({ id: id }))
   // One output entry. id: an item id, or '#tag' for a tag.

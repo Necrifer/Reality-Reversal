@@ -1,4 +1,5 @@
 // Converted from industrial_foregoing.js for Minecraft 1.21.1 NeoForge.
+ServerEvents.recipes(event => {
 (function () {
 
 function materialize(v) {
@@ -9,7 +10,18 @@ function materialize(v) {
   if (v._fluid) return Fluid.of(v.id, v.amount);
   var o = {}; Object.keys(v).forEach(function (k) { o[k] = materialize(v[k]); }); return o;
 }
-
+function fluidin (id, vol) {return id.startsWith('#') ? {tag: id.slice(1), amount: vol} : {fluid: id, amount: vol}}
+function fluidout (id, vol) {return id.startsWith('#') ? {tag: id.slice(1), amount: vol} : {fluid: id, amount: vol}}
+function itemout (id, amt) {return id.startsWith('#') ? {tag: id.slice(1), amount: amt} : {item: id, amount: amt}}
+function dischamber(input, liqin, volin, output, amountout, liqout, volout){
+  return event.custom({
+    type: 'industrialforegoing:dissolution_chamber',
+    input: input,
+    inputFluid: fluidin[(liqin, volin)],
+    output: itemout[(output, amountout)],
+    outputFluid: fluidout[(liqout, volout)]
+  })
+}
 const records = [
   {
     "file": "industrial_foregoing.js",
@@ -158,4 +170,4 @@ ServerEvents.recipes(function (event) {
     } catch (error) { console.error('[1.21.1 port] ' + r.source + ' / ' + r.kind + ': ' + error); }
   });
 });
-})();
+})});
