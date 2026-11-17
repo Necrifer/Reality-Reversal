@@ -10,6 +10,8 @@ Update2: Astral Sorcery, Botania and Thaumcraft is now available on 1.21, togeth
 
 Update3: I have a custom mod added for its late-endgame progression for tech: Go check it out if you are interested, it surrounds the more advanced and theoretical parts of sciences and mathematics.
 
+Update4: Version 1.21 is now active, version 1.20.1 will now be archived.
+
 This is a massive project undertaken by someone with nearly 0 background in CS, so expect lots of fixes/bugs/changes frequently. 
 A lot of features are still heavily underdeveloped/exist as concept and not yet fixed, so there is not much to look around yet.
 Due to very frequent changes on 1.21 mods development environment, files may be removed/changed in massive chunks at times.
