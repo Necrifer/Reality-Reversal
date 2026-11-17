@@ -1,479 +1,366 @@
- - Step Height Entity Attribute(step_height_entity_attribute)@1.2.0
- - KubeUtils(kubeutils)@20.1.1
- - Almanac(almanac)@1.0.2
- - FTB Essentials(ftbessentials)@2001.2.4
- - PAUCAL(paucal)@0.6.0+1.20.1-forge
- - PonderLib(ponderlib)@0.7.3
- - KubeJSCurios(kubejs_curios)@1.0.4
- - Connector Extras KubeJS Bridge(connectorextras_kubejs_bridge)@1.11.2+1.20.1
- - Fabric Rendering Fluids (v1)(fabric_rendering_fluids_v1)@3.0.29+4ac5e37a77
- - Cardinal Components API (entities)(cardinal_components_entity)@5.2.3
- - Fabric Models (v0)(fabric_models_v0)@0.4.3+7c3892a477
- - HammerLib(hammerlib)@20.1.50
- - ProjectE(projecte)@1.0.1
- - ModernFix(modernfix)@5.27.83+mc1.20.1
- - Fabric Command API (v1)(fabric_command_api_v1)@1.2.35+f71b366f77
- - WitherBean's Wither Storm Tweaks(wither_storm_tweaks)@1.0.0
- - Fabric Command API (v2)(fabric_command_api_v2)@2.2.14+561530ec77
- - Fabric BlockView API (v2)(fabric_block_view_api_v2)@1.0.3+53347ba977
- - Connector Extras REI Bridge(connectorextras_rei_bridge)@1.11.2+1.20.1
- - clientcrafting mod(clientcrafting)@1.20.1-2.1
- - LowDragLib(ldlib)@1.0.52.a
- - Cloth Config v10 API(cloth_config)@11.1.136
- - Supplementaries(supplementaries)@1.20-3.1.43
- - Embeddium(embeddium)@0.3.31+mc1.20.1
- - Rubidium (Embeddium)(rubidium)@0.7.1
- - Corpse(corpse)@1.20.1-1.0.23
- - Castle in the Sky(castle_in_the_sky)@1.20.1
- - Industrial Foregoing(industrialforegoing)@3.5.22
- - ImmersiveUI(immersiveui)@0.3.0
- - SDMGameStagesHelper(sdmgamestageshelper)@1.20.1-1.1.0
- - FTB Materials(ftbmaterials)@20.1.1
- - GroovyModLoader(gml)@4.0.11
- - Jupiter(jupiter)@2.3.7
- - Gendustry(gendustry)@1.0.5
- - Botania(botania)@1.20.1-456-FORGE
- - spark(spark)@1.10.53
- - GameStages(gamestages)@15.0.2
- - CommonGroovyLibrary(commongroovylibrary)@0.3.3
- - ExtraLib(extralib)@3.1.1
- - Apothic Attributes(attributeslib)@1.3.7
- - Chunk Pregenerator(chunkpregen)@1.20-4.4.4
- - Cumulus(cumulus_menus)@1.20.1-1.0.1-neoforge
- - NaturesAura(naturesaura)@39.4
- - Extra Botany: Reburn(extrabotany)@1.9.2
- - TRansition(transition)@1.0.25
- - flib(flib)@0.0.16
- - Dynamic FPS(dynamic_fps)@3.11.4
- - Fabric Rendering Data Attachment (v1)(fabric_rendering_data_attachment_v1)@0.3.39+a6081afc77
- - Nitrogen(nitrogen_internals)@1.20.1-1.0.12-neoforge
- - Fast Leaf Decay(fastleafdecay)@32
- - JourneyMap API(journeymap_api)@1.20.1-2.0.0
- - DivineRPG(divinerpg)@1.10.7.5
- - Super Factory Manager (SFM)(sfm)@4.34.0
- - Fabric Client Tags(fabric_client_tags_api_v1)@1.1.3+5d6761b877
- - SmartBrainLib(smartbrainlib)@1.15
- - Kiwi Library(kiwi)@11.10.3+forge
- - Client Tweaks(clienttweaks)@11.1.11
- - Simply Jetpacks 2(simplyjetpacks)@1.20.1-2.11.0.0
- - FastBoot(fastboot)@1.2
- - Advent Of Ascension(aoa3)@3.7.1
- - KubeJS Nature's Aura(kubejs_naturesaura)@1.0.2
- - Visual Workbench(visualworkbench)@8.0.1
- - AttributeFix(attributefix)@21.0.5
- - Fabric Screen Handler API (v1)(fabric_screen_handler_api_v1)@1.3.33+561530ec77
- - Caelus API(caelus)@3.2.0+1.20.1
- - Tslat Effects Lib (TEL)(tslateffectslib)@1.7
- - fastasyncworldsave mod(fastasyncworldsave)@1.20.1-2.6
- - BOZOID(epherolib)@0.1.2
- - Cursed Earth Returns(cursedearth)@1.6
- - Compact Machines(compactmachines)@6.0.3
- - BotanyPots(botanypots)@13.0.43
- - Void Miners(voidminers)@1.20.1-1.9.26.2
- - Angel Block(angel_block)@1.0.0
- - Quests Additions(questsadditions)@1.4.7
- - Fusion(fusion)@1.3.15+b
- - CraftTweaker(crafttweaker)@14.0.60
- - Fabric Particles (v1)(fabric_particles_v1)@1.1.3+78e1ecb877
- - Iron Chests(ironchest)@1.20.1-14.4.4
- - Minecraft(minecraft)@1.20.1
- - Smoothchunk mod(smoothchunk)@1.20.1-4.1
- - TerraBlender(terrablender)@3.0.1.10
- - SmartKeyPrompts(smartkeyprompts)@1.1.3-hotfix
- - Pam's HarvestCraft 2 - Crops(pamhc2crops)@1.0.3
- - Just Enough Breeding(justenoughbreeding)@3.0.1
- - All The Leaks(alltheleaks)@1.1.3+1.20.1-forge
- - Fabric Block API (v1)(fabric_block_api_v1)@1.0.12+0e6cb7f777
- - Fabric Resource Conditions API (v1)(fabric_resource_conditions_api_v1)@2.3.9+996d00b277
- - KubeJS ProjectE(kubejsprojecte)@1.0
-- Forge Config API Port (ConnectorExtras)(forgeconfigapiport)@8.0.0
-- Flywheel(flywheel)@1.0.6-278
-- Torcherino(torcherino)@20.0.0
-- AlmostUnified(almostunified)@1.20.1-0.11.0
-- EMI(emi)@1.1.24+1.20.1+forge
-- Fabric Registry Sync (v0)(fabric_registry_sync_v0)@2.3.6+1c0ea72177
-- ImmediatelyFast(immediatelyfast)@1.5.5+1.20.4
-- underwater_village(underwater_village)@1.0.2
-- FastFurnace(fastfurnace)@8.0.2
-- Cardinal Components API (world saves)(cardinal_components_level)@5.2.3
-- Fabric Object Builder API (v1)(fabric_object_builder_api_v1)@11.1.5+f8c414ce77
-- Ad Astra Extra(adastraextra)@1.2.3
-- Valkyrien Skies 2(valkyrienskies)@2.4.11
-- Fabric Message API (v1)(fabric_message_api_v1)@5.1.10+52cc178c77
-- Extreme Sound Muffler(extremesoundmuffler)@3.51
-- ae2CraftingTree(ae2ct)@1.20.1-1.1.1
-- Forestry(forestry)@2.11.1
-- Ad Astra(ad_astra)@1.15.21
-- Bedrock Miner(bedrockminer)@2.2.2
-- KumaAPI(kuma_api)@20.1.12
-- Fabric Renderer API (v1)(fabric_renderer_api_v1)@3.2.2+cf68abbe77
-- AlchemyLib(alchemylib)@1.0.30
-- Global Packs(globalpacks)@19.3.7
-- Souls holes(soulsholes)@1.0.0+1.20.1-forge
-- Fabric Item API (v1)(fabric_item_api_v1)@2.1.29+4d0bbcfa77
-- Revelationary(revelationary)@1.3.91.20.1
-- Extended Crafting(extendedcrafting)@6.0.10
-- Extended Compressor(extendedcompressor)@1.0.1
-- Sophisticated Core(sophisticatedcore)@1.5.1.2335
-- Gpu memory leak fix(gpumemleakfix)@1.20.1-1.8
-- Structure Essentials mod(structureessentials)@1.20.1-5.0
-- Botania [Ponder](botania_ponder)@1.2.0
-- Placebo(placebo)@8.6.3
-- Bookshelf(bookshelf)@20.2.15
-- Sophisticated Backpacks(sophisticatedbackpacks)@3.26.3.2157
-- Cardinal Components API (items)(cardinal_components_item)@5.2.3
-- Sodium Options API(sodiumoptionsapi)@1.0.10
-- Melody(melody)@1.0.2
-- Fzzy Config(fzzy_config)@0.7.7+1.20.1+forge
-- Forgified Fabric API(fabric_api)@0.92.6+1.11.15+1.20.1
-- Connector Extras ModMenu Bridge(connectorextras_modmenu_bridge)@1.11.2+1.20.1
-- ModMenu (Connector Extras)(modmenu)@7.2.2
-- Fractal(fractal)@1.2.0
-- Trenzalore(trenzalore)@3.3.10
-- Konkrete(konkrete)@1.8.0
-- DoG(dog)@1.2.0
-- AvaritiaIntegration(avaritia_integration)@1.0.2
-- TConstruct JS(tconstruct_js)@1.0.6
-- Hostile Neural Networks(hostilenetworks)@5.3.3
-- AmbientSounds(ambientsounds)@6.3.8
-- Fabric API Lookup API (v1)(fabric_api_lookup_api_v1)@1.6.37+67f9824077
-- ArcaneTablet(projex)@1.3
-- LionfishAPI(lionfishapi)@3.0
-- Connector Extras Architectury Bridge(connectorextras_architectury_bridge)@1.11.2+1.20.1
-- Solar Flux Reborn(solarflux)@20.1.11
-- memorysettings mod(memorysettings)@1.20.1-6.0
-- cataclysm(cataclysm)@3.31
-- Cerbons API(cerbons_api)@1.1.0
-- Time In A Bottle(tiab)@4.0.4-mc1.20.1
-- Mystical Customization(mysticalcustomization)@5.0.3
-- Connector(connectormod)@1.0.0-beta.49+1.20.1
-- Cardinal Components API (base)(cardinal_components_base)@5.2.3
-- AI-Improvements(aiimprovements)@0.5.2
-- Cupboard utilities(cupboard)@1.20.1-4.2
-- Voidscape(voidscape)@1.20.1-1.5.389
-- The Undergarden(undergarden)@0.8.14
-- Matmos(matmos_tct)@7.7
-- Data Anchor(dataanchor)@1.0.0.23
-- Fabric Key Binding API (v1)(fabric_key_binding_api_v1)@1.0.38+561530ec77
-- Fabric Transfer API (v1)(fabric_transfer_api_v1)@3.3.6+25eff73b77
-- Pam's HarvestCraft 2 - Trees(pamhc2trees)@1.0.2
-- Particle Rain(particlerain)@4.0.0-beta.11
-- Common Networking(commonnetworking)@1.0.6-1.20.1
-- Connector Extras Pehkui Bridge(connectorextras_pehkui_bridge)@1.11.2+1.20.1
-- Fabric Resource Loader (v0)(fabric_resource_loader_v0)@0.11.12+4b4151c077
-- Obscure API(obscure_api)@18
-- MagiChem(magichem)@0.5.2
-- AE2 Extras(ae2extras)@1.20.1-1
-- jheaps(org_jheaps_jheaps)@0.14
-- Clumps(clumps)@12.0.0.4
-- Reverb(reverb)@1.0.0
-- BadMobs(badmobs)@19.0.4
-- Explorer's Compass(explorerscompass)@1.20.1-1.4.0-forge
-- PackagedExCrafting(packagedexcrafting)@3.4.0.21
-- TxniLib(txnilib)@1.0.24
-- Connector Extras Energy Bridge(connectorextras_energy_bridge)@1.11.2+1.20.1
-- Mystical Agriculture(mysticalagriculture)@7.0.24
-- CraftingTweaks(craftingtweaks)@18.2.9
-- Tinkers' Construct(tconstruct)@3.11.2.166
-- AppliedE(appliede)@0.14.7-fix2
-- Re-Avaritia(avaritia)@1.4.2
-- Fabric BlockRenderLayer Registration (v1)(fabric_blockrenderlayer_v1)@1.1.42+1d0da21e77
-- Amecs API(amecsapi)@1.5.3+mc1.20-pre1
-- CreativeCore(creativecore)@2.12.40
-- Ender IO(enderio)@6.2.18-beta
-- JAOPCA(jaopca)@4.4.18.34
-- Time in a bottle Curio Support(curiotiab)@1.20.1-2.0.2
-- Fast Workbench(fastbench)@8.0.4
-- Storage Drawers(storagedrawers)@12.14.3
-- Flux Networks(fluxnetworks)@7.2.1.15
-- Fabric Biome API (v1)(fabric_biome_api_v1)@13.0.14+dc36698e77
-- Building Gadgets 2(buildinggadgets2)@1.0.8
-- Ferrite Core(ferritecore)@6.0.1
-- Lychee Tweaker(lychee)@5.2.1+forge
-- Lodestone(lodestone)@1.20.1-1.6.4.1
-- BadOptimizations(badoptimizations)@2.4.1
-- Astral Dimension(astral_dimension)@3.0
-- PartiCull(particull)@2.0
-- OpenLoader(openloader)@19.0.5
-- SuperMartijn642's Config Library(supermartijn642configlib)@1.1.8
-- Trinkets(trinkets)@3.7.2
-- Sodium Extras(sodiumextras)@1.0.6
-- Additional Entity Attributes(additionalentityattributes)@1.7.61.20.1
-- Scena(scena)@1.0.103
-- Botarium(botarium)@2.3.4
-- Ponder(ponder)@1.0.91
-- Just Another Void Dimension(javd)@5.0.1+mc1.20.1
-- KubeLoader(kubeloader)@0.0.8
-- Fabric Convention Tags(fabric_convention_tags_v1)@1.5.6+fa3d1c0177
-- ConnectedTexturesMod(ctm)@1.20.1-1.1.10
-- Balm(balm)@7.3.43
-- Fabric Screen API (v1)(fabric_screen_api_v1)@2.0.9+45a670a577
-- Dynamic view distance(dynview)@2.3
-- mangomultiblock(mangomultiblock)@1.3.0
-- Myotus(myotus)@15.0.7
-- Just Enough Resources(jeresources)@1.4.0.247
-- CallFromTheDepth (callfromthedepth_)@1.22.1
-- Crash Assistant(crash_assistant)@1.11.12
-- Mystical Agradditions(mysticalagradditions)@7.0.12
-- S-Lib(s_lib)@2.1.1+1.20.1
-- Athena(athena)@3.1.2
-- Connector Extras Terrablender Bridge(connectorextras_terrablender_bridge)@1.11.2+1.20.1
-- Glodium(glodium)@1.20-1.5-forge
-- KubeJS Mystical Agriculture(kubejs_mystical_agriculture)@0.1.0
-- Torchmaster(torchmaster)@20.1.9
-- Fabric Game Rule API (v1)(fabric_game_rule_api_v1)@1.0.41+683d4da877
-- VanillaBackport(vanillabackport)@1.1.7.10
-- SuperMartijn642's Core Lib(supermartijn642corelib)@1.1.24+b
-- Resourcefulconfig(resourcefulconfig)@2.1.3
-- Curios API(curios)@5.14.1+1.20.1
-- Project Expansion(projectexpansion)@1.20.1-1.1.3
-- Angel Ring 2(angelring)@2.2.3
-- Fabric Entity Events (v1)(fabric_entity_events_v1)@1.6.1+4ca7515277
-- EtSTLib(etstlib)@3.0.0-beta.20
-- The Abyss: The Other Side(theabyss)@1.0.0
-- Infiniverse(infiniverse)@1.0.0.5
-- CodeChicken Lib(codechickenlib)@4.4.0.528
-- CBMultipart(cb_multipart)@3.3.0.159
-- CBMicroblock(cb_microblock)@3.3.0.159
-- CBMultipart Minecraft(cb_multipart_minecraft)@3.3.0.159
-- Brandon's Core(brandonscore)@3.2.1.302
-- Draconic Evolution(draconicevolution)@3.1.2.621
-- Fabric Dimensions API (v1)(fabric_dimensions_v1)@2.1.55+8005d10d77
-- Tinkers' Advanced-Materials(tinkers_advanced_materials)@3.0.0-beta.3
-- Fabric Model Loading API (v1)(fabric_model_loading_api_v1)@1.0.4+6274ab9d77
-- Just Enough Items(jei)@15.20.0.134
-- JEI Biome(jei_biome)@1.20.1-forge-1.10
-- Lithostitched(lithostitched)@1.4.11
-- Universal Bone Meal(universalbonemeal)@8.0.1
-- Mekanism(mekanism)@10.4.16
-- Mekanism: Generators(mekanismgenerators)@10.4.16
-- Mekanism: Ponders(mekanism_ponders)@1.0.3-1.20.1
-- Inventory Tweaks Refoxed(invtweaks)@1.2.2
-- Fabric Rendering (v1)(fabric_rendering_v1)@3.0.9+66e9a48f77
-- Fabric Renderer - Indigo(fabric_renderer_indigo)@1.5.3+b5b2da4177
-- Fallingleaves(fallingleaves)@2.1.2
-- Nature's Compass(naturescompass)@1.20.1-1.12.0-forge
-- OELib(oelib)@0.2.4.1
-- GlitchCore(glitchcore)@0.0.1.1
-- Biomes O' Plenty(biomesoplenty)@19.0.0.96
-- Serene Seasons(sereneseasons)@9.1.0.3
-- Neruina(neruina)@2.1.2
-- Connector Extras Geckolib-Fabric Compat(connectorextras_geckolib_fabric_compat)@1.11.2+1.20.1
-- Structure To KubeJs Aisles(structuretokubejsaisles)@1.0.3
-- Click Machine(clickmachine)@8.0.2
-- Cataclysm Dimension(cataclysm_dimension)@1.5.7
-- Formations(formations)@1.0.4
-- Puzzles Access Api(puzzlesaccessapi)@20.1.1
-- Immersive Petroleum(immersivepetroleum)@4.3.0-36
-- Ad Astra: More Structures(ad_astra_more_structures)@1.0.2
-- Forge(forge)@47.4.22
-- CoFH Core(cofh_core)@11.0.2
-- Thermal Series(thermal)@11.0.6
-- Thermal Integration(thermal_integration)@11.0.1
-- AppleSkin(appleskin)@2.5.1+mc1.20.1
-- Woot Revived(woot_revived)@20.1.1.9
-- Akashic Tome(akashictome)@1.7-27
-- Thermal Innovation(thermal_innovation)@11.0.1
-- Thermal Foundation(thermal_foundation)@11.0.6
-- Thermal Dynamics(thermal_dynamics)@11.0.1
-- Event Wrapper(eventwrapper)@1.1.4
-- Log Begone(logbegone)@1.0.8
-- Alchemistry(alchemistry)@2.3.4
-- Zero CORE 2(zerocore)@1.20.1-2.1.48
-- Avaritia:Expand(avaritia_expand)@0.0.9+Re-1.3.9.8+1.20.1
-- Simple Backups(simplebackups)@1.20.1-3.1.24
-- ItemPhysicLite(itemphysiclite)@1.6.11
-- Fabric API Base(fabric_api_base)@0.4.32+ef105b4977
-- Mouse Tweaks(mousetweaks)@2.25.1
-- Immersive Engineering(immersiveengineering)@1.20.1-10.2.0-183
-- SpectreLib(spectrelib)@0.13.17+1.20.1
-- Connector Extras JEI Bridge(connectorextras_jei_bridge)@1.11.2+1.20.1
-- Kotlin For Forge(kotlinforforge)@4.12.0
-- tctcore(tctcore)@2.2
-- EntityJS(entityjs)@0.7.3
-- Mantle(mantle)@1.11.104
-- Pam's HarvestCraft 2 - Food Core(pamhc2foodcore)@1.0.5
-- Croptopia(croptopia)@0.0NONE
-- Fabric Item Group API (v1)(fabric_item_group_api_v1)@4.0.14+c9161c2d77
-- Polymorph(polymorph)@0.49.10+1.20.1
-- Mana and Artifice(mna)@3.1.11
-- EntityCulling(entityculling)@1.11.2
-- Smart Particles(smart_particles)@20.1.10-Forge
-- More Sounds(more_sounds)@1.20.1-0.3.1-beta-forge
-- Fabric Recipe API (v1)(fabric_recipe_api_v1)@1.0.24+514a076577
-- Modern UI(modernui)@3.12.0.1
-- Jade-VS(jade_vs)@1.3.0
-- Puzzles Lib(puzzleslib)@8.1.33
-- Aquaculture 2(aquaculture)@2.5.7
-- Fabric Sound API (v1)(fabric_sound_api_v1)@1.0.14+4f23bd8477
-- chunksending mod(chunksending)@1.20.1-3.9
-- Aquamirae(aquamirae)@6.4.0
-- Carbon Config Library(carbonconfig)@1.20-2.0.2.1
-- Not Enough Crashes(notenoughcrashes)@4.4.9+1.20.1
-- MoreEventsJS(more_events_js)@1.1.0
-- GeckoLib 4(geckolib)@4.8.4
-- recipeessentials mod(recipeessentials)@1.20.1-4.7
-- The Aether(aether)@1.20.1-1.5.2-neoforge
-- Connectivity Mod(connectivity)@1.20.1-7.6
-- Citadel(citadel)@2.6.3
-- Ice and Fire(iceandfire)@2.1.13-1.20.1
-- Fabric Data Attachment API (v1)(fabric_data_attachment_api_v1)@1.0.2+30ef839e77
-- Primal Magick(primalmagick)@4.0.11
-- Spectrum(spectrum)@1.8.13
-- Multibuilder Tool(mbtool)@1.0.27
-- Fabric Content Registries (v0)(fabric_content_registries_v0)@4.0.13+a670df1e77
-- The Twilight Forest(twilightforest)@4.3.2508
-- Crafting Recipe Exporter(craftingrecipeexporter)@1.0.2
-- Farmer's Delight(farmersdelight)@1.20.1-1.3.4
-- Avaritia's Delight(avaritia_delight)@1.0.0
-- ExtraQuests [FTB Quests](extraquests)@1.7.0
-- Crash Utilities(crashutilities)@8.1.4
-- Get It Together, Drops!(getittogetherdrops)@1.3
-- EMC Interface(emc_interface)@1.20.1.1
-- Advanced Mining Dimension(mining_dimension)@1.20.1-1.1.0
-- Colorful Hearts(colorfulhearts)@4.3.16
-- Matchbooks(matchbooks)@0.1.0
-- Reach Entity Attributes(reach_entity_attributes)@2.4.0
-- Tinkers' Advanced(tinkers_advanced)@3.0.0-beta.5
-- Tinkers' Advanced Utilities(tinkers_advanced_utilities)@3.0.0-beta.5
-- Mystical Extended Tier(mystical_extended_tier)@1.0.0
-- Pam's HarvestCraft 2 - Food Extended(pamhc2foodextended)@0.0NONE
-- Re-Dimension Stages(redimstages)@1.0.0
-- leaky mod(leaky)@1.20.1-3.4
-- Actually Subtractions(actuallyadditions)@1.2.14.20+mc1.20.1
-- Patchouli(patchouli)@1.20.1-85-FORGE
-- Thermal Expansion(thermal_expansion)@11.0.1
-- Reality Reversal Progression Lens [DEV ONLY](rr_dev_progression_lens)@0.2.10
-- Cracker's Wither Storm Mod(witherstormmod)@4.2.1
-- JEI Drops(jeidrops)@1.0.0
-- FTB Ultimine(ftbultimine)@2001.1.8
-- Tinkers' Compatibility(tcompat)@2.0.3
-- SDMMobStages(sdmmobstages)@1.20.1-1.0.1
-- Resourceful Lib(resourcefullib)@2.1.29
-- LootJS(lootjs)@1.20.1-2.13.1
-- Deeper and Darker(deeperdarker)@1.3.3
-- Architectury(architectury)@9.2.14
-- DimensionalDoors(dimdoors)@5.4.4
-- KubeJS GUI 2 (1.20.1)(streetskubegui)@1.0.0
-- KubeJS Addditions (Forge)(kubejsadditions)@4.3.4
-- Uranus(uranus)@2.2.6-bugfix.2
-- UI Lib(uilib)@0.3.5
-- Tiny Mob Farm(tinymobfarm)@1.4.1-1.20.1
-- KubeJS Botania(kubejs_botania)@1.4.0
-- Not Enough Recipe Book(nerb)@0.4.1
-- FTB Library(ftblibrary)@2001.2.13
-- FTB Teams(ftbteams)@2001.3.2
-- FTB Chunks(ftbchunks)@2001.3.8
-- JamLib(jamlib)@1.3.6+1.20.1-patch.1
-- Right Click Harvest(rightclickharvest)@4.6.1+1.20.1
-- FTB Quests(ftbquests)@2001.4.22
-- Certain Questing Additions(certain_questing_additions)@1.2.0.3
-- Fabric Loot API (v2)(fabric_loot_api_v2)@1.2.3+eb28f93e77
-- Connector Extras(connectorextras)@1.11.2+1.20.1
-- Extreme Reactors(bigreactors)@1.20.1-2.0.97
-- Productive Bees(productivebees)@1.20.1-12.6.0
-- Productive Bees EMI Fix(productivebees_emi_fix)@1.1.0
-- Trash Cans(trashcans)@1.1.0+a
-- MRU(mru)@1.0.33+1.20.1
-- Fabric Networking API (v1)(fabric_networking_api_v1)@1.3.14+fb7c822677
-- PackagedAvaritia:Re(packagedavaritia)@2.2.2.13
-- Inventory Essentials(inventoryessentials)@8.2.19
-- Let Me Despawn(letmedespawn)@1.5.0
-- Fabric Lifecycle Events (v1)(fabric_lifecycle_events_v1)@2.2.23+afab492177
-- Cyclic(cyclic)@1.13.7
-- Rhino(rhino)@2001.2.3-build.10
-- KubeJS(kubejs)@2001.6.5-build.26
-- KubeJS-EnderIO(kubejs_enderio)@1.20.1-0.6.1
-- FTB XMod Compat(ftbxmodcompat)@2.1.3
-- LycheeJS(lycheejs)@0.2.1-1.20.1
-- Kubejs Extended Crafting(kubejs_extended_crafting)@2001.5
-- FluidJS(fluidjs)@1.3.0
-- KubeJS Thermal(kubejs_thermal)@2001.1.10-build.5
-- Cucumber Library(cucumber)@7.0.16
-- Mystical Agriculture Tiered Crystals(matc)@1.6.0
-- Limited Chunkloading(limitedchunks)@1.8
-- Arrowhead(arrowhead)@1.2.0-1.19.4
-- OctoLib(octolib)@0.5.0.1
-- Productive Lib(productivelib)@1.20.1-0.0.4
-- TRender(trender)@1.0.17
-- Fast Suite(fastsuite)@5.1.2
-- Journeymap(journeymap)@1.20.1-6.0.5
-- Nuclearcraft Neoteric(nuclearcraft)@1.2.36
-- Fabric Mining Level API (v1)(fabric_mining_level_api_v1)@2.1.52+561530ec77
-- Configured(configured)@2.2.3
-- Luminastra(luminastra)@1.1.1
-- CrackersLib(crackerslib)@1.20.1-0.4.1
-- Featurify(featurify)@2.0.12
-- Particular Reforged(particular)@1.5.7
-- McJtyLib(mcjtylib)@1.20-8.0.8
-- RFToolsBase(rftoolsbase)@1.20-5.0.7
-- RFToolsPower(rftoolspower)@1.20-6.0.3
-- RFToolsBuilder(rftoolsbuilder)@1.20-6.0.10
-- XNet(xnet)@1.20-6.1.7
-- RFToolsDimensions(rftoolsdim)@1.20-11.0.11
-- XNet Gases(xnetgases)@5.1.4
-- RFToolsStorage(rftoolsstorage)@1.20-5.0.4
-- RFToolsControl(rftoolscontrol)@1.20-7.0.4
-- GuideME(guideme)@20.1.15
-- Terralith(terralith)@2.5.4
-- EnderStorage(enderstorage)@2.11.0.188
-- Hex Casting(hexcasting)@0.11.4
-- HexAutomata(hexautomata)@1.20.1-0.3.5.1
-- Recipe Stages(recipestages)@8.0.0.2
-- Fabric Transitive Access Wideners (v1)(fabric_transitive_access_wideners_v1)@4.3.2+1880499877
-- RFToolsUtility(rftoolsutility)@1.20-6.0.7
-- EnchantmentDescriptions(enchdesc)@17.1.21
-- Moonlight Library(moonlight)@1.20-2.16.35
-- ItemStages(itemstages)@8.0.3
-- Configuration(configuration)@3.1.0
-- GregTech(gtceu)@7.5.3
-- GregTech Molecule Drawings(moldraw)@3.4.0
-- Titanium(titanium)@3.8.34
-- MixinSquared(mixinsquared)@0.3.6-beta.1
-- Jade(jade)@11.13.3+forge
-- Applied Energistics 2(ae2)@15.4.10
-- Applied KubeJS(applied_kjs)@1.0.0
-- AEInfinityBooster(aeinfinitybooster)@1.20.1-1.0.0+51
-- Better P2P(betterp2p)@1.5.0
-- AE Wireless(aewireless)@1.3.7
-- GTMThings(gtmthings)@1.6.0
-- AE Omni Cells(ae2omnicells)@1.1.6
-- AE2NetworkAnalyzer(ae2netanalyser)@1.20-1.0.6-forge
-- AE2WTLib(ae2wtlib)@15.3.3-forge
-- ExtendedAE(expatternprovider)@1.20-1.4.21-forge
-- Applied Enhancements(appliedenhancements)@1.0.6-forge
-- Advanced AE(advanced_ae)@1.3.6-1.20.1
-- Neo ECO AE Extension(neoecoae)@20.4.2
-- Crazy AE2 Addons(crazyae2addons)@3.2.5
-- Polymorphic Energistics(polyeng)@0.1.1-1.20.1
-- Extended Terminal(extendedterminal)@15.0.4
-- MEGA Cells(megacells)@2.4.6-1.20.1
-- InsaneAE(insaneae)@1.1.0
-- AE2AddonLib(ae2addonlib)@1.0.4-1.20.1
-- AE2 Fluid Crafting Terminal(ae2fct)@15.0.2
-- Platform(platform)@1.3.4
-- PackagedAuto(packagedauto)@3.4.15.46
-- AvaritiaTweak(avaritia_tweak)@1.3.0
-- Sounds(sounds)@2.2.1+1.20.1+forge
-- Tridot(tridot)@1.20.1-1.0.169
-- Valoria(valoria)@1.20.1-1.0.4.2
-- ChemLib(chemlib)@2.0.19
-- KubeJS Alchemistry(kubejsalchem)@1.20.1-1.1.2-R
-- Malum(malum)@1.20.1-1.6.7
-- JEI Malum(jei_malum)@1.20.1-forge-1.0
-- jgrapht-core(org_jgrapht_jgrapht_core)@1.5.2
-- KJS Industrial Foregoing(kjsindustrialforegoing)@1.0
-- betterchunkloading mod(betterchunkloading)@1.20.1-5.4
-- Modonomicon(modonomicon)@1.79.3
-- YetAnotherConfigLib(yet_another_config_lib_v3)@3.6.6+1.20.1-forge
-- Smart Tooltip Scroll(smart_tooltip_scroll)@2.3.2+1.20.1
-- Async Locator(asynclocator)@1.3.0
-- JEI Structures(jei_structures)@1.9
-- Inline(inline)@1.20.1-1.2.2
-- Connector Extras EMI Bridge(connectorextras_emi_bridge)@1.11.2+1.20.1
-- Deeper Oceans(deeper_oceans)@2.0.0
-- chisels-and-bits(chiselsandbits)@20.1.20
-- PackMode(packmode)@7.0.0
-- Translocators(translocators)@2.6.0.86
-- Fabric Data Generation API (v1)(fabric_data_generation_api_v1)@12.3.7+369cb3a477
-- Fabric Events Interaction (v0)(fabric_events_interaction_v0)@0.6.5+0f26153f77
+Mod List:
+		Name Version (Mod Id)
+
+		Aaron 1.23.0 (aaron)
+		Accessories 1.1.0-beta.48+1.21.1 (accessories)
+		Actually Additions 1.3.26 (actuallyadditions)
+		Ad Astra 1.16.26 (ad_astra)
+		Ad Astra Asteroid Belt 1.21.1 1.1 (pv_ad_asterobelt)
+		Ad Astra: More Structures 1.0.2 (ad_astra_more_structures)
+		Additional Entity Attributes 2.0.2+1.21.1 (additionalentityattributes)
+		Advanced AE 1.6.12-1.21.1 (advanced_ae)
+		AE Wireless Transceiver 1.3.2fix (aewireless)
+		AE2 Fluid Crafting Terminal 19.1.3 (ae2fct)
+		AE2:Crafting Tree 1.21.1-1.1.1 (ae2ct)
+		AE2AddonLib 1.0.3-1.21.1 (ae2addonlib)
+		AE2Extras 0 (ae2extras)
+		AE2NetworkAnalyzer 1.21-2.1.5-neoforge (ae2netanalyser)
+		AE2WTLib 19.5.1 (ae2wtlib)
+		AE2WTLib API 19.5.1 (ae2wtlib_api)
+		AEInfinityBooster 2.1.2 (aeinfinitybooster)
+		AI-Improvements 0.5.3 (aiimprovements)
+		Akashic Tome 1.8-30 (akashictome)
+		Alchemistry 2.4.5 (alchemistry)
+		AlchemyLib 1.1.6 (alchemylib)
+		All The Leaks 1.1.16+1.21.1-neoforge (alltheleaks)
+		Almanac 1.5.2 (almanac)
+		AlmostUnified 1.21.1-1.4.2 (almostunified)
+		AoA3 3.7.16.1 (aoa3)
+		Apollib 1.2.0 (apollib)
+		AppleSkin 3.0.9+mc1.21 (appleskin)
+		Applied Astralsorcery 0.5.4 (appliedas)
+		Applied Energistics 2 19.2.19 (ae2)
+		Applied Enhancements 1.1.2 (appliedenhancements)
+		Applied Mekanistics 1.6.3 (appmek)
+		Applied Thaumaturgy 1.0.4 (applied_thaumaturgy)
+		AppliedE 1.0.8-beta (appliede)
+		Aquaculture 2 2.7.22 (aquaculture)
+		Aquamirae 7.2.13 (aquamirae)
+		Architectury 13.0.11 (architectury)
+		Arrowhead 2.1.0+1.21.1-neoforge (arrowhead)
+		Ars Nouveau 5.13.5 (ars_nouveau)
+		Ars Nouveau Performance Optimization 1.2.0 (arsnouveauperformanceoptimization)
+		Astral Dimension 3.0 (astral_dimension)
+		Astral Sorcery 2.0.3 (astralsorcery)
+		Astral Sorcery JEI Fix 1.0.3 (as_jei_fix)
+		Astral Sorcery KubeJS Addon 2101.1.1 (kubejsastralsorcery)
+		Astral Sorcery: True Skies 1.0.0 (astralsorcery_true_skies)
+		Athena 4.0.6 (athena)
+		AttributeFix 21.1.3 (attributefix)
+		Auroral 1.21.1-1.1.5 (auroral)
+		Avaritia Expand 0.3.6 (avaritia_expand)
+		Avaritia's Delight 1.6.3 (avaritia_delight)
+		AvaritiaIntegration 1.0 (avaritia_integration)
+		Bad Packets 0.8.2 (badpackets)
+		BadMobs 21.1.1 (badmobs)
+		BadOptimizations 2.4.1 (badoptimizations)
+		Balm 21.0.66 (balm)
+		Bedrock Miner 3.0.3 (bedrockminer)
+		Better Advanced Tooltips 2101.1.0-build.5 (betteradvancedtooltips)
+		Better P2P 1.5.2 (betterp2p)
+		Biomes O' Plenty 21.1.0.14 (biomesoplenty)
+		Bookshelf 21.1.81 (bookshelf)
+		Botania Revived 2.0.2 (botania)
+		BotanyPots 21.1.44 (botanypots)
+		BotanyPots-Mystical 21.1.12 (botanypotsmystical)
+		Brandon's Core 3.2.1.309 (brandonscore)
+		Building Gadgets 2 21.1.1 (buildinggadgets2)
+		Caelus API 7.0.1+1.21.1 (caelus)
+		Castle in the Sky 1.21.1.1 (castle_in_the_sky)
+		Cataclysm Dimension 1.5.5 (cataclysm_dimension)
+		CBMultipart 3.5.0.155 (cb_multipart)
+		Certain Questing Additions 1.2.0.5 (certain_questing_additions)
+		ChemLib 2.1.5 (chemlib)
+		Client Tweaks 21.1.15 (clienttweaks)
+		clientcrafting mod 2.1 (clientcrafting)
+		Cloth Config v15 API 15.0.140 (cloth_config)
+		Clumps 19.0.0.1 (clumps)
+		CodeChicken Lib 4.6.1.529 (codechickenlib)
+		CodecUI 1.21.1-1.4.7 (codecui)
+		Colorful Hearts 10.5.9 (colorfulhearts)
+		Common Networking 1.0.21-1.21.1 (commonnetworking)
+		Common Storage Lib: Core 0.0.10 (common_storage_lib)
+		Common Storage Lib: Data 0.0.10 (common_storage_lib_data)
+		Common Storage Lib: Lookup 0.0.10 (common_storage_lib_lookup)
+		Common Storage Lib: Resources 0.0.10 (common_storage_lib_resources)
+		Configurable 3.5.3 (configurable)
+		Configuration 3.1.1 (configuration)
+		Configured 2.6.3 (configured)
+		ConnectedTexturesMod 1.21-1.2.1+3 (ctm)
+		Connectivity Mod 7.7 (connectivity)
+		Corpse 1.21.1-1.1.22 (corpse)
+		Crafting Tweaks 21.1.11 (craftingtweaks)
+		Crash Assistant 1.11.12 (crash_assistant)
+		Crash Utilities 9.0.4 (crashutilities)
+		Croptopia 4.2.4 (croptopia)
+		Cucumber Library 8.0.16 (cucumber)
+		Cumulus 2.0.7 (cumulus_menus)
+		Cupboard mod 4.2 (cupboard)
+		Curios API 9.5.1+1.21.1 (curios)
+		Cyclic 1.14.2 (cyclic)
+		Deeper Additional Structures 1.0.2 (deeper_additional_structures)
+		Deeper and Darker 1.4.1 (deeperdarker)
+		Deeper Oceans 2.0.1 (deeper_oceans)
+		DimensionalDoors 6.2.2 (dimdoors)
+		DivineRPG 1.10.10 (divinerpg)
+		DoG 1.2.0 (dog)
+		Draconic Evolution 3.1.4.633 (draconicevolution)
+		Durability Tooltip 1.2.0 (durabilitytooltip)
+		Dynamic FPS 3.11.4 (dynamic_fps)
+		Dynamic view distance 4.0 (dynview)
+		EnchantmentDescriptions 21.1.11 (enchdesc)
+		Ender Core 8.2.14-beta (endercore)
+		Ender IO 8.2.14-beta (enderio)
+		Ender IO - Modded Conduits 8.2.14-beta (enderio_modded_conduits)
+		EnderStorage 2.13.0.191 (enderstorage)
+		EntityCulling 1.12.1 (entityculling)
+		EntityJS 1.5.2 (entityjs)
+		EpheroLib 1.2.0 (epherolib)
+		Excessive Utilities 1.12.0 (excessive_utilities)
+		Explorer's Compass 1.21.1-3.4.0-neoforge (explorerscompass)
+		Extended Compressor 1.0.3 (extendedcompressor)
+		Extended Crafting: Expanded Plus 1.0.0 (extendedcrafting)
+		Extended Terminal 19.1.0 (extendedterminal)
+		ExtendedAE 1.21-2.2.43-neoforge (extendedae)
+		ExtraLib 3.3.1 (extralib)
+		ExtraQuests [FTB Quests] 2.0.1 (extraquests)
+		Extreme Reactors 1.21.1-2.4.28 (bigreactors)
+		Extreme Sound Muffler 3.57 (extremesoundmuffler)
+		Fallingleaves 1.21.1-2.6.0 (fallingleaves)
+		Farmer's Delight 1.3.4 (farmersdelight)
+		Fast Suite 6.0.7 (fastsuite)
+		Fast Workbench 9.1.3 (fastbench)
+		FastFurnace 9.0.1 (fastfurnace)
+		FastLeafDecay 35 (fastleafdecay)
+		Ferrite Core 7.0.3 (ferritecore)
+		flib 0.2.9 (flib)
+		FluidJS 1.2.3 (fluidjs)
+		Flux Networks 8.0.0 (fluxnetworks)
+		Flywheel 1.0.6 (flywheel)
+		Forgified Fabric API Base 0.4.42+d1308ded19 (fabric_api_base)
+		Forgified Fabric BlockView API (v2) 1.0.10+9afaaf8c19 (fabric_block_view_api_v2)
+		Forgified Fabric Particles (v1) 4.0.2+824f924c19 (fabric_particles_v1)
+		Forgified Fabric Renderer API (v1) 3.4.1+9125b6dc19 (fabric_renderer_api_v1)
+		Forgified Fabric Rendering Data Attachment (v1) 0.3.48+73761d2e19 (fabric_rendering_data_attachment_v1)
+		Formations 1.0.4 (formations)
+		Fractal 1.8.2+1.21.1-neoforge (fractal)
+		FractalJEI 2.0.3 (fractaljei)
+		Fragmentum 5.4.0 (fragmentum)
+		FTB Chunks 2101.1.24 (ftbchunks)
+		FTB Essentials 2101.1.10 (ftbessentials)
+		FTB Filter System 21.1.4 (ftbfiltersystem)
+		FTB Library 2101.1.39 (ftblibrary)
+		FTB Quests 2101.1.38 (ftbquests)
+		FTB Teams 2101.1.12 (ftbteams)
+		FTB Ultimine 2101.1.15 (ftbultimine)
+		FTB XMod Compat 21.1.14 (ftbxmodcompat)
+		Fusion 1.3.16 (fusion)
+		GeckoLib 4 4.9.3 (geckolib)
+		GlitchCore 2.1.0.2 (glitchcore)
+		Global Packs 21.0.6 (globalpacks)
+		Glodium 1.21-2.2-neoforge (glodium)
+		Gpu memory leak fix 1.8 (gpumemleakfix)
+		Grand Power 3.0.2 (grandpower)
+		GregTech 8.1.0 (gtceu)
+		GuideME 21.1.22 (guideme)
+		Hostile Neural Networks 6.5.1 (hostilenetworks)
+		Ice And Fire Community Edition 2.2 (iceandfire)
+		ImmediatelyFast 1.6.15+1.21.1 (immediatelyfast)
+		Immersive Engineering 12.4.2-194 (immersiveengineering)
+		Immersive Petroleum 4.5.0-39 (immersivepetroleum)
+		ImmersiveUI 0.3.3 (immersiveui)
+		Industrial Foregoing 1.21-3.6.39 (industrialforegoing)
+		Infiniverse 2.0.1.0 (infiniverse)
+		Integration 0.2 (integration)
+		Inventory Particles 3.2.0+1.21.1+neoforge (inventory_particles)
+		Iron Chests 1.21-neoforge-16.0.7 (ironchest)
+		Item Zoom 3.0.0 (itemzoom)
+		Jade 15.10.6+neoforge (jade)
+		JamLib 1.3.6+1.21.1 (jamlib)
+		JAOPCA 5.0.15.25 (jaopca)
+		JAOPCA: Thaumaturge 1.0.0 (jaopcathaumaturge)
+		JEI Malum 1.0 (jei_malum)
+		JEI++ 1.0.8a-1.21.1 (jei_plus_plus)
+		JEIDrawables 21.1.7 (jeidrawables)
+		JEIWorldGen 1.4.5 (jeiworldgen)
+		Journeymap 1.21.1-6.0.9 (journeymap)
+		JourneyMap API 2.0.0-1.21.1 (journeymap_api)
+		Jupiter 2.3.7 (jupiter)
+		Just Another Void Dimension 9.0.0 (javd)
+		Just Enough Items 19.70.0.458 (jei)
+		Just Enough Resources 1.6.0.57 (jeresources)
+		Kiwi Library 15.8.7+neoforge (kiwi)
+		Kotlin For Forge 5.12.0 (kotlinforforge)
+		KubeJEI 1.0.0 (kubejei)
+		KubeJS 2101.7.2-build.381 (kubejs)
+		KubeJS Actually Additions 1.21.1-0.3.0 (kubejs_actuallyadditions)
+		KubeJS Additions 1.21.1-6.0.0 (kubejsadditions)
+		KubeJS Draconic Evolution 1.1.0 (kubejsde)
+		KubeJS EnderIO 1.21.1-0.12.0 (kubejs_enderio)
+		KubeJS Nature's Aura 1.0.3 (kubejs_naturesaura)
+		KubeJS Oritech 1.21.1-0.4.5 (kubejs_oritech)
+		KubeJS ProjectE 1.3.3 (kubejsprojecte)
+		kubejsarsnouveau 1.3.2 (kubejsarsnouveau)
+		KubeThaum 1.3.1 (kubethaum)
+		KumaAPI 21.0.8 (kuma_api)
+		L_Ender's Cataclysm 1.21.1 3.33 (cataclysm)
+		LambDynamicLights (API) 4.5.1+1.21.1 (lambdynlights_api)
+		Let Me Despawn 1.5.0 (letmedespawn)
+		lionfishapi 3.1 (lionfishapi)
+		Lithostitched 1.8.1 (lithostitched)
+		Lodestone 1.8.2 (lodestone)
+		Log Begone 1.0.3 (logbegone)
+		LootJS 1.21.1-3.7.0 (lootjs)
+		LowDragLib 1.0.35.a (ldlib)
+		LowDragLib2 2.2.44 (ldlib2)
+		Lychee Tweaker 6.7.3+neoforge (lychee)
+		LycheeJS NeoForge 1.21.1-2.2 (lycheejs)
+		Malum 1.8.2 (malum)
+		Matmos 7.7 (matmos_tct)
+		McJtyLib 1.21-9.0.22 (mcjtylib)
+		Mekanism 10.7.19 (mekanism)
+		Mekanism: Generators 10.7.19 (mekanismgenerators)
+		Mekanism: Ponders 1.0.4-1.21.1 (mekanism_ponders)
+		memorysettings mod 6.0 (memorysettings)
+		MezzConfig 0.6.8 (mezz_config)
+		Mighty Ender Chicken Rehatched 21.1.5 (mecrh)
+		Minecraft 1.21.1 (minecraft)
+		Mob Grinding Utils 1.1.10+mc1.21.1 (mob_grinding_utils)
+		Modern UI 3.13.0.1 (modernui)
+		ModernFix 5.27.27+mc1.21.1 (modernfix)
+		Modonomicon 1.122.0 (modonomicon)
+		Modular Machinery CR 0.1.8 (mmcr)
+		Moonlight Lib 1.21.1-3.7.2 (moonlight)
+		MossyLib 1.6.0+1.21.1+neoforge (mossylib)
+		Mouse Tweaks 2.26.1 (mousetweaks)
+		MRU 1.0.41+1.21.1 (mru)
+		Multibuilder Tool 1.1.31 (mbtool)
+		Myotus 19.1.2 (myotus)
+		Mystical Agradditions 8.0.15 (mysticalagradditions)
+		Mystical Agriculture 8.0.29 (mysticalagriculture)
+		Mystical Agriculture Tiered Crystals 1.7.1 (matc)
+		Mystical Customization 6.0.2 (mysticalcustomization)
+		Mystical Extended Tier 1.0.6 (mysticalextendedtier)
+		Nature's Compass 1.21.1-3.4.0-neoforge (naturescompass)
+		NaturesAura 41.10 (naturesaura)
+		Neo ECO AE Extension 21.2.17 (neoecoae)
+		Neo ECO Prototype 1.4.10 (neoecoprototype)
+		NeoForge 21.1.265 (neoforge)
+		Neruina 3.3.5 (neruina)
+		Nitrogen 1.1.25 (nitrogen_internals)
+		Nuclear Radiation 1.0.22 (nuclear_radiation)
+		NuclearCraft: Neoteric 1.3.11 (nuclearcraft)
+		Nuggets 1.1.0.48 (nuggets)
+		ObserverLib 1.10.3 (observerlib)
+		OctoLib 0.6.2 (octolib)
+		OELib 0.3.0 (oelib)
+		OELib Bless 0.3.0 (oelib_bless)
+		OELib Compatibility 0.3.0 (oelib_compat)
+		OELib Config 0.3.0 (oelib_config)
+		OELib Data 0.3.0 (oelib_data)
+		OELib Dev 0.3.0 (oelib_dev)
+		OELib Event 0.3.0 (oelib_event)
+		OELib Misc 0.3.0 (oelib_misc)
+		OELib Network 0.3.0 (oelib_network)
+		OELib Registry 0.3.0 (oelib_registry)
+		OELib Renderer 0.3.0 (oelib_renderer)
+		OmniSequence: Transfinite 2.0.15 (molecularmanipulator)
+		Oracle Index 1.4.0 (oracle_index)
+		Oritech 1.2.13 (oritech)
+		oωo 0.12.15.6-beta.1+1.21 (owo)
+		PackagedAuto 4.0.8.21 (packagedauto)
+		PackagedAvaritia:Re 3.0.1.5 (packagedavaritia)
+		PackagedExCrafting 4.0.0.11 (packagedexcrafting)
+		Pam's HarvestCraft - Crops 1.0.9 (pamhc2crops)
+		Pam's HarvestCraft - Food Core 1.0.4 (pamhc2foodcore)
+		Pam's HarvestCraft - Food Extended 1.0.0 (pamhc2foodextended)
+		Pam's HarvestCraft - Trees 1.0.9 (pamhc2trees)
+		Particular Reforged 1.5.7 (particular)
+		PartiCull 2.0 (particull)
+		Patchouli 1.21.1-93-NEOFORGE (patchouli)
+		Physics Mod 3.0.35 (physicsmod)
+		Placebo 9.9.4 (placebo)
+		Platform 1.4.2 (platform)
+		Polymorph+ 1.4.2+1.21.1 (polymorph_plus)
+		Polymorphic AE2 1.0.1 (polymorphic_ae2)
+		Ponder 1.0.87+mc1.21.1 (ponder)
+		PrickleMC 21.1.11 (prickle)
+		Primal Magick 6.0.7 (primalmagick)
+		Productive Bees 1.21.1-13.14.0 (productivebees)
+		Productive Lib 1.21.1-0.2.0 (productivelib)
+		Project Expansion 1.21.1-1.0.6 (projectexpansion)
+		ProjectE 1.1.0 (projecte)
+		Puzzles Lib 21.1.64 (puzzleslib)
+		RaishxCore 0.2.2 (raishxcore)
+		Re-Avaritia 1.4.4 (avaritia)
+		Re:JAOPCA Singularities 1.0.3 (rejaopcasingularities)
+		recipeessentials mod 4.7 (recipeessentials)
+		Reese's Sodium Options 2.2.4+mc1.21.1 (reeses_sodium_options)
+		Resourceful Lib 3.0.12 (resourcefullib)
+		Resourcefulconfig 3.0.11 (resourcefulconfig)
+		Revelationary 1.5.2+1.21.1 (revelationary)
+		RFToolsBase 1.21-6.0.11 (rftoolsbase)
+		RFToolsBuilder 1.21-7.0.8 (rftoolsbuilder)
+		RFToolsDimensions 1.21-12.0.4 (rftoolsdim)
+		RFToolsPower 1.21-7.0.6 (rftoolspower)
+		RFToolsStorage 1.21-6.0.5 (rftoolsstorage)
+		RFToolsUtility 1.21-7.0.12 (rftoolsutility)
+		Rhino 2101.2.7-build.85 (rhino)
+		Right Click Harvest 4.6.1+1.21.1 (rightclickharvest)
+		S-Lib 3.0.1+1.21.1 (s_lib)
+		Sable Companion 1.6.0 (sablecompanion)
+		Serene Seasons 10.1.0.3 (sereneseasons)
+		Simple Backups 1.21-4.0.21 (simplebackups)
+		SKP 1.1.3 (smartkeyprompts)
+		Smart Particles 21.8.10 (smart_particles)
+		Smart Tooltip Scroll 1.1.1+1.21.1 (smart_tooltip_scroll)
+		SmartBrainLib 1.16.11 (smartbrainlib)
+		Sodium 0.8.13+mc1.21.1 (sodium)
+		Sodium Extras 1.0.7 (sodiumextras)
+		Sophisticated Backpacks 3.26.21 (sophisticatedbackpacks)
+		Sophisticated Core 1.5.37 (sophisticatedcore)
+		Sounds 2.4.22+lts (sounds)
+		spark 1.10.124 (spark)
+		Spectrum 1.12.9-1.21.1-neo (spectrum)
+		SpectrumJEI 21.1.11.1+neoforge (spectrumjei)
+		Storage Drawers 13.11.4 (storagedrawers)
+		Structure Essentials mod 5.1 (structureessentials)
+		Super Factory Manager (SFM) 4.34.0 (sfm)
+		SuperChunk 0.6.1 (superchunk)
+		SuperMartijn642's Config Library 1.1.8 (supermartijn642configlib)
+		SuperMartijn642's Core Lib 1.1.25 (supermartijn642corelib)
+		tctcore 2.2 (tctcore)
+		TerraBlender 4.1.0.8 (terrablender)
+		Thaumaturge 1.1.0 (thaumaturge)
+		The Aether 1.5.10 (aether)
+		The Gaia Dimension 1.21-2.2.288 (gaiadimension)
+		The Twilight Forest 4.8.3345 (twilightforest)
+		The Undergarden 0.9.7 (undergarden)
+		Theoretical Sciences 1.2.0 (theoreticalsciences)
+		Time In A Bottle 6.5.4 (tiab)
+		Time in a bottle Curio Support 3.0.1 (tiabcurio)
+		Tiny Mob Farm Remastered 1.5.2-1.21 (tinymobfarm)
+		Titanium 4.0.51 (titanium)
+		Torcherino AE 1.03 (torcherino_ae_mod)
+		Torchmaster 21.1.13 (torchmaster)
+		TRansition 1.0.28 (transition)
+		Translocators 2.8.0.89 (translocators)
+		Trash Cans 1.1.2 (trashcans)
+		TRender 1.0.17 (trender)
+		Trenzalore 6.1.1 (trenzalore)
+		Tslat's Modding Extensions 1.0.0 (tslatmoddingextensions)
+		UFO FUTURE 3.0.2 (ufo)
+		UI Lib 9.0.0 (uilib)
+		underwater_village 1.0.2 (underwater_village)
+		Universal Bone Meal 21.1.0 (universalbonemeal)
+		Uranus 2.4.1-bugfix (uranus)
+		VanillaBackport 1.2.2 (vanillabackport)
+		Visual Workbench 21.1.2 (visualworkbench)
+		Void Miners Remastered 2.0.3 (voidminersremastered)
+		Voidscape 1.21.1-1.9.588 (voidscape)
+		Woot Revived 21.1.1.13-kjs (woot_revived)
+		XNet 1.21-7.0.7 (xnet)
+		XNet Gases 6.0.2 (xnetgases)
+		YAML Config 9.0.0 (yamlconfig)
+		YetAnotherConfigLib 3.8.2+1.21.1-neoforge (yet_another_config_lib_v3)
+		Zero CORE 2 1.21.1-2.4.21 (zerocore)
