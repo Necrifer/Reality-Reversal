@@ -1,6 +1,6 @@
-// Crafting table recipes with a reusable (non-consumed) ingredient, moved from scripts/craftingtable.zs (CraftTweaker).
-// .keepIngredient(x) returns x to the grid after crafting, like CraftTweaker's .reuse().
-// Recipe IDs stay crafttweaker:<name>.
+// Ported from Crafttweaker.
+// RecipeID specifically uses the Crafttweaker prefix to not require hunting for broken scripts
+
 ServerEvents.recipes(event => {
     const recipeId = name => 'crafttweaker:' + name
 

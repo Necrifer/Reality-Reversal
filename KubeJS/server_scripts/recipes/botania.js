@@ -48,7 +48,13 @@ ServerEvents.recipes(event => {
         type: 'neoforge:components', items: 'aether:ice_ring',
         components: { 'minecraft:damage': 0 }, strict: false
     };
+    function replace(result, oldInput, newInput){
+    return event.replaceInput(result, oldInput, newInput)}
+    replace('botania:glimmering_livingwood_log', 'glowstone', 'botania:terrasteel_nugget')
+    replace('botania:glimmergin_livingwood', 'glowstone', 'botania:terrasteel_nugget')
+    replace('botania:mana_pylon', 'gold_ingot', 'malum:hallowed_gold_ingot')
     IdRemoval('botania:runic_altar/deception')
+    IdRemoval('botania:petal_apothecary/orechid_ignem')
     runicAltar('botania:rune_air', ['botania:ender_air_bottle', 'aether:golden_aercloud', 'enderio:cloud_seed_bucket', 'malum:aerial_spirit', 'aether:zanite_gemstone'], 5200);
     runicAltar('botania:rune_earth', ['mysticalagriculture:prosperity_seed_base', 'cyclic:soil', 'primalmagick:essence_shard_earth', 'mysticalagriculture:earth_agglomeratio', 'minecraft:sculk'], 5200);
     runicAltar('botania:rune_fire', [blazePrediction, 'ars_nouveau:red_archwood_log', 'twilightforest:fiery_block', 'malum:infernal_spirit', 'gtceu:blaze_bucket'], 5200);

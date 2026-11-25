@@ -84,6 +84,7 @@ ServerEvents.recipes(event => {
   fluidinfuse('kubejs:aurorial_call', 1500, 'enderio:dark_steel_ingot', 5, 'auroral:shimmersteel_ingot', 1)
   fluidinfuse('kubejs:aurorial_call', 400, 'botania:black_lotus', 5, 'auroral:aurora_shard', 1)
   fluidinfuse('kubejs:aurorial_call', 400, 'auroral:woven_leather', 5, 'auroral:shimmerweave_fabric', 1)
+  fluidinfuse('nuclearcraft:cryotheum', 144, '#c:stones', 1, 'divinerpg:frozen_stone', 1)
   fluidinfuse('kubejs:instability', 500, 'primalmagick:marble_hallowed', 8, 'primalmagick:mana_singularity', 1)
   pressuriser('oritech:plutonium_dust', 9, 'mekanism:pellet_plutonium', 1)
   pressuriser('gtceu:hematite_dust', 9, 'gaiadimension:hematite', 1)

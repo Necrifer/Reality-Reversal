@@ -15,6 +15,7 @@ AstralSorcery.recipes(event => {
    function inputchange (result, itemin, itemout) {event.replaceInput({output: Item.of(result)}, itemin, itemout)}
     event.remove({id: 'astralsorcery:focal_combine/altar_illumination'})
     event.remove({id: 'astralsorcery:altar/astrolabe'})
+    event.remove({id: 'appliedas:me_starlight_infuser'})
     event.remove({output: 'appliedas:constellation_core'})
     event.focal_combine('astralsorcery:altar_illumination', ['astralsorcery:marble_raw', 'astralsorcery:marble_raw', 'astralsorcery:marble_raw', 'crafting_table', 'kubejs:eyes3'])
         .duration(100)

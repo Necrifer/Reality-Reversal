@@ -156,6 +156,7 @@ ServerEvents.recipes(event => {
     'tinymobfarm:ultimate_farm',
     'divinerpg:shapeless/divine_rock',
     'mmcr:basic_casing',
+    'ad_astra:ostrum_engine',
     'mysticalagriculture:soulium_seed_base',
     'gaiadimension:keystone_block',
     'oritech:crafting/biogen',
@@ -525,6 +526,17 @@ const shapedCrafting = [
     keys: {
       A: 'auroral:shimmersteel_ingot',
       B: 'gtceu:ev_machine_hull'
+    }
+  },
+  {
+    id: 'modpack:ostrum_engine',
+    output: 'ad_astra:ostrum_engine',
+    pattern: ['AAA','ABA','DCD'],
+    keys: {
+      A: 'ad_astra:ostrum_plate',
+      B: 'ad_astra:desh_engine',
+      C: 'gtceu:chaos_infused_rotor',
+      D: 'kubejs:sol_astral_ingot'
     }
   },
   {
